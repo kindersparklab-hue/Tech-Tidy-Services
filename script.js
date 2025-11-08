@@ -1,9 +1,17 @@
-// Smooth scrolling for nav links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
+// ===== TECH TIDY SCRIPT =====
+
+// Highlight active nav link based on URL
+const links = document.querySelectorAll("nav a");
+links.forEach(link => {
+  if (link.href === window.location.href) {
+    link.classList.add("active");
+  }
+});
+
+// Example scroll-to-top button (optional)
+window.addEventListener("scroll", () => {
+  const scrollBtn = document.getElementById("scrollTopBtn");
+  if (scrollBtn) {
+    scrollBtn.style.display = window.scrollY > 300 ? "block" : "none";
+  }
 });
