@@ -15,3 +15,13 @@ window.addEventListener("scroll", () => {
     scrollBtn.style.display = window.scrollY > 300 ? "block" : "none";
   }
 });
+
+
+// Highlight active nav link
+const links = document.querySelectorAll("nav a");
+links.forEach(link => {
+  if (link.href === window.location.href) {
+    link.classList.add("active");
+  }
+});
+
