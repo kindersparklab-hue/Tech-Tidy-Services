@@ -8,15 +8,19 @@
 }
 
 body {
-  font-family: "Segoe UI", Arial, sans-serif;
+  font-family: 'Segoe UI', Arial, sans-serif;
   color: #333;
-  background: #fff;
   line-height: 1.6;
+  background: #f5f6fa;
+}
+
+a {
+  text-decoration: none;
 }
 
 .container {
   width: 90%;
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -27,6 +31,9 @@ body {
   background: #0096E6;
   color: #fff;
   padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
@@ -37,14 +44,13 @@ body {
 }
 
 .logo {
-  width: 120px;
+  width: 150px;
 }
 
 .main-nav a {
   color: #fff;
-  text-decoration: none;
+  font-weight: 600;
   margin-left: 20px;
-  font-weight: 500;
   transition: opacity 0.3s ease;
 }
 
@@ -53,74 +59,104 @@ body {
 }
 
 /* ---------------------------
-   MAIN CONTENT
+   HERO SECTION
 ----------------------------*/
-main {
-  padding: 40px 0;
+.hero-section {
+  background: linear-gradient(135deg, #0096E6 0%, #00cfff 100%);
+  color: #fff;
+  padding: 100px 0 60px 0;
+  text-align: center;
 }
 
-h1, h2, h3 {
+.hero-section h1 {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+}
+
+.hero-section .tagline {
+  font-size: 1.3rem;
+  margin-bottom: 30px;
+  font-weight: 500;
+}
+
+.hero-counters {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.counter-card {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  padding: 20px 30px;
+  min-width: 120px;
+}
+
+.counter-card .count {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.counter-card .label {
+  font-size: 1rem;
+  margin-top: 5px;
+  color: #fff;
+}
+
+.btn-primary {
+  display: inline-block;
+  background: #fff;
   color: #0096E6;
-  margin-bottom: 15px;
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: 0.3s;
 }
 
-p {
-  margin-bottom: 15px;
+.btn-primary:hover {
+  background: #e6f0fa;
 }
 
 /* ---------------------------
-   SERVICES GRID
+   SERVICES SECTION
 ----------------------------*/
+.services-section {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.services-section h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #0096E6;
+}
+
 .services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  gap: 25px;
 }
 
 .service-card {
-  background: #f8f8f8;
-  border-radius: 8px;
-  padding: 20px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-  transition: transform 0.2s ease;
+  background: #fff;
+  padding: 25px 15px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.service-card h3 {
+  color: #0096E6;
+  font-size: 1.2rem;
 }
 
 .service-card:hover {
-  transform: translateY(-5px);
-}
-
-/* ---------------------------
-   CONTACT FORM
-----------------------------*/
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-top: 15px;
-  max-width: 500px;
-}
-
-.contact-form input,
-.contact-form textarea {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 15px;
-}
-
-.contact-form button {
-  background: #0096E6;
-  color: white;
-  border: none;
-  padding: 12px;
-  font-size: 16px;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.contact-form button:hover {
-  background: #007ec1;
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
 }
 
 /* ---------------------------
@@ -129,7 +165,7 @@ p {
 .site-footer {
   background: #111;
   color: #fff;
-  padding: 20px 0;
+  padding: 25px 0;
   text-align: center;
   font-size: 14px;
 }
@@ -138,3 +174,60 @@ p {
   display: flex;
   flex-direction: column;
   gap: 5px;
+  align-items: center;
+}
+
+/* ---------------------------
+   FLOATING SOCIAL ICONS
+----------------------------*/
+.social-floating {
+  position: fixed;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 999;
+}
+
+.social-floating img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.social-floating img:hover {
+  transform: scale(1.2);
+}
+
+/* ---------------------------
+   RESPONSIVE
+----------------------------*/
+@media (max-width: 768px) {
+  .header-inner {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .main-nav a {
+    margin: 8px;
+  }
+
+  .hero-section {
+    padding: 80px 20px 40px 20px;
+  }
+
+  .hero-counters {
+    gap: 25px;
+  }
+
+  .social-floating {
+    flex-direction: row;
+    bottom: 10px;
+    top: auto;
+    right: 50%;
+    transform: translateX(50%);
+  }
+}
