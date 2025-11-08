@@ -1,40 +1,55 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact Tech Tidy</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — Tech & Tidy Technical Services L.L.C</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <img src="assets/images/logo.png" alt="Tech Tidy Logo" class="logo" />
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="contact.html" class="active">Contact</a>
-    </nav>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img src="assets/images/logo.png" alt="Tech & Tidy logo" class="logo">
+      </a>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <section class="contact">
-    <h1>Contact Tech Tidy</h1>
-    <form action="https://formspree.io/f/yourformid" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="_replyto" placeholder="Your Email" required />
-      <textarea name="message" placeholder="Your Message"></textarea>
-      <button type="submit">Send Message</button>
-    </form>
+  <main class="container">
+    <h1>Contact Us</h1>
+    <p>We’d love to hear from you! Feel free to contact us through any of the following ways:</p>
 
     <div class="contact-info">
-      <p><strong>Email:</strong> info@techtidy.com</p>
-      <p><strong>Phone:</strong> +971 58 116 0415</p>
-      <p><strong>Address:</strong> Dubai, UAE</p>
+      <p><strong>📍 Address:</strong> Dubai, United Arab Emirates</p>
+      <p><strong>📞 Phone:</strong> <a href="tel:+971581160415">+971 58 116 0415</a></p>
+      <p><strong>📧 Email:</strong> <a href="mailto:INQUIRE@techntidy.com">INQUIRE@techntidy.com</a></p>
     </div>
-  </section>
 
-  <footer>
-    <p>© 2025 Tech Tidy</p>
+    <h2>Send Us a Message</h2>
+    <form class="contact-form" action="#" method="post" onsubmit="return false;">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>Tech &amp; Tidy Technical Services L.L.C</div>
+      <div>Copyright © 2025 All rights reserved</div>
+    </div>
   </footer>
-</body>
-</html>
+
+  <!-- Floating social icons -->
+  <div class="social-floating">
+    <a href="https://www.facebook.com/share/1ETF7bs5pK" target="_blank" rel="noopener noreferrer">
+      <img src="assets/images/facebook.png" alt="Facebook">
+    </a>
+    <a href="https://wa.me/+9715811604
