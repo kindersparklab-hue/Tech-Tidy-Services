@@ -1,79 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tech & Tidy Services</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> <!-- For icons -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Company Name</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-<nav style="display: flex; justify-content: space-between; align-items: center; padding: 10px 20px; background-color: #2C2C2C;">
-    <div class="logo">
-        <img src="https://github.com/kindersparklab-hue/Tech-Tidy-Services/blob/e30b93c2312a115a00e346fd13256e367a3e13af/logo-removebg-preview%20(1).png?raw=true" 
-             alt="Tech Tidy Services Logo" 
-             style="height: 70px; width: auto; filter: drop-shadow(0 0 4px rgba(0,0,0,0.6));">
-    </div>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+  <header>
+    <img src="assets/images/logo.png" alt="Company Logo" class="logo" />
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
     </nav>
-    
-    <section id="home" class="hero">
-        <h1>Empowering Your Tech Needs</h1>
-        <p>Expert technical services tailored for your business.</p>
-        <a href="#contact" class="btn">Get Started</a>
-    </section>
-    
-    <section id="services">
-        <h2>Our Services</h2>
-        <div class="service-grid">
-            <div class="service">
-                <i class="fas fa-cogs"></i>
-                <h3>IT Support</h3>
-                <p>Reliable maintenance and troubleshooting.</p>
-            </div>
-            <div class="service">
-                <i class="fas fa-code"></i>
-                <h3>Software Development</h3>
-                <p>Custom apps and solutions.</p>
-            </div>
-            <div class="service">
-                <i class="fas fa-network-wired"></i>
-                <h3>Network Setup</h3>
-                <p>Secure and efficient networks.</p>
-            </div>
-            <div class="service">
-                <i class="fas fa-users"></i>
-                <h3>Consulting</h3>
-                <p>Strategic tech advice.</p>
-            </div>
-        </div>
-    </section>
-    
-    <section id="about">
-        <h2>About Us</h2>
-        <p>We are a team of experts dedicated to delivering top-notch technical services. With years of experience, we help businesses thrive in the digital world.</p>
-        <img src="team-placeholder.jpg" alt="Our Team" style="max-width: 100%;"> <!-- Add your image -->
-    </section>
-    
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <form action="https://formspree.io/your-email" method="POST"> <!-- Replace with your email via Formspree -->
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" placeholder="Your Message" required></textarea>
-            <button type="submit">Send</button>
-        </form>
-        <p>Email: info@yourcompany.com | Phone: (123) 456-7890</p>
-    </section>
-    
-    <footer>
-        <p>&copy; 2023 Tech & Tidy Services. All rights reserved.</p>
-    </footer>
-    
-    <script src="script.js"></script>
+  </header>
+
+  <section class="hero">
+    <h1>Turning Your Vision Into Reality</h1>
+    <p>Professional fit-out, acoustic, and fabrication services.</p>
+    <a href="contact.html" class="btn">Get in Touch</a>
+  </section>
+
+  <section class="about-preview">
+    <h2>About Us</h2>
+    <p>
+      We are a technical services company offering high-quality fit-out works,
+      storage solutions, and acoustic treatments for residential and commercial
+      spaces.
+    </p>
+    <a href="about.html" class="btn">Learn More</a>
+  </section>
+
+  <section class="services-preview">
+    <h2>Our Services</h2>
+    <div class="service-grid">
+      <div class="service-card">
+        <img src="assets/images/service1.jpg" alt="Fit-out Works" />
+        <h3>Fit-out Works</h3>
+      </div>
+      <div class="service-card">
+        <img src="assets/images/service2.jpg" alt="Acoustic Works" />
+        <h3>Acoustic Works</h3>
+      </div>
+      <div class="service-card">
+        <img src="assets/images/service3.jpg" alt="Storage Solutions" />
+        <h3>Storage Solutions</h3>
+      </div>
+    </div>
+    <a href="services.html" class="btn">See All Services</a>
+  </section>
+
+  <footer>
+    <p>© 2025 Your Company Name | All rights reserved.</p>
+    <div class="socials">
+      <a href="#"><img src="assets/icons/facebook.svg" alt="Facebook" /></a>
+      <a href="#"><img src="assets/icons/instagram.svg" alt="Instagram" /></a>
+      <a href="#"><img src="assets/icons/linkedin.svg" alt="LinkedIn" /></a>
+    </div>
+  </footer>
 </body>
 </html>
