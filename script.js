@@ -1,27 +1,19 @@
-// ===== TECH TIDY SCRIPT =====
+// Animate counters on homepage
+document.addEventListener("DOMContentLoaded", function () {
+  const counters = document.querySelectorAll(".count");
 
-// Highlight active nav link based on URL
-const links = document.querySelectorAll("nav a");
-links.forEach(link => {
-  if (link.href === window.location.href) {
-    link.classList.add("active");
-  }
+  counters.forEach(counter => {
+    const target = +counter.getAttribute("data-target");
+    let count = 0;
+    const increment = Math.ceil(target / 100); // Smooth steps
+    const updateCount = () => {
+      count += increment;
+      if (count > target) count = target;
+      counter.textContent = count;
+      if (count < target) {
+        requestAnimationFrame(updateCount);
+      }
+    };
+    updateCount();
+  });
 });
-
-// Example scroll-to-top button (optional)
-window.addEventListener("scroll", () => {
-  const scrollBtn = document.getElementById("scrollTopBtn");
-  if (scrollBtn) {
-    scrollBtn.style.display = window.scrollY > 300 ? "block" : "none";
-  }
-});
-
-
-// Highlight active nav link
-const links = document.querySelectorAll("nav a");
-links.forEach(link => {
-  if (link.href === window.location.href) {
-    link.classList.add("active");
-  }
-});
-
