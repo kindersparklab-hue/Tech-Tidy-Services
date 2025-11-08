@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Achievements — Tech & Tidy Technical Services L.L.C</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="assets/images/logo.png">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <img src="assets/images/logo.png" alt="Tech & Tidy Logo" class="logo">
+      </a>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="achievements.html">Achievements</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container hero-content">
+      <h1>Our Achievements</h1>
+      <p class="tagline">Keeping your spaces efficient, safe, and perfectly maintained.</p>
+    </div>
+  </section>
+
+  <!-- Achievements Counters -->
+  <main class="container services-section">
+    <div class="stats">
+      <div class="stat">
+        <h2 class="count" data-target="3">0</h2>
+        <p>Ongoing Projects</p>
+      </div>
+      <div class="stat">
+        <h2 class="count" data-target="5">0</h2>
+        <p>Happy Customers</p>
+      </div>
+      <div class="stat">
+        <h2 class="count" data-target="14">0</h2>
+        <p>Completed Projects</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>Tech & Tidy Technical Services L.L.C</div>
+      <div>Copyright © 2025 All rights reserved</div>
+    </div>
+  </footer>
+
+  <!-- Floating Social Icons -->
+  <div class="social-floating">
+    <a href="https://www.facebook.com/share/1ETF7bs5pK" target="_blank" rel="noopener">
+      <img src="assets/images/facebook.png" alt="Facebook">
+    </a>
+    <a href="https://wa.me/+971581160415" target="_blank" rel="noopener">
+      <img src="assets/images/whatsapp.png" alt="WhatsApp">
+    </a>
+    <a href="https://www.instagram.com/techtidyservices" target="_blank" rel="noopener">
+      <img src="assets/images/instagram.png" alt="Instagram">
+    </a>
+  </div>
+
+  <!-- Script for Animated Counters -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const counters = document.querySelectorAll(".count");
+
+      counters.forEach(counter => {
+        const target = +counter.getAttribute("data-target");
+        let count = 0;
+        const increment = Math.ceil(target / 100);
+
+        const updateCount = () => {
+          count += increment;
+          if (count > target) count = target;
+          counter.textContent = count;
+          if (count < target) {
+            requestAnimationFrame(updateCount);
+          }
+        };
+        updateCount();
+      });
+    });
+  </script>
+
+</body>
+</html>
