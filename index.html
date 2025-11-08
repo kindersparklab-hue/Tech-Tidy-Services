@@ -1,95 +1,84 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tech Tidy</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tech & Tidy Technical Services L.L.C</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="assets/images/logo.png">
 </head>
 <body>
-  <!-- Header -->
-  <header>
-    <img src="assets/images/logo.png" alt="Tech Tidy Logo" class="logo">
-    <nav>
-      <a href="#services">Services</a>
-      <a href="#team">Team</a>
-      <a href="#contact">Contact</a>
-    </nav>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img src="assets/images/logo.png" alt="Tech & Tidy logo" class="logo">
+      </a>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <h1>Welcome to Tech Tidy</h1>
-    <p>Professional Fit-out, Acoustic, and Storage Solutions</p>
-    <a href="#contact" class="btn">Get in Touch</a>
-  </section>
+  <main class="container">
+    <section class="hero">
+      <h1>Tech & Tidy Technical Services L.L.C</h1>
+      <p class="tagline">“Keeping your spaces efficient, safe, and perfectly maintained.”</p>
 
-  <!-- Services -->
-  <section id="services">
-    <h2>Our Services</h2>
-    <div class="service-grid">
-      <div class="service-card">
-        <img src="assets/images/service1.jpg" alt="Fit-out Works">
-        <h3>Fit-out Works</h3>
+      <div class="counters">
+        <div class="counter-card">
+          <div class="count" data-target="3">0</div>
+          <div class="label">Ongoing Projects</div>
+        </div>
+        <div class="counter-card">
+          <div class="count" data-target="5">0</div>
+          <div class="label">Happy Customers</div>
+        </div>
+        <div class="counter-card">
+          <div class="count" data-target="14">0</div>
+          <div class="label">Completed Projects</div>
+        </div>
       </div>
-      <div class="service-card">
-        <img src="assets/images/service2.jpg" alt="Acoustic Works">
-        <h3>Acoustic Works</h3>
-      </div>
-      <div class="service-card">
-        <img src="assets/images/service3.jpg" alt="Storage Solutions">
-        <h3>Storage Solutions</h3>
-      </div>
+    </section>
+
+    <section class="intro">
+      <h2>About Us</h2>
+      <p>
+        Tech & Tidy Technical Services L.L.C is a professional maintenance and facility solutions
+        company dedicated to delivering reliable, efficient, and high-quality technical services
+        across residential, commercial, and industrial sectors. We combine expertise, innovation,
+        and attention to detail to ensure safe and sustainable results for every client.
+      </p>
+    </section>
+
+    <section class="quick-links">
+      <a class="card" href="about.html">Learn more about us</a>
+      <a class="card" href="services.html">Our services</a>
+      <a class="card" href="contact.html">Get in touch</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>Tech &amp; Tidy Technical Services L.L.C</div>
+      <div>Copyright © 2025 All rights reserved</div>
     </div>
-  </section>
-
-  <!-- Team -->
-  <section id="team">
-    <h2>Meet Our Team</h2>
-    <img src="assets/images/team.jpg" alt="Tech Tidy Team" class="team-photo">
-  </section>
-
-  <!-- Projects -->
-  <section id="projects">
-    <h2>Our Projects</h2>
-    <div class="service-grid">
-      <div class="service-card">
-        <img src="assets/images/project1.jpg" alt="Project 1">
-      </div>
-      <div class="service-card">
-        <img src="assets/images/project2.jpg" alt="Project 2">
-      </div>
-      <div class="service-card">
-        <img src="assets/images/project3.jpg" alt="Project 3">
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" style="background: url('assets/images/contact-bg.jpg') center/cover no-repeat;">
-    <h2>Contact Us</h2>
-    <form>
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea placeholder="Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-    <div class="socials">
-      <a href="#"><img src="assets/icons/facebook.svg" alt="Facebook"></a>
-      <a href="#"><img src="assets/icons/instagram.svg" alt="Instagram"></a>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 Tech Tidy</p>
   </footer>
 
-  <!-- WhatsApp Floating Button -->
-  <a href="https://wa.me/971581160415?text=Hi%20Tech%20Tidy%2C%20I%27d%20like%20to%20know%20more%20about%20your%20services." 
-     class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
-    <img src="assets/icons/whatsapp.svg" alt="WhatsApp">
-  </a>
+  <!-- Floating social icons -->
+  <div class="social-floating">
+    <a href="https://www.facebook.com/share/1ETF7bs5pK" target="_blank" rel="noopener noreferrer">
+      <img src="assets/images/facebook.png" alt="Facebook">
+    </a>
+    <a href="https://wa.me/+971581160415" target="_blank" rel="noopener noreferrer">
+      <img src="assets/images/whatsapp.png" alt="WhatsApp">
+    </a>
+    <a href="https://www.instagram.com/techtidyservices" target="_blank" rel="noopener noreferrer">
+      <img src="assets/images/instagram.png" alt="Instagram">
+    </a>
+  </div>
 
   <script src="script.js"></script>
 </body>
