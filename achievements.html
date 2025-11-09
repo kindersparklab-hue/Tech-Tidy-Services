@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Achievements — Tech & Tidy Technical Services L.L.C</title>
+  <title>Our Achievements — Tech & Tidy Technical Services L.L.C</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="assets/images/logo.png">
 </head>
@@ -13,7 +13,7 @@
   <header class="site-header">
     <div class="container header-inner">
       <a href="index.html" class="brand">
-<img src="Assets/Images/logo.png" alt="Tech & Tidy Logo" class="logo">
+        <img src="assets/images/logo.png" alt="Tech & Tidy Logo" class="logo">
       </a>
       <nav class="main-nav">
         <a href="index.html">Home</a>
@@ -33,74 +33,42 @@
     </div>
   </section>
 
-  <!-- Achievements Counters -->
-  <main class="container services-section">
-    <div class="stats">
-      <div class="stat">
-        <h2 class="count" data-target="3">0</h2>
-        <p>Ongoing Projects</p>
-      </div>
-      <div class="stat">
-        <h2 class="count" data-target="5">0</h2>
-        <p>Happy Customers</p>
-      </div>
-      <div class="stat">
-        <h2 class="count" data-target="14">0</h2>
-        <p>Completed Projects</p>
+  <!-- Achievements Section -->
+  <section class="achievements-section">
+    <div class="container">
+      <h2 class="section-title">Proud Milestones</h2>
+      <div class="achievement-grid">
+
+        <div class="achievement-card">
+          <div class="icon">🏗️</div>
+          <h3 class="count" data-target="3">0</h3>
+          <p>Ongoing Projects</p>
+        </div>
+
+        <div class="achievement-card">
+          <div class="icon">😊</div>
+          <h3 class="count" data-target="5">0</h3>
+          <p>Happy Customers</p>
+        </div>
+
+        <div class="achievement-card">
+          <div class="icon">🏠</div>
+          <h3 class="count" data-target="14">0</h3>
+          <p>Completed Projects</p>
+        </div>
+
       </div>
     </div>
-  </main>
+  </section>
 
   <!-- Footer -->
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <div>Tech & Tidy Technical Services L.L.C</div>
-      <div>Copyright © 2025 All rights reserved</div>
+    <div class="footer-inner">
+      <p>Tech & Tidy Technical Services L.L.C</p>
+      <p>Copyright © 2025 All rights reserved</p>
     </div>
   </footer>
 
-<!-- Floating Social Icons -->
-<div class="social-floating">
-  <!-- Facebook -->
-  <a href="https://www.facebook.com/share/1ETF7bs5pK" target="_blank" rel="noopener">
-    <img src="Assets/Images/Facebook.png" alt="Facebook">
-  </a>
-  
-  <!-- WhatsApp with pre-filled message -->
-  <a href="https://wa.me/+971581160415?text=Hi%20Tech%20%26%20Tidy%20Technical%20Services!%20I%20would%20like%20to%20inquire%20about%20your%20technical%20services." 
-     target="_blank" rel="noopener">
-    <img src="Assets/Images/WhatsApp.png" alt="WhatsApp">
-  </a>
-  
-  <!-- Instagram -->
-  <a href="https://www.instagram.com/techtidyservices" target="_blank" rel="noopener">
-    <img src="Assets/Images/Instagram.png" alt="Instagram">
-  </a>
-</div>
-
-
-  <!-- Script for Animated Counters -->
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const counters = document.querySelectorAll(".count");
-
-      counters.forEach(counter => {
-        const target = +counter.getAttribute("data-target");
-        let count = 0;
-        const increment = Math.ceil(target / 100);
-
-        const updateCount = () => {
-          count += increment;
-          if (count > target) count = target;
-          counter.textContent = count;
-          if (count < target) {
-            requestAnimationFrame(updateCount);
-          }
-        };
-        updateCount();
-      });
-    });
-  </script>
-
+  <script src="script.js"></script>
 </body>
 </html>
