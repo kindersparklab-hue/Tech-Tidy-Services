@@ -1,78 +1,80 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Achievements — Tech & Tidy Technical Services L.L.C</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Achievements - Tech&Tidy Services</title>
   <link rel="stylesheet" href="styles.css">
-  <link rel="icon" href="assets/images/logo.png">
+  <script src="script.js" defer></script>
 </head>
 <body>
-
+  <!-- HEADER -->
   <header class="site-header">
     <div class="container header-inner">
-      <a href="index.html" class="brand"><img src="assets/images/logo.png" alt="logo" class="logo"></a>
+      <a href="index.html">
+        <img src="images/logo.png" alt="Tech&Tidy Logo" class="logo">
+      </a>
       <nav class="main-nav">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="services.html">Services</a>
-        <a href="achievements.html" class="active">Achievements</a>
+        <a href="achievements.html" style="text-decoration:underline;">Achievements</a>
         <a href="contact.html">Contact</a>
       </nav>
     </div>
   </header>
 
-  <section class="hero-section small-hero">
-    <div class="container hero-inner">
-      <div class="hero-text">
-        <h1>Our Achievements</h1>
-        <p class="tagline">Keeping your spaces efficient, safe, and perfectly maintained.</p>
-      </div>
+  <!-- HERO / TITLE SECTION -->
+  <section class="hero-section">
+    <div class="container">
+      <h1>Our Achievements</h1>
+      <p class="tagline">Delivering quality, trust, and excellence across every service.</p>
     </div>
   </section>
 
-  <main class="section section-light">
-    <div class="container">
-      <h2 class="section-title">Proud Milestones</h2>
-      <div class="achievement-grid">
-        <div class="achievement-card">
-          <div class="icon">🏗️</div>
-          <div class="count" data-target="3">0</div>
-          <p>Ongoing Projects</p>
-        </div>
-
-        <div class="achievement-card">
-          <div class="icon">😊</div>
-          <div class="count" data-target="5">0</div>
-          <p>Happy Customers</p>
-        </div>
-
-        <div class="achievement-card">
-          <div class="icon">🏠</div>
-          <div class="count" data-target="14">0</div>
-          <p>Completed Projects</p>
-        </div>
+  <!-- ACHIEVEMENTS COUNTERS -->
+  <section class="container" style="padding:80px 0; text-align:center;">
+    <div class="hero-counters">
+      <div class="counter-card" data-aos="fade-up">
+        <div class="count" data-target="1200">0</div>
+        <div class="label">Projects Completed</div>
+      </div>
+      <div class="counter-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="count" data-target="950">0</div>
+        <div class="label">Satisfied Clients</div>
+      </div>
+      <div class="counter-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="count" data-target="25">0</div>
+        <div class="label">Expert Technicians</div>
+      </div>
+      <div class="counter-card" data-aos="fade-up" data-aos-delay="300">
+        <div class="count" data-target="10">0</div>
+        <div class="label">Years of Excellence</div>
       </div>
     </div>
-  </main>
 
+    <div style="margin-top:50px;">
+      <p style="max-width:700px; margin:auto; font-size:1.1rem; color:#555;">
+        Over the years, Tech&Tidy Services has earned the trust of hundreds of customers across the UAE.
+        Our commitment to quality, reliability, and customer satisfaction has helped us grow into a
+        trusted name in maintenance and renovation solutions.
+      </p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
   <footer class="site-footer">
     <div class="container footer-inner">
-      <div class="footer-left">
-        <strong>Tech &amp; Tidy Technical Services L.L.C</strong>
-        <div class="footer-contact">Address: Dubai, United Arab Emirates</div>
-        <div class="footer-contact">Phone: +971 58 116 0415 | Email: <a href="mailto:INQUIRE@techntidy.com">INQUIRE@techntidy.com</a></div>
-      </div>
-      <div class="footer-right">Copyright © 2025 All rights reserved</div>
+      <p>&copy; 2025 Tech&Tidy Services. All Rights Reserved.</p>
+      <p>Professional Home, Office & Villa Maintenance Solutions</p>
     </div>
   </footer>
 
+  <!-- FLOATING SOCIAL ICONS -->
   <div class="social-floating">
-    <a class="social-btn" href="https://www.facebook.com/share/1ETF7bs5pK" target="_blank"><img src="assets/images/facebook.png" alt="Facebook"></a>
-    <a class="social-btn" href="https://wa.me/971581160415?text=Hi%20Tech%20%26%20Tidy%20Technical%20Services!%20I%20would%20like%20to%20inquire%20about%20your%20technical%20services." target="_blank"><img src="assets/images/whatsapp.png" alt="WhatsApp"></a>
-    <a class="social-btn" href="https://www.instagram.com/techtidyservices" target="_blank"><img src="assets/images/instagram.png" alt="Instagram"></a>
+    <a href="#"><img src="images/whatsapp.png" alt="WhatsApp"></a>
+    <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
+    <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
   </div>
-
-  <script src="script.js"></script>
 </body>
 </html>
