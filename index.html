@@ -6,12 +6,189 @@
   <title>Tech & Tidy Technical Services L.L.C</title>
   <link rel="stylesheet" href="styles.css" />
   <script defer src="script.js"></script>
+
+  <style>
+    /* RESET */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #222;
+      background-color: #f8fafc;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* HEADER */
+    header.site-header {
+      background: linear-gradient(90deg, #003c78, #00a9e0);
+      color: #fff;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 5%;
+    }
+
+    .logo {
+      height: 55px;
+      width: auto;
+    }
+
+    nav.main-nav a {
+      color: #fff;
+      font-weight: 500;
+      margin: 0 12px;
+      transition: color 0.3s;
+    }
+
+    nav.main-nav a:hover {
+      color: #ffe600;
+    }
+
+    /* HERO SECTION */
+    .hero-section {
+      background: linear-gradient(to right, #e8f6ff, #f4fbff);
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .hero-section h1 {
+      font-size: 2.4rem;
+      color: #003c78;
+      margin-bottom: 15px;
+    }
+
+    .tagline {
+      font-size: 1.1rem;
+      color: #555;
+      margin-bottom: 40px;
+    }
+
+    .hero-counters {
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+    }
+
+    .counter-card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 20px 30px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      transition: transform 0.3s;
+    }
+
+    .counter-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .count {
+      font-size: 2.2rem;
+      font-weight: bold;
+      color: #00a9e0;
+      display: block;
+    }
+
+    .label {
+      color: #333;
+      font-weight: 500;
+      margin-top: 5px;
+    }
+
+    .btn-primary {
+      background: #00a9e0;
+      color: #fff;
+      padding: 12px 25px;
+      border-radius: 6px;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+
+    .btn-primary:hover {
+      background: #008cc1;
+    }
+
+    /* FOOTER */
+    footer.site-footer {
+      background: #003c78;
+      color: #fff;
+      text-align: center;
+      padding: 25px 10px;
+      margin-top: 60px;
+    }
+
+    footer p {
+      margin: 5px 0;
+      font-size: 0.95rem;
+    }
+
+    /* FLOATING SOCIAL ICONS */
+    .social-floating {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      z-index: 1500;
+    }
+
+    .social-floating a img {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+      background-color: #fff;
+      padding: 8px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .social-floating a img:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+    }
+
+    @media (max-width: 768px) {
+      .hero-counters {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+      }
+
+      nav.main-nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+      }
+
+      nav.main-nav a {
+        margin: 6px;
+      }
+    }
+  </style>
 </head>
 
 <body>
   <!-- HEADER -->
-  <header class="site-header" style="background: linear-gradient(90deg, #0096E6, #42b9ff);">
-    <div class="container header-inner">
+  <header class="site-header">
+    <div class="header-inner">
       <img src="Assets/Images/logo.png" alt="Tech & Tidy Logo" class="logo" />
       <nav class="main-nav">
         <a href="index.html">Home</a>
@@ -51,7 +228,7 @@
   <!-- FOOTER -->
   <footer class="site-footer">
     <div class="footer-inner">
-      <p>Tech & Tidy Technical Services L.L.C</p>
+      <p><strong>Tech & Tidy Technical Services L.L.C</strong></p>
       <p>Copyright © 2025 All rights reserved.</p>
     </div>
   </footer>
