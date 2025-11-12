@@ -1,82 +1,198 @@
-/* --------------- Base --------------- */
-:root{
-  --navy:#0A1A2F;
-  --accent:#0096E6;
-  --accent-2:#00BFFF;
-  --muted:#6b7280;
-  --light:#f7fbff;
+/* ---------------------------
+   GENERAL STYLES
+----------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Inter,system-ui,Segoe UI,Arial,sans-serif;color:#112;margin:0;background:#fff;line-height:1.6}
-.container{max-width:1100px;margin:0 auto;padding:20px}
 
-/* --------------- Header --------------- */
-.site-header{background:var(--navy);color:#fff;position:sticky;top:0;z-index:1000;box-shadow:0 3px 10px rgba(0,0,0,0.25)}
-.header-inner{display:flex;align-items:center;justify-content:space-between;gap:20px}
-.brand{display:flex;align-items:center}
-.logo{height:56px;filter:drop-shadow(0 2px 6px rgba(0,0,0,0.6))}
-.main-nav a{color:#fff;margin-left:18px;text-decoration:none;font-weight:600;letter-spacing:0.5px;transition:color .2s,transform .15s}
-.main-nav a:hover{color:var(--accent-2);transform:translateY(-1px)}
-.main-nav a.active{color:var(--accent);text-decoration:underline}
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #333;
+  line-height: 1.6;
+  background: #f5f6fa;
+}
 
-/* --------------- Hero (dark premium) --------------- */
-.hero-section{background:linear-gradient(135deg,#012B5B 0%, #014f86 100%);color:#fff;padding:90px 0;display:flex;align-items:center}
-.hero-inner{display:flex;gap:40px;align-items:center;justify-content:space-between;flex-wrap:wrap}
-.hero-text{flex:1;min-width:280px}
-.hero-text h1{font-size:2.4rem;margin-bottom:10px;line-height:1.1;text-shadow:0 4px 18px rgba(0,0,0,0.45)}
-.tagline{color:#dbeeff;font-size:1.1rem;margin-bottom:22px}
-.hero-visual{flex:0 0 220px;text-align:center}
-.hero-logo-visual{width:160px;opacity:.95;filter:drop-shadow(0 6px 18px rgba(0,0,0,.45))}
+a {
+  text-decoration: none;
+}
 
-/* counters inside hero */
-.hero-counters{display:flex;gap:28px;flex-wrap:wrap;margin-bottom:22px;align-items:center}
-.counter-card{background:rgba(255,255,255,0.06);padding:18px 28px;border-radius:12px;min-width:110px;text-align:center}
-.counter-card .count{font-size:1.8rem;font-weight:800;color:#fff}
-.counter-card .label{color:rgba(255,255,255,0.85);margin-top:6px;font-size:.95rem}
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
-/* hero buttons */
-.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
-.btn-primary{background:var(--accent);color:#fff;padding:10px 20px;border-radius:30px;display:inline-block;font-weight:700}
-.btn-primary:hover{background:var(--accent-2)}
-.btn-ghost{background:transparent;color:#fff;padding:10px 18px;border-radius:30px;border:1px solid rgba(255,255,255,0.12)}
+/* ---------------------------
+   HEADER
+----------------------------*/
+.site-header {
+  background: linear-gradient(90deg, #0096E6, #42b9ff);
+  color: #fff;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
 
-/* --------------- Sections --------------- */
-.section{padding:60px 0}
-.section-light{background:var(--light)}
-.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
-.service-card{background:#fff;padding:22px;border-radius:12px;box-shadow:0 6px 20px rgba(2,6,23,0.05);transition:transform .25s,box-shadow .25s}
-.service-card:hover{transform:translateY(-8px);box-shadow:0 12px 30px rgba(2,6,23,0.08)}
-.services-grid.large .service-card{min-height:110px}
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-/* --------------- Achievements --------------- */
-.section-title{font-size:1.6rem;color:var(--navy);margin-bottom:26px}
-.achievement-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px}
-.achievement-card{background:#fff;padding:28px;border-radius:14px;box-shadow:0 8px 24px rgba(3,12,30,0.06);text-align:center}
-.achievement-card .icon{font-size:2rem;margin-bottom:10px}
-.achievement-card .count{font-size:2.4rem;color:var(--navy);font-weight:800}
-.achievement-card p{color:var(--accent);font-weight:600;margin-top:8px}
+.logo {
+  width: 150px;
+  filter: drop-shadow(0 0 3px rgba(255,255,255,0.7));
+}
 
-/* --------------- Contact --------------- */
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
-.contact-card{background:#fff;padding:22px;border-radius:12px;box-shadow:0 6px 20px rgba(2,6,23,0.05)}
-.contact-card form{display:flex;flex-direction:column;gap:10px}
-.contact-card input,.contact-card textarea{padding:10px;border:1px solid #e8eef6;border-radius:8px}
+/* Navigation */
+.main-nav a {
+  color: #fff;
+  font-weight: 600;
+  margin-left: 20px;
+  transition: opacity 0.3s ease;
+}
 
-/* --------------- Footer --------------- */
-.site-footer{background:var(--navy);color:#fff;padding:28px 0;margin-top:24px}
-.footer-inner{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
-.footer-left a{color:#fff;text-decoration:underline}
+.main-nav a:hover {
+  opacity: 0.8;
+}
 
-/* --------------- Floating social buttons --------------- */
-.social-floating{position:fixed;top:50%;right:18px;transform:translateY(-50%);display:flex;flex-direction:column;gap:12px;z-index:1100}
-.social-btn{display:block;width:52px;height:52px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(3,12,30,.18)}
-.social-btn img{width:28px;height:28px}
+/* ---------------------------
+   HERO SECTION
+----------------------------*/
+.hero-section {
+  background: linear-gradient(135deg, #0096E6 0%, #00cfff 100%);
+  color: #fff;
+  padding: 100px 0 60px 0;
+  text-align: center;
+}
 
-/* --------------- Responsive --------------- */
-@media (max-width:900px){
-  .hero-inner{flex-direction:column;align-items:center;text-align:center}
-  .hero-visual{display:none}
-  .contact-grid{grid-template-columns:1fr}
-  .footer-inner{flex-direction:column;align-items:center}
-  .social-floating{right:12px;top:auto;bottom:18px;transform:none;flex-direction:row}
+.hero-section h1 {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+}
+
+.hero-section .tagline {
+  font-size: 1.3rem;
+  margin-bottom: 30px;
+  font-weight: 500;
+}
+
+.hero-counters {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.counter-card {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  padding: 20px 30px;
+  min-width: 120px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.counter-card .count {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.counter-card .label {
+  font-size: 1rem;
+  margin-top: 5px;
+  color: #fff;
+}
+
+.btn-primary {
+  display: inline-block;
+  background: #fff;
+  color: #0096E6;
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background: #e6f0fa;
+}
+
+/* ---------------------------
+   FOOTER
+----------------------------*/
+.site-footer {
+  background: #111;
+  color: #fff;
+  padding: 25px 0;
+  text-align: center;
+  font-size: 14px;
+}
+
+.footer-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+}
+
+/* ---------------------------
+   FLOATING SOCIAL ICONS
+----------------------------*/
+.social-floating {
+  position: fixed;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 999;
+}
+
+.social-floating img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.social-floating img:hover {
+  transform: scale(1.2);
+}
+
+/* ---------------------------
+   RESPONSIVE DESIGN
+----------------------------*/
+@media (max-width: 768px) {
+  .header-inner {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .main-nav a {
+    margin: 8px;
+  }
+
+  .hero-section {
+    padding: 80px 20px 40px 20px;
+  }
+
+  .hero-counters {
+    gap: 25px;
+  }
+
+  .social-floating {
+    flex-direction: row;
+    bottom: 10px;
+    top: auto;
+    right: 50%;
+    transform: translateX(50%);
+  }
 }
