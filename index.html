@@ -6,268 +6,305 @@
   <title>Tech & Tidy Services</title>
 
   <!-- MAIN STYLES -->
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css" />
 
-  <!-- ICONS -->
-  <link rel="icon" href="Assets/Images/Logo.png">
+  <!-- FAVICON -->
+  <link rel="icon" href="Assets/Images/Logo.png" />
 
-  <!-- SCRIPT -->
+  <!-- MAIN SCRIPT (counters etc.) -->
   <script defer src="script.js"></script>
 </head>
 
 <body>
 
-<!-- ================= HEADER ================= -->
-<header class="site-header">
-  <div class="header-inner container">
+  <!-- ================= HEADER ================= -->
+  <header class="site-header">
+    <div class="container header-inner">
 
-    <!-- LOGO -->
-    <a href="index.html">
-      <img src="Assets/Images/Logo.png" class="logo" alt="Tech & Tidy Logo">
+      <!-- LOGO (medium, non-glowing: controlled in CSS) -->
+      <a href="index.html" class="logo-wrap">
+        <img src="Assets/Images/Logo.png" alt="Tech & Tidy Logo" class="logo" />
+      </a>
+
+      <!-- NAVIGATION -->
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="#services">Our Services</a>
+        <a href="about.html">About Us</a>
+        <a href="achievements.html">Achievements</a>
+        <a href="#why-us">Why Choose Us</a>
+        <a href="#reviews">Customer Reviews</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <!-- SHARE BUTTON -->
+      <button class="share-toggle" type="button" onclick="toggleShareMenu()" aria-label="Share">
+        <img src="Assets/Images/Share.png" alt="Share" />
+      </button>
+    </div>
+
+    <!-- SHARE POPUP -->
+    <div id="share-menu" class="share-menu">
+      <div class="share-menu-inner">
+        <p class="share-title">Share this page</p>
+        <a href="https://wa.me/?text=Check%20out%20Tech%20%26%20Tidy%20Services:%20" target="_blank">Share on WhatsApp</a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=" target="_blank">Share on Facebook</a>
+        <a href="https://www.instagram.com/" target="_blank">Share on Instagram</a>
+        <button type="button" onclick="copyLink()">Copy Page Link</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= HERO ================= -->
+  <section class="hero-section">
+    <div class="container hero-inner">
+      <h1>Tech & Tidy Services</h1>
+      <p class="tagline">Keeping your spaces efficient, safe, and perfectly maintained.</p>
+
+      <div class="hero-buttons">
+        <a href="#services" class="btn-primary">Our Services</a>
+        <a href="contact.html" class="btn-primary">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 1. OUR SERVICES ================= -->
+  <!-- (3 cards per row, same style family as Achievements cards) -->
+  <section id="services" class="section section-light">
+    <div class="container">
+      <h2 class="section-title">Services We Offer</h2>
+
+      <div class="cards-row services-row">
+        <div class="card-box">
+          <h3>Repair & Maintenance</h3>
+          <p>Comprehensive repair solutions for all your home and office needs.</p>
+        </div>
+        <div class="card-box">
+          <h3>Home, Office &amp; Villa Renovation</h3>
+          <p>Transform your space with expert renovation services.</p>
+        </div>
+        <div class="card-box">
+          <h3>Painting Services</h3>
+          <p>Professional painting for homes, offices, and commercial spaces.</p>
+        </div>
+        <div class="card-box">
+          <h3>Electrical &amp; Plumbing</h3>
+          <p>Skilled electrical and plumbing work to ensure smooth operation.</p>
+        </div>
+        <div class="card-box">
+          <h3>Carpentry Services</h3>
+          <p>Custom woodwork and carpentry for home or business projects.</p>
+        </div>
+        <div class="card-box">
+          <h3>Cleaning Services</h3>
+          <p>Reliable cleaning for homes, offices, and commercial properties.</p>
+        </div>
+        <div class="card-box">
+          <h3>Bathroom &amp; Kitchen Renovation</h3>
+          <p>Modern designs and expert craftsmanship for premium upgrades.</p>
+        </div>
+        <div class="card-box">
+          <h3>Pest Control</h3>
+          <p>Safe and effective pest control for a healthy living environment.</p>
+        </div>
+        <div class="card-box">
+          <h3>Packers &amp; Movers</h3>
+          <p>Hassle-free moving services for homes and businesses.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 2. ABOUT (small summary on home) ================= -->
+  <section id="about-home" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">About Us</h2>
+      <p class="about-text">
+        Tech &amp; Tidy Services provides professional maintenance, renovation, and cleaning
+        solutions for homes, offices, and villas across the UAE. Our team is committed
+        to delivering reliable, efficient, and high-quality work with attention to detail
+        and complete customer satisfaction.
+      </p>
+    </div>
+  </section>
+
+  <!-- ================= 3. ACHIEVEMENTS (YOUR ORIGINAL STYLE) ================= -->
+  <section class="section-light" id="achievements-home">
+    <div class="container">
+
+      <div class="hero-counters">
+
+        <div class="counter-card">
+          <span class="count" data-target="3">0</span>
+          <div class="label">Ongoing Projects</div>
+        </div>
+
+        <div class="counter-card">
+          <span class="count" data-target="5">0</span>
+          <div class="label">Happy Customers</div>
+        </div>
+
+        <div class="counter-card">
+          <span class="count" data-target="14">0</span>
+          <div class="label">Completed Projects</div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= 4. WHY CHOOSE US ================= -->
+  <!-- same "row of boxes" style -->
+  <section id="why-us" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">Why Choose Us?</h2>
+
+      <div class="cards-row why-row">
+        <div class="card-box">
+          <img src="Assets/Images/cost.png" alt="Cost Effective" class="why-icon" />
+          <h3>Cost-Effective Solutions</h3>
+          <p>We deliver exceptional quality without unnecessary costs.</p>
+        </div>
+
+        <div class="card-box">
+          <img src="Assets/Images/dependability.png" alt="Dependability" class="why-icon" />
+          <h3>Dependability</h3>
+          <p>Reliable, precise and professional project execution.</p>
+        </div>
+
+        <div class="card-box">
+          <img src="Assets/Images/materials.png" alt="High-Quality Materials" class="why-icon" />
+          <h3>High-Quality Materials</h3>
+          <p>Premium materials for durability and a refined finish.</p>
+        </div>
+
+        <div class="card-box">
+          <img src="Assets/Images/expertise.png" alt="Industry Expertise" class="why-icon" />
+          <h3>Industry Expertise</h3>
+          <p>Experienced team with deep technical knowledge.</p>
+        </div>
+
+        <div class="card-box">
+          <img src="Assets/Images/timely.png" alt="Timely Execution" class="why-icon" />
+          <h3>Timely Execution</h3>
+          <p>Efficient delivery with respect for your deadlines.</p>
+        </div>
+
+        <div class="card-box">
+          <img src="Assets/Images/custom.png" alt="Custom Solutions" class="why-icon" />
+          <h3>Custom Solutions</h3>
+          <p>Services tailored to your space, needs and vision.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 5. CUSTOMER REVIEWS ================= -->
+  <!-- same "cards-row" layout, 3 cards -->
+  <section id="reviews" class="section section-light">
+    <div class="container">
+      <h2 class="section-title">Customer Reviews</h2>
+
+      <div class="cards-row reviews-row">
+        <div class="card-box review-card">
+          <p class="review-text">
+            “Excellent service! The team was punctual, professional, and left everything spotless.”
+          </p>
+          <div class="review-author">— Ahmed R.</div>
+        </div>
+
+        <div class="card-box review-card">
+          <p class="review-text">
+            “Our kitchen renovation was completed beautifully and within budget.”
+          </p>
+          <div class="review-author">— Sarah M.</div>
+        </div>
+
+        <div class="card-box review-card">
+          <p class="review-text">
+            “Quick response, fair pricing, and high-quality workmanship. Highly recommended!”
+          </p>
+          <div class="review-author">— Daniel K.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+
+      <!-- small logo, same style as header; size controlled by CSS -->
+      <img src="Assets/Images/Logo.png" alt="Tech & Tidy Logo" class="footer-logo" />
+
+      <p><strong>Tech &amp; Tidy Services</strong></p>
+      <p>Dubai, United Arab Emirates</p>
+      <p>Phone: +971 58 116 0415 | Email: inquiry@techntidy.com</p>
+
+      <div class="footer-social">
+        <a href="https://www.facebook.com/share/1ETF7bs5pK" target="_blank">
+          <img src="Assets/Images/Facebook.png" alt="Facebook" />
+        </a>
+        <a href="https://wa.me/971581160415?text=Hi%20Tech%20%26%20Tidy%20Services!%20I%20would%20like%20to%20inquire%20about%20your%20technical%20services." target="_blank">
+          <img src="Assets/Images/WhatsApp.png" alt="WhatsApp" />
+        </a>
+        <a href="https://www.instagram.com/techtidyservices" target="_blank">
+          <img src="Assets/Images/Instagram.png" alt="Instagram" />
+        </a>
+      </div>
+
+      <p>© 2025 Tech &amp; Tidy Services. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ================= FLOATING SOCIAL ICONS ================= -->
+  <div class="social-floating">
+    <a href="https://wa.me/971581160415?text=Hi%20Tech%20%26%20Tidy%20Services!%20I%20would%20like%20to%20inquire%20about%20your%20technical%20services." target="_blank">
+      <img src="Assets/Images/WhatsApp.png" alt="WhatsApp" />
     </a>
-
-    <!-- NAVIGATION MENU -->
-    <nav class="main-nav">
-      <a href="index.html">Home</a>
-      <a href="#services">Our Services</a>
-      <a href="about.html">About Us</a>
-      <a href="achievements.html">Achievements</a>
-      <a href="#why">Why Choose Us</a>
-      <a href="#reviews">Customer Reviews</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-
-    <!-- SHARE ICON -->
-    <div class="share-icon" onclick="toggleShareMenu()">&#x1F517;</div>
+    <a href="https://www.facebook.com/share/1ETF7bs5pK" target="_blank">
+      <img src="Assets/Images/Facebook.png" alt="Facebook" />
+    </a>
+    <a href="https://www.instagram.com/techtidyservices" target="_blank">
+      <img src="Assets/Images/Instagram.png" alt="Instagram" />
+    </a>
   </div>
 
-  <!-- SHARE DROPDOWN -->
-  <div id="share-menu">
-    <p class="share-title">Share This Page</p>
-    <a href="https://wa.me/?text=Check%20this%20service%20provider:%20https://yourwebsite.com" target="_blank">WhatsApp</a>
-    <a href="https://www.facebook.com/sharer/sharer.php?u=https://yourwebsite.com" target="_blank">Facebook</a>
-    <a href="https://www.instagram.com" target="_blank">Instagram</a>
-    <button onclick="copyLink()">Copy Link</button>
-  </div>
-</header>
+  <!-- ================= SHARE / COPY JS ================= -->
+  <script>
+    function toggleShareMenu() {
+      const menu = document.getElementById('share-menu');
+      menu.classList.toggle('open');
+    }
 
-<!-- ================= HERO SECTION ================= -->
-<section class="hero-section">
-  <div class="container hero-inner">
+    function copyLink() {
+      const url = window.location.href;
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(url)
+          .then(() => alert('Page link copied!'))
+          .catch(() => alert('Unable to copy link.'));
+      } else {
+        // Fallback for very old browsers
+        const tempInput = document.createElement('input');
+        tempInput.value = url;
+        document.body.appendChild(tempInput);
+        tempInput.select();
+        document.execCommand('copy');
+        document.body.removeChild(tempInput);
+        alert('Page link copied!');
+      }
+    }
 
-    <h1>Tech & Tidy Services</h1>
-    <p class="tagline">Keeping your spaces efficient, safe, and perfectly maintained.</p>
-
-    <!-- BUTTONS -->
-    <div class="hero-buttons">
-      <a href="#services" class="btn-primary">Our Services</a>
-      <a href="contact.html" class="btn-primary">Contact Us</a>
-    </div>
-
-  </div>
-</section>
-
-
-<!-- ================= SERVICES SECTION ================= -->
-<section id="services" class="section">
-  <div class="container">
-    <h2 class="section-title">Services We Offer</h2>
-
-    <div class="services-grid">
-
-      <a href="services.html#repair-maintenance" class="service-box">
-        <h3>Repair & Maintenance</h3>
-        <p>Comprehensive repair solutions for all your home and office needs.</p>
-      </a>
-
-      <a href="services.html#renovation" class="service-box">
-        <h3>Home, Office & Villa Renovation</h3>
-        <p>Transform your space with expert renovation services.</p>
-      </a>
-
-      <a href="services.html#painting" class="service-box">
-        <h3>Painting Services</h3>
-        <p>Professional painting for homes, offices, and commercial spaces.</p>
-      </a>
-
-      <a href="services.html#electrical-plumbing" class="service-box">
-        <h3>Electrical & Plumbing</h3>
-        <p>Skilled electrical and plumbing work to ensure smooth operation.</p>
-      </a>
-
-      <a href="services.html#carpentry" class="service-box">
-        <h3>Carpentry Services</h3>
-        <p>Custom woodwork and carpentry for home or business projects.</p>
-      </a>
-
-      <a href="services.html#cleaning" class="service-box">
-        <h3>Cleaning Services</h3>
-        <p>Reliable cleaning for homes, offices, and commercial spaces.</p>
-      </a>
-
-      <a href="services.html#bathroom-kitchen" class="service-box">
-        <h3>Bathroom & Kitchen Renovation</h3>
-        <p>Modern designs and expert craftsmanship for premium upgrades.</p>
-      </a>
-
-      <a href="services.html#pest-control" class="service-box">
-        <h3>Pest Control</h3>
-        <p>Safe and effective pest control for healthy environments.</p>
-      </a>
-
-      <a href="services.html#packers-movers" class="service-box">
-        <h3>Packers & Movers</h3>
-        <p>Hassle-free moving services for homes and businesses.</p>
-      </a>
-
-    </div>
-  </div>
-</section>
-
-
-<!-- ================= ACHIEVEMENTS SECTION ================= -->
-<section class="section-light">
-  <div class="container">
-
-    <div class="hero-counters">
-
-      <div class="counter-card">
-        <span class="count" data-target="3">0</span>
-        <div class="label">Ongoing Projects</div>
-      </div>
-
-      <div class="counter-card">
-        <span class="count" data-target="5">0</span>
-        <div class="label">Happy Customers</div>
-      </div>
-
-      <div class="counter-card">
-        <span class="count" data-target="14">0</span>
-        <div class="label">Completed Projects</div>
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
-
-<!-- ================= WHY CHOOSE US ================= -->
-<section id="why" class="section">
-  <div class="container">
-    <h2 class="section-title">Why Choose Us?</h2>
-
-    <div class="why-grid">
-
-      <div class="why-card">
-        <img src="Assets/Images/cost.png">
-        <h3>Cost-Effective Solutions</h3>
-        <p>Exceptional quality without unnecessary costs.</p>
-      </div>
-
-      <div class="why-card">
-        <img src="Assets/Images/dependability.png">
-        <h3>Dependability</h3>
-        <p>Reliable, precise and professional in every project.</p>
-      </div>
-
-      <div class="why-card">
-        <img src="Assets/Images/materials.png">
-        <h3>High-Quality Materials</h3>
-        <p>Premium materials ensuring durability and beauty.</p>
-      </div>
-
-      <div class="why-card">
-        <img src="Assets/Images/expertise.png">
-        <h3>Industry Expertise</h3>
-        <p>Experienced team with deep technical knowledge.</p>
-      </div>
-
-      <div class="why-card">
-        <img src="Assets/Images/timely.png">
-        <h3>Timely Execution</h3>
-        <p>Efficient delivery with respect for your deadlines.</p>
-      </div>
-
-      <div class="why-card">
-        <img src="Assets/Images/custom.png">
-        <h3>Custom Solutions</h3>
-        <p>Tailored services built around your needs and vision.</p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-<!-- ================= CUSTOMER REVIEWS ================= -->
-<section id="reviews" class="section-light">
-  <div class="container">
-    <h2 class="section-title">Customer Reviews</h2>
-
-    <div class="reviews-grid">
-
-      <div class="review-card">
-        <p class="review-text">
-          “Excellent service! The team was punctual, professional, and left everything spotless.”
-        </p>
-        <div class="review-author">— Ahmed R.</div>
-      </div>
-
-      <div class="review-card">
-        <p class="review-text">
-          “Our kitchen renovation was completed beautifully and within budget.”
-        </p>
-        <div class="review-author">— Sarah M.</div>
-      </div>
-
-      <div class="review-card">
-        <p class="review-text">
-          “Quick response, fair pricing, and high-quality workmanship. Highly recommended!”
-        </p>
-        <div class="review-author">— Daniel K.</div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-<!-- ================= FOOTER ================= -->
-<footer class="site-footer">
-  <div class="footer-inner container">
-
-    <img src="Assets/Images/Logo.png" class="footer-logo" alt="footer logo">
-
-    <p><strong>Tech & Tidy Services</strong></p>
-    <p>Dubai, United Arab Emirates</p>
-    <p>+971 58 116 0415</p>
-    <p>inquiry@techntidy.com</p>
-
-    <div class="footer-social">
-      <a href="https://wa.me/+971581160415" target="_blank"><img src="Assets/Images/WhatsApp.png"></a>
-      <a href="https://facebook.com" target="_blank"><img src="Assets/Images/Facebook.png"></a>
-      <a href="https://instagram.com/techtidyservices" target="_blank"><img src="Assets/Images/Instagram.png"></a>
-    </div>
-
-    <p>© 2025 Tech & Tidy Services. All Rights Reserved.</p>
-
-  </div>
-</footer>
-
-
-<!-- FLOATING SOCIAL ICONS -->
-<div class="social-floating">
-  <a href="https://wa.me/+971581160415" target="_blank">
-    <img src="Assets/Images/WhatsApp.png">
-  </a>
-  <a href="https://facebook.com" target="_blank">
-    <img src="Assets/Images/Facebook.png">
-  </a>
-  <a href="https://instagram.com/techtidyservices" target="_blank">
-    <img src="Assets/Images/Instagram.png">
-  </a>
-</div>
+    // Optional: close share menu if user clicks outside
+    document.addEventListener('click', function (e) {
+      const menu = document.getElementById('share-menu');
+      const button = document.querySelector('.share-toggle');
+      if (!menu.contains(e.target) && !button.contains(e.target)) {
+        menu.classList.remove('open');
+      }
+    });
+  </script>
 
 </body>
 </html>
