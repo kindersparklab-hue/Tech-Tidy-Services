@@ -8,8 +8,8 @@
   <script defer src="script.js"></script>
 
   <style>
-    /* RESET */
     * { margin: 0; padding: 0; box-sizing: border-box; }
+
     body {
       font-family: 'Segoe UI', Tahoma, sans-serif;
       background: #071524;
@@ -18,9 +18,9 @@
 
     a { text-decoration: none; color: inherit; }
 
-    /* HEADER */
+    /* LIGHT HEADER */
     header.site-header {
-      background: linear-gradient(90deg, #003c78, #00a9e0);
+      background: #ffffff;    /* LIGHT COLOR */
       padding: 15px 5%;
       display: flex;
       align-items: center;
@@ -28,20 +28,22 @@
       position: sticky;
       top: 0;
       z-index: 1000;
+      border-bottom: 2px solid #e0e0e0;
     }
 
     .logo {
       height: 55px;
       width: auto;
-      filter: none !important;   /* REMOVE GLOW */
+      filter: none !important; /* No glow */
     }
 
     nav.main-nav a {
-      color: #fff;
+      color: #003c78;
       margin-left: 20px;
       font-weight: 600;
     }
-    nav.main-nav a:hover { color: #ffe600; }
+
+    nav.main-nav a:hover { color: #00a9e0; }
 
     /* HERO */
     .hero-section {
@@ -121,14 +123,14 @@
     .count {
       font-size: 2.4rem;
       font-weight: 700;
-      color: #ffcc00 !important; /* YELLOW NUMBERS */
+      color: #ffcc00 !important;
     }
 
     .label {
       margin-top: 10px;
       font-size: 1.05rem;
       font-weight: 600;
-      color: #ffcc00 !important; /* YELLOW LABELS */
+      color: #ffcc00 !important;
     }
 
     /* BUTTONS */
@@ -146,15 +148,17 @@
       border-radius: 30px;
       font-weight: 600;
     }
+
     .btn-primary:hover { background: #008ac0; }
 
-    /* FOOTER */
+    /* LIGHT FOOTER */
     footer {
-      background: #003c78;
+      background: #ffffff; /* LIGHT FOOTER */
       text-align: center;
       padding: 35px 20px;
-      color: #fff;
+      color: #003c78;
       margin-top: 50px;
+      border-top: 2px solid #e0e0e0;
     }
 
     footer img {
@@ -187,37 +191,18 @@
     <h1>Tech & Tidy Services</h1>
     <p class="tagline">Keeping your spaces efficient, safe, and perfectly maintained.</p>
 
-    <!-- SERVICES GRID -->
     <h2 class="services-title">Services We Offer</h2>
 
     <div class="services-grid">
-      <div class="service-box">Repair & Maintenance
-        <div class="service-desc">Comprehensive repair solutions for home & office.</div>
-      </div>
-      <div class="service-box">Home, Office & Villa Renovation
-        <div class="service-desc">Transform your space with expert renovation.</div>
-      </div>
-      <div class="service-box">Painting Services
-        <div class="service-desc">Interior & exterior painting solutions.</div>
-      </div>
-      <div class="service-box">Electrical & Plumbing
-        <div class="service-desc">Reliable electrical and plumbing services.</div>
-      </div>
-      <div class="service-box">Carpentry Services
-        <div class="service-desc">Custom woodwork & professional carpentry.</div>
-      </div>
-      <div class="service-box">Cleaning Services
-        <div class="service-desc">Deep cleaning for homes & offices.</div>
-      </div>
-      <div class="service-box">Bathroom & Kitchen Renovation
-        <div class="service-desc">Modern upgrades with expert craftsmanship.</div>
-      </div>
-      <div class="service-box">Pest Control
-        <div class="service-desc">Safe & effective pest management.</div>
-      </div>
-      <div class="service-box">Packers & Movers
-        <div class="service-desc">Hassle-free relocation & moving services.</div>
-      </div>
+      <div class="service-box">Repair & Maintenance<div class="service-desc">Comprehensive repair solutions.</div></div>
+      <div class="service-box">Home, Office & Villa Renovation<div class="service-desc">Complete renovation services.</div></div>
+      <div class="service-box">Painting Services<div class="service-desc">Interior & exterior painting.</div></div>
+      <div class="service-box">Electrical & Plumbing<div class="service-desc">Safe, reliable installations.</div></div>
+      <div class="service-box">Carpentry Services<div class="service-desc">Custom woodwork & repairs.</div></div>
+      <div class="service-box">Cleaning Services<div class="service-desc">Deep cleaning & sanitizing.</div></div>
+      <div class="service-box">Bathroom & Kitchen Renovation<div class="service-desc">Modern upgrades & designs.</div></div>
+      <div class="service-box">Pest Control<div class="service-desc">Safe, effective treatments.</div></div>
+      <div class="service-box">Packers & Movers<div class="service-desc">Hassle-free relocation.</div></div>
     </div>
 
     <!-- COUNTERS -->
@@ -241,7 +226,6 @@
       <a href="services.html" class="btn-primary">Our Services</a>
       <a href="contact.html" class="btn-primary">Contact Us</a>
     </div>
-
   </section>
 
   <!-- FOOTER -->
