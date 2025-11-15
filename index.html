@@ -6,342 +6,219 @@
   <title>Tech & Tidy Services</title>
   <link rel="stylesheet" href="styles.css" />
   <script defer src="script.js"></script>
-
-  <style>
-    /* RESET */
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      color: #222;
-      background-color: #f5f7fa;
-    }
-
-    a { text-decoration: none; color: inherit; }
-
-    /* HEADER */
-    header.site-header {
-      background: linear-gradient(90deg, #003c78, #00a9e0);
-      color: #fff;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-      padding: 12px 0;
-    }
-
-    .header-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      width: 90%;
-      margin: auto;
-    }
-
-    .logo {
-      height: 60px;
-      width: auto;
-    }
-
-    nav.main-nav a {
-      color: #fff;
-      font-weight: 600;
-      margin: 0 12px;
-      transition: 0.3s;
-    }
-
-    nav.main-nav a:hover { color: #ffe600; }
-
-    /* HERO */
-    .hero-section {
-      background: linear-gradient(to right, #e9f6ff, #f3fbff);
-      text-align: center;
-      padding: 80px 20px;
-    }
-
-    .hero-section h1 {
-      font-size: 2.5rem;
-      color: #003c78;
-      margin-bottom: 10px;
-    }
-
-    .tagline {
-      font-size: 1.2rem;
-      color: #444;
-      margin-bottom: 40px;
-    }
-
-    /* SERVICES GRID */
-    .services-section {
-      width: 90%;
-      margin: 50px auto;
-      text-align: center;
-    }
-
-    .services-section h2 {
-      font-size: 2rem;
-      color: #003c78;
-      margin-bottom: 20px;
-    }
-
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
-      gap: 20px;
-      margin-top: 25px;
-    }
-
-    .service-box {
-      background: #ffffff;
-      border-radius: 10px;
-      padding: 20px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      border-left: 6px solid #00a9e0;
-      transition: 0.3s;
-    }
-
-    .service-box:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 18px rgba(0,0,0,0.15);
-    }
-
-    .service-box h3 {
-      font-size: 1.3rem;
-      color: #003c78;
-      margin-bottom: 8px;
-    }
-
-    /* COUNTERS */
-    .hero-counters {
-      display: flex;
-      justify-content: center;
-      gap: 40px;
-      margin: 50px 0;
-      flex-wrap: wrap;
-    }
-
-    .counter-card {
-      background: #ffdd57;
-      padding: 20px 30px;
-      border-radius: 12px;
-      text-align: center;
-      min-width: 150px;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-    }
-
-    .count {
-      font-size: 2.2rem;
-      font-weight: bold;
-      color: #003c78;
-    }
-
-    .label {
-      margin-top: 5px;
-      font-weight: 600;
-      color: #003c78;
-    }
-
-    .btn-primary {
-      margin: 10px;
-      display: inline-block;
-      background: #00a9e0;
-      color: #fff;
-      padding: 12px 25px;
-      border-radius: 6px;
-      font-weight: 600;
-      transition: 0.3s;
-    }
-
-    .btn-primary:hover {
-      background: #008cc1;
-    }
-
-    /* WHY CHOOSE US */
-    .why-section {
-      width: 90%;
-      margin: 60px auto;
-    }
-
-    .why-section h2 {
-      text-align: center;
-      font-size: 2rem;
-      color: #003c78;
-      margin-bottom: 20px;
-    }
-
-    .why-list li {
-      background: #ffffff;
-      padding: 15px;
-      border-left: 6px solid #00a9e0;
-      border-radius: 10px;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-      margin-bottom: 12px;
-      list-style: none;
-      font-size: 1.05rem;
-    }
-
-    /* REVIEWS */
-    .review-section {
-      width: 90%;
-      margin: 60px auto;
-      text-align: center;
-    }
-
-    .review-card {
-      background: white;
-      padding: 20px;
-      border-radius: 10px;
-      margin-bottom: 15px;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-    }
-
-    /* FOOTER */
-    footer {
-      background: #003c78;
-      color: #fff;
-      text-align: center;
-      padding: 30px 10px;
-      margin-top: 60px;
-    }
-
-    footer img {
-      height: 55px;
-      margin-bottom: 10px;
-    }
-
-    /* FLOATING SOCIAL */
-    .social-floating {
-      position: fixed;
-      bottom: 25px;
-      right: 25px;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      z-index: 1500;
-    }
-
-    .social-floating a img {
-      width: 48px;
-      height: 48px;
-      border-radius: 50%;
-      background: #fff;
-      padding: 8px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-      transition: 0.3s;
-    }
-
-    .social-floating a:hover img {
-      transform: scale(1.1);
-    }
-
-    @media (max-width: 768px) {
-      .hero-counters { flex-direction: column; }
-    }
-  </style>
 </head>
 
 <body>
 
-  <!-- HEADER -->
-  <header class="site-header">
-    <div class="header-inner">
-      <img src="Assets/Images/Logo.png" class="logo" alt="Logo" />
-      <nav class="main-nav">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="achievements.html">Achievements</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </div>
-  </header>
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-inner container">
+    <img src="Assets/Images/Logo.png" class="logo" alt="Tech & Tidy Logo" />
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="achievements.html">Achievements</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
 
-  <!-- HERO -->
-  <section class="hero-section">
+<!-- HERO -->
+<section class="hero-section">
+  <div class="container">
     <h1>Tech & Tidy Services</h1>
     <p class="tagline">Keeping your spaces efficient, safe, and perfectly maintained.</p>
-  </section>
 
-  <!-- SERVICES – 3×3 GRID -->
-  <section class="services-section">
-    <h2>Services We Offer</h2>
+    <div class="hero-counters">
+      <div class="counter-card">
+        <span class="count" data-target="3">0</span>
+        <div class="label">Ongoing Projects</div>
+      </div>
+      <div class="counter-card">
+        <span class="count" data-target="5">0</span>
+        <div class="label">Happy Customers</div>
+      </div>
+      <div class="counter-card">
+        <span class="count" data-target="14">0</span>
+        <div class="label">Completed Projects</div>
+      </div>
+    </div>
 
-    <div class="services-grid">
-      <div class="service-box"><h3>Repair & Maintenance</h3><p>Comprehensive repair solutions for all your home and office needs.</p></div>
-      <div class="service-box"><h3>Home, Office & Villa Renovation</h3><p>Transform your space with expert renovation services.</p></div>
-      <div class="service-box"><h3>Painting Services</h3><p>Professional painting for homes, offices, and commercial spaces.</p></div>
-      <div class="service-box"><h3>Electrical & Plumbing</h3><p>Skilled electrical and plumbing work to ensure smooth operations.</p></div>
-      <div class="service-box"><h3>Carpentry Services</h3><p>Custom woodwork and carpentry for home or business projects.</p></div>
-      <div class="service-box"><h3>Cleaning Services</h3><p>Reliable cleaning for homes, offices, and commercial spaces.</p></div>
-      <div class="service-box"><h3>Bathroom & Kitchen Renovation</h3><p>Upgrade your bathroom and kitchen with modern designs.</p></div>
-      <div class="service-box"><h3>Pest Control</h3><p>Safe and effective pest management for a healthy environment.</p></div>
-      <div class="service-box"><h3>Packers & Movers</h3><p>Hassle-free moving services for homes and businesses.</p></div>
-    </div>
-  </section>
-
-  <!-- COUNTERS -->
-  <div class="hero-counters">
-    <div class="counter-card">
-      <span class="count" data-target="3">0</span>
-      <div class="label">Ongoing Projects</div>
-    </div>
-    <div class="counter-card">
-      <span class="count" data-target="5">0</span>
-      <div class="label">Happy Customers</div>
-    </div>
-    <div class="counter-card">
-      <span class="count" data-target="14">0</span>
-      <div class="label">Completed Projects</div>
+    <div class="button-row">
+      <a href="services.html" class="btn-primary">Our Services</a>
+      <a href="contact.html" class="btn-primary">Contact Us</a>
     </div>
   </div>
+</section>
 
-  <div style="text-align:center;">
-    <a href="services.html" class="btn-primary">Our Services</a>
-    <a href="contact.html" class="btn-primary">Contact Us</a>
+<!-- SERVICES GRID -->
+<section class="services-section">
+  <h2>Services We Offer</h2>
+
+  <div class="services-grid container">
+    <div class="service-box">
+      <h3>Repair & Maintenance</h3>
+      <p>Comprehensive repair solutions for all your home and office needs.</p>
+    </div>
+
+    <div class="service-box">
+      <h3>Home, Office & Villa Renovation</h3>
+      <p>Transform your space with expert renovation services.</p>
+    </div>
+
+    <div class="service-box">
+      <h3>Painting Services</h3>
+      <p>Professional painting for homes, offices, and commercial spaces.</p>
+    </div>
+
+    <div class="service-box">
+      <h3>Electrical & Plumbing</h3>
+      <p>Skilled electrical and plumbing work to ensure smooth operation.</p>
+    </div>
+
+    <div class="service-box">
+      <h3>Carpentry Services</h3>
+      <p>Custom woodwork and carpentry for home or business projects.</p>
+    </div>
+
+    <div class="service-box">
+      <h3>Cleaning Services</h3>
+      <p>Reliable cleaning for homes, offices, and commercial properties.</p>
+    </div>
+
+    <div class="service-box">
+      <h3>Bathroom & Kitchen Renovation</h3>
+      <p>Upgrade your kitchen or bathroom with modern designs.</p>
+    </div>
+
+    <div class="service-box">
+      <h3>Pest Control</h3>
+      <p>Safe and effective pest management for a healthy environment.</p>
+    </div>
+
+    <div class="service-box">
+      <h3>Packers & Movers</h3>
+      <p>Hassle-free moving services for homes and businesses.</p>
+    </div>
   </div>
+</section>
 
-  <!-- WHY CHOOSE US -->
-  <section class="why-section">
-    <h2>Why Choose Us?</h2>
-    <ul class="why-list">
-      <li>✔ Cost-Effective Solutions – Best value for your investment.</li>
-      <li>✔ Dependability – Reliable, professional, and on-time delivery.</li>
-      <li>✔ High-Quality Materials – Durable and premium finishes.</li>
-      <li>✔ Industry Expertise – Experienced team with proven skills.</li>
-      <li>✔ Timely Execution – Respecting your deadlines.</li>
-      <li>✔ Custom Solutions – Tailored to your needs and vision.</li>
-    </ul>
-  </section>
+<!-- ABOUT US -->
+<section class="about-section">
+  <div class="container">
+    <h2>About Us</h2>
+    <p>
+      Tech & Tidy Services delivers reliable, efficient, and high-quality maintenance,
+      renovation, and cleaning solutions across homes, offices, and villas in the UAE.
+      We combine expertise, innovation, and professionalism to ensure the best results.
+    </p>
+  </div>
+</section>
 
-  <!-- REVIEWS -->
-  <section class="review-section">
-    <h2>Customer Reviews</h2>
-    <div class="review-card">“Excellent service, very professional team!” — Ahmed</div>
-    <div class="review-card">“Quick, clean, and reliable. Highly recommended.” — Fatima</div>
-    <div class="review-card">“Transformed my villa beautifully!” — Karim</div>
-  </section>
+<!-- WHY CHOOSE US -->
+<section class="why-section">
+  <h2 class="section-title">Why Choose Us?</h2>
 
-  <!-- FOOTER -->
-  <footer>
-    <img src="Assets/Images/Logo.png" alt="Footer Logo" />
+  <div class="why-grid container">
+
+    <div class="why-card">
+      <img src="Assets/Images/cost.png" alt="Cost Effective">
+      <h3>✔ Cost-Effective Solutions</h3>
+      <p>We deliver exceptional quality without unnecessary costs.</p>
+    </div>
+
+    <div class="why-card">
+      <img src="Assets/Images/dependability.png" alt="Dependability">
+      <h3>✔ Dependability</h3>
+      <p>Reliable, precise, and professional execution every time.</p>
+    </div>
+
+    <div class="why-card">
+      <img src="Assets/Images/materials.png" alt="Materials">
+      <h3>✔ High-Quality Materials</h3>
+      <p>Premium materials ensure long-lasting results.</p>
+    </div>
+
+    <div class="why-card">
+      <img src="Assets/Images/expertise.png" alt="Expertise">
+      <h3>✔ Industry Expertise</h3>
+      <p>Years of experience delivering innovative solutions.</p>
+    </div>
+
+    <div class="why-card">
+      <img src="Assets/Images/timely.png" alt="Timely">
+      <h3>✔ Timely Execution</h3>
+      <p>We respect deadlines and deliver fast without compromising quality.</p>
+    </div>
+
+    <div class="why-card">
+      <img src="Assets/Images/custom.png" alt="Custom Solutions">
+      <h3>✔ Custom Solutions</h3>
+      <p>Tailored services designed to match your goals and needs.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- CUSTOMER REVIEWS -->
+<section class="review-section">
+  <h2>Customer Reviews</h2>
+
+  <div class="review-grid container">
+
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <p>"Very professional and fast service. Highly recommended!"</p>
+      <h4>- Ahmed K.</h4>
+    </div>
+
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <p>"Excellent quality of work. They transformed my villa beautifully."</p>
+      <h4>- Fatima S.</h4>
+    </div>
+
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <p>"Affordable, reliable and great experience from start to finish."</p>
+      <h4>- John P.</h4>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <img src="Assets/Images/Logo.png" class="footer-logo" />
     <p><strong>Tech & Tidy Services</strong></p>
     <p>Dubai, United Arab Emirates</p>
     <p>+971 58 116 0415</p>
     <p>inquiry@techntidy.com</p>
-    <p>© 2025 Tech & Tidy Services. All Rights Reserved.</p>
-  </footer>
 
-  <!-- FLOATING SOCIAL -->
-  <div class="social-floating">
-    <a href="https://wa.me/971581160415?text=Hello!%20I%20would%20like%20to%20inquire%20about%20your%20services." target="_blank">
-      <img src="Assets/Images/WhatsApp.png" alt="WhatsApp" />
-    </a>
-    <a href="https://www.facebook.com/share/1ETF7bs5pK" target="_blank">
-      <img src="Assets/Images/Facebook.png" alt="Facebook" />
-    </a>
-    <a href="https://www.instagram.com/techtidyservices" target="_blank">
-      <img src="Assets/Images/Instagram.png" alt="Instagram" />
-    </a>
+    <div class="footer-social">
+      <a href="https://wa.me/971581160415"><img src="Assets/Images/WhatsApp.png"></a>
+      <a href="https://www.facebook.com/share/1ETF7bs5pK"><img src="Assets/Images/Facebook.png"></a>
+      <a href="https://www.instagram.com/techtidyservices"><img src="Assets/Images/Instagram.png"></a>
+    </div>
+
+    <div class="footer-copy">© 2025 Tech & Tidy Services. All Rights Reserved.</div>
   </div>
+</footer>
+
+<!-- FLOATING SOCIAL ICONS -->
+<div class="social-floating">
+  <a title="Chat on WhatsApp" href="https://wa.me/971581160415?text=Hi%20Tech%20%26%20Tidy%20Services!" target="_blank">
+    <img src="Assets/Images/WhatsApp.png" alt="WhatsApp" />
+  </a>
+  <a title="Visit our Facebook" href="https://www.facebook.com/share/1ETF7bs5pK" target="_blank">
+    <img src="Assets/Images/Facebook.png" alt="Facebook" />
+  </a>
+  <a title="Visit our Instagram" href="https://www.instagram.com/techtidyservices" target="_blank">
+    <img src="Assets/Images/Instagram.png" alt="Instagram" />
+  </a>
+</div>
+
 </body>
 </html>
