@@ -506,3 +506,92 @@ img {
     transform: translateX(-50%) translateY(8px);
   }
 }
+
+/* ============================================================
+   SERVICE DETAILS PAGE (2-COLUMN ALTERNATING)
+============================================================ */
+.hero-section.small-hero {
+  padding: 50px 15px 35px;
+}
+
+.service-details-section {
+  padding: 50px 0 60px;
+}
+
+.service-details-section .container {
+  max-width: 1100px;
+}
+
+.service-row {
+  display: flex;
+  align-items: stretch;
+  gap: 25px;
+  margin-bottom: 28px;
+  padding: 24px;
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+}
+
+/* Alternate background for every second row */
+.service-row:nth-child(even) {
+  background: #e9f5ff;
+}
+
+.service-col {
+  flex: 1;
+}
+
+/* Image column */
+.service-col.image {
+  max-width: 45%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-col.image img {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 14px;
+  object-fit: cover;
+}
+
+/* Text column */
+.service-col.text h2 {
+  font-size: 1.5rem;
+  color: #0096E6;
+  margin-bottom: 10px;
+}
+
+.service-col.text h3 {
+  font-size: 1.1rem;
+  margin-top: 16px;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.service-col.text p {
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.service-col.text ul {
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+.service-col.text ul li {
+  margin-bottom: 5px;
+}
+
+/* RESPONSIVE: stack on small screens */
+@media (max-width: 900px) {
+  .service-row {
+    flex-direction: column;
+  }
+
+  .service-col.image {
+    max-width: 100%;
+  }
+}
