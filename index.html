@@ -1,94 +1,148 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Tech & Tidy Services</title>
   <link rel="stylesheet" href="styles.css">
-  <style>
-    /* Basic Hero and Slider Styles */
-    body { margin: 0; font-family: Arial, sans-serif; }
-    header { background-color: #D4AF37; color: #fff; padding: 60px 20px; text-align: center; position: relative; }
-    .hero-slider { display: flex; overflow: hidden; width: 100%; max-width: 800px; margin: 0 auto; position: relative; }
-    .slide { min-width: 100%; transition: transform 0.5s ease-in-out; }
-    .slide h2 { font-size: 2em; margin-bottom: 10px; }
-    .slide a { color: #fff; text-decoration: none; font-weight: bold; border: 2px solid #fff; padding: 8px 15px; border-radius: 5px; }
-
-    /* Counter */
-    .counter { position: absolute; bottom: 20px; right: 20px; background: rgba(0,0,0,0.5); padding: 5px 10px; border-radius: 5px; font-size: 14px; }
-
-    /* Footer */
-    .site-footer { background: #222; color: #fff; text-align: center; padding: 30px 20px; }
-    .site-footer img { max-width: 120px; margin-bottom: 15px; }
-    .site-footer p { margin: 5px 0; }
-  </style>
+  <script defer src="script.js"></script>
 </head>
 <body>
 
-  <!-- Header / Hero Section -->
-  <header>
-    <h1>Tech & Tidy Services</h1>
-    <div class="hero-slider">
-      <div class="slide">
-        <h2>Cleaning Services</h2>
-        <a href="services.html#cleaning">Explore</a>
-      </div>
-      <div class="slide">
-        <h2>Sanitization Services</h2>
-        <a href="services.html#sanitization">Explore</a>
-      </div>
-      <div class="slide">
-        <h2>Maintenance Services</h2>
-        <a href="services.html#maintenance">Explore</a>
-      </div>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <img src="Assets/Images/Logo.png" alt="Tech & Tidy Services" class="logo">
+      </a>
+
+      <nav class="main-nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="achievements.html">Achievements</a>
+        <a href="contact.html">Contact</a>
+      </nav>
     </div>
-    <div class="counter" id="slideCounter">1 / 3</div>
   </header>
 
-  <!-- Main Content -->
-  <main>
-    <section class="welcome">
-      <h2>Welcome to Tech & Tidy Services</h2>
-      <p>Providing premium cleaning and maintenance services in Dubai, UAE.</p>
-    </section>
-  </main>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="container hero-inner">
+      <div class="hero-left">
+        <h1>Tech &amp; Tidy Services</h1>
+        <p class="tagline">Keeping your spaces efficient, safe, and perfectly maintained.</p>
 
-  <!-- Footer -->
+        <div class="hero-counters">
+          <div class="counter-card">
+            <span class="count" data-target="3">0</span>
+            <div class="label">Ongoing Projects</div>
+          </div>
+          <div class="counter-card">
+            <span class="count" data-target="5">0</span>
+            <div class="label">Happy Customers</div>
+          </div>
+          <div class="counter-card">
+            <span class="count" data-target="14">0</span>
+            <div class="label">Completed Projects</div>
+          </div>
+        </div>
+
+        <div class="hero-actions">
+          <a class="btn-primary" href="services.html">Our Services</a>
+          <a class="btn-ghost" href="contact.html">Contact Us</a>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <img src="Assets/Images/Logo.png" alt="logo visual" class="hero-logo">
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES SLIDER (CARD STYLE AUTO-SLIDE) -->
+  <section class="section section-light">
+    <div class="container">
+      <h2 class="section-title">Services We Offer</h2>
+
+      <div class="slider-wrapper" id="services-slider">
+        <div class="slider-track">
+          <!-- Each card links to the relevant section on services.html -->
+          <a class="service-card" href="services.html#repair-maintenance">
+            <div class="card-icon">🛠️</div>
+            <div class="card-title">Repair & Maintenance</div>
+          </a>
+
+          <a class="service-card" href="services.html#renovation">
+            <div class="card-icon">🏗️</div>
+            <div class="card-title">Home, Office & Villa Renovation</div>
+          </a>
+
+          <a class="service-card" href="services.html#painting">
+            <div class="card-icon">🎨</div>
+            <div class="card-title">Painting Services</div>
+          </a>
+
+          <a class="service-card" href="services.html#electrical-plumbing">
+            <div class="card-icon">🔌</div>
+            <div class="card-title">Electrical & Plumbing</div>
+          </a>
+
+          <a class="service-card" href="services.html#carpentry">
+            <div class="card-icon">🪚</div>
+            <div class="card-title">Carpentry Services</div>
+          </a>
+
+          <a class="service-card" href="services.html#cleaning">
+            <div class="card-icon">🧹</div>
+            <div class="card-title">Cleaning Services</div>
+          </a>
+
+          <a class="service-card" href="services.html#bathroom-kitchen">
+            <div class="card-icon">🚿</div>
+            <div class="card-title">Bathroom & Kitchen Renovation</div>
+          </a>
+
+          <a class="service-card" href="services.html#pest-control">
+            <div class="card-icon">🐜</div>
+            <div class="card-title">Pest Control</div>
+          </a>
+
+          <a class="service-card" href="services.html#packers-movers">
+            <div class="card-icon">📦</div>
+            <div class="card-title">Packers & Movers</div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER (exact content you requested) -->
   <footer class="site-footer">
-    <img src="logo.png" alt="Tech & Tidy Services Logo">
-    <p>
-      Tech & Tidy Services<br>
-      Dubai, United Arab Emirates<br>
-      Phone: +971 58 116 0415<br>
-      inquiry@techntidy.com
-    </p>
-    <p>© 2025 Tech & Tidy Services. All Rights Reserved.</p>
+    <div class="container footer-inner">
+      <img src="Assets/Images/Logo.png" alt="Tech & Tidy Services" class="footer-logo">
+      <div class="footer-info">
+        <div class="company-name">Tech &amp; Tidy Services</div>
+        <div>Dubai, United Arab Emirates</div>
+        <div>Phone: +971 58 116 0415 | Email: <a href="mailto:inquiry@techntidy.com">inquiry@techntidy.com</a></div>
+        <div class="copyright">© 2025 Tech &amp; Tidy Services. All Rights Reserved.</div>
+      </div>
+    </div>
   </footer>
 
-  <!-- Slider Script -->
-  <script>
-    const slides = document.querySelectorAll('.slide');
-    const counter = document.getElementById('slideCounter');
-    let currentIndex = 0;
-
-    function showSlide(index) {
-      slides.forEach((slide, i) => {
-        slide.style.transform = `translateX(-${index * 100}%)`;
-      });
-      counter.textContent = `${index + 1} / ${slides.length}`;
-    }
-
-    function nextSlide() {
-      currentIndex = (currentIndex + 1) % slides.length;
-      showSlide(currentIndex);
-    }
-
-    // Auto-slide every 4 seconds
-    setInterval(nextSlide, 4000);
-
-    // Initial display
-    showSlide(currentIndex);
-  </script>
+  <!-- FLOATING SOCIALS -->
+  <div class="social-floating">
+    <a href="https://wa.me/971581160415?text=Hi%20Tech%20%26%20Tidy%20Services%20I%20would%20like%20to%20inquire" target="_blank">
+      <img src="Assets/Images/WhatsApp.png" alt="WhatsApp">
+    </a>
+    <a href="https://www.facebook.com/share/1ETF7bs5pK" target="_blank">
+      <img src="Assets/Images/Facebook.png" alt="Facebook">
+    </a>
+    <a href="https://www.instagram.com/techtidyservices" target="_blank">
+      <img src="Assets/Images/Instagram.png" alt="Instagram">
+    </a>
+  </div>
 
 </body>
 </html>
