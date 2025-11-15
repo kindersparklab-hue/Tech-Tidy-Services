@@ -5,272 +5,258 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tech & Tidy Services</title>
 
-  <!-- CSS -->
   <link rel="stylesheet" href="styles.css" />
-
-  <!-- Script -->
+  <link rel="icon" href="Assets/Images/Logo.png" />
   <script defer src="script.js"></script>
 </head>
-
 <body>
 
-<!-- ============================================================
-     HEADER
-=============================================================== -->
-<header class="site-header">
-  <div class="container header-inner">
-    
-    <!-- LOGO -->
-    <a href="index.html">
-      <img src="Assets/Images/Logo.png" alt="Tech & Tidy Logo" class="logo">
+  <!-- ================= HEADER ================= -->
+  <header class="site-header">
+    <div class="container header-inner">
+
+      <!-- Logo (click → home) -->
+      <a href="index.html" class="brand">
+        <img src="Assets/Images/Logo.png" alt="Tech & Tidy Logo" class="logo">
+      </a>
+
+      <!-- Navigation -->
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About Us</a>
+        <a href="achievements.html">Achievements</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <!-- Share button -->
+      <button class="share-toggle" type="button" onclick="toggleShare()">
+        <img src="Assets/Images/Share.png" alt="Share" class="share-icon">
+      </button>
+
+      <!-- Share popup -->
+      <div class="share-menu" id="share-menu">
+        <div class="share-header">
+          <img src="Assets/Images/Logo.png" alt="Tech & Tidy" class="share-header-icon">
+          <span>Share Tech & Tidy Services</span>
+        </div>
+        <a href="https://wa.me/971581160415?text=Hi%20Tech%20%26%20Tidy%20Services!%20I%20would%20like%20to%20inquire%20about%20your%20technical%20services."
+           target="_blank">WhatsApp</a>
+        <a href="https://www.facebook.com/profile.php?id=61580373990541" target="_blank">Facebook</a>
+        <a href="https://www.instagram.com/techtidyservices" target="_blank">Instagram</a>
+        <a href="tel:+971581160415">Call Us</a>
+        <button type="button" onclick="copyShareLink()">Copy Page Link</button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ================= HERO ================= -->
+  <section class="hero-section">
+    <div class="container hero-inner">
+      <h1 class="reveal">Tech & Tidy Services</h1>
+      <p class="tagline reveal delay-1">
+        Keeping your spaces efficient, safe, and perfectly maintained.
+      </p>
+
+      <div class="hero-buttons reveal delay-2">
+        <a href="#services" class="btn-primary">Our Services</a>
+        <a href="contact.html" class="btn-primary">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SERVICES ================= -->
+  <section id="services" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title reveal">Services We Offer</h2>
+
+      <div class="card-grid">
+
+        <a href="services.html#repair-maintenance" class="info-card reveal delay-1">
+          <h3>Repair &amp; Maintenance</h3>
+          <p>Comprehensive repair solutions for all your home and office needs.</p>
+        </a>
+
+        <a href="services.html#renovation" class="info-card reveal delay-2">
+          <h3>Home, Office &amp; Villa Renovation</h3>
+          <p>Transform your space with expert renovation services.</p>
+        </a>
+
+        <a href="services.html#painting" class="info-card reveal delay-3">
+          <h3>Painting Services</h3>
+          <p>Professional painting for homes, offices, and commercial spaces.</p>
+        </a>
+
+        <a href="services.html#electrical-plumbing" class="info-card reveal delay-4">
+          <h3>Electrical &amp; Plumbing</h3>
+          <p>Skilled electrical and plumbing work to keep systems running smoothly.</p>
+        </a>
+
+        <a href="services.html#carpentry" class="info-card reveal delay-5">
+          <h3>Carpentry Services</h3>
+          <p>Custom woodwork and carpentry for home or business projects.</p>
+        </a>
+
+        <a href="services.html#cleaning" class="info-card reveal delay-6">
+          <h3>Cleaning Services</h3>
+          <p>Reliable cleaning for homes, offices, and commercial spaces.</p>
+        </a>
+
+        <a href="services.html#bathroom-kitchen" class="info-card reveal delay-7">
+          <h3>Bathroom &amp; Kitchen Renovation</h3>
+          <p>Modern upgrades with expert craftsmanship and quality finishes.</p>
+        </a>
+
+        <a href="services.html#pest-control" class="info-card reveal delay-8">
+          <h3>Pest Control</h3>
+          <p>Safe and effective pest management for a healthy living environment.</p>
+        </a>
+
+        <a href="services.html#packers-movers" class="info-card reveal delay-9">
+          <h3>Packers &amp; Movers</h3>
+          <p>Hassle-free moving services for homes and businesses.</p>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= WHY CHOOSE US ================= -->
+  <section id="why-us" class="section section-light">
+    <div class="container">
+      <h2 class="section-title reveal">Why Choose Us?</h2>
+
+      <div class="card-grid">
+        <div class="info-card reveal delay-1">
+          <img src="Assets/Images/Cost.png" alt="Cost Effective" class="why-icon">
+          <h3>Cost-Effective Solutions</h3>
+          <p>We deliver exceptional quality without unnecessary costs.</p>
+        </div>
+
+        <div class="info-card reveal delay-2">
+          <img src="Assets/Images/Dependable.png" alt="Dependable" class="why-icon">
+          <h3>Dependability</h3>
+          <p>Reliable, precise and professional project execution.</p>
+        </div>
+
+        <div class="info-card reveal delay-3">
+          <img src="Assets/Images/Quality.png" alt="Quality Materials" class="why-icon">
+          <h3>High-Quality Materials</h3>
+          <p>Premium materials that ensure durability and a refined finish.</p>
+        </div>
+
+        <div class="info-card reveal delay-4">
+          <img src="Assets/Images/Expert.png" alt="Industry Expertise" class="why-icon">
+          <h3>Industry Expertise</h3>
+          <p>Experienced team with deep technical knowledge.</p>
+        </div>
+
+        <div class="info-card reveal delay-5">
+          <img src="Assets/Images/Time.png" alt="Timely Execution" class="why-icon">
+          <h3>Timely Execution</h3>
+          <p>We respect your deadlines and complete projects efficiently.</p>
+        </div>
+
+        <div class="info-card reveal delay-6">
+          <img src="Assets/Images/Custom.png" alt="Custom Solutions" class="why-icon">
+          <h3>Custom Solutions</h3>
+          <p>Services tailored to your space, needs, and vision.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CUSTOMER REVIEWS ================= -->
+  <section id="reviews" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title reveal">Customer Reviews</h2>
+
+      <div class="card-grid">
+        <div class="info-card review-card reveal delay-1">
+          <p>“Excellent service! The team was punctual, professional, and left everything spotless.”</p>
+          <p class="review-name">— Ahmed R.</p>
+        </div>
+
+        <div class="info-card review-card reveal delay-2">
+          <p>“Our kitchen renovation was completed beautifully and within budget.”</p>
+          <p class="review-name">— Sarah M.</p>
+        </div>
+
+        <div class="info-card review-card reveal delay-3">
+          <p>“Quick response, fair pricing, and high-quality workmanship. Highly recommended!”</p>
+          <p class="review-name">— Daniel K.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ACHIEVEMENTS / COUNTERS ================= -->
+  <section id="achievements-home" class="section section-light">
+    <div class="container">
+      <div class="hero-counters">
+
+        <div class="counter-card reveal delay-1">
+          <span class="count" data-target="3">0</span>
+          <div class="label">Ongoing Projects</div>
+        </div>
+
+        <div class="counter-card reveal delay-2">
+          <span class="count" data-target="5">0</span>
+          <div class="label">Happy Customers</div>
+        </div>
+
+        <div class="counter-card reveal delay-3">
+          <span class="count" data-target="14">0</span>
+          <div class="label">Completed Projects</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <img src="Assets/Images/Logo.png" alt="Tech & Tidy Logo" class="footer-logo reveal">
+
+      <p><strong>Tech &amp; Tidy Services</strong></p>
+      <p>Dubai, United Arab Emirates</p>
+      <p>Phone: +971 58 116 0415 | Email: inquiry@techntidy.com</p>
+
+      <div class="footer-social">
+        <a href="https://wa.me/971581160415?text=Hi%20Tech%20%26%20Tidy%20Services!%20I%20would%20like%20to%20inquire%20about%20your%20technical%20services."
+           target="_blank">
+          <img src="Assets/Images/WhatsApp.png" alt="WhatsApp">
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=61580373990541" target="_blank">
+          <img src="Assets/Images/Facebook.png" alt="Facebook">
+        </a>
+        <a href="https://www.instagram.com/techtidyservices" target="_blank">
+          <img src="Assets/Images/Instagram.png" alt="Instagram">
+        </a>
+      </div>
+
+      <p class="footer-copy">© 2025 Tech &amp; Tidy Services. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ================= FLOATING ICONS (RIGHT SIDE) ================= -->
+  <div class="social-floating">
+    <a href="tel:+971581160415" title="Call Us">
+      <img src="Assets/Images/Call.png" alt="Call">
     </a>
-
-    <!-- NAV -->
-    <nav class="main-nav">
-      <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
-      <a href="about.html">About Us</a>
-      <a href="achievements.html">Achievements</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-
-    <!-- SHARE BUTTON -->
-    <button class="share-toggle" onclick="toggleShare()">
-      <img src="Assets/Images/Share.png" alt="Share" class="share-icon">
-    </button>
-
-    <!-- SHARE POPUP -->
-    <div class="share-menu">
-      <div class="share-header">
-        <img src="Assets/Images/Share.png" class="share-header-icon">
-        Share This Page
-      </div>
-
-      <a href="https://wa.me/+971581160415" target="_blank">WhatsApp</a>
-      <a href="https://www.facebook.com/share/1ETF7bs5pK" target="_blank">Facebook</a>
-      <a href="https://www.instagram.com/techtidyservices" target="_blank">Instagram</a>
-      <button onclick="navigator.clipboard.writeText(window.location.href)">Copy Link</button>
-    </div>
-
+    <a href="https://wa.me/971581160415?text=Hi%20Tech%20%26%20Tidy%20Services!%20I%20would%20like%20to%20inquire%20about%20your%20technical%20services."
+       target="_blank" title="Chat on WhatsApp">
+      <img src="Assets/Images/WhatsApp.png" alt="WhatsApp">
+    </a>
+    <a href="https://www.facebook.com/profile.php?id=61580373990541" target="_blank" title="Our Facebook">
+      <img src="Assets/Images/Facebook.png" alt="Facebook">
+    </a>
+    <a href="https://www.instagram.com/techtidyservices" target="_blank" title="Our Instagram">
+      <img src="Assets/Images/Instagram.png" alt="Instagram">
+    </a>
   </div>
-</header>
-
-
-<!-- ============================================================
-     HERO SECTION
-=============================================================== -->
-<section class="hero-section">
-  <div class="container">
-    <h1 class="reveal">Tech & Tidy Services</h1>
-    <p class="tagline reveal delay-1">Keeping your spaces efficient, safe, and perfectly maintained.</p>
-
-    <div class="hero-buttons reveal delay-2">
-      <a href="services.html" class="btn-primary">Our Services</a>
-      <a href="contact.html" class="btn-primary">Contact Us</a>
-    </div>
-  </div>
-</section>
-
-
-<!-- ============================================================
-     SERVICES SECTION
-=============================================================== -->
-<section class="section">
-  <div class="container">
-
-    <h2 class="section-title reveal">Services We Offer</h2>
-
-    <div class="card-grid">
-      
-      <div class="info-card reveal delay-1" onclick="location.href='services.html'">
-        <h3>Repair & Maintenance</h3>
-        <p>Complete repair solutions for home & office.</p>
-      </div>
-
-      <div class="info-card reveal delay-2" onclick="location.href='services.html'">
-        <h3>Home, Office & Villa Renovation</h3>
-        <p>Transform your space with modern renovation.</p>
-      </div>
-
-      <div class="info-card reveal delay-3" onclick="location.href='services.html'">
-        <h3>Painting Services</h3>
-        <p>Premium interior & exterior painting.</p>
-      </div>
-
-      <div class="info-card reveal delay-4" onclick="location.href='services.html'">
-        <h3>Electrical & Plumbing</h3>
-        <p>Professional and safe technical work.</p>
-      </div>
-
-      <div class="info-card reveal delay-5" onclick="location.href='services.html'">
-        <h3>Carpentry Services</h3>
-        <p>Custom woodwork & furniture solutions.</p>
-      </div>
-
-      <div class="info-card reveal delay-6" onclick="location.href='services.html'">
-        <h3>Cleaning Services</h3>
-        <p>Reliable and deep cleaning service.</p>
-      </div>
-
-      <div class="info-card reveal delay-7" onclick="location.href='services.html'">
-        <h3>Bathroom & Kitchen Renovation</h3>
-        <p>Upgrade with modern designs & fittings.</p>
-      </div>
-
-      <div class="info-card reveal delay-8" onclick="location.href='services.html'">
-        <h3>Pest Control</h3>
-        <p>Safe and effective pest management.</p>
-      </div>
-
-      <div class="info-card reveal delay-9" onclick="location.href='services.html'">
-        <h3>Packers & Movers</h3>
-        <p>Hassle-free relocation for homes & offices.</p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-<!-- ============================================================
-     WHY CHOOSE US
-=============================================================== -->
-<section class="section-alt">
-  <div class="container">
-
-    <h2 class="section-title reveal">Why Choose Us?</h2>
-
-    <div class="card-grid">
-
-      <div class="info-card reveal delay-1">
-        <img src="Assets/Images/Cost.png" class="why-icon">
-        <h3>Cost-Effective Solutions</h3>
-        <p>Exceptional quality without unnecessary costs.</p>
-      </div>
-
-      <div class="info-card reveal delay-2">
-        <img src="Assets/Images/Dependable.png" class="why-icon">
-        <h3>Dependable Service</h3>
-        <p>We complete every project with precision.</p>
-      </div>
-
-      <div class="info-card reveal delay-3">
-        <img src="Assets/Images/Quality.png" class="why-icon">
-        <h3>High-Quality Materials</h3>
-        <p>Premium materials for long-lasting durability.</p>
-      </div>
-
-      <div class="info-card reveal delay-4">
-        <img src="Assets/Images/Expert.png" class="why-icon">
-        <h3>Industry Expertise</h3>
-        <p>Experienced team delivering reliable results.</p>
-      </div>
-
-      <div class="info-card reveal delay-5">
-        <img src="Assets/Images/Time.png" class="why-icon">
-        <h3>Timely Execution</h3>
-        <p>Fast and efficient project completion.</p>
-      </div>
-
-      <div class="info-card reveal delay-6">
-        <img src="Assets/Images/Custom.png" class="why-icon">
-        <h3>Custom Solutions</h3>
-        <p>Tailored services to match your vision.</p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-<!-- ============================================================
-     CUSTOMER REVIEWS
-=============================================================== -->
-<section class="section">
-  <div class="container">
-
-    <h2 class="section-title reveal">Customer Reviews</h2>
-
-    <div class="card-grid">
-
-      <div class="info-card review-card reveal delay-1">
-        <p>"Amazing service! Quick, reliable and professional."</p>
-        <div class="review-name">— Ahmed S.</div>
-      </div>
-
-      <div class="info-card review-card reveal delay-2">
-        <p>"Best renovation work I've ever had done."</p>
-        <div class="review-name">— Maria G.</div>
-      </div>
-
-      <div class="info-card review-card reveal delay-3">
-        <p>"Highly recommend Tech & Tidy Services!"</p>
-        <div class="review-name">— John P.</div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-<!-- ============================================================
-     ACHIEVEMENTS
-=============================================================== -->
-<section class="section-light">
-  <div class="container">
-
-    <div class="hero-counters">
-
-      <div class="counter-card reveal delay-1">
-        <span class="count" data-target="3">0</span>
-        <div class="label">Ongoing Projects</div>
-      </div>
-
-      <div class="counter-card reveal delay-2">
-        <span class="count" data-target="5">0</span>
-        <div class="label">Happy Customers</div>
-      </div>
-
-      <div class="counter-card reveal delay-3">
-        <span class="count" data-target="14">0</span>
-        <div class="label">Completed Projects</div>
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
-
-<!-- ============================================================
-     FOOTER
-=============================================================== -->
-<footer class="site-footer">
-  <img src="Assets/Images/Logo.png" class="footer-logo reveal">
-
-  <p>Tech & Tidy Services</p>
-  <p>Dubai, United Arab Emirates</p>
-  <p>+971 58 116 0415</p>
-  <p>inquiry@techntidy.com</p>
-
-  <div class="footer-social">
-    <a href="https://wa.me/+971581160415"><img src="Assets/Images/WhatsApp.png"></a>
-    <a href="https://www.facebook.com/share/1ETF7bs5pK"><img src="Assets/Images/Facebook.png"></a>
-    <a href="https://www.instagram.com/techtidyservices"><img src="Assets/Images/Instagram.png"></a>
-  </div>
-
-  <p class="footer-copy">© 2025 Tech & Tidy Services. All Rights Reserved.</p>
-</footer>
-
-
-<!-- ============================================================
-     FLOATING SOCIAL ICONS
-=============================================================== -->
-<div class="social-floating">
-  <a href="https://wa.me/+971581160415"><img src="Assets/Images/WhatsApp.png"></a>
-  <a href="https://www.facebook.com/share/1ETF7bs5pK"><img src="Assets/Images/Facebook.png"></a>
-  <a href="https://www.instagram.com/techtidyservices"><img src="Assets/Images/Instagram.png"></a>
-</div>
 
 </body>
 </html>
