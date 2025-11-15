@@ -1,6 +1,4 @@
-/* =========================================================
-   GLOBAL RESET
-========================================================= */
+/* ================= GLOBAL RESET ================= */
 * {
   margin: 0;
   padding: 0;
@@ -21,78 +19,76 @@ a {
 
 .container {
   width: 90%;
-  max-width: 1250px;
-  margin: auto;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-
-/* =========================================================
-   HEADER
-========================================================= */
+/* ================= HEADER ================= */
 .site-header {
   width: 100%;
   background: linear-gradient(90deg, #0096E6, #42b9ff);
-  padding: 13px 0;
-  display: flex;
-  justify-content: center;
+  padding: 12px 0;
   position: sticky;
   top: 0;
-  z-index: 999;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
 }
 
 .header-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
 }
 
 .logo {
-  width: 115px;
+  width: 120px;
   height: auto;
   object-fit: contain;
 }
 
-/* NAV LINKS */
+/* Nav */
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
 .main-nav a {
   color: #fff;
   font-weight: 600;
-  margin-left: 22px;
-  font-size: 1rem;
+  font-size: 0.95rem;
 }
 
 .main-nav a:hover {
-  opacity: 0.7;
+  opacity: 0.8;
 }
 
-/* SHARE BUTTON */
+/* Share button */
 .share-toggle {
   background: none;
   border: none;
   cursor: pointer;
-  margin-left: 15px;
+  margin-left: 12px;
 }
 
 .share-icon {
-  width: 30px;
-  height: 30px;
-  opacity: 0.9;
+  width: 26px;
+  height: 26px;
 }
 
-.share-icon:hover {
-  opacity: 1;
-}
-
-/* SHARE MENU POPUP */
+/* Share menu */
 .share-menu {
   position: absolute;
-  right: 5%;
-  top: 75px;
+  top: 52px;
+  right: 0;
+  width: 220px;
   background: #fff;
-  width: 210px;
-  padding: 12px;
   border-radius: 10px;
-  box-shadow: 0 4px 18px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 18px rgba(0,0,0,0.18);
+  padding: 12px 12px 10px;
   display: none;
+  z-index: 1200;
 }
 
 .share-menu.open {
@@ -103,42 +99,43 @@ a {
   display: flex;
   align-items: center;
   gap: 8px;
-  margin-bottom: 6px;
-  font-weight: bold;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #003d78;
 }
 
 .share-header-icon {
-  width: 20px;
-  height: 20px;
+  width: 22px;
+  height: 22px;
 }
 
-.share-menu a, .share-menu button {
+/* share menu links/buttons */
+.share-menu a,
+.share-menu button {
   display: block;
-  padding: 8px 0;
-  color: #0096E6;
-  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 7px 8px;
+  border-radius: 6px;
   border: none;
-  background: none;
-  width: 100%;
-  text-align: left;
+  background: #eaf7ff;
+  color: #007ac5;
+  margin-bottom: 5px;
   cursor: pointer;
+  text-align: left;
 }
 
 .share-menu a:hover,
 .share-menu button:hover {
-  opacity: 0.6;
+  background: #d5efff;
 }
 
-
-
-/* =========================================================
-   HERO SECTION
-========================================================= */
+/* ================= HERO ================= */
 .hero-section {
   background: linear-gradient(135deg, #0096E6 0%, #42b9ff 100%);
   color: #fff;
   text-align: center;
-  padding: 80px 0 60px;
+  padding: 80px 20px 60px;
 }
 
 .hero-section h1 {
@@ -147,283 +144,202 @@ a {
 }
 
 .tagline {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin-bottom: 25px;
 }
 
 .hero-buttons {
-  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
 }
 
 .btn-primary {
   display: inline-block;
   background: #fff;
   color: #0096E6;
-  padding: 12px 25px;
-  margin: 0 8px;
+  padding: 12px 24px;
   border-radius: 30px;
-  font-weight: bold;
-  transition: 0.3s;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .btn-primary:hover {
   background: #eef7ff;
+  transform: translateY(-1px);
 }
 
+/* ================= SECTIONS ================= */
+.section {
+  padding: 70px 20px;
+}
 
+.section-alt {
+  padding: 70px 20px;
+  background: #ffffff;
+}
 
-/* =========================================================
-   ACHIEVEMENTS SECTION
-========================================================= */
 .section-light {
-  padding: 60px 0;
-  background: #f7f9fc;
+  padding: 70px 20px;
+  background: #f5f7fc;
 }
 
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  color: #0096E6;
+  margin-bottom: 35px;
+}
+
+/* ================= CARD GRID (Services / Why / Reviews) ================= */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.info-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 22px 18px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.14);
+}
+
+.info-card h3 {
+  font-size: 1.2rem;
+  color: #0096E6;
+  margin-bottom: 8px;
+}
+
+.info-card p {
+  font-size: 0.95rem;
+  color: #444;
+}
+
+/* Why icons */
+.why-icon {
+  width: 52px;
+  height: 52px;
+  margin-bottom: 10px;
+}
+
+/* Reviews */
+.review-name {
+  margin-top: 10px;
+  font-weight: 700;
+  color: #0078c5;
+  font-size: 0.95rem;
+}
+
+/* ================= ACHIEVEMENTS COUNTERS ================= */
 .hero-counters {
   display: flex;
   justify-content: center;
-  gap: 30px;
+  gap: 26px;
   flex-wrap: wrap;
 }
 
 .counter-card {
   background: #fff;
-  padding: 22px 35px;
+  padding: 22px 26px;
   border-radius: 12px;
-  text-align: center;
   min-width: 160px;
+  text-align: center;
   box-shadow: 0 3px 10px rgba(0,0,0,0.08);
 }
 
 .counter-card .count {
+  font-size: 2.1rem;
+  font-weight: 700;
   color: #0096E6;
-  font-size: 2.2rem;
-  font-weight: bold;
 }
 
 .counter-card .label {
-  margin-top: 6px;
-  color: #333;
-  font-weight: 600;
-}
-
-
-
-/* =========================================================
-   SECTIONS (SERVICES / WHY US / REVIEWS)
-========================================================= */
-.section {
-  padding: 70px 0;
-}
-
-.section-alt {
-  padding: 70px 0;
-  background: #ffffff;
-}
-
-.section-title {
-  text-align: center;
-  font-size: 2.1rem;
-  color: #0096E6;
-  margin-bottom: 35px;
-}
-
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-  gap: 25px;
-}
-
-.info-card {
-  background: #fff;
-  padding: 28px 20px;
-  border-radius: 15px;
-  text-align: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  transition: 0.3s;
-  cursor: pointer;
-}
-
-.info-card:hover {
-  transform: translateY(-5px);
-}
-
-.info-card h3 {
-  font-size: 1.25rem;
-  color: #0096E6;
-  margin-bottom: 10px;
-}
-
-.info-card p {
-  color: #444;
-  font-size: 0.95rem;
   margin-top: 5px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #333;
 }
 
-.why-icon {
-  width: 55px;
-  height: 55px;
-  margin-bottom: 12px;
-}
-
-.review-name {
-  margin-top: 10px;
-  font-weight: bold;
-  color: #222;
-}
-
-
-
-/* =========================================================
-   FOOTER
-========================================================= */
+/* ================= FOOTER ================= */
 .site-footer {
   background: #111;
   color: #fff;
-  padding: 40px 0;
   text-align: center;
+  padding: 36px 20px 30px;
+}
+
+.footer-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
 }
 
 .footer-logo {
   width: 110px;
-  margin-bottom: 10px;
+  height: auto;
+  margin-bottom: 8px;
+}
+
+.footer-social {
+  display: flex;
+  gap: 12px;
+  margin: 10px 0;
 }
 
 .footer-social img {
-  width: 38px;
-  margin: 10px;
-  cursor: pointer;
-  transition: 0.2s;
-}
-
-.footer-social img:hover {
-  transform: scale(1.15);
+  width: 32px;
+  height: 32px;
 }
 
 .footer-copy {
-  margin-top: 15px;
+  margin-top: 8px;
   font-size: 0.9rem;
+  opacity: 0.9;
 }
 
-
-
-/* =========================================================
-   FLOATING SOCIAL ICONS
-========================================================= */
+/* ================= FLOATING SOCIAL ICONS ================= */
 .social-floating {
   position: fixed;
-  right: 18px;
+  right: 16px;
   top: 50%;
   transform: translateY(-50%);
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  z-index: 999;
+  gap: 10px;
+  z-index: 1100;
 }
 
 .social-floating img {
-  width: 46px;
-  height: 46px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   background: #fff;
-  padding: 7px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
-  transition: 0.3s;
+  padding: 6px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .social-floating img:hover {
-  transform: scale(1.2);
+  transform: scale(1.08);
+  box-shadow: 0 5px 14px rgba(0,0,0,0.32);
 }
 
-
-
-/* =========================================================
-   ANIMATIONS
-========================================================= */
-
-/* Smooth fade + slide from bottom */
-@keyframes fadeUp {
-  0% { opacity: 0; transform: translateY(25px); }
-  100% { opacity: 1; transform: translateY(0); }
-}
-
-/* Smooth fade + slide from top (header) */
-@keyframes slideDown {
-  0% { opacity: 0; transform: translateY(-20px); }
-  100% { opacity: 1; transform: translateY(0); }
-}
-
-/* Smooth fade + scale */
-@keyframes scaleIn {
-  0% { opacity: 0; transform: scale(0.85); }
-  100% { opacity: 1; transform: scale(1); }
-}
-
-/* Slide left for reviews */
-@keyframes slideLeft {
-  0% { opacity: 0; transform: translateX(40px); }
-  100% { opacity: 1; transform: translateX(0); }
-}
-
-/* Floating icon bounce */
-@keyframes bounceHover {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-6px); }
-}
-
-
-
-/* =========================================================
-   APPLY ANIMATIONS
-========================================================= */
-.site-header {
-  animation: slideDown 0.7s ease-out;
-}
-
-.info-card {
-  opacity: 0;
-  animation: fadeUp 0.85s ease forwards;
-}
-.info-card:nth-child(1) { animation-delay: 0.1s; }
-.info-card:nth-child(2) { animation-delay: 0.2s; }
-.info-card:nth-child(3) { animation-delay: 0.3s; }
-.info-card:nth-child(4) { animation-delay: 0.4s; }
-.info-card:nth-child(5) { animation-delay: 0.5s; }
-.info-card:nth-child(6) { animation-delay: 0.6s; }
-.info-card:nth-child(7) { animation-delay: 0.7s; }
-.info-card:nth-child(8) { animation-delay: 0.8s; }
-.info-card:nth-child(9) { animation-delay: 0.9s; }
-
-.why-icon {
-  opacity: 0;
-  animation: scaleIn 0.9s ease forwards;
-}
-
-.review-card {
-  opacity: 0;
-  animation: slideLeft 0.9s ease forwards;
-}
-.review-card:nth-child(2) { animation-delay: 0.2s; }
-.review-card:nth-child(3) { animation-delay: 0.3s; }
-
-.share-menu {
-  animation: fadeUp 0.4s ease;
-}
-
-.social-floating img:hover {
-  animation: bounceHover 0.8s ease infinite;
-}
-
-
-
-/* =========================================================
-   SCROLL REVEAL ENGINE
-========================================================= */
+/* ================= SCROLL REVEAL ================= */
 .reveal {
   opacity: 0;
-  transform: translateY(30px);
-  transition: 0.9s ease;
+  transform: translateY(25px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
 }
 
 .reveal.revealed {
@@ -431,70 +347,74 @@ a {
   transform: translateY(0);
 }
 
-/* Delay helpers */
-.delay-1 { transition-delay: 0.2s; }
-.delay-2 { transition-delay: 0.4s; }
-.delay-3 { transition-delay: 0.6s; }
-.delay-4 { transition-delay: 0.8s; }
-.delay-5 { transition-delay: 1s; }
-.delay-6 { transition-delay: 1.2s; }
-.delay-7 { transition-delay: 1.4s; }
-.delay-8 { transition-delay: 1.6s; }
-.delay-9 { transition-delay: 1.8s; }
+.delay-1 { transition-delay: 0.15s; }
+.delay-2 { transition-delay: 0.3s; }
+.delay-3 { transition-delay: 0.45s; }
+.delay-4 { transition-delay: 0.6s; }
+.delay-5 { transition-delay: 0.75s; }
+.delay-6 { transition-delay: 0.9s; }
+.delay-7 { transition-delay: 1.05s; }
+.delay-8 { transition-delay: 1.2s; }
+.delay-9 { transition-delay: 1.35s; }
 
-
-
-/* =========================================================
-   RESPONSIVE DESIGN
-========================================================= */
-@media (max-width: 850px) {
-  
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
   .header-inner {
     flex-wrap: wrap;
     gap: 10px;
-    justify-content: center;
   }
 
   .main-nav {
-    order: 3;
-    width: 100%;
-    text-align: center;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .main-nav a {
-    margin: 10px 12px;
-    display: inline-block;
+    margin: 4px 8px;
+  }
+
+  .hero-section {
+    padding: 60px 15px 45px;
   }
 
   .hero-section h1 {
-    font-size: 2rem;
+    font-size: 2.2rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
   }
 
   .hero-buttons .btn-primary {
-    display: block;
-    margin: 10px auto;
-    width: 70%;
+    width: 65%;
+    max-width: 260px;
   }
 
   .social-floating {
-    top: auto;
-    bottom: 20px;
-    right: 50%;
-    transform: translateX(50%);
-    flex-direction: row;
-  }
-
-  .hero-counters {
-    gap: 20px;
+    right: 10px;
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
+  .logo {
+    width: 100px;
+  }
+
   .info-card {
-    padding: 20px;
+    padding: 18px 16px;
   }
 
   .why-icon {
-    width: 48px;
+    width: 46px;
+    height: 46px;
+  }
+
+  .social-floating {
+    bottom: 14px;
+    top: auto;
+    transform: translateX(0);
+    right: 50%;
+    flex-direction: row;
+    transform: translateX(50%);
   }
 }
