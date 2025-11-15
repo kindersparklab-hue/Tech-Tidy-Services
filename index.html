@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Tech & Tidy Services</title>
   <link rel="stylesheet" href="styles.css">
-  <script defer src="script.js"></script>
+  <link rel="icon" href="Assets/Images/Logo.png">
+  <script src="script.js" defer></script>
 </head>
 <body>
 
@@ -15,7 +16,6 @@
       <a href="index.html" class="brand">
         <img src="Assets/Images/Logo.png" alt="Tech & Tidy Services" class="logo">
       </a>
-
       <nav class="main-nav">
         <a href="index.html" class="active">Home</a>
         <a href="about.html">About</a>
@@ -27,113 +27,99 @@
   </header>
 
   <!-- HERO -->
-  <section class="hero">
-    <div class="hero-overlay"></div>
-    <div class="container hero-inner">
-      <div class="hero-left">
-        <h1>Tech &amp; Tidy Services</h1>
-        <p class="tagline">Keeping your spaces efficient, safe, and perfectly maintained.</p>
-
-        <div class="hero-counters">
-          <div class="counter-card">
-            <span class="count" data-target="3">0</span>
-            <div class="label">Ongoing Projects</div>
-          </div>
-          <div class="counter-card">
-            <span class="count" data-target="5">0</span>
-            <div class="label">Happy Customers</div>
-          </div>
-          <div class="counter-card">
-            <span class="count" data-target="14">0</span>
-            <div class="label">Completed Projects</div>
-          </div>
-        </div>
-
-        <div class="hero-actions">
-          <a class="btn-primary" href="services.html">Our Services</a>
-          <a class="btn-ghost" href="contact.html">Contact Us</a>
-        </div>
-      </div>
-
-      <div class="hero-right">
-        <img src="Assets/Images/Logo.png" alt="logo visual" class="hero-logo">
-      </div>
+  <section class="hero-section">
+    <div class="container hero-content">
+      <h1>Tech &amp; Tidy Services</h1>
+      <p class="tagline">Keeping your spaces efficient, safe, and perfectly maintained.</p>
     </div>
   </section>
 
-  <!-- SERVICES SLIDER (CARD STYLE AUTO-SLIDE) -->
-  <section class="section section-light">
+  <!-- SERVICES WE OFFER – HORIZONTAL SLIDING BOXES -->
+  <section class="services-slider">
     <div class="container">
-      <h2 class="section-title">Services We Offer</h2>
+      <h2>Services We Offer</h2>
 
-      <div class="slider-wrapper" id="services-slider">
-        <div class="slider-track">
-          <!-- Each card links to the relevant section on services.html -->
-          <a class="service-card" href="services.html#repair-maintenance">
-            <div class="card-icon">🛠️</div>
-            <div class="card-title">Repair & Maintenance</div>
-          </a>
+      <div class="slider-row">
 
-          <a class="service-card" href="services.html#renovation">
-            <div class="card-icon">🏗️</div>
-            <div class="card-title">Home, Office & Villa Renovation</div>
-          </a>
+        <a class="service-box" href="services.html#repair-maintenance">
+          <h3>Repair &amp; Maintenance</h3>
+        </a>
 
-          <a class="service-card" href="services.html#painting">
-            <div class="card-icon">🎨</div>
-            <div class="card-title">Painting Services</div>
-          </a>
+        <a class="service-box" href="services.html#renovation">
+          <h3>Home, Office &amp; Villa Renovation</h3>
+        </a>
 
-          <a class="service-card" href="services.html#electrical-plumbing">
-            <div class="card-icon">🔌</div>
-            <div class="card-title">Electrical & Plumbing</div>
-          </a>
+        <a class="service-box" href="services.html#painting">
+          <h3>Painting Services</h3>
+        </a>
 
-          <a class="service-card" href="services.html#carpentry">
-            <div class="card-icon">🪚</div>
-            <div class="card-title">Carpentry Services</div>
-          </a>
+        <a class="service-box" href="services.html#electrical-plumbing">
+          <h3>Electrical &amp; Plumbing</h3>
+        </a>
 
-          <a class="service-card" href="services.html#cleaning">
-            <div class="card-icon">🧹</div>
-            <div class="card-title">Cleaning Services</div>
-          </a>
+        <a class="service-box" href="services.html#carpentry">
+          <h3>Carpentry Services</h3>
+        </a>
 
-          <a class="service-card" href="services.html#bathroom-kitchen">
-            <div class="card-icon">🚿</div>
-            <div class="card-title">Bathroom & Kitchen Renovation</div>
-          </a>
+        <a class="service-box" href="services.html#cleaning">
+          <h3>Cleaning Services</h3>
+        </a>
 
-          <a class="service-card" href="services.html#pest-control">
-            <div class="card-icon">🐜</div>
-            <div class="card-title">Pest Control</div>
-          </a>
+        <a class="service-box" href="services.html#bathroom-kitchen">
+          <h3>Bathroom &amp; Kitchen Renovation</h3>
+        </a>
 
-          <a class="service-card" href="services.html#packers-movers">
-            <div class="card-icon">📦</div>
-            <div class="card-title">Packers & Movers</div>
-          </a>
-        </div>
+        <a class="service-box" href="services.html#pest-control">
+          <h3>Pest Control</h3>
+        </a>
+
+        <a class="service-box" href="services.html#packers-movers">
+          <h3>Packers &amp; Movers</h3>
+        </a>
+
       </div>
     </div>
   </section>
 
-  <!-- FOOTER (exact content you requested) -->
+  <!-- COUNTERS AT BOTTOM -->
+  <section class="counters-section">
+    <div class="counter-box">
+      <span class="count" data-target="3">0</span>
+      <p>Ongoing Projects</p>
+    </div>
+    <div class="counter-box">
+      <span class="count" data-target="5">0</span>
+      <p>Happy Customers</p>
+    </div>
+    <div class="counter-box">
+      <span class="count" data-target="14">0</span>
+      <p>Completed Projects</p>
+    </div>
+  </section>
+
+  <!-- CTA BUTTONS UNDER COUNTERS -->
+  <div class="cta-links">
+    <a href="services.html" class="btn-primary">Our Services</a>
+    <a href="contact.html" class="btn-secondary">Contact Us</a>
+  </div>
+
+  <!-- FOOTER -->
   <footer class="site-footer">
     <div class="container footer-inner">
       <img src="Assets/Images/Logo.png" alt="Tech & Tidy Services" class="footer-logo">
-      <div class="footer-info">
-        <div class="company-name">Tech &amp; Tidy Services</div>
-        <div>Dubai, United Arab Emirates</div>
-        <div>Phone: +971 58 116 0415 | Email: <a href="mailto:inquiry@techntidy.com">inquiry@techntidy.com</a></div>
-        <div class="copyright">© 2025 Tech &amp; Tidy Services. All Rights Reserved.</div>
+      <div class="footer-text">
+        <p class="footer-title">Tech &amp; Tidy Services</p>
+        <p>Dubai, United Arab Emirates</p>
+        <p>+971 58 116 0415</p>
+        <p><a href="mailto:inquiry@techntidy.com">inquiry@techntidy.com</a></p>
+        <p>© 2025 Tech &amp; Tidy Services. All Rights Reserved.</p>
       </div>
     </div>
   </footer>
 
-  <!-- FLOATING SOCIALS -->
+  <!-- FLOATING SOCIAL ICONS -->
   <div class="social-floating">
-    <a href="https://wa.me/971581160415?text=Hi%20Tech%20%26%20Tidy%20Services%20I%20would%20like%20to%20inquire" target="_blank">
+    <a href="https://wa.me/971581160415?text=Hi%20Tech%20%26%20Tidy%20Services!%20I%20would%20like%20to%20inquire%20about%20your%20technical%20services." target="_blank">
       <img src="Assets/Images/WhatsApp.png" alt="WhatsApp">
     </a>
     <a href="https://www.facebook.com/share/1ETF7bs5pK" target="_blank">
