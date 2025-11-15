@@ -112,18 +112,33 @@
     .label {
       margin-top: 5px;
       font-weight: 500;
+      font-size: 1rem;
+      color: #333;
     }
 
-    .cta-links {
+    /* CTA BUTTONS */
+    .cta-buttons {
       text-align: center;
-      margin-top: 30px;
+      margin-top: 25px;
     }
 
-    .cta-links a {
+    .cta-btn {
+      background: #0096E6;
+      color: white;
+      padding: 14px 32px;
+      border-radius: 8px;
       margin: 0 12px;
-      font-weight: 600;
-      color: #0073b6;
-      text-decoration: underline;
+      font-weight: 700;
+      font-size: 1rem;
+      display: inline-block;
+      transition: 0.3s ease;
+      text-decoration: none;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+    }
+
+    .cta-btn:hover {
+      background: #007ab8;
+      transform: translateY(-3px);
     }
 
     /* FOOTER */
@@ -137,6 +152,7 @@
     footer img {
       width: 110px;
       margin-bottom: 10px;
+      filter: none !important; /* REMOVE GLOW */
     }
 
     footer p {
@@ -165,7 +181,7 @@
   <!-- HEADER -->
   <header class="site-header">
     <div class="header-inner">
-      <img src="Assets/Images/Logo.png" alt="Tech & Tidy Logo" class="logo" />
+      <img src="Assets/Images/Logo.png" alt="Tech & Tidy Logo" class="logo" style="filter:none;">
       <nav class="main-nav">
         <a href="index.html" class="active">Home</a>
         <a href="about.html">About</a>
@@ -205,7 +221,7 @@
 
       <a class="service-card" href="services.html#electrical-plumbing">
         <div class="service-title">Electrical & Plumbing</div>
-        <p>Skilled electrical and plumbing work to ensure your systems run smoothly.</p>
+        <p>Skilled electrical and plumbing work to ensure everything runs smoothly.</p>
       </a>
 
       <a class="service-card" href="services.html#carpentry">
@@ -220,7 +236,7 @@
 
       <a class="service-card" href="services.html#bathroom-kitchen">
         <div class="service-title">Bathroom & Kitchen Renovation</div>
-        <p>Upgrade your kitchen or bathroom with modern designs.</p>
+        <p>Upgrade your kitchen or bathroom with modern craftsmanship.</p>
       </a>
 
       <a class="service-card" href="services.html#pest-control">
@@ -239,23 +255,27 @@
   <!-- COUNTERS SECTION -->
   <section class="counters-section">
     <div class="hero-counters">
+
       <div class="counter-card">
         <span class="count" data-target="3">0</span>
         <div class="label">Ongoing Projects</div>
       </div>
+
       <div class="counter-card">
         <span class="count" data-target="5">0</span>
         <div class="label">Happy Customers</div>
       </div>
+
       <div class="counter-card">
         <span class="count" data-target="14">0</span>
         <div class="label">Completed Projects</div>
       </div>
+
     </div>
 
-    <div class="cta-links">
-      <a href="services.html">Our Services</a>
-      <a href="contact.html">Contact Us</a>
+    <div class="cta-buttons">
+      <a class="cta-btn" href="services.html">Our Services</a>
+      <a class="cta-btn" href="contact.html">Contact Us</a>
     </div>
   </section>
 
