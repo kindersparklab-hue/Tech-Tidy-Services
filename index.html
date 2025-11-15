@@ -8,13 +8,14 @@
   <link rel="icon" href="Assets/Images/Logo.png">
   <script src="script.js" defer></script>
 </head>
+
 <body>
 
   <!-- HEADER -->
   <header class="site-header">
     <div class="container header-inner">
       <a href="index.html" class="brand">
-        <img src="Assets/Images/Logo.png" alt="Tech & Tidy Services" class="logo">
+        <img src="Assets/Images/Logo.png" class="logo" alt="Tech & Tidy Services">
       </a>
       <nav class="main-nav">
         <a href="index.html" class="active">Home</a>
@@ -34,70 +35,76 @@
     </div>
   </section>
 
-  <!-- SERVICES WE OFFER – HORIZONTAL SLIDING BOXES -->
-  <section class="services-slider">
+  <!-- SERVICES WE OFFER (GRID) -->
+  <section class="services-section">
     <div class="container">
-      <h2>Services We Offer</h2>
+      <h2 class="section-title">Services We Offer</h2>
 
-      <div class="slider-row">
+      <div class="services-grid">
 
-        <a class="service-box" href="services.html#repair-maintenance">
-          <h3>Repair &amp; Maintenance</h3>
+        <a class="counter-card service-card" href="services.html#repair-maintenance">
+          <div class="label">Repair &amp; Maintenance</div>
         </a>
 
-        <a class="service-box" href="services.html#renovation">
-          <h3>Home, Office &amp; Villa Renovation</h3>
+        <a class="counter-card service-card" href="services.html#renovation">
+          <div class="label">Home, Office &amp; Villa Renovation</div>
         </a>
 
-        <a class="service-box" href="services.html#painting">
-          <h3>Painting Services</h3>
+        <a class="counter-card service-card" href="services.html#painting">
+          <div class="label">Painting Services</div>
         </a>
 
-        <a class="service-box" href="services.html#electrical-plumbing">
-          <h3>Electrical &amp; Plumbing</h3>
+        <a class="counter-card service-card" href="services.html#electrical-plumbing">
+          <div class="label">Electrical &amp; Plumbing</div>
         </a>
 
-        <a class="service-box" href="services.html#carpentry">
-          <h3>Carpentry Services</h3>
+        <a class="counter-card service-card" href="services.html#carpentry">
+          <div class="label">Carpentry Services</div>
         </a>
 
-        <a class="service-box" href="services.html#cleaning">
-          <h3>Cleaning Services</h3>
+        <a class="counter-card service-card" href="services.html#cleaning">
+          <div class="label">Cleaning Services</div>
         </a>
 
-        <a class="service-box" href="services.html#bathroom-kitchen">
-          <h3>Bathroom &amp; Kitchen Renovation</h3>
+        <a class="counter-card service-card" href="services.html#bathroom-kitchen">
+          <div class="label">Bathroom &amp; Kitchen Renovation</div>
         </a>
 
-        <a class="service-box" href="services.html#pest-control">
-          <h3>Pest Control</h3>
+        <a class="counter-card service-card" href="services.html#pest-control">
+          <div class="label">Pest Control</div>
         </a>
 
-        <a class="service-box" href="services.html#packers-movers">
-          <h3>Packers &amp; Movers</h3>
+        <a class="counter-card service-card" href="services.html#packers-movers">
+          <div class="label">Packers &amp; Movers</div>
         </a>
 
       </div>
     </div>
   </section>
 
-  <!-- COUNTERS AT BOTTOM -->
+  <!-- COUNTERS -->
   <section class="counters-section">
-    <div class="counter-box">
-      <span class="count" data-target="3">0</span>
-      <p>Ongoing Projects</p>
-    </div>
-    <div class="counter-box">
-      <span class="count" data-target="5">0</span>
-      <p>Happy Customers</p>
-    </div>
-    <div class="counter-box">
-      <span class="count" data-target="14">0</span>
-      <p>Completed Projects</p>
+    <div class="hero-counters">
+
+      <div class="counter-card">
+        <span class="count" data-target="3">0</span>
+        <div class="label">Ongoing Projects</div>
+      </div>
+
+      <div class="counter-card">
+        <span class="count" data-target="5">0</span>
+        <div class="label">Happy Customers</div>
+      </div>
+
+      <div class="counter-card">
+        <span class="count" data-target="14">0</span>
+        <div class="label">Completed Projects</div>
+      </div>
+
     </div>
   </section>
 
-  <!-- CTA BUTTONS UNDER COUNTERS -->
+  <!-- CTA LINKS -->
   <div class="cta-links">
     <a href="services.html" class="btn-primary">Our Services</a>
     <a href="contact.html" class="btn-secondary">Contact Us</a>
@@ -107,6 +114,7 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <img src="Assets/Images/Logo.png" alt="Tech & Tidy Services" class="footer-logo">
+
       <div class="footer-text">
         <p class="footer-title">Tech &amp; Tidy Services</p>
         <p>Dubai, United Arab Emirates</p>
