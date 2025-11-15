@@ -5,13 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tech & Tidy Services</title>
 
-  <!-- External styles control theme / colors / glow -->
   <link rel="stylesheet" href="styles.css" />
-
-  <!-- Favicon -->
   <link rel="icon" href="Assets/Images/Logo.png" />
-
-  <!-- Counters etc. -->
   <script defer src="script.js"></script>
 </head>
 <body>
@@ -20,12 +15,12 @@
   <header class="site-header">
     <div class="container header-inner">
 
-      <!-- LOGO (size + non-glow will be controlled in styles.css) -->
+      <!-- Logo -->
       <a href="index.html" class="brand">
         <img src="Assets/Images/Logo.png" alt="Tech & Tidy Logo" class="logo">
       </a>
 
-      <!-- MAIN MENU: GOES TO PAGES -->
+      <!-- Main nav (page links) -->
       <nav class="main-nav">
         <a href="index.html">Home</a>
         <a href="services.html">Services</a>
@@ -34,25 +29,23 @@
         <a href="contact.html">Contact</a>
       </nav>
 
-      <!-- SHARE ICON BUTTON -->
+      <!-- Share button -->
       <button class="share-toggle" type="button" onclick="toggleShareMenu()" aria-label="Share this page">
         <img src="Assets/Images/Share.png" alt="Share" class="share-icon">
       </button>
-    </div>
 
-    <!-- SHARE POPUP MENU -->
-    <div id="share-menu" class="share-menu">
-      <p class="share-title">Share this page</p>
-      <a href="https://wa.me/?text=Check%20Tech%20%26%20Tidy%20Services%20https://yourdomain.com" target="_blank">
-        WhatsApp
-      </a>
-      <a href="https://www.facebook.com/sharer/sharer.php?u=https://yourdomain.com" target="_blank">
-        Facebook
-      </a>
-      <a href="https://www.instagram.com" target="_blank">
-        Instagram
-      </a>
-      <button type="button" onclick="copyLink()">Copy Link</button>
+      <!-- Share popup -->
+      <div id="share-menu" class="share-menu">
+        <div class="share-header">
+          <img src="Assets/Images/Share.png" alt="Share" class="share-header-icon">
+          <span>Share this page</span>
+        </div>
+        <a href="https://wa.me/?text=Check%20Tech%20%26%20Tidy%20Services%20https://yourwebsite.com" target="_blank">WhatsApp</a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://yourwebsite.com" target="_blank">Facebook</a>
+        <a href="https://www.instagram.com" target="_blank">Instagram</a>
+        <button type="button" onclick="copyLink()">Copy Link</button>
+      </div>
+
     </div>
   </header>
 
@@ -69,131 +62,155 @@
     </div>
   </section>
 
-  <!-- ================= ACHIEVEMENTS (COUNTERS) ================= -->
+  <!-- ================= ACHIEVEMENTS ================= -->
   <section id="achievements" class="section section-light">
     <div class="container">
       <div class="hero-counters">
-        <div class="counter-card">
+
+        <div class="counter-card counter-achievement">
           <span class="count" data-target="3">0</span>
           <div class="label">Ongoing Projects</div>
         </div>
-        <div class="counter-card">
+
+        <div class="counter-card counter-achievement">
           <span class="count" data-target="5">0</span>
           <div class="label">Happy Customers</div>
         </div>
-        <div class="counter-card">
+
+        <div class="counter-card counter-achievement">
           <span class="count" data-target="14">0</span>
           <div class="label">Completed Projects</div>
         </div>
+
       </div>
     </div>
   </section>
 
-  <!-- ================= SERVICES (SAME STYLE FAMILY AS COUNTERS) ================= -->
-  <section id="services" class="section section-alt services-section">
+  <!-- ================= SERVICES ================= -->
+  <section id="services" class="section section-alt">
     <div class="container">
       <h2 class="section-title">Services We Offer</h2>
 
-      <!-- reuse hero-counters + counter-card for matching style -->
-      <div class="hero-counters services-cards">
-        <div class="counter-card">
+      <div class="card-grid">
+
+        <a href="services.html#repair-maintenance" class="info-card">
           <h3>Repair &amp; Maintenance</h3>
           <p>Comprehensive repair solutions for all your home and office needs.</p>
-        </div>
-        <div class="counter-card">
+        </a>
+
+        <a href="services.html#renovation" class="info-card">
           <h3>Home, Office &amp; Villa Renovation</h3>
           <p>Transform your space with expert renovation services.</p>
-        </div>
-        <div class="counter-card">
+        </a>
+
+        <a href="services.html#painting" class="info-card">
           <h3>Painting Services</h3>
           <p>Professional painting for homes, offices, and commercial spaces.</p>
-        </div>
-        <div class="counter-card">
+        </a>
+
+        <a href="services.html#electrical-plumbing" class="info-card">
           <h3>Electrical &amp; Plumbing</h3>
-          <p>Safe and reliable electrical &amp; plumbing work.</p>
-        </div>
-        <div class="counter-card">
+          <p>Safe and reliable electrical and plumbing work.</p>
+        </a>
+
+        <a href="services.html#carpentry" class="info-card">
           <h3>Carpentry Services</h3>
-          <p>Custom woodwork and carpentry for home or business.</p>
-        </div>
-        <div class="counter-card">
+          <p>Custom woodwork and carpentry for home or business projects.</p>
+        </a>
+
+        <a href="services.html#cleaning" class="info-card">
           <h3>Cleaning Services</h3>
-          <p>Deep and regular cleaning for homes and offices.</p>
-        </div>
-        <div class="counter-card">
+          <p>Deep and regular cleaning for homes, offices, and commercial spaces.</p>
+        </a>
+
+        <a href="services.html#bathroom-kitchen" class="info-card">
           <h3>Bathroom &amp; Kitchen Renovation</h3>
-          <p>Modern upgrades with elegant and durable finishes.</p>
-        </div>
-        <div class="counter-card">
+          <p>Modern, functional upgrades with elegant finishes.</p>
+        </a>
+
+        <a href="services.html#pest-control" class="info-card">
           <h3>Pest Control</h3>
-          <p>Safe and effective pest management solutions.</p>
-        </div>
-        <div class="counter-card">
+          <p>Safe and effective pest management for a healthy environment.</p>
+        </a>
+
+        <a href="services.html#packers-movers" class="info-card">
           <h3>Packers &amp; Movers</h3>
-          <p>Hassle-free and secure relocation services.</p>
-        </div>
+          <p>Hassle-free moving services for homes and businesses.</p>
+        </a>
+
       </div>
     </div>
   </section>
 
-  <!-- ================= WHY CHOOSE US (BOXED) ================= -->
-  <section id="why-us" class="section section-light why-section">
+  <!-- ================= WHY CHOOSE US ================= -->
+  <section id="why-us" class="section section-light">
     <div class="container">
       <h2 class="section-title">Why Choose Us?</h2>
 
-      <div class="hero-counters why-cards">
-        <div class="counter-card">
-          <img src="Assets/Images/cost.png" alt="Cost Effective" class="why-icon">
+      <div class="card-grid">
+
+        <div class="info-card">
+          <img src="Assets/Images/cost.png" alt="Cost-Effective" class="why-icon">
           <h3>Cost-Effective Solutions</h3>
-          <p>We deliver exceptional quality without unnecessary costs.</p>
+          <p>Exceptional quality without unnecessary costs.</p>
         </div>
-        <div class="counter-card">
+
+        <div class="info-card">
           <img src="Assets/Images/dependability.png" alt="Dependability" class="why-icon">
           <h3>Dependability</h3>
-          <p>Reliable, precise and professional in every project.</p>
+          <p>Reliable, precise and professional project execution.</p>
         </div>
-        <div class="counter-card">
+
+        <div class="info-card">
           <img src="Assets/Images/materials.png" alt="High-Quality Materials" class="why-icon">
           <h3>High-Quality Materials</h3>
-          <p>Premium materials ensuring durability and a refined finish.</p>
+          <p>Premium materials that ensure durability and a refined finish.</p>
         </div>
-        <div class="counter-card">
+
+        <div class="info-card">
           <img src="Assets/Images/expertise.png" alt="Industry Expertise" class="why-icon">
           <h3>Industry Expertise</h3>
           <p>Experienced team with deep technical knowledge.</p>
         </div>
-        <div class="counter-card">
+
+        <div class="info-card">
           <img src="Assets/Images/timely.png" alt="Timely Execution" class="why-icon">
           <h3>Timely Execution</h3>
-          <p>We respect your deadlines and deliver efficient results.</p>
+          <p>We respect your deadlines and complete projects efficiently.</p>
         </div>
-        <div class="counter-card">
+
+        <div class="info-card">
           <img src="Assets/Images/custom.png" alt="Custom Solutions" class="why-icon">
           <h3>Custom Solutions</h3>
-          <p>Services tailored to your space, needs and vision.</p>
+          <p>Services tailored to your space, needs, and vision.</p>
         </div>
+
       </div>
     </div>
   </section>
 
   <!-- ================= CUSTOMER REVIEWS ================= -->
-  <section id="reviews" class="section section-alt review-section">
+  <section id="reviews" class="section section-alt">
     <div class="container">
       <h2 class="section-title">Customer Reviews</h2>
 
-      <div class="hero-counters reviews-cards">
-        <div class="counter-card">
+      <div class="card-grid">
+
+        <div class="info-card">
           <p>“Excellent service! The team was punctual, professional, and left everything spotless.”</p>
           <p class="review-name">— Ahmed R.</p>
         </div>
-        <div class="counter-card">
-          <p>“Our renovation was completed beautifully and within the agreed budget.”</p>
+
+        <div class="info-card">
+          <p>“Our kitchen renovation was completed beautifully and within budget.”</p>
           <p class="review-name">— Sarah M.</p>
         </div>
-        <div class="counter-card">
-          <p>“Quick response, fair pricing and high-quality workmanship. Highly recommended!”</p>
+
+        <div class="info-card">
+          <p>“Quick response, fair pricing, and high-quality workmanship. Highly recommended!”</p>
           <p class="review-name">— Daniel K.</p>
         </div>
+
       </div>
     </div>
   </section>
@@ -220,7 +237,7 @@
         </a>
       </div>
 
-      <p class="footer-copy">© 2025 Tech &amp; Tidy Services. All rights reserved.</p>
+      <p class="footer-copy">© 2025 Tech &amp; Tidy Services. All Rights Reserved.</p>
     </div>
   </footer>
 
@@ -238,15 +255,13 @@
     </a>
   </div>
 
-  <!-- ================= SHARE + COUNTERS JS ================= -->
+  <!-- ================= SHARE JS ================= -->
   <script>
-    // SHARE POPUP TOGGLE
     function toggleShareMenu() {
       const menu = document.getElementById('share-menu');
       menu.classList.toggle('open');
     }
 
-    // COPY CURRENT PAGE LINK
     function copyLink() {
       const url = window.location.href;
       if (navigator.clipboard && navigator.clipboard.writeText) {
@@ -266,7 +281,7 @@
       }
     }
 
-    // CLOSE SHARE MENU WHEN CLICKING OUTSIDE
+    // Close share menu when clicking outside
     document.addEventListener('click', function (e) {
       const menu = document.getElementById('share-menu');
       const btn = document.querySelector('.share-toggle');
