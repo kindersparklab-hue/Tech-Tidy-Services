@@ -1,11 +1,13 @@
-/* ================= COUNTERS ================= */
+// =============================================
+// COUNTER ANIMATION
+// =============================================
 document.addEventListener("DOMContentLoaded", () => {
   const counters = document.querySelectorAll(".count");
 
   counters.forEach(counter => {
     const target = +counter.getAttribute("data-target") || 0;
     let current = 0;
-    const duration = 1200;
+    const duration = 1500;
     const start = performance.now();
 
     function update(now) {
@@ -24,7 +26,22 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-/* ================= SHARE POPUP ================= */
+// =============================================
+// REVEAL ANIMATION (ensure content is visible)
+// =============================================
+document.addEventListener("DOMContentLoaded", () => {
+  const reveals = document.querySelectorAll(".reveal");
+  reveals.forEach((el, index) => {
+    setTimeout(() => {
+      el.classList.add("visible");
+    }, 150 * index);
+  });
+});
+
+
+// =============================================
+// SHARE POPUP
+// =============================================
 document.addEventListener("DOMContentLoaded", () => {
   const shareBtn = document.getElementById("shareBtn");
   const shareMenu = document.getElementById("shareMenu");
@@ -38,16 +55,54 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   if (closeShare && shareMenu) {
-    closeShare.addEventListener("click", () => {
+    closeShare.addEventListener("click", (e) => {
+      e.stopPropagation();
       shareMenu.classList.remove("open");
     });
   }
 
-  // Click outside closes share
+  // Close when clicking outside the share menu
   document.addEventListener("click", (e) => {
     if (!shareMenu) return;
-    if (!shareMenu.contains(e.target) && !shareBtn.contains(e.target)) {
+    if (!shareMenu.contains(e.target) && e.target !== shareBtn && !shareBtn.contains(e.target)) {
       shareMenu.classList.remove("open");
     }
+  });
+});
+
+
+// =============================================
+// FOOTER "MORE" MENU (click for mobile)
+// =============================================
+document.addEventListener("DOMContentLoaded", () => {
+  const footerMore = document.getElementById("footerMore");
+  const footerMoreBtn = document.getElementById("footerMoreBtn");
+  const footerMoreMenu = document.getElementById("footerMoreMenu");
+
+  if (!footerMore || !footerMoreBtn || !footerMoreMenu) return;
+
+  footerMoreBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    // Toggle for mobile
+    if (window.innerWidth <= 768) {
+      if (footerMoreMenu.style.display === "flex") {
+        footerMoreMenu.style.display = "none";
+      } else {
+        footerMoreMenu.style.display = "flex";
+        footerMoreMenu.style.flexDirection = "column";
+      }
+    }
+  });
+
+  // Close on outside click (mobile)
+  document.addEventListener("click", () => {
+    if (window.innerWidth <= 768) {
+      footerMoreMenu.style.display = "none";
+    }
+  });
+
+  // Prevent closing when clicking inside menu
+  footerMoreMenu.addEventListener("click", (e) => {
+    e.stopPropagation();
   });
 });
