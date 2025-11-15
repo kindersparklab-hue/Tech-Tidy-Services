@@ -1,93 +1,125 @@
-// ============ SCROLL REVEAL ============
-document.addEventListener("DOMContentLoaded", () => {
-  const revealEls = document.querySelectorAll(".reveal");
-
-  const revealObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("revealed");
-        revealObserver.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.15 });
-
-  revealEls.forEach(el => revealObserver.observe(el));
-});
-
-// ============ COUNTER ANIMATION ============
+/* ======================================================
+   COUNTER ANIMATION
+====================================================== */
 document.addEventListener("DOMContentLoaded", () => {
   const counters = document.querySelectorAll(".count");
 
-  if (!counters.length) return;
-
-  const animateCounter = (el) => {
-    const target = parseInt(el.getAttribute("data-target"), 10) || 0;
+  counters.forEach(counter => {
+    let target = +counter.getAttribute("data-target");
     let current = 0;
-    const duration = 1200;
-    const startTime = performance.now();
 
-    function update(now) {
-      const elapsed = now - startTime;
-      const progress = Math.min(elapsed / duration, 1);
-      current = Math.floor(progress * target);
-      el.textContent = current;
+    const animate = () => {
+      let step = Math.ceil(target / 80);
+      current += step;
 
-      if (progress < 1) {
-        requestAnimationFrame(update);
+      if (current >= target) {
+        counter.textContent = target;
       } else {
-        el.textContent = target;
+        counter.textContent = current;
+        requestAnimationFrame(animate);
       }
-    }
+    };
 
-    requestAnimationFrame(update);
-  };
-
-  const counterObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        animateCounter(entry.target);
-        counterObserver.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.5 });
-
-  counters.forEach(c => counterObserver.observe(c));
+    requestAnimationFrame(animate);
+  });
 });
 
-// ============ SHARE MENU ============
-function toggleShare() {
-  const menu = document.getElementById("share-menu");
-  if (menu) {
-    menu.classList.toggle("open");
-  }
+
+/* ======================================================
+   SHARE POPUP SYSTEM
+====================================================== */
+const shareBtn = document.getElementById("shareBtn");
+const shareMenu = document.getElementById("shareMenu");
+const closeShare = document.getElementById("closeShare");
+
+if (shareBtn && shareMenu && closeShare) {
+  shareBtn.addEventListener("click", () => {
+    shareMenu.classList.add("open");
+  });
+
+  closeShare.addEventListener("click", () => {
+    shareMenu.classList.remove("open");
+  });
 }
 
-function copyShareLink() {
-  const url = window.location.href;
-  if (navigator.clipboard && navigator.clipboard.writeText) {
-    navigator.clipboard.writeText(url).then(() => {
-      alert("Page link copied!");
-    }).catch(() => {
-      alert("Unable to copy link.");
-    });
-  } else {
-    const temp = document.createElement("input");
-    temp.value = url;
-    document.body.appendChild(temp);
-    temp.select();
-    document.execCommand("copy");
-    document.body.removeChild(temp);
-    alert("Page link copied!");
-  }
+
+/* ======================================================
+   CLICK LOGO = GO HOME
+====================================================== */
+const mainLogo = document.getElementById("mainLogo");
+
+if (mainLogo) {
+  mainLogo.addEventListener("click", () => {
+    window.location.href = "index.html";
+  });
 }
 
-// Close share if clicked outside
-document.addEventListener("click", (e) => {
-  const menu = document.getElementById("share-menu");
-  const btn = document.querySelector(".share-toggle");
-  if (!menu || !btn) return;
 
-  if (!menu.contains(e.target) && !btn.contains(e.target)) {
-    menu.classList.remove("open");
-  }
-});
+/* ======================================================
+   FLOATING ICONS (Click = open)
+====================================================== */
+
+// WhatsApp Floating Icon
+const floatWhatsApp = document.getElementById("floatWhatsApp");
+if (floatWhatsApp) {
+  floatWhatsApp.addEventListener("click", () => {
+    window.open("https://wa.me/971581160415?text=Hi%20Tech%20%26%20Tidy%20Services%2C%20I%20would%20like%20to%20inquire%20about%20your%20services.", "_blank");
+  });
+}
+
+// Instagram Floating Icon
+const floatInstagram = document.getElementById("floatInstagram");
+if (floatInstagram) {
+  floatInstagram.addEventListener("click", () => {
+    window.open("https://www.instagram.com/techtidyservices", "_blank");
+  });
+}
+
+// Facebook Floating Icon
+const floatFacebook = document.getElementById("floatFacebook");
+if (floatFacebook) {
+  floatFacebook.addEventListener("click", () => {
+    window.open("https://www.facebook.com/share/1ETF7bs5pK", "_blank");
+  });
+}
+
+// Call Floating Icon
+const floatCall = document.getElementById("floatCall");
+if (floatCall) {
+  floatCall.addEventListener("click", () => {
+    window.location.href = "tel:+971581160415";
+  });
+}
+
+
+/* ======================================================
+   SHARE OPTIONS INSIDE POPUP
+====================================================== */
+
+const shareWhatsApp = document.getElementById("shareWhatsApp");
+if (shareWhatsApp) {
+  shareWhatsApp.addEventListener("click", () => {
+    window.open("https://wa.me/971581160415?text=Hi%20Tech%20%26%20Tidy%20Services!", "_blank");
+  });
+}
+
+const shareInstagram = document.getElementById("shareInstagram");
+if (shareInstagram) {
+  shareInstagram.addEventListener("click", () => {
+    window.open("https://www.instagram.com/techtidyservices", "_blank");
+  });
+}
+
+const shareFacebook = document.getElementById("shareFacebook");
+if (shareFacebook) {
+  shareFacebook.addEventListener("click", () => {
+    window.open("https://www.facebook.com/share/1ETF7bs5pK", "_blank");
+  });
+}
+
+const shareCall = document.getElementById("shareCall");
+if (shareCall) {
+  shareCall.addEventListener("click", () => {
+    window.location.href = "tel:+971581160415";
+  });
+}
