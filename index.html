@@ -1,342 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tech & Tidy Services</title>
-  <link rel="stylesheet" href="styles.css" />
-  <script defer src="script.js"></script>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
 
 <body>
 
-  <!-- ================= HEADER ================= -->
-  <header class="site-header">
-    <div class="header-inner container">
+<!-- ================= HEADER ================= -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="header-logo">
+      <img src="Assets/Images/Logo.png" alt="Tech & Tidy Logo">
+    </a>
 
-      <!-- Logo (click → home) -->
-      <a href="index.html" class="logo-wrap">
-        <img src="Assets/Images/Logo.png" alt="Tech & Tidy Logo" class="logo" />
-      </a>
+    <nav class="main-nav">
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="services.html">Services</a>
+      <a href="achievements.html">Achievements</a>
+      <a href="contact.html">Contact</a>
+    </nav>
 
-      <!-- Navigation -->
-      <nav class="main-nav">
-        <a href="index.html" class="active">Home</a>
-        <a href="services.html">Services</a>
-        <a href="about.html">About Us</a>
-        <a href="achievements.html">Achievements</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-
-      <!-- SHARE BUTTON -->
-      <button id="shareBtn" class="share-btn" type="button">
-        <img src="Assets/Images/SHARE.png" alt="Share">
-      </button>
-
-    </div>
-  </header>
-
-  <!-- ============ SHARE POPUP (SLIDE PANEL) ============ -->
-  <div id="shareMenu" class="share-menu">
-    <div class="share-inner">
-      <img src="Assets/Images/Logo.png" class="share-logo" alt="Tech & Tidy">
-      <h3>Share Tech & Tidy</h3>
-
-      <a id="shareWhatsApp" class="share-option"
-        href="https://wa.me/971581160415?text=Hi%20Tech%20%26%20Tidy%20Services!%20I%20would%20like%20to%20inquire%20about%20your%20technical%20services."
-        target="_blank">
-        <img src="Assets/Images/WhatsApp.png" alt="WhatsApp"> WhatsApp
-      </a>
-
-      <a id="shareInstagram" class="share-option" href="https://www.instagram.com/techtidyservices" target="_blank">
-        <img src="Assets/Images/Instagram.png" alt="Instagram"> Instagram
-      </a>
-
-<a id="shareFacebook" class="share-option"
-  href="https://www.facebook.com/profile.php?id=61583813489748" target="_blank">
-  <img src="Assets/Images/Facebook.png" alt="Facebook"> Facebook
-</a>
-
-
-      <a id="shareCall" class="share-option" href="tel:+971581160415">
-        <img src="Assets/Images/Call.png" alt="Call"> Call Us
-      </a>
-
-      <button id="closeShare" class="close-share" type="button">Close</button>
+    <!-- Share Button -->
+    <div class="share-btn">
+      <img src="Assets/Images/Share.png" alt="Share">
     </div>
   </div>
+</header>
+
+
+<!-- SHARE POPUP -->
+<div class="share-popup" id="sharePopup">
+  <h3>Share</h3>
+
+  <a href="https://wa.me/971581160415" target="_blank">
+    <img src="Assets/Images/WhatsApp.png"> WhatsApp
+  </a>
+
+  <a href="https://www.facebook.com/profile.php?id=61583813489748" target="_blank">
+    <img src="Assets/Images/Facebook.png"> Facebook
+  </a>
+
+  <a href="https://www.instagram.com/techtidyservices" target="_blank">
+    <img src="Assets/Images/Instagram.png"> Instagram
+  </a>
+
+  <a href="tel:+971581160415">
+    <img src="Assets/Images/Call.png"> Call Us
+  </a>
+
+  <button class="close-share">Close</button>
+</div>
 
 
 
-  <!-- ================= HERO SECTION ================= -->
-  <section class="hero-section">
-    <div class="container">
-      <h1 class="reveal">Tech &amp; Tidy Services</h1>
-      <p class="tagline reveal delay-1">
-        Keeping your spaces efficient, safe, and perfectly maintained.
-      </p>
+<!-- ================= HERO ================= -->
+<section class="hero-section">
+  <div class="container">
+    <h1>Tech & Tidy Services</h1>
+    <p class="tagline">Keeping your spaces efficient, safe, and perfectly maintained.</p>
+  </div>
+</section>
+
+
+
+<!-- ================= SERVICES WE OFFER ================= -->
+<section class="section-light">
+  <div class="container">
+    <h2 class="center">Services We Offer</h2>
+
+    <div class="services-grid">
+
+      <!-- 12 TOTAL SERVICES (Correct Order) -->
+
+      <a href="services.html#repair-maintenance" class="service-box">
+        <h3>Repair & Maintenance</h3>
+        <p>Comprehensive repair solutions for all your home and office needs.</p>
+      </a>
+
+      <a href="services.html#renovation" class="service-box">
+        <h3>Home, Office & Villa Renovation</h3>
+        <p>Transform your space with expert renovation services.</p>
+      </a>
+
+      <a href="services.html#painting" class="service-box">
+        <h3>Painting Services</h3>
+        <p>Professional painting for homes, offices, and commercial spaces.</p>
+      </a>
+
+      <a href="services.html#electrical-plumbing" class="service-box">
+        <h3>Electrical & Plumbing</h3>
+        <p>Skilled electrical and plumbing work for smooth operation.</p>
+      </a>
+
+      <a href="services.html#carpentry" class="service-box">
+        <h3>Carpentry Services</h3>
+        <p>Custom woodwork and carpentry for your property.</p>
+      </a>
+
+      <a href="services.html#cleaning" class="service-box">
+        <h3>Cleaning Services</h3>
+        <p>Reliable cleaning for homes, offices, and commercial spaces.</p>
+      </a>
+
+      <a href="services.html#bathroom-kitchen" class="service-box">
+        <h3>Bathroom & Kitchen Renovation</h3>
+        <p>Modern upgrades and installation by experts.</p>
+      </a>
+
+      <a href="services.html#pest-control" class="service-box">
+        <h3>Pest Control</h3>
+        <p>Safe and effective pest management for a healthy environment.</p>
+      </a>
+
+      <a href="services.html#packers-movers" class="service-box">
+        <h3>Packers & Movers</h3>
+        <p>Hassle-free moving services for homes and businesses.</p>
+      </a>
+
+      <!-- NEW SERVICES -->
+      <a href="services.html#ac-maintenance-repair" class="service-box">
+        <h3>AC Maintenance & Repair</h3>
+        <p>Professional AC servicing, cleaning & repair.</p>
+      </a>
+
+      <a href="services.html#window-ac-repair" class="service-box">
+        <h3>Window AC Repair</h3>
+        <p>Expert repair for all Window AC models.</p>
+      </a>
+
+      <a href="services.html#fridge-installation-maintenance" class="service-box">
+        <h3>Fridge Installation & Maintenance</h3>
+        <p>Fridge installation and scheduled maintenance.</p>
+      </a>
+
     </div>
-  </section>
+  </div>
+</section>
 
 
 
-  <!-- ================= SERVICES GRID ================= -->
-  <section class="section-light">
-    <div class="container">
-      <h2 class="section-title reveal">Services We Offer</h2>
+<!-- ================= ACHIEVEMENTS ================= -->
+<section class="section-light">
+  <div class="container">
 
-      <div class="services-grid">
+    <div class="hero-counters">
 
-        <a href="services.html#repair-maintenance" class="service-box reveal delay-1">
-          <h3>Repair &amp; Maintenance</h3>
-          <p>Comprehensive repair solutions for home and office.</p>
-        </a>
-
-        <a href="services.html#renovation" class="service-box reveal delay-2">
-          <h3>Home, Office &amp; Villa Renovation</h3>
-          <p>Transform your space with expert renovation services.</p>
-        </a>
-
-        <a href="services.html#painting" class="service-box reveal delay-3">
-          <h3>Painting Services</h3>
-          <p>Interior and exterior painting for all properties.</p>
-        </a>
-
-        <a href="services.html#electrical-plumbing" class="service-box reveal delay-4">
-          <h3>Electrical &amp; Plumbing</h3>
-          <p>Skilled electrical and plumbing work for safe systems.</p>
-        </a>
-
-        <a href="services.html#carpentry" class="service-box reveal delay-1">
-          <h3>Carpentry Services</h3>
-          <p>Custom woodwork &amp; fine craftsmanship.</p>
-        </a>
-
-        <a href="services.html#cleaning" class="service-box reveal delay-2">
-          <h3>Cleaning Services</h3>
-          <p>Professional deep cleaning for homes &amp; offices.</p>
-        </a>
-
-        <a href="services.html#bathroom-kitchen" class="service-box reveal delay-3">
-          <h3>Bathroom &amp; Kitchen Renovation</h3>
-          <p>Modern upgrades for your kitchen and bathrooms.</p>
-        </a>
-
-        <a href="services.html#pest-control" class="service-box reveal delay-4">
-          <h3>Pest Control</h3>
-          <p>Safe and effective pest management.</p>
-        </a>
-
-        <a href="services.html#packers-movers" class="service-box reveal delay-5">
-          <h3>Packers &amp; Movers</h3>
-          <p>Hassle-free moving services.</p>
-        </a>
-
-        <!-- AC Maintenance & Repair -->
-<a href="services.html#ac-maintenance-repair" class="service-box reveal delay-1">
-  <h3>AC Maintenance & Repair</h3>
-  <p>Professional AC servicing, deep cleaning & reliable repair solutions.</p>
-</a>
-
-<!-- Window AC Repair -->
-<a href="services.html#window-ac-repair" class="service-box reveal delay-2">
-  <h3>Window AC Repair</h3>
-  <p>Expert repair services for all Window AC models.</p>
-</a>
-
-<!-- Fridge Installation & Maintenance -->
-<a href="services.html#fridge-installation-maintenance" class="service-box reveal delay-3">
-  <h3>Fridge Installation & Maintenance</h3>
-  <p>Professional fridge installation and routine maintenance.</p>
-</a>
-
+      <div class="counter-card">
+        <span class="count" data-target="3">0</span>
+        <div class="label">Ongoing Projects</div>
       </div>
-    </div>
-  </section>
 
-
-
-  <!-- ================= ACHIEVEMENTS COUNTERS ================= -->
-  <section class="section-light">
-    <div class="container">
-      <div class="hero-counters">
-
-        <div class="counter-card reveal delay-1">
-          <span class="count" data-target="3">0</span>
-          <div class="label">Ongoing Projects</div>
-        </div>
-
-        <div class="counter-card reveal delay-2">
-          <span class="count" data-target="5">0</span>
-          <div class="label">Happy Customers</div>
-        </div>
-
-        <div class="counter-card reveal delay-3">
-          <span class="count" data-target="14">0</span>
-          <div class="label">Completed Projects</div>
-        </div>
-
+      <div class="counter-card">
+        <span class="count" data-target="5">0</span>
+        <div class="label">Happy Customers</div>
       </div>
-    </div>
-  </section>
 
-
-
-  <!-- ================= WHY CHOOSE US ================= -->
-  <section class="section-light" id="why-us">
-    <div class="container">
-      <h2 class="section-title reveal">Why Choose Us?</h2>
-
-      <div class="choose-grid">
-
-        <div class="choose-box reveal delay-1">
-          <img src="Assets/Images/cost.png" alt="Cost Effective">
-          <h3>Cost-Effective Solutions</h3>
-          <p>Exceptional quality without unnecessary costs.</p>
-        </div>
-
-        <div class="choose-box reveal delay-2">
-          <img src="Assets/Images/dependability.png" alt="Dependability">
-          <h3>Dependability</h3>
-          <p>We complete every project with precision & professionalism.</p>
-        </div>
-
-        <div class="choose-box reveal delay-3">
-          <img src="Assets/Images/materials.png" alt="High Quality Materials">
-          <h3>High-Quality Materials</h3>
-          <p>Premium materials that ensure durability and a refined finish.</p>
-        </div>
-
-        <div class="choose-box reveal delay-4">
-          <img src="Assets/Images/expertise.png" alt="Industry Expertise">
-          <h3>Industry Expertise</h3>
-          <p>Years of experience in maintenance and renovation services.</p>
-        </div>
-
-        <div class="choose-box reveal delay-5">
-          <img src="Assets/Images/timely.png" alt="Timely Execution">
-          <h3>Timely Execution</h3>
-          <p>We respect your deadlines and deliver on time.</p>
-        </div>
-
-        <div class="choose-box reveal delay-5">
-          <img src="Assets/Images/custom.png" alt="Custom Solutions">
-          <h3>Custom Solutions</h3>
-          <p>Solutions tailored to your requirements and vision.</p>
-        </div>
-
+      <div class="counter-card">
+        <span class="count" data-target="14">0</span>
+        <div class="label">Completed Projects</div>
       </div>
+
     </div>
-  </section>
+
+  </div>
+</section>
 
 
 
-  <!-- ================= CUSTOMER REVIEWS ================= -->
-  <section class="section-light" id="reviews">
-    <div class="container">
-      <h2 class="section-title reveal">Customer Reviews</h2>
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  <div class="container footer-inner">
 
-      <div class="review-grid">
-
-        <div class="review-box reveal delay-1">
-          <p>“Very professional and fast. Highly recommended!”</p>
-          <span>- Ali R.</span>
-        </div>
-
-        <div class="review-box reveal delay-2">
-          <p>“They renovated my villa beautifully. Great attention to detail.”</p>
-          <span>- Sarah K.</span>
-        </div>
-
-        <div class="review-box reveal delay-3">
-          <p>“Reliable and efficient. Tech & Tidy is my go-to service.”</p>
-          <span>- Yousuf M.</span>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-
-
-  <!-- ================= FOOTER ================= -->
-  <footer class="site-footer">
-    <div class="footer-inner container">
-
-      <!-- Logo + Info -->
-      <img src="Assets/Images/Logo.png" class="footer-logo" alt="Tech & Tidy">
-
-      <p><strong>Tech &amp; Tidy Services</strong></p>
+    <!-- Left -->
+    <div class="footer-left">
+      <img src="Assets/Images/Logo.png" class="footer-logo">
+      <p><strong>Tech & Tidy Services</strong></p>
       <p>Dubai, United Arab Emirates</p>
-      <p><a href="tel:+971581160415">+971 58 116 0415</a></p>
-      <p><a href="mailto:inquiry@techntidy.com">inquiry@techntidy.com</a></p>
+      <p>+971 58 116 0415</p>
+      <p>inquiry@techntidy.com</p>
+    </div>
 
-      <!-- Footer Menu -->
-      <div class="footer-menu">
-        <a href="index.html">Home</a>
-        <a href="about.html">About Us</a>
+    <!-- Right menu -->
+    <div class="footer-right">
+      <h4>Menu</h4>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
 
-        <div class="footer-more" id="footerMore">
-          <button type="button" id="footerMoreBtn">More ▾</button>
-          <div class="more-menu" id="footerMoreMenu">
-            <a href="achievements.html">Achievements</a>
-            <a href="#why-us">Why Us</a>
-            <a href="#reviews">Customer Review</a>
-            <a href="contact.html">Contact Us</a>
-            <a href="services.html">Services</a>
-          </div>
+      <div class="footer-more">
+        <span>More ▾</span>
+        <div class="footer-more-menu">
+          <a href="achievements.html">Achievements</a>
+          <a href="whyus.html">Why Us</a>
+          <a href="reviews.html">Customer Review</a>
+          <a href="contact.html">Contact Us</a>
+          <a href="services.html">Services</a>
         </div>
       </div>
-
-      <!-- Social Icons (same style as floating) -->
-      <div class="footer-social">
-        <a href="https://wa.me/971581160415?text=Hi%20Tech%20%26%20Tidy%20Services!%20I%20would%20like%20to%20inquire%20about%20your%20technical%20services."
-          target="_blank">
-          <img src="Assets/Images/WhatsApp.png" alt="WhatsApp">
-        </a>
-<a href="https://www.facebook.com/profile.php?id=61583813489748" target="_blank">
-  <img src="Assets/Images/Facebook.png" alt="Facebook">
-</a>
-
-        <a href="https://www.instagram.com/techtidyservices" target="_blank">
-          <img src="Assets/Images/Instagram.png" alt="Instagram">
-        </a>
-        <a href="tel:+971581160415">
-          <img src="Assets/Images/Call.png" alt="Call">
-        </a>
-      </div>
-
-      <p class="footer-copy">© 2025 Tech &amp; Tidy Services. All Rights Reserved.</p>
-
     </div>
-  </footer>
 
-
-
-  <!-- ================= FLOATING ICONS (RIGHT SIDE) ================= -->
-  <div class="floating-icons">
-
-    <a
-      href="https://wa.me/971581160415?text=Hi%20Tech%20%26%20Tidy%20Services!%20I%20would%20like%20to%20inquire%20about%20your%20technical%20services."
-      target="_blank">
-      <img src="Assets/Images/WhatsApp.png" class="float-btn" alt="WhatsApp" />
-    </a>
-
-<a href="https://www.facebook.com/profile.php?id=61583813489748" target="_blank">
-  <img src="Assets/Images/Facebook.png" class="float-btn" alt="Facebook" />
-</a>
-
-
-    <a href="https://www.instagram.com/techtidyservices" target="_blank">
-      <img src="Assets/Images/Instagram.png" class="float-btn" alt="Instagram" />
-    </a>
-
-    <a href="tel:+971581160415">
-      <img src="Assets/Images/Call.png" class="float-btn" alt="Call" />
-    </a>
+    <!-- Social -->
+    <div class="footer-social">
+      <a href="https://wa.me/971581160415"><img src="Assets/Images/WhatsApp.png"></a>
+      <a href="https://www.facebook.com/profile.php?id=61583813489748"><img src="Assets/Images/Facebook.png"></a>
+      <a href="https://www.instagram.com/techtidyservices"><img src="Assets/Images/Instagram.png"></a>
+      <a href="tel:+971581160415"><img src="Assets/Images/Call.png"></a>
+    </div>
 
   </div>
+
+  <p class="copyright">© 2025 Tech & Tidy Services. All Rights Reserved.</p>
+</footer>
 
 </body>
 </html>
