@@ -1,33 +1,33 @@
-// ================= SHARE PANEL =================
+// ================= SHARE PANEL & COUNTERS =================
 document.addEventListener('DOMContentLoaded', () => {
-  const shareToggle = document.getElementById('shareToggle');
-  const sharePanel  = document.getElementById('sharePanel');
-  const shareClose  = document.getElementById('shareClose');
+  const shareToggle   = document.getElementById('shareToggle');
+  const sharePanel    = document.getElementById('sharePanel');
+  const shareClose    = document.getElementById('shareClose');
   const shareBackdrop = document.getElementById('shareBackdrop');
 
   function openShare() {
     if (!sharePanel) return;
     sharePanel.classList.add('open');
-    shareBackdrop.classList.add('open');
+    if (shareBackdrop) shareBackdrop.classList.add('open');
     sharePanel.setAttribute('aria-hidden', 'false');
   }
 
   function closeShare() {
     if (!sharePanel) return;
     sharePanel.classList.remove('open');
-    shareBackdrop.classList.remove('open');
+    if (shareBackdrop) shareBackdrop.classList.remove('open');
     sharePanel.setAttribute('aria-hidden', 'true');
   }
 
-  if (shareToggle) shareToggle.addEventListener('click', openShare);
-  if (shareClose) shareClose.addEventListener('click', closeShare);
+  if (shareToggle)   shareToggle.addEventListener('click', openShare);
+  if (shareClose)    shareClose.addEventListener('click', closeShare);
   if (shareBackdrop) shareBackdrop.addEventListener('click', closeShare);
 
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') closeShare();
   });
 
-  // ================= COUNTERS (HOME & ACHIEVEMENTS PAGE) =================
+  // ================= COUNTERS =================
   const counters = document.querySelectorAll('.count');
   counters.forEach(counter => {
     const target = +counter.getAttribute('data-target') || 0;
@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-// ================= SHARE HELPERS =================
+// ================= SHARE OPEN HELPERS =================
 function openWhatsApp() {
   const msg = encodeURIComponent(
     'Hi Tech & Tidy Services! I would like to inquire about your required services.'
@@ -57,10 +57,7 @@ function openWhatsApp() {
 }
 
 function openFacebook() {
-  window.open(
-    'https://www.facebook.com/profile.php?id=61583813489748',
-    '_blank'
-  );
+  window.open('https://www.facebook.com/profile.php?id=61583813489748', '_blank');
 }
 
 function openInstagram() {
