@@ -1,21 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Us — Tech & Tidy Services</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="icon" href="Assets/Images/Logo.png">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About — Tech & Tidy Services</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
 </head>
 <body>
 
-<!-- ================= HEADER ================= -->
 <header class="site-header">
   <div class="container header-inner">
-    <a href="index.html">
-      <img src="Assets/Images/Logo.png" alt="Tech & Tidy Logo" class="logo">
+    <a href="index.html" class="header-logo-wrap">
+      <img src="Assets/Images/Logo.png" alt="Tech & Tidy Logo" class="header-logo">
     </a>
-
     <nav class="main-nav">
       <a href="index.html">Home</a>
       <a href="about.html" class="active">About Us</a>
@@ -23,166 +21,126 @@
       <a href="achievements.html">Achievements</a>
       <a href="contact.html">Contact</a>
     </nav>
-
-    <img src="Assets/Images/SHARE.png" class="share-btn" onclick="toggleShare()" alt="Share">
+    <img src="Assets/Images/SHARE.png" id="shareToggle" class="share-btn" alt="Share">
   </div>
 </header>
 
-<!-- SHARE POPUP -->
-<div id="sharePopup" class="share-popup">
-  <div class="share-box">
-    <img src="Assets/Images/Logo.png" class="share-logo" alt="Share Logo">
-    <h3>Share Our Website</h3>
-
-    <a href="https://wa.me/971581160415" target="_blank" class="share-item">
-      <img src="Assets/Images/WhatsApp.png" alt="WhatsApp"> WhatsApp
-    </a>
-
-    <a href="https://www.facebook.com/profile.php?id=61583813489748" target="_blank" class="share-item">
-      <img src="Assets/Images/Facebook.png" alt="Facebook"> Facebook
-    </a>
-
-    <a href="https://www.instagram.com/techtidyservices" target="_blank" class="share-item">
-      <img src="Assets/Images/Instagram.png" alt="Instagram"> Instagram
-    </a>
-
-    <a href="tel:+971581160415" class="share-item">
-      <img src="Assets/Images/Call.png" alt="Call"> Call Us
-    </a>
-
-    <button class="close-share" onclick="toggleShare()">Close</button>
+<div class="share-popup" id="sharePopup">
+  <div class="share-popup-inner">
+    <div class="share-header">
+      <h3>Share & Connect</h3>
+      <button id="shareClose" class="share-close">&times;</button>
+    </div>
+    <div class="share-grid">
+      <a href="https://wa.me/971581160415?text=Hi%20Tech%20%26%20Tidy%20Technical%20Services!%20I%20would%20like%20to%20inquire%20about%20your%20technical%20services." target="_blank">
+        <img src="Assets/Images/WhatsApp.png" alt="WhatsApp">
+        <span>WhatsApp</span>
+      </a>
+      <a href="https://www.facebook.com/profile.php?id=61583813489748" target="_blank">
+        <img src="Assets/Images/Facebook.png" alt="Facebook">
+        <span>Facebook</span>
+      </a>
+      <a href="https://www.instagram.com/techtidyservices" target="_blank">
+        <img src="Assets/Images/Instagram.png" alt="Instagram">
+        <span>Instagram</span>
+      </a>
+      <a href="tel:+971581160415">
+        <img src="Assets/Images/Call.png" alt="Call">
+        <span>Call</span>
+      </a>
+    </div>
   </div>
 </div>
 
-<script>
-function toggleShare(){
-  document.getElementById("sharePopup").classList.toggle("show");
-}
-</script>
-
-<!-- ================= HERO ================= -->
-<section class="hero-section small-hero">
+<section class="sub-hero">
   <div class="container">
     <h1>About Tech &amp; Tidy Services</h1>
-    <p class="tagline">Keeping your spaces efficient, safe, and perfectly maintained.</p>
+    <p>Keeping your spaces efficient, safe, and perfectly maintained.</p>
   </div>
 </section>
 
-<!-- ================= ABOUT + TEAM ================= -->
 <section class="section-light">
-  <div class="container about-grid">
-    <div class="about-text">
+  <div class="container about-content">
+    <div>
       <h2>Who We Are</h2>
-      <p>Tech &amp; Tidy Services is a professional maintenance and facility solutions company dedicated to delivering reliable, efficient, and high-quality technical services across residential, commercial, and industrial spaces.</p>
-      <p>From small repairs to full property renovations, we combine technical expertise, modern tools, and attention to detail to ensure safe, long-lasting, and high-quality results for every project.</p>
+      <p>Tech &amp; Tidy Services is a professional maintenance and facility solutions company dedicated to delivering reliable, efficient, and high-quality technical services across residential, commercial, and industrial sectors. We combine expertise, innovation, and attention to detail to ensure safe and sustainable results for every client.</p>
 
       <h3>Our Mission</h3>
-      <p>To keep every space we work on efficient, safe, clean, and perfectly maintained while offering honest, professional and cost-effective services.</p>
+      <p>To keep your home, villa, or office operating safely, efficiently, and looking its best — through professional technical services and customer-focused care.</p>
+
+      <h3>What We Do</h3>
+      <ul>
+        <li>General repair &amp; maintenance</li>
+        <li>Home, office &amp; villa renovation</li>
+        <li>Electrical &amp; plumbing works</li>
+        <li>Carpentry &amp; custom woodwork</li>
+        <li>Cleaning, pest control &amp; moving services</li>
+      </ul>
+
+      <h3>Our Values</h3>
+      <ul>
+        <li>Honesty and transparent pricing</li>
+        <li>Quality workmanship and materials</li>
+        <li>On-time delivery and dependable service</li>
+        <li>Long-term relationships with our clients</li>
+      </ul>
     </div>
 
-    <div class="about-image">
-      <!-- Your team image -->
-      <img src="Assets/Images/Team picture.png" alt="Tech & Tidy Team">
-    </div>
-  </div>
-</section>
-
-<!-- ================= WHY CHOOSE US ================= -->
-<section class="section-light">
-  <div class="container">
-    <h2 class="section-title">Why Choose Us?</h2>
-
-    <div class="why-grid">
-
-      <div class="why-card">
-        <img src="Assets/Images/cost.png" alt="Cost Effective">
-        <h3>Cost-Effective Solutions</h3>
-        <p>We deliver exceptional quality without unnecessary costs, ensuring you get the best value for your investment.</p>
-      </div>
-
-      <div class="why-card">
-        <img src="Assets/Images/dependability.png" alt="Dependability">
-        <h3>Dependability</h3>
-        <p>We are committed to reliability and professionalism, completing every project with care and precision.</p>
-      </div>
-
-      <div class="why-card">
-        <img src="Assets/Images/materials.png" alt="High-Quality Materials">
-        <h3>High-Quality Materials</h3>
-        <p>We use premium-grade materials to guarantee durability, safety, and a refined finish that lasts.</p>
-      </div>
-
-      <div class="why-card">
-        <img src="Assets/Images/expertise.png" alt="Industry Expertise">
-        <h3>Industry Expertise</h3>
-        <p>With years of experience, our team brings deep technical knowledge and smart solutions to every project.</p>
-      </div>
-
-      <div class="why-card">
-        <img src="Assets/Images/timely.png" alt="Timely Execution">
-        <h3>Timely Execution</h3>
-        <p>We respect your time and deadlines, ensuring projects are completed efficiently without compromising quality.</p>
-      </div>
-
-      <div class="why-card">
-        <img src="Assets/Images/custom.png" alt="Custom Solutions">
-        <h3>Custom Solutions</h3>
-        <p>Every space is unique. We tailor our services to match your specific needs, style, and expectations.</p>
-      </div>
-
+    <div>
+      <img src="Assets/Images/Team picture.png" alt="Tech & Tidy Team" class="team-image">
     </div>
   </div>
 </section>
 
-<!-- ================= FOOTER ================= -->
 <footer class="site-footer">
-  <div class="container footer-container">
-
+  <div class="container footer-inner">
     <div class="footer-left">
-      <img src="Assets/Images/Logo.png" class="footer-logo" alt="Footer Logo">
-      <p class="brand-name">Tech &amp; Tidy Services</p>
+      <img src="Assets/Images/Logo.png" class="footer-logo" alt="Tech & Tidy Logo">
+      <p><strong>Tech &amp; Tidy Services</strong></p>
       <p>Dubai, United Arab Emirates</p>
       <p><a href="tel:+971581160415">+971 58 116 0415</a></p>
       <p><a href="mailto:inquiry@techntidy.com">inquiry@techntidy.com</a></p>
     </div>
 
-    <div class="footer-links">
-      <h4>Navigation</h4>
+    <div class="footer-menu">
+      <h4>Menu</h4>
       <a href="index.html">Home</a>
       <a href="about.html">About Us</a>
       <a href="services.html">Services</a>
       <a href="achievements.html">Achievements</a>
       <a href="contact.html">Contact Us</a>
-      <a href="whyus.html">Why Us</a>
-      <a href="reviews.html">Customer Review</a>
     </div>
 
     <div class="footer-social">
-      <h4>Connect With Us</h4>
-      <a href="https://wa.me/971581160415" target="_blank"><img src="Assets/Images/WhatsApp.png" alt="WhatsApp"></a>
-      <a href="https://www.facebook.com/profile.php?id=61583813489748" target="_blank"><img src="Assets/Images/Facebook.png" alt="Facebook"></a>
-      <a href="https://www.instagram.com/techtidyservices" target="_blank"><img src="Assets/Images/Instagram.png" alt="Instagram"></a>
-      <a href="tel:+971581160415"><img src="Assets/Images/Call.png" alt="Call"></a>
+      <a href="https://wa.me/971581160415?text=Hi%20Tech%20%26%20Tidy%20Technical%20Services!%20I%20would%20like%20to%20inquire%20about%20your%20technical%20services." target="_blank">
+        <img src="Assets/Images/WhatsApp.png" alt="WhatsApp">
+      </a>
+      <a href="https://www.facebook.com/profile.php?id=61583813489748" target="_blank">
+        <img src="Assets/Images/Facebook.png" alt="Facebook">
+      </a>
+      <a href="https://www.instagram.com/techtidyservices" target="_blank">
+        <img src="Assets/Images/Instagram.png" alt="Instagram">
+      </a>
+      <a href="tel:+971581160415">
+        <img src="Assets/Images/Call.png" alt="Call">
+      </a>
     </div>
-
   </div>
-
-  <p class="footer-copy">© 2025 Tech &amp; Tidy Services. All Rights Reserved.</p>
+  <p class="copyright">© 2025 Tech & Tidy Services. All Rights Reserved.</p>
 </footer>
 
-<!-- FLOATING ICONS -->
 <div class="floating-icons">
-  <a href="https://wa.me/971581160415" target="_blank">
-    <img src="Assets/Images/WhatsApp.png" class="float-btn" alt="WhatsApp" />
+  <a href="https://wa.me/971581160415?text=Hi%20Tech%20%26%20Tidy%20Technical%20Services!%20I%20would%20like%20to%20inquire%20about%20your%20technical%20services." target="_blank">
+    <img src="Assets/Images/WhatsApp.png" alt="WhatsApp">
   </a>
   <a href="https://www.facebook.com/profile.php?id=61583813489748" target="_blank">
-    <img src="Assets/Images/Facebook.png" class="float-btn" alt="Facebook" />
+    <img src="Assets/Images/Facebook.png" alt="Facebook">
   </a>
   <a href="https://www.instagram.com/techtidyservices" target="_blank">
-    <img src="Assets/Images/Instagram.png" class="float-btn" alt="Instagram" />
+    <img src="Assets/Images/Instagram.png" alt="Instagram">
   </a>
   <a href="tel:+971581160415">
-    <img src="Assets/Images/Call.png" class="float-btn" alt="Call" />
+    <img src="Assets/Images/Call.png" alt="Call">
   </a>
 </div>
 
