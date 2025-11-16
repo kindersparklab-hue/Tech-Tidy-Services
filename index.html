@@ -1,241 +1,264 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tech & Tidy Services</title>
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tech & Tidy Services</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
 </head>
 
 <body>
 
 <!-- ================= HEADER ================= -->
 <header class="site-header">
-    <div class="container header-inner">
-        <a href="index.html">
-            <img src="Assets/Images/Logo.png" class="logo" alt="Logo">
-        </a>
+  <div class="container header-inner">
+    <a href="index.html" class="brand">
+      <img src="Assets/Images/Logo.png" class="logo" alt="Tech & Tidy Logo">
+    </a>
 
-        <nav class="main-nav">
-            <a href="index.html">Home</a>
-            <a href="about.html">About Us</a>
-            <a href="services.html">Services</a>
-            <a href="achievements.html">Achievements</a>
-            <a href="contact.html">Contact</a>
-        </nav>
+    <nav class="main-nav">
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="services.html">Services</a>
+      <a href="achievements.html">Achievements</a>
+      <a href="contact.html">Contact</a>
+    </nav>
 
-        <img src="Assets/Images/SHARE.png" class="share-btn" alt="Share">
-    </div>
+    <button type="button" class="share-btn" id="shareToggle" aria-label="Share this page">
+      <img src="Assets/Images/SHARE.png" alt="Share">
+    </button>
+  </div>
 </header>
 
-<!-- SHARE PANEL -->
-<div class="share-panel">
-    <div class="share-item" onclick="openWhatsApp()">
-        <img src="Assets/Images/WhatsApp.png"><span>WhatsApp</span>
-    </div>
-    <div class="share-item" onclick="openFacebook()">
-        <img src="Assets/Images/Facebook.png"><span>Facebook</span>
-    </div>
-    <div class="share-item" onclick="openInstagram()">
-        <img src="Assets/Images/Instagram.png"><span>Instagram</span>
-    </div>
-    <div class="share-item" onclick="callNow()">
-        <img src="Assets/Images/Call.png"><span>Call</span>
-    </div>
-</div>
+<!-- ================= SHARE SLIDER PANEL ================= -->
+<aside class="share-panel" id="sharePanel" aria-hidden="true">
+  <div class="share-panel-header">
+    <img src="Assets/Images/Logo.png" class="share-logo" alt="Tech & Tidy">
+    <button type="button" class="share-close" id="shareClose" aria-label="Close share options">×</button>
+  </div>
+
+  <p class="share-title">Share our website</p>
+
+  <div class="share-panel-inner">
+    <button class="share-option" type="button" onclick="openWhatsApp()">
+      <img src="Assets/Images/WhatsApp.png" alt="WhatsApp">
+      <span>WhatsApp</span>
+    </button>
+
+    <button class="share-option" type="button" onclick="openFacebook()">
+      <img src="Assets/Images/Facebook.png" alt="Facebook">
+      <span>Facebook</span>
+    </button>
+
+    <button class="share-option" type="button" onclick="openInstagram()">
+      <img src="Assets/Images/Instagram.png" alt="Instagram">
+      <span>Instagram</span>
+    </button>
+
+    <button class="share-option" type="button" onclick="callNow()">
+      <img src="Assets/Images/Call.png" alt="Call">
+      <span>Call</span>
+    </button>
+  </div>
+</aside>
+
+<div class="share-backdrop" id="shareBackdrop"></div>
 
 <!-- ================= BANNER SLIDESHOW ================= -->
-<div class="slideshow-container">
-    <div class="slide" style="background-image:url('Assets/Images/Banner - 1.png');"></div>
-    <div class="slide" style="background-image:url('Assets/Images/Banner - 2.png');"></div>
-    <div class="slide" style="background-image:url('Assets/Images/Banner - 3.png');"></div>
-    <div class="slide" style="background-image:url('Assets/Images/Banner - 4.png');"></div>
+<div class="banner-slider">
+  <div class="slide" style="background-image:url('Assets/Images/Banner - 1.png');"></div>
+  <div class="slide" style="background-image:url('Assets/Images/Banner - 2.png');"></div>
+  <div class="slide" style="background-image:url('Assets/Images/Banner - 3.png');"></div>
+  <div class="slide" style="background-image:url('Assets/Images/Banner - 4.png');"></div>
 </div>
 
 <!-- ================= HERO TEXT ================= -->
-<section class="hero-center">
-    <h1>Tech & Tidy Services</h1>
-    <p>Keeping your spaces efficient, safe, and perfectly maintained.</p>
+<section class="hero-text-section">
+  <h1>Tech &amp; Tidy Services</h1>
+  <p>Keeping your spaces efficient, safe, and perfectly maintained.</p>
 
-    <div class="hero-buttons">
-        <a href="services.html" class="btn-primary">Our Services</a>
-        <a href="contact.html" class="btn-secondary">Contact Us</a>
-    </div>
+  <div class="hero-buttons">
+    <a href="services.html" class="btn-primary">Our Services</a>
+    <a href="contact.html" class="btn-secondary">Contact Us</a>
+  </div>
 </section>
 
 <!-- ================= SERVICES WE OFFER ================= -->
-<section class="section">
-    <h2 class="section-title">Services We Offer</h2>
+<section class="services-section">
+  <h2>Services We Offer</h2>
 
-    <div class="services-grid">
+  <div class="services-grid">
+    <a href="services.html#repair-maintenance" class="service-box">
+      <h3>Repair &amp; Maintenance</h3>
+      <p>Comprehensive repair solutions for all your home and office needs.</p>
+    </a>
 
-        <a href="services.html#repair-maintenance" class="service-box">
-            <h3>Repair & Maintenance</h3>
-        </a>
+    <a href="services.html#renovation" class="service-box">
+      <h3>Home, Office &amp; Villa Renovation</h3>
+      <p>Transform your space with expert renovation services.</p>
+    </a>
 
-        <a href="services.html#renovation" class="service-box">
-            <h3>Home, Office & Villa Renovation</h3>
-        </a>
+    <a href="services.html#painting" class="service-box">
+      <h3>Painting Services</h3>
+      <p>Professional painting for homes, offices, and commercial spaces.</p>
+    </a>
 
-        <a href="services.html#painting" class="service-box">
-            <h3>Painting Services</h3>
-        </a>
+    <a href="services.html#electrical-plumbing" class="service-box">
+      <h3>Electrical &amp; Plumbing</h3>
+      <p>Safe, reliable electrical and plumbing work.</p>
+    </a>
 
-        <a href="services.html#electrical-plumbing" class="service-box">
-            <h3>Electrical & Plumbing</h3>
-        </a>
+    <a href="services.html#appliance-maintenance" class="service-box">
+      <h3>Home Appliance Installation &amp; Maintenance</h3>
+      <p>Installation and routine maintenance for major appliances.</p>
+    </a>
 
-        <a href="services.html#appliance-maintenance" class="service-box">
-            <h3>Home Appliance Installation & Maintenance</h3>
-        </a>
+    <a href="services.html#carpentry" class="service-box">
+      <h3>Carpentry Services</h3>
+      <p>Custom woodwork and carpentry for home or business projects.</p>
+    </a>
 
-        <a href="services.html#carpentry" class="service-box">
-            <h3>Carpentry Services</h3>
-        </a>
+    <a href="services.html#bathroom-renovation" class="service-box">
+      <h3>Bathroom Renovation</h3>
+      <p>Modern bathroom upgrades with quality fittings and finishes.</p>
+    </a>
 
-        <a href="services.html#bathroom-renovation" class="service-box">
-            <h3>Bathroom Renovation</h3>
-        </a>
+    <a href="services.html#kitchen-renovation" class="service-box">
+      <h3>Kitchen Renovation</h3>
+      <p>Smart, functional kitchen designs and remodeling.</p>
+    </a>
 
-        <a href="services.html#kitchen-renovation" class="service-box">
-            <h3>Kitchen Renovation</h3>
-        </a>
+    <a href="services.html#cleaning" class="service-box">
+      <h3>Cleaning Services</h3>
+      <p>Reliable cleaning for homes, offices, and commercial spaces.</p>
+    </a>
 
-        <a href="services.html#cleaning" class="service-box">
-            <h3>Cleaning Services</h3>
-        </a>
+    <a href="services.html#ac-maintenance" class="service-box">
+      <h3>AC Maintenance &amp; Repair</h3>
+      <p>Professional AC servicing, deep cleaning and repairs.</p>
+    </a>
 
-        <a href="services.html#ac-maintenance" class="service-box">
-            <h3>AC Maintenance & Repair</h3>
-        </a>
+    <a href="services.html#pest-control" class="service-box">
+      <h3>Pest / Bird Control</h3>
+      <p>Safe and effective pest &amp; bird management solutions.</p>
+    </a>
 
-        <a href="services.html#pest-control" class="service-box">
-            <h3>Pest / Bird Control</h3>
-        </a>
-
-        <a href="services.html#packers-movers" class="service-box">
-            <h3>Packers & Movers</h3>
-        </a>
-
-    </div>
+    <a href="services.html#packers-movers" class="service-box">
+      <h3>Packers &amp; Movers</h3>
+      <p>Hassle-free moving services for homes and businesses.</p>
+    </a>
+  </div>
 </section>
 
 <!-- ================= WHY CHOOSE US ================= -->
-<section class="section">
-    <h2 class="section-title">Why Choose Us?</h2>
+<section class="why-section">
+  <h2>Why Choose Us?</h2>
 
-    <div class="why-grid">
-
-        <div class="why-box">
-            <img src="Assets/Images/cost.png">
-            <h4>Cost-Effective Solutions</h4>
-        </div>
-
-        <div class="why-box">
-            <img src="Assets/Images/dependability.png">
-            <h4>Dependability</h4>
-        </div>
-
-        <div class="why-box">
-            <img src="Assets/Images/materials.png">
-            <h4>High-Quality Materials</h4>
-        </div>
-
-        <div class="why-box">
-            <img src="Assets/Images/expertise.png">
-            <h4>Industry Expertise</h4>
-        </div>
-
-        <div class="why-box">
-            <img src="Assets/Images/timely.png">
-            <h4>Timely Execution</h4>
-        </div>
-
-        <div class="why-box">
-            <img src="Assets/Images/custom.png">
-            <h4>Custom Solutions</h4>
-        </div>
-
+  <div class="why-grid">
+    <div class="why-box">
+      <img src="Assets/Images/cost.png" alt="Cost Effective">
+      <h3>Cost-Effective Solutions</h3>
+      <p>Great quality without unnecessary costs.</p>
     </div>
+
+    <div class="why-box">
+      <img src="Assets/Images/dependability.png" alt="Dependable">
+      <h3>Dependability</h3>
+      <p>Reliable team that completes every project with care.</p>
+    </div>
+
+    <div class="why-box">
+      <img src="Assets/Images/materials.png" alt="Materials">
+      <h3>High-Quality Materials</h3>
+      <p>Premium materials for durable and refined results.</p>
+    </div>
+
+    <div class="why-box">
+      <img src="Assets/Images/expertise.png" alt="Expertise">
+      <h3>Industry Expertise</h3>
+      <p>Experienced technicians with strong technical know-how.</p>
+    </div>
+
+    <div class="why-box">
+      <img src="Assets/Images/timely.png" alt="Timely">
+      <h3>Timely Execution</h3>
+      <p>We respect your deadlines and deliver on time.</p>
+    </div>
+
+    <div class="why-box">
+      <img src="Assets/Images/custom.png" alt="Custom Solutions">
+      <h3>Custom Solutions</h3>
+      <p>Services tailored to your exact needs and vision.</p>
+    </div>
+  </div>
 </section>
 
 <!-- ================= CUSTOMER REVIEWS ================= -->
-<section class="section">
-    <h2 class="section-title">Customer Reviews</h2>
+<section class="review-section">
+  <h2>Customer Reviews</h2>
 
-    <div class="reviews-grid">
+  <div class="review-box">
+    <p>"Excellent service, fast and reliable. Highly recommended!"</p>
+    <span>- Ahmed</span>
+  </div>
 
-        <div class="review-box">
-            <p>"Excellent service, fast and reliable. Highly recommended!"</p>
-            <h4>- Ahmed</h4>
-        </div>
+  <div class="review-box">
+    <p>"Professional team. My villa renovation looks amazing now."</p>
+    <span>- Fatima</span>
+  </div>
 
-        <div class="review-box">
-            <p>"Professional team. My villa renovation looks amazing now."</p>
-            <h4>- Fatima</h4>
-        </div>
-
-        <div class="review-box">
-            <p>"Quick AC repair. They saved us during the hot days."</p>
-            <h4>- Sameer</h4>
-        </div>
-
-    </div>
+  <div class="review-box">
+    <p>"Quick AC repair. They saved us during the hot days."</p>
+    <span>- Sameer</span>
+  </div>
 </section>
 
 <!-- ================= ACHIEVEMENTS ================= -->
-<section class="section-light">
-    <div class="container">
-        <div class="hero-counters">
-
-            <div class="counter-card">
-                <span class="count" data-target="3">0</span>
-                <div class="label">Ongoing Projects</div>
-            </div>
-
-            <div class="counter-card">
-                <span class="count" data-target="5">0</span>
-                <div class="label">Happy Customers</div>
-            </div>
-
-            <div class="counter-card">
-                <span class="count" data-target="14">0</span>
-                <div class="label">Completed Projects</div>
-            </div>
-
-        </div>
+<section class="achievements-section">
+  <div class="hero-counters">
+    <div class="counter-card">
+      <span class="count" data-target="3">0</span>
+      <div class="label">Ongoing Projects</div>
     </div>
+    <div class="counter-card">
+      <span class="count" data-target="5">0</span>
+      <div class="label">Happy Customers</div>
+    </div>
+    <div class="counter-card">
+      <span class="count" data-target="14">0</span>
+      <div class="label">Completed Projects</div>
+    </div>
+  </div>
 </section>
 
 <!-- ================= FOOTER ================= -->
 <footer class="site-footer">
-    <div class="footer-inner">
+  <div class="footer-inner">
+    <img src="Assets/Images/Logo.png" class="footer-logo" alt="Tech & Tidy">
 
-        <img src="Assets/Images/Logo.png" class="footer-logo">
-
-        <h3>Tech & Tidy Services</h3>
-        <p>Dubai, United Arab Emirates</p>
-        <p>Phone: +971 58 116 0415</p>
-        <p>Email: inquiry@techntidy.com</p>
-
-        <!-- FOOTER SOCIAL ICONS -->
-        <div class="footer-social">
-            <img src="Assets/Images/WhatsApp.png" onclick="openWhatsApp()">
-            <img src="Assets/Images/Facebook.png" onclick="openFacebook()">
-            <img src="Assets/Images/Instagram.png" onclick="openInstagram()">
-            <img src="Assets/Images/Call.png" onclick="callNow()">
-        </div>
-
+    <div class="footer-info">
+      <h3>Tech &amp; Tidy Services</h3>
+      <p>Dubai, United Arab Emirates</p>
+      <p>Phone: +971 58 116 0415</p>
+      <p>Email: inquiry@techntidy.com</p>
     </div>
+
+    <div class="footer-social">
+      <img src="Assets/Images/WhatsApp.png" alt="WhatsApp" onclick="openWhatsApp()">
+      <img src="Assets/Images/Facebook.png" alt="Facebook" onclick="openFacebook()">
+      <img src="Assets/Images/Instagram.png" alt="Instagram" onclick="openInstagram()">
+      <img src="Assets/Images/Call.png" alt="Call" onclick="callNow()">
+    </div>
+  </div>
 </footer>
 
-<!-- FLOATING ICONS -->
+<!-- ================= FLOATING ICONS ================= -->
 <div class="floating-icons">
-    <img src="Assets/Images/WhatsApp.png" onclick="openWhatsApp()">
-    <img src="Assets/Images/Facebook.png" onclick="openFacebook()">
-    <img src="Assets/Images/Instagram.png" onclick="openInstagram()">
-    <img src="Assets/Images/Call.png" onclick="callNow()">
+  <img src="Assets/Images/WhatsApp.png" alt="WhatsApp" onclick="openWhatsApp()">
+  <img src="Assets/Images/Facebook.png" alt="Facebook" onclick="openFacebook()">
+  <img src="Assets/Images/Instagram.png" alt="Instagram" onclick="openInstagram()">
+  <img src="Assets/Images/Call.png" alt="Call" onclick="callNow()">
 </div>
 
 </body>
