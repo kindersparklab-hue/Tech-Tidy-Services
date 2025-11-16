@@ -1,137 +1,136 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Contact — Tech & Tidy Services</title>
   <link rel="stylesheet" href="styles.css">
-  <script defer src="script.js"></script>
+  <link rel="icon" href="Assets/Images/logo.png">
 </head>
 <body>
 
-<header class="site-header">
-  <div class="container header-inner">
-    <a href="index.html" class="header-logo-wrap">
-      <img src="Assets/Images/Logo.png" alt="Tech & Tidy Logo" class="header-logo">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <img src="Assets/Images/logo.png" alt="Tech &amp; Tidy Logo" class="logo">
+      </a>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About Us</a>
+        <a href="achievements.html">Achievements</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+      <button class="share-icon-btn" id="shareToggle" aria-label="Share this page">
+        <img src="Assets/Images/SHARE.png" alt="Share icon">
+      </button>
+    </div>
+  </header>
+
+  <section class="sub-hero">
+    <div class="container">
+      <h1>Contact Us</h1>
+      <p class="sub-hero-tagline">
+        We’re here to help with all your maintenance, renovation and service needs.
+      </p>
+    </div>
+  </section>
+
+  <main class="section-light">
+    <div class="container contact-layout">
+      <div class="contact-card">
+        <h2>Get in touch</h2>
+        <p><strong>Location:</strong> Dubai, United Arab Emirates</p>
+        <p><strong>Phone:</strong> <a href="tel:+971581160415">+971 58 116 0415</a></p>
+        <p><strong>Email:</strong> <a href="mailto:inquiry@techntidy.com">inquiry@techntidy.com</a></p>
+        <p><strong>WhatsApp:</strong> 
+          <a href="https://wa.me/971581160415?text=Hi%20Tech%20%26%20Tidy%20Services!%20I%20would%20like%20to%20inquire%20about%20your%20required%20services." target="_blank">
+            Chat with us
+          </a>
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <!-- footer + floating + share panel reused -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-top">
+        <img src="Assets/Images/logo.png" alt="Tech &amp; Tidy Logo" class="footer-logo">
+        <div class="footer-text">
+          <h3>Tech &amp; Tidy Services</h3>
+          <p>Dubai, United Arab Emirates</p>
+          <p>Phone: <a href="tel:+971581160415">+971 58 116 0415</a></p>
+          <p>Email: <a href="mailto:inquiry@techntidy.com">inquiry@techntidy.com</a></p>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="services.html">Services</a>
+        <a href="achievements.html">Achievements</a>
+        <a href="index.html#why-us">Why Us</a>
+        <a href="index.html#customer-reviews">Customer Review</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+
+      <div class="footer-social">
+        <a href="https://wa.me/971581160415?text=Hi%20Tech%20%26%20Tidy%20Services!%20I%20would%20like%20to%20inquire%20about%20your%20required%20services." target="_blank">
+          <img src="Assets/Images/WhatsApp.png" alt="WhatsApp">
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=61583813489748" target="_blank">
+          <img src="Assets/Images/Facebook.png" alt="Facebook">
+        </a>
+        <a href="https://www.instagram.com/techtidyservices" target="_blank">
+          <img src="Assets/Images/Instagram.png" alt="Instagram">
+        </a>
+        <a href="tel:+971581160415">
+          <img src="Assets/Images/Call.png" alt="Call us">
+        </a>
+      </div>
+
+      <p class="footer-copy">© 2025 Tech &amp; Tidy Services. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <div class="floating-contact">
+    <a href="https://wa.me/971581160415?text=Hi%20Tech%20%26%20Tidy%20Services!%20I%20would%20like%20to%20inquire%20about%20your%20required%20services." target="_blank">
+      <img src="Assets/Images/WhatsApp.png" alt="WhatsApp">
     </a>
-    <nav class="main-nav">
-      <a href="index.html">Home</a>
-      <a href="about.html">About Us</a>
-      <a href="services.html">Services</a>
-      <a href="achievements.html">Achievements</a>
-      <a href="contact.html" class="active">Contact</a>
-    </nav>
-    <img src="Assets/Images/SHARE.png" id="shareToggle" class="share-btn" alt="Share">
+    <a href="https://www.facebook.com/profile.php?id=61583813489748" target="_blank">
+      <img src="Assets/Images/Facebook.png" alt="Facebook">
+    </a>
+    <a href="https://www.instagram.com/techtidyservices" target="_blank">
+      <img src="Assets/Images/Instagram.png" alt="Instagram">
+    </a>
+    <a href="tel:+971581160415">
+      <img src="Assets/Images/Call.png" alt="Call">
+    </a>
   </div>
-</header>
 
-<div class="share-popup" id="sharePopup">
-  <div class="share-popup-inner">
-    <div class="share-header">
-      <h3>Share & Connect</h3>
-      <button id="shareClose" class="share-close">&times;</button>
-    </div>
-    <div class="share-grid">
-      <a href="https://wa.me/971581160415?text=Hi%20Tech%20%26%20Tidy%20Technical%20Services!%20I%20would%20like%20to%20inquire%20about%20your%20technical%20services." target="_blank">
-        <img src="Assets/Images/WhatsApp.png" alt="WhatsApp">
-        <span>WhatsApp</span>
-      </a>
-      <a href="https://www.facebook.com/profile.php?id=61583813489748" target="_blank">
-        <img src="Assets/Images/Facebook.png" alt="Facebook">
-        <span>Facebook</span>
-      </a>
-      <a href="https://www.instagram.com/techtidyservices" target="_blank">
-        <img src="Assets/Images/Instagram.png" alt="Instagram">
-        <span>Instagram</span>
-      </a>
-      <a href="tel:+971581160415">
-        <img src="Assets/Images/Call.png" alt="Call">
-        <span>Call</span>
-      </a>
+  <div class="share-panel" id="sharePanel">
+    <div class="share-panel-inner">
+      <button class="share-close" id="shareClose" aria-label="Close share panel">&times;</button>
+      <img src="Assets/Images/logo.png" alt="Tech &amp; Tidy Logo" class="share-logo">
+      <h3>Share this page</h3>
+      <div class="share-cards">
+        <a class="share-card" href="https://wa.me/971581160415?text=Hi%20Tech%20%26%20Tidy%20Services!%20I%20would%20like%20to%20inquire%20about%20your%20required%20services." target="_blank">
+          WhatsApp
+        </a>
+        <a class="share-card" href="https://www.facebook.com/profile.php?id=61583813489748" target="_blank">
+          Facebook
+        </a>
+        <a class="share-card" href="https://www.instagram.com/techtidyservices" target="_blank">
+          Instagram
+        </a>
+        <a class="share-card" href="tel:+971581160415">
+          Call
+        </a>
+      </div>
     </div>
   </div>
-</div>
 
-<section class="sub-hero">
-  <div class="container">
-    <h1>Contact Us</h1>
-    <p>We’re here to help with all your technical service needs.</p>
-  </div>
-</section>
-
-<section class="section-light">
-  <div class="container contact-layout">
-    <div class="contact-card">
-      <h2>Get in touch</h2>
-      <p><strong>Address:</strong><br>Dubai, United Arab Emirates</p>
-      <p><strong>Phone:</strong><br><a href="tel:+971581160415">+971 58 116 0415</a></p>
-      <p><strong>Email:</strong><br><a href="mailto:inquiry@techntidy.com">inquiry@techntidy.com</a></p>
-    </div>
-
-    <div class="contact-card">
-      <h2>Connect Online</h2>
-      <p>You can also reach us quickly via WhatsApp or our social media channels.</p>
-      <ul class="contact-links">
-        <li><a href="https://wa.me/971581160415?text=Hi%20Tech%20%26%20Tidy%20Technical%20Services!%20I%20would%20like%20to%20inquire%20about%20your%20technical%20services." target="_blank">WhatsApp Chat</a></li>
-        <li><a href="https://www.facebook.com/profile.php?id=61583813489748" target="_blank">Facebook Page</a></li>
-        <li><a href="https://www.instagram.com/techtidyservices" target="_blank">Instagram Profile</a></li>
-        <li><a href="tel:+971581160415" target="_blank">Call Us</a></li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<footer class="site-footer">
-  <div class="container footer-inner">
-    <div class="footer-left">
-      <img src="Assets/Images/Logo.png" class="footer-logo" alt="Tech & Tidy Logo">
-      <p><strong>Tech &amp; Tidy Services</strong></p>
-      <p>Dubai, United Arab Emirates</p>
-      <p><a href="tel:+971581160415">+971 58 116 0415</a></p>
-      <p><a href="mailto:inquiry@techntidy.com">inquiry@techntidy.com</a></p>
-    </div>
-
-    <div class="footer-menu">
-      <h4>Menu</h4>
-      <a href="index.html">Home</a>
-      <a href="about.html">About Us</a>
-      <a href="services.html">Services</a>
-      <a href="achievements.html">Achievements</a>
-      <a href="contact.html">Contact Us</a>
-    </div>
-
-    <div class="footer-social">
-      <a href="https://wa.me/971581160415?text=Hi%20Tech%20%26%20Tidy%20Technical%20Services!%20I%20would%20like%20to%20inquire%20about%20your%20technical%20services." target="_blank">
-        <img src="Assets/Images/WhatsApp.png" alt="WhatsApp">
-      </a>
-      <a href="https://www.facebook.com/profile.php?id=61583813489748" target="_blank">
-        <img src="Assets/Images/Facebook.png" alt="Facebook">
-      </a>
-      <a href="https://www.instagram.com/techtidyservices" target="_blank">
-        <img src="Assets/Images/Instagram.png" alt="Instagram">
-      </a>
-      <a href="tel:+971581160415">
-        <img src="Assets/Images/Call.png" alt="Call">
-      </a>
-    </div>
-  </div>
-  <p class="copyright">© 2025 Tech & Tidy Services. All Rights Reserved.</p>
-</footer>
-
-<div class="floating-icons">
-  <a href="https://wa.me/971581160415?text=Hi%20Tech%20%26%20Tidy%20Technical%20Services!%20I%20would%20like%20to%20inquire%20about%20your%20technical%20services." target="_blank">
-    <img src="Assets/Images/WhatsApp.png" alt="WhatsApp">
-  </a>
-  <a href="https://www.facebook.com/profile.php?id=61583813489748" target="_blank">
-    <img src="Assets/Images/Facebook.png" alt="Facebook">
-  </a>
-  <a href="https://www.instagram.com/techtidyservices" target="_blank">
-    <img src="Assets/Images/Instagram.png" alt="Instagram">
-  </a>
-  <a href="tel:+971581160415">
-    <img src="Assets/Images/Call.png" alt="Call">
-  </a>
-</div>
-
+  <script src="script.js"></script>
 </body>
 </html>
