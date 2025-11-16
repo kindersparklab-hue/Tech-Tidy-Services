@@ -1,96 +1,73 @@
-// script.js
+// ===============================
+// HERO BANNER SLIDER
+// ===============================
+document.addEventListener("DOMContentLoaded", () => {
+  const hero = document.querySelector(".hero-section");
+  if (hero) {
+    const banners = [
+      "Assets/Images/Banner - 1.png",
+      "Assets/Images/Banner - 2.png",
+      "Assets/Images/Banner - 3.png",
+      "Assets/Images/Banner - 4.png"
+    ];
+    let index = 0;
 
-document.addEventListener("DOMContentLoaded", function () {
-  // ================= COUNTERS =================
+    function rotateBanner() {
+      index = (index + 1) % banners.length;
+      hero.style.backgroundImage = `url("${banners[index]}")`;
+    }
+
+    // Start with first (already set in CSS), then rotate
+    setInterval(rotateBanner, 6000);
+  }
+
+  // ===============================
+  // COUNTER ANIMATION
+  // ===============================
   const counters = document.querySelectorAll(".count");
-  if (counters.length) {
-    counters.forEach(counter => {
-      const target = parseInt(counter.getAttribute("data-target") || "0", 10);
-      let current = 0;
-      const frames = 80;
-      const increment = Math.max(1, Math.round(target / frames));
+  counters.forEach(counter => {
+    const target = parseInt(counter.getAttribute("data-target"), 10) || 0;
+    let current = 0;
+    const frames = 80;
+    const increment = Math.max(1, Math.round(target / frames));
 
-      const animate = () => {
-        current += increment;
-        if (current >= target) {
-          counter.textContent = target;
-        } else {
-          counter.textContent = current;
-          requestAnimationFrame(animate);
-        }
-      };
-      requestAnimationFrame(animate);
-    });
-  }
+    const updateCount = () => {
+      current += increment;
+      if (current >= target) {
+        counter.textContent = target;
+      } else {
+        counter.textContent = current;
+        requestAnimationFrame(updateCount);
+      }
+    };
 
-  // ================= REVEAL ON SCROLL =================
-  const reveals = document.querySelectorAll(".reveal");
-  if (reveals.length && "IntersectionObserver" in window) {
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.15 });
+    requestAnimationFrame(updateCount);
+  });
 
-    reveals.forEach(el => observer.observe(el));
-  } else if (reveals.length) {
-    // fallback: show all
-    reveals.forEach(el => el.classList.add("visible"));
-  }
+  // ===============================
+  // SCROLL REVEAL
+  // ===============================
+  const revealItems = document.querySelectorAll(".reveal");
 
-  // ================= HERO SLIDER =================
-  const slides = document.querySelectorAll(".hero-slide");
-  if (slides.length > 1) {
-    let currentIndex = 0;
-    setInterval(() => {
-      slides[currentIndex].classList.remove("active");
-      currentIndex = (currentIndex + 1) % slides.length;
-      slides[currentIndex].classList.add("active");
-    }, 5000);
-  }
-
-  // ================= SHARE PANEL =================
-  const shareToggle = document.getElementById("shareToggle");
-  const sharePanel = document.getElementById("sharePanel");
-  const shareClose = document.getElementById("shareClose");
-
-  const openSharePanel = () => {
-    if (sharePanel) {
-      sharePanel.classList.add("open");
-      document.body.classList.add("no-scroll");
-    }
-  };
-
-  const closeSharePanel = () => {
-    if (sharePanel) {
-      sharePanel.classList.remove("open");
-      document.body.classList.remove("no-scroll");
-    }
-  };
-
-  if (shareToggle && sharePanel) {
-    shareToggle.addEventListener("click", openSharePanel);
-  }
-  if (shareClose && sharePanel) {
-    shareClose.addEventListener("click", closeSharePanel);
-  }
-
-  // close when clicking outside inner card
-  if (sharePanel) {
-    sharePanel.addEventListener("click", (e) => {
-      if (e.target === sharePanel) {
-        closeSharePanel();
+  function handleReveal() {
+    const triggerBottom = window.innerHeight * 0.88;
+    revealItems.forEach(el => {
+      const boxTop = el.getBoundingClientRect().top;
+      if (boxTop < triggerBottom) {
+        el.classList.add("visible");
       }
     });
   }
 
-  // close with ESC
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") {
-      closeSharePanel();
-    }
-  });
+  window.addEventListener("scroll", handleReveal);
+  handleReveal(); // initial
 });
+
+// ===============================
+// SHARE PANEL TOGGLE
+// ===============================
+function toggleShare() {
+  const panel = document.getElementById("share-panel");
+  if (!panel) return;
+  panel.classList.toggle("open");
+}
