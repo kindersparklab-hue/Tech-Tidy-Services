@@ -1,173 +1,261 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AERION MOTORS</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tech & Tidy Services</title>
 
-<style>
-  body { margin: 0; font-family: Arial, sans-serif; background: #0A0A0A; color:#fff; }
-
-  /* INTRO */
-  #intro {
-    position: fixed;
-    top:0; left:0;
-    width:100%; height:100%;
-    background:#000;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    z-index:1000;
-  }
-  #intro video {
-    width:100%; height:100%; object-fit:cover;
-  }
-
-  #main-content { display:none; }
-
-  /* HEADER */
-  header {
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:20px;
-    background:#111;
-  }
-  .brand-logo {
-    height:50px;
-    cursor:pointer;
-  }
-  nav ul {
-    list-style:none;
-    display:flex;
-    gap:30px;
-    margin:0;
-  }
-  nav ul li a {
-    color:#fff; text-decoration:none; font-weight:bold;
-  }
-
-  /* HERO */
-  .hero { text-align:center; padding:100px 20px; }
-  .hero h1 { font-size:48px; margin:20px 0; color:#D31024; }
-  .cta-button {
-    display:inline-block;
-    padding:15px 30px;
-    background:#D31024;
-    color:#fff;
-    text-decoration:none;
-    border-radius:5px;
-    margin-top:20px;
-  }
-
-  /* MODAL */
-  .modal {
-    display:none;
-    position:fixed;
-    top:0; left:0;
-    width:100%; height:100%;
-    background:rgba(0,0,0,0.9);
-    justify-content:center;
-    align-items:center;
-    z-index:2000;
-  }
-  .modal-content {
-    background:#111;
-    padding:20px;
-    border-radius:10px;
-    text-align:center;
-    max-width:90%;
-    color:#fff;
-  }
-  .close {
-    position:absolute;
-    top:10px; right:20px;
-    font-size:30px;
-    cursor:pointer;
-    color:#D31024;
-  }
-
-  footer {
-    background:#111;
-    padding:20px;
-    text-align:center;
-  }
-</style>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
 </head>
 
 <body>
 
-<!-- INTRO -->
-<div id="intro">
-  <video id="intro-video" playsinline>
-    <source src="Assets/drift-video.mp4" type="video/mp4">
-  </video>
-  <audio id="drift-audio" src="Assets/drift-sound.mp3"></audio>
-</div>
+<!-- ===================== HEADER ===================== -->
+<header class="site-header">
+  <div class="container header-inner">
 
-<!-- MAIN CONTENT -->
-<div id="main-content">
+    <a href="index.html" class="brand">
+      <img src="Assets/Images/Logo.png" alt="Logo" class="logo">
+    </a>
 
-<header>
-  <img src="Assets/AERION MOTORS.png" class="brand-logo" id="home-logo">
-  <nav>
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="store.html">Store</a></li>
-      <li><a href="#about">About Us</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+    <nav class="main-nav">
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="services.html">Services</a>
+      <a href="achievements.html">Achievements</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <img src="Assets/Images/SHARE.png" class="share-btn" id="shareBtn" alt="Share">
+  </div>
 </header>
 
-<section id="home" class="hero">
-  <img src="Assets/HERO CAR IMAGE.png" style="width:70%; max-width:600px;">
-  <h1>Born for Speed. Built for Legends.</h1>
-  <a href="store.html" class="cta-button">Explore Products</a>
-</section>
 
-<section id="about">
-  <h2>About AERION MOTORS</h2>
-  <p>High-performance racing meets luxury craftsmanship.</p>
-</section>
+<!-- ===================== SHARE SLIDER PANEL ===================== -->
+<div class="share-panel" id="sharePanel">
+  <div class="share-panel-inner">
 
-<section id="contact">
-  <h2>Contact Us</h2>
-  <p>Phone: 971551517478</p>
-  <p>WhatsApp: <a href="https://wa.me/971551517478" target="_blank">Chat Now</a></p>
-</section>
+    <img src="Assets/Images/Logo.png" class="share-logo">
 
-<footer>
-  <p>&copy; 2025 AERION MOTORS. All rights reserved.</p>
-</footer>
+    <a class="share-option" href="https://wa.me/971581160415?text=Hi%20Tech%20%26%20Tidy%20Services!%20I%20would%20like%20to%20inquire%20about%20your%20required%20services." target="_blank">
+      <img src="Assets/Images/WhatsApp.png">
+      WhatsApp
+    </a>
 
+    <a class="share-option" href="https://www.facebook.com/profile.php?id=61583813489748" target="_blank">
+      <img src="Assets/Images/Facebook.png">
+      Facebook
+    </a>
+
+    <a class="share-option" href="https://www.instagram.com/techtidyservices" target="_blank">
+      <img src="Assets/Images/Instagram.png">
+      Instagram
+    </a>
+
+    <a class="share-option" href="tel:+971581160415">
+      <img src="Assets/Images/Call.png">
+      Call Us
+    </a>
+
+  </div>
 </div>
 
-<script>
-const intro = document.getElementById("intro");
-const introVideo = document.getElementById("intro-video");
-const introAudio = document.getElementById("drift-audio");
-const mainContent = document.getElementById("main-content");
 
-// Required by browsers — plays after first tap
-document.body.addEventListener("click", () => {
-    introVideo.play();
-    introAudio.play();
-}, { once:true });
+<!-- ===================== BANNER SLIDER ===================== -->
+<div class="banner-slider">
+  <div class="slide" style="background-image:url('Assets/Images/Banner - 1.png');"></div>
+  <div class="slide" style="background-image:url('Assets/Images/Banner - 2.png');"></div>
+  <div class="slide" style="background-image:url('Assets/Images/Banner - 3.png');"></div>
+  <div class="slide" style="background-image:url('Assets/Images/Banner - 4.png');"></div>
+</div>
 
-// End intro
-introVideo.addEventListener("ended", () => {
-    intro.style.display = "none";
-    mainContent.style.display = "block";
-    introAudio.pause();
-});
 
-// Logo scroll to home
-document.getElementById("home-logo").addEventListener("click", () => {
-    window.scrollTo({ top:0, behavior:"smooth" });
-});
-</script>
+<!-- ===================== HERO TEXT ===================== -->
+<section class="hero-text-section">
+  <h1>Tech & Tidy Services</h1>
+  <p>Keeping your spaces efficient, safe, and perfectly maintained.</p>
+
+  <div class="hero-buttons">
+    <a href="services.html" class="btn-primary">Our Services</a>
+    <a href="contact.html" class="btn-secondary">Contact Us</a>
+  </div>
+</section>
+
+
+<!-- ===================== SERVICES WE OFFER ===================== -->
+<section class="services-section">
+  <h2>Services We Offer</h2>
+
+  <div class="services-grid">
+
+    <a href="services.html#repair-maintenance" class="service-box">
+      <h3>Repair & Maintenance</h3>
+    </a>
+
+    <a href="services.html#renovation" class="service-box">
+      <h3>Home, Office & Villa Renovation</h3>
+    </a>
+
+    <a href="services.html#painting" class="service-box">
+      <h3>Painting Services</h3>
+    </a>
+
+    <a href="services.html#electrical-plumbing" class="service-box">
+      <h3>Electrical & Plumbing</h3>
+    </a>
+
+    <a href="services.html#appliances" class="service-box">
+      <h3>Home Appliance Installation & Maintenance</h3>
+    </a>
+
+    <a href="services.html#carpentry" class="service-box">
+      <h3>Carpentry Services</h3>
+    </a>
+
+    <a href="services.html#bathroom" class="service-box">
+      <h3>Bathroom Renovation</h3>
+    </a>
+
+    <a href="services.html#kitchen" class="service-box">
+      <h3>Kitchen Renovation</h3>
+    </a>
+
+    <a href="services.html#cleaning" class="service-box">
+      <h3>Cleaning Services</h3>
+    </a>
+
+    <a href="services.html#ac-maintenance" class="service-box">
+      <h3>AC Maintenance & Repair</h3>
+    </a>
+
+    <a href="services.html#pest" class="service-box">
+      <h3>Pest / Bird Control</h3>
+    </a>
+
+    <a href="services.html#packers" class="service-box">
+      <h3>Packers & Movers</h3>
+    </a>
+
+  </div>
+</section>
+
+
+<!-- ===================== WHY CHOOSE US ===================== -->
+<section class="why-section">
+  <h2>Why Choose Us?</h2>
+
+  <div class="why-grid">
+
+    <div class="why-box">
+      <img src="Assets/Images/cost.png">
+      <h3>Cost-Effective Solutions</h3>
+    </div>
+
+    <div class="why-box">
+      <img src="Assets/Images/dependability.png">
+      <h3>Dependability</h3>
+    </div>
+
+    <div class="why-box">
+      <img src="Assets/Images/materials.png">
+      <h3>High-Quality Materials</h3>
+    </div>
+
+    <div class="why-box">
+      <img src="Assets/Images/expertise.png">
+      <h3>Industry Expertise</h3>
+    </div>
+
+    <div class="why-box">
+      <img src="Assets/Images/timely.png">
+      <h3>Timely Execution</h3>
+    </div>
+
+    <div class="why-box">
+      <img src="Assets/Images/custom.png">
+      <h3>Custom Solutions</h3>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ===================== CUSTOMER REVIEWS ===================== -->
+<section class="review-section">
+  <h2>Customer Reviews</h2>
+
+  <div class="review-box">
+    <p>“Excellent work, very professional and on time.”</p>
+    <span>- Customer A</span>
+  </div>
+
+  <div class="review-box">
+    <p>“Affordable and reliable services. Highly recommended.”</p>
+    <span>- Customer B</span>
+  </div>
+
+  <div class="review-box">
+    <p>“They renovated my kitchen beautifully. Great job.”</p>
+    <span>- Customer C</span>
+  </div>
+</section>
+
+
+<!-- ===================== ACHIEVEMENTS ===================== -->
+<section class="achievements-section">
+  <div class="hero-counters">
+
+    <div class="counter-card">
+      <span class="count" data-target="3">0</span>
+      <div class="label">Ongoing Projects</div>
+    </div>
+
+    <div class="counter-card">
+      <span class="count" data-target="5">0</span>
+      <div class="label">Happy Customers</div>
+    </div>
+
+    <div class="counter-card">
+      <span class="count" data-target="14">0</span>
+      <div class="label">Completed Projects</div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="site-footer">
+  <div class="footer-inner">
+
+    <img src="Assets/Images/Logo.png" class="footer-logo">
+
+    <div class="footer-info">
+      <strong>Tech & Tidy Services</strong><br>
+      Dubai, United Arab Emirates<br>
+      +971 58 116 0415<br>
+      inquiry@techntidy.com
+    </div>
+
+    <div class="footer-social">
+      <a href="https://wa.me/971581160415" target="_blank"><img src="Assets/Images/WhatsApp.png"></a>
+      <a href="https://www.facebook.com/profile.php?id=61583813489748" target="_blank"><img src="Assets/Images/Facebook.png"></a>
+      <a href="https://www.instagram.com/techtidyservices" target="_blank"><img src="Assets/Images/Instagram.png"></a>
+      <a href="tel:+971581160415"><img src="Assets/Images/Call.png"></a>
+    </div>
+
+  </div>
+</footer>
+
+
+<!-- ===================== FLOATING ICONS ===================== -->
+<div class="floating-icons">
+  <a href="https://wa.me/971581160415" target="_blank"><img src="Assets/Images/WhatsApp.png"></a>
+  <a href="https://www.facebook.com/profile.php?id=61583813489748" target="_blank"><img src="Assets/Images/Facebook.png"></a>
+  <a href="https://www.instagram.com/techtidyservices" target="_blank"><img src="Assets/Images/Instagram.png"></a>
+  <a href="tel:+971581160415"><img src="Assets/Images/Call.png"></a>
+</div>
 
 </body>
 </html>
