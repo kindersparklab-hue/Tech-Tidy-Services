@@ -21,7 +21,6 @@ img {
   user-select: none;
 }
 
-/* Simple container helper */
 .container {
   width: 92%;
   max-width: 1200px;
@@ -44,6 +43,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 12px;
 }
 
 .logo {
@@ -55,6 +55,8 @@ img {
   display: flex;
   align-items: center;
   gap: 14px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .main-nav a {
@@ -77,12 +79,12 @@ img {
 }
 
 .share-btn img {
-  width: 32px;
-  height: 32px;
+  width: 28px;
+  height: 28px;
 }
 
 /* ===============================
-   SHARE SLIDER PANEL
+   SHARE SLIDER PANEL (OVERLAY)
 ================================== */
 .share-panel {
   position: fixed;
@@ -191,7 +193,7 @@ img {
 }
 
 .banner-slider .slide:nth-child(1) { animation-delay: 0s; }
-.banner-slider .slide:nth-child(2) { animation-delay: 6s; }
+banner-slider .slide:nth-child(2) { animation-delay: 6s; }
 .banner-slider .slide:nth-child(3) { animation-delay: 12s; }
 .banner-slider .slide:nth-child(4) { animation-delay: 18s; }
 
@@ -228,6 +230,7 @@ img {
   display: flex;
   justify-content: center;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .btn-primary,
@@ -251,7 +254,7 @@ img {
 }
 
 /* ===============================
-   SERVICES GRID
+   SERVICES GRID (HOME)
 ================================== */
 .services-section {
   padding: 40px 20px 50px;
@@ -437,7 +440,7 @@ img {
 }
 
 .footer-social img {
-  width: 30px;
+  width: 26px;
   margin: 0 8px;
   cursor: pointer;
 }
@@ -456,8 +459,8 @@ img {
 }
 
 .floating-icons img {
-  width: 46px;
-  height: 46px;
+  width: 42px;
+  height: 42px;
   background: #ffffff;
   border-radius: 50%;
   padding: 8px;
@@ -466,14 +469,114 @@ img {
 }
 
 /* ===============================
-   MOBILE FIXES
+   INNER PAGES: GENERIC
+================================== */
+.page-hero {
+  padding: 50px 20px 30px;
+  text-align: center;
+  background: #e8f6ff;
+}
+
+.page-hero h1 {
+  font-size: 30px;
+  color: #003f66;
+}
+
+.page-hero p {
+  margin-top: 10px;
+  color: #00527a;
+}
+
+.page-section {
+  padding: 40px 20px 50px;
+}
+
+.page-section h2 {
+  font-size: 24px;
+  color: #003f66;
+  margin-bottom: 15px;
+}
+
+.page-section p {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* ABOUT PAGE LAYOUT */
+.about-two-col {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.about-text {
+  flex: 1 1 320px;
+}
+
+.about-image {
+  flex: 1 1 280px;
+  text-align: center;
+}
+
+/* SERVICES DETAIL PAGE */
+.services-detail-page {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.service-detail {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.4fr);
+  gap: 30px;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.service-detail.reverse {
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.1fr);
+}
+
+.service-detail img {
+  border-radius: 14px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.12);
+}
+
+.service-detail-text h3 {
+  font-size: 22px;
+  color: #003f66;
+  margin-bottom: 10px;
+}
+
+.service-detail-text p {
+  margin-bottom: 8px;
+}
+
+.service-detail-text ul {
+  margin-left: 18px;
+  margin-top: 6px;
+}
+
+/* CONTACT PAGE */
+.contact-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contact-card {
+  background: #ffffff;
+  padding: 24px 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+
+/* ===============================
+   RESPONSIVE
 ================================== */
 @media (max-width: 768px) {
   .header-inner {
-    gap: 10px;
-  }
-
-  .main-nav {
     flex-wrap: wrap;
     justify-content: center;
   }
@@ -489,6 +592,11 @@ img {
   .hero-text-section p {
     font-size: 16px;
   }
+
+  .service-detail,
+  .service-detail.reverse {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 480px) {
@@ -497,8 +605,8 @@ img {
   }
 
   .share-btn img {
-    width: 30px;
-    height: 30px;
+    width: 26px;
+    height: 26px;
   }
 
   .banner-slider {
@@ -513,17 +621,13 @@ img {
     flex-direction: column;
   }
 
-  .service-box {
-    font-size: 15px;
-  }
-
-  .floating-icons img {
-    width: 44px;
-    height: 44px;
-  }
-
   .share-panel {
     width: 78%;
     right: -78%;
+  }
+
+  .floating-icons img {
+    width: 40px;
+    height: 40px;
   }
 }
