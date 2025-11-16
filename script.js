@@ -1,73 +1,93 @@
 // ===============================
-// HERO BANNER SLIDER
+// SHARE PANEL (RIGHT SLIDE-IN)
 // ===============================
-document.addEventListener("DOMContentLoaded", () => {
-  const hero = document.querySelector(".hero-section");
-  if (hero) {
-    const banners = [
-      "Assets/Images/Banner - 1.png",
-      "Assets/Images/Banner - 2.png",
-      "Assets/Images/Banner - 3.png",
-      "Assets/Images/Banner - 4.png"
-    ];
-    let index = 0;
 
-    function rotateBanner() {
-      index = (index + 1) % banners.length;
-      hero.style.backgroundImage = `url("${banners[index]}")`;
-    }
+const shareBtn = document.querySelector(".share-btn");
+const sharePanel = document.querySelector(".share-panel");
 
-    // Start with first (already set in CSS), then rotate
-    setInterval(rotateBanner, 6000);
+shareBtn.addEventListener("click", () => {
+  sharePanel.classList.toggle("open");
+});
+
+// Close the panel when clicking outside
+document.addEventListener("click", (e) => {
+  if (!sharePanel.contains(e.target) && !shareBtn.contains(e.target)) {
+    sharePanel.classList.remove("open");
   }
-
-  // ===============================
-  // COUNTER ANIMATION
-  // ===============================
-  const counters = document.querySelectorAll(".count");
-  counters.forEach(counter => {
-    const target = parseInt(counter.getAttribute("data-target"), 10) || 0;
-    let current = 0;
-    const frames = 80;
-    const increment = Math.max(1, Math.round(target / frames));
-
-    const updateCount = () => {
-      current += increment;
-      if (current >= target) {
-        counter.textContent = target;
-      } else {
-        counter.textContent = current;
-        requestAnimationFrame(updateCount);
-      }
-    };
-
-    requestAnimationFrame(updateCount);
-  });
-
-  // ===============================
-  // SCROLL REVEAL
-  // ===============================
-  const revealItems = document.querySelectorAll(".reveal");
-
-  function handleReveal() {
-    const triggerBottom = window.innerHeight * 0.88;
-    revealItems.forEach(el => {
-      const boxTop = el.getBoundingClientRect().top;
-      if (boxTop < triggerBottom) {
-        el.classList.add("visible");
-      }
-    });
-  }
-
-  window.addEventListener("scroll", handleReveal);
-  handleReveal(); // initial
 });
 
 // ===============================
-// SHARE PANEL TOGGLE
+// WHATSAPP MESSAGE
 // ===============================
-function toggleShare() {
-  const panel = document.getElementById("share-panel");
-  if (!panel) return;
-  panel.classList.toggle("open");
+
+function openWhatsApp() {
+  const msg = encodeURIComponent(
+    "Hi Tech & Tidy Services! I would like to inquire about your required services."
+  );
+  window.open(`https://wa.me/971581160415?text=${msg}`, "_blank");
+}
+
+// ===============================
+// FLOATING ICON ACTIONS
+// ===============================
+
+function openFacebook() {
+  window.open("https://www.facebook.com/profile.php?id=61583813489748", "_blank");
+}
+
+function openInstagram() {
+  window.open("https://www.instagram.com/techtidyservices", "_blank");
+}
+
+function callNow() {
+  window.location.href = "tel:+971581160415";
+}
+
+// ===============================
+// SLIDESHOW BANNERS
+// ===============================
+
+let slideIndex = 0;
+const slides = document.querySelectorAll(".slide");
+
+function showSlides() {
+  slides.forEach(slide => slide.style.opacity = "0");
+
+  slideIndex++;
+  if (slideIndex > slides.length) slideIndex = 1;
+
+  slides[slideIndex - 1].style.opacity = "1";
+
+  setTimeout(showSlides, 6000); 
+}
+
+if (slides.length > 0) {
+  showSlides();
+}
+
+// ===============================
+// COUNTER ANIMATION
+// ===============================
+
+const counters = document.querySelectorAll(".count");
+
+function animateCounters() {
+  counters.forEach(counter => {
+    const target = +counter.getAttribute("data-target");
+    let count = 0;
+    const increment = Math.ceil(target / 100);
+
+    function update() {
+      count += increment;
+      if (count > target) count = target;
+      counter.textContent = count;
+      if (count < target) requestAnimationFrame(update);
+    }
+    update();
+  });
+}
+
+// Start counting only if counters exist
+if (counters.length > 0) {
+  setTimeout(animateCounters, 500);
 }
