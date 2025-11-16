@@ -1,34 +1,46 @@
 // ===============================
 // SHARE POPUP TOGGLE
 // ===============================
-const shareBtn = document.getElementById("shareToggle");
-const sharePopup = document.getElementById("sharePopup");
-
-if (shareBtn) {
-  shareBtn.addEventListener("click", () => {
-    sharePopup.classList.toggle("show");
-  });
-}
-
-// Close popup if clicking outside
-document.addEventListener("click", (e) => {
-  if (!sharePopup.contains(e.target) && e.target !== shareBtn) {
-    sharePopup.classList.remove("show");
-  }
-});
-
-// ===============================
-// COUNTERS ANIMATION
-// ===============================
 document.addEventListener("DOMContentLoaded", () => {
+  const shareToggle = document.getElementById("shareToggle");
+  const sharePopup = document.getElementById("sharePopup");
+  const shareClose = document.getElementById("shareClose");
+
+  if (shareToggle && sharePopup) {
+    shareToggle.addEventListener("click", () => {
+      sharePopup.classList.add("show");
+    });
+
+    if (shareClose) {
+      shareClose.addEventListener("click", () => {
+        sharePopup.classList.remove("show");
+      });
+    }
+
+    document.addEventListener("click", (e) => {
+      if (
+        sharePopup.classList.contains("show") &&
+        !sharePopup.contains(e.target) &&
+        e.target !== shareToggle
+      ) {
+        sharePopup.classList.remove("show");
+      }
+    });
+  }
+
+  // ===============================
+  // COUNTERS ANIMATION
+  // ===============================
   const counters = document.querySelectorAll(".count");
 
   counters.forEach(counter => {
-    const target = +counter.getAttribute("data-target");
+    const target = +counter.getAttribute("data-target") || 0;
     let current = 0;
+    const steps = 80;
+    const increment = Math.max(1, Math.round(target / steps));
 
     const update = () => {
-      current += Math.ceil(target / 80);
+      current += increment;
       if (current >= target) {
         counter.textContent = target;
       } else {
@@ -39,23 +51,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
     update();
   });
-});
 
-// ===============================
-// REVEAL ANIMATIONS
-// ===============================
-const reveals = document.querySelectorAll(".reveal");
+  // ===============================
+  // REVEAL ON SCROLL
+  // ===============================
+  const revealElements = document.querySelectorAll(".reveal");
 
-function revealOnScroll() {
-  for (let i = 0; i < reveals.length; i++) {
+  function handleReveal() {
     const windowHeight = window.innerHeight;
-    const revealTop = reveals[i].getBoundingClientRect().top;
-
-    if (revealTop < windowHeight - 120) {
-      reveals[i].classList.add("active");
-    }
+    revealElements.forEach(el => {
+      const top = el.getBoundingClientRect().top;
+      if (top < windowHeight - 100) {
+        el.classList.add("active");
+      }
+    });
   }
-}
 
-window.addEventListener("scroll", revealOnScroll);
-revealOnScroll();
+  window.addEventListener("scroll", handleReveal);
+  handleReveal();
+});
