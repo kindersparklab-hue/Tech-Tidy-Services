@@ -1,322 +1,173 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Tech & Tidy Services</title>
-  <link rel="icon" href="Assets/Images/Logo.png">
-  <link rel="stylesheet" href="styles.css">
-  <script defer src="script.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AERION MOTORS</title>
+<link rel="stylesheet" href="style.css">
+
+<style>
+  body { margin: 0; font-family: Arial, sans-serif; background: #0A0A0A; color:#fff; }
+
+  /* INTRO */
+  #intro {
+    position: fixed;
+    top:0; left:0;
+    width:100%; height:100%;
+    background:#000;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:1000;
+  }
+  #intro video {
+    width:100%; height:100%; object-fit:cover;
+  }
+
+  #main-content { display:none; }
+
+  /* HEADER */
+  header {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px;
+    background:#111;
+  }
+  .brand-logo {
+    height:50px;
+    cursor:pointer;
+  }
+  nav ul {
+    list-style:none;
+    display:flex;
+    gap:30px;
+    margin:0;
+  }
+  nav ul li a {
+    color:#fff; text-decoration:none; font-weight:bold;
+  }
+
+  /* HERO */
+  .hero { text-align:center; padding:100px 20px; }
+  .hero h1 { font-size:48px; margin:20px 0; color:#D31024; }
+  .cta-button {
+    display:inline-block;
+    padding:15px 30px;
+    background:#D31024;
+    color:#fff;
+    text-decoration:none;
+    border-radius:5px;
+    margin-top:20px;
+  }
+
+  /* MODAL */
+  .modal {
+    display:none;
+    position:fixed;
+    top:0; left:0;
+    width:100%; height:100%;
+    background:rgba(0,0,0,0.9);
+    justify-content:center;
+    align-items:center;
+    z-index:2000;
+  }
+  .modal-content {
+    background:#111;
+    padding:20px;
+    border-radius:10px;
+    text-align:center;
+    max-width:90%;
+    color:#fff;
+  }
+  .close {
+    position:absolute;
+    top:10px; right:20px;
+    font-size:30px;
+    cursor:pointer;
+    color:#D31024;
+  }
+
+  footer {
+    background:#111;
+    padding:20px;
+    text-align:center;
+  }
+</style>
 </head>
+
 <body>
 
-  <!-- ================= HEADER ================= -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <div class="logo-wrap">
-        <a href="index.html">
-          <img src="Assets/Images/Logo.png" alt="Tech & Tidy Services Logo" class="logo">
-        </a>
-      </div>
+<!-- INTRO -->
+<div id="intro">
+  <video id="intro-video" playsinline>
+    <source src="Assets/drift-video.mp4" type="video/mp4">
+  </video>
+  <audio id="drift-audio" src="Assets/drift-sound.mp3"></audio>
+</div>
 
-      <nav class="main-nav">
-        <a href="index.html" class="active">Home</a>
-        <a href="about.html">About Us</a>
-        <a href="services.html">Services</a>
-        <a href="achievements.html">Achievements</a>
-        <a href="contact.html">Contact Us</a>
-      </nav>
+<!-- MAIN CONTENT -->
+<div id="main-content">
 
-      <!-- Share trigger in header -->
-      <button class="share-trigger" type="button" onclick="toggleShare()">
-        <img src="Assets/Images/SHARE.png" alt="Share">
-      </button>
-    </div>
-  </header>
+<header>
+  <img src="Assets/AERION MOTORS.png" class="brand-logo" id="home-logo">
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="store.html">Store</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
 
-  <!-- ================= SHARE SLIDE PANEL ================= -->
-  <div id="share-panel">
-    <div class="share-header">
-      <img src="Assets/Images/Logo.png" class="share-logo" alt="Tech & Tidy Logo">
-      <span class="close-share" onclick="toggleShare()">✕</span>
-    </div>
+<section id="home" class="hero">
+  <img src="Assets/HERO CAR IMAGE.png" style="width:70%; max-width:600px;">
+  <h1>Born for Speed. Built for Legends.</h1>
+  <a href="store.html" class="cta-button">Explore Products</a>
+</section>
 
-    <div class="share-items">
-      <a href="https://wa.me/971581160415?text=Hi%20Tech%20%26%20Tidy%20Services!%20I%20would%20like%20to%20inquire%20about%20your%20required%20services."
-         target="_blank" class="share-item">
-        <img src="Assets/Images/WhatsApp.png" alt="WhatsApp">
-        <span>WhatsApp</span>
-      </a>
+<section id="about">
+  <h2>About AERION MOTORS</h2>
+  <p>High-performance racing meets luxury craftsmanship.</p>
+</section>
 
-      <a href="https://www.facebook.com/profile.php?id=61583813489748"
-         target="_blank" class="share-item">
-        <img src="Assets/Images/Facebook.png" alt="Facebook">
-        <span>Facebook</span>
-      </a>
+<section id="contact">
+  <h2>Contact Us</h2>
+  <p>Phone: 971551517478</p>
+  <p>WhatsApp: <a href="https://wa.me/971551517478" target="_blank">Chat Now</a></p>
+</section>
 
-      <a href="https://www.instagram.com/techtidyservices"
-         target="_blank" class="share-item">
-        <img src="Assets/Images/Instagram.png" alt="Instagram">
-        <span>Instagram</span>
-      </a>
+<footer>
+  <p>&copy; 2025 AERION MOTORS. All rights reserved.</p>
+</footer>
 
-      <a href="tel:+971581160415" class="share-item">
-        <img src="Assets/Images/Call.png" alt="Call">
-        <span>Call</span>
-      </a>
-    </div>
-  </div>
+</div>
 
-  <!-- ================= FLOATING CONTACT ICONS ================= -->
-  <div class="social-floating">
-    <a href="https://wa.me/971581160415?text=Hi%20Tech%20%26%20Tidy%20Services!%20I%20would%20like%20to%20inquire%20about%20your%20required%20services."
-       target="_blank" class="float-btn">
-      <img src="Assets/Images/WhatsApp.png" alt="WhatsApp">
-    </a>
-    <a href="https://www.facebook.com/profile.php?id=61583813489748"
-       target="_blank" class="float-btn">
-      <img src="Assets/Images/Facebook.png" alt="Facebook">
-    </a>
-    <a href="https://www.instagram.com/techtidyservices"
-       target="_blank" class="float-btn">
-      <img src="Assets/Images/Instagram.png" alt="Instagram">
-    </a>
-    <a href="tel:+971581160415" class="float-btn">
-      <img src="Assets/Images/Call.png" alt="Call">
-    </a>
-  </div>
+<script>
+const intro = document.getElementById("intro");
+const introVideo = document.getElementById("intro-video");
+const introAudio = document.getElementById("drift-audio");
+const mainContent = document.getElementById("main-content");
 
-  <!-- ================= HERO SECTION ================= -->
-  <section class="hero-section">
-    <div class="hero-overlay">
-      <div class="container hero-content">
-        <h1>Tech &amp; Tidy Services</h1>
-        <p class="hero-tagline">Keeping your spaces efficient, safe, and perfectly maintained.</p>
+// Required by browsers — plays after first tap
+document.body.addEventListener("click", () => {
+    introVideo.play();
+    introAudio.play();
+}, { once:true });
 
-        <div class="hero-actions">
-          <a href="services.html" class="btn-primary">Our Services</a>
-          <a href="contact.html" class="btn-secondary">Contact Us</a>
-        </div>
-      </div>
-    </div>
-  </section>
+// End intro
+introVideo.addEventListener("ended", () => {
+    intro.style.display = "none";
+    mainContent.style.display = "block";
+    introAudio.pause();
+});
 
-  <!-- ================= SERVICES WE OFFER ================= -->
-  <section id="services" class="section-light services-home">
-    <div class="container">
-      <h2 class="section-title">Services We Offer</h2>
-
-      <div class="services-grid-home">
-        <a href="services.html#repair-maintenance" class="service-box reveal">
-          <h3>Repair &amp; Maintenance</h3>
-          <p>Comprehensive repair solutions for all your home and office needs.</p>
-        </a>
-
-        <a href="services.html#home-office-villa-renovation" class="service-box reveal">
-          <h3>Home, Office &amp; Villa Renovation</h3>
-          <p>Transform your space with expert renovation services.</p>
-        </a>
-
-        <a href="services.html#painting-services" class="service-box reveal">
-          <h3>Painting Services</h3>
-          <p>Professional painting for homes, offices, and commercial spaces.</p>
-        </a>
-
-        <a href="services.html#electrical-plumbing" class="service-box reveal">
-          <h3>Electrical &amp; Plumbing</h3>
-          <p>Skilled electrical and plumbing work to ensure your systems run smoothly.</p>
-        </a>
-
-        <a href="services.html#home-appliance" class="service-box reveal">
-          <h3>Home Appliance Installation &amp; Maintenance</h3>
-          <p>Installation and care for ACs, fridges and other essential appliances.</p>
-        </a>
-
-        <a href="services.html#carpentry" class="service-box reveal">
-          <h3>Carpentry Services</h3>
-          <p>Custom woodwork and carpentry for home or business projects.</p>
-        </a>
-
-        <a href="services.html#bathroom-renovation" class="service-box reveal">
-          <h3>Bathroom Renovation</h3>
-          <p>Modern, practical and stylish bathroom upgrade solutions.</p>
-        </a>
-
-        <a href="services.html#kitchen-renovation" class="service-box reveal">
-          <h3>Kitchen Renovation</h3>
-          <p>Well-planned kitchens with efficient layouts and elegant finishes.</p>
-        </a>
-
-        <a href="services.html#cleaning-services" class="service-box reveal">
-          <h3>Cleaning Services</h3>
-          <p>Reliable cleaning for homes, offices, and commercial spaces.</p>
-        </a>
-
-        <a href="services.html#ac-maintenance-repair" class="service-box reveal">
-          <h3>AC Maintenance &amp; Repair</h3>
-          <p>Professional AC servicing, deep cleaning and reliable repair.</p>
-        </a>
-
-        <a href="services.html#pest-bird-control" class="service-box reveal">
-          <h3>Pest/Bird Control</h3>
-          <p>Safe and effective pest and bird control for a healthy environment.</p>
-        </a>
-
-        <a href="services.html#packers-movers" class="service-box reveal">
-          <h3>Packers &amp; Movers</h3>
-          <p>Hassle-free moving services for homes and businesses.</p>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= WHY CHOOSE US ================= -->
-  <section id="why-us" class="section">
-    <div class="container">
-      <h2 class="section-title">Why Choose Us?</h2>
-
-      <div class="why-grid">
-        <div class="why-card reveal">
-          <img src="Assets/Images/cost.png" alt="Cost Effective">
-          <h3>Cost-Effective Solutions</h3>
-          <p>We deliver exceptional quality without unnecessary costs, ensuring you get the best value.</p>
-        </div>
-
-        <div class="why-card reveal">
-          <img src="Assets/Images/dependability.png" alt="Dependability">
-          <h3>Dependability</h3>
-          <p>We complete every project with precision and professionalism, ensuring a seamless experience.</p>
-        </div>
-
-        <div class="why-card reveal">
-          <img src="Assets/Images/materials.png" alt="High Quality Materials">
-          <h3>High-Quality Materials</h3>
-          <p>We use premium materials to guarantee durability, functionality and a refined finish.</p>
-        </div>
-
-        <div class="why-card reveal">
-          <img src="Assets/Images/expertise.png" alt="Industry Expertise">
-          <h3>Industry Expertise</h3>
-          <p>Backed by years of experience, our team brings deep knowledge and smart solutions.</p>
-        </div>
-
-        <div class="why-card reveal">
-          <img src="Assets/Images/timely.png" alt="Timely Execution">
-          <h3>Timely Execution</h3>
-          <p>We respect your deadlines and ensure efficient completion without compromising quality.</p>
-        </div>
-
-        <div class="why-card reveal">
-          <img src="Assets/Images/custom.png" alt="Custom Solutions">
-          <h3>Custom Solutions</h3>
-          <p>Every space is unique. We craft tailored solutions that fit your needs and vision.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= CUSTOMER REVIEWS ================= -->
-  <section id="reviews" class="section-light">
-    <div class="container">
-      <h2 class="section-title">Customer Reviews</h2>
-
-      <div class="reviews-grid">
-        <div class="review-card reveal">
-          <p>“Very professional and on time. They handled my apartment maintenance and deep cleaning perfectly.”</p>
-          <div class="review-name">— Ahmed, Dubai Marina</div>
-        </div>
-
-        <div class="review-card reveal">
-          <p>“Tech &amp; Tidy renovated our kitchen and living room. Great finishing, neat work and clear communication.”</p>
-          <div class="review-name">— Sarah, Jumeirah</div>
-        </div>
-
-        <div class="review-card reveal">
-          <p>“Fast response for AC repair and electrical issues. Reliable team, highly recommended.”</p>
-          <div class="review-name">— Imran, Business Bay</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= ACHIEVEMENTS SECTION ================= -->
-  <section id="achievements-home" class="section">
-    <div class="container">
-      <h2 class="section-title">Our Achievements</h2>
-
-      <div class="hero-counters">
-        <div class="counter-card reveal">
-          <span class="count" data-target="3">0</span>
-          <div class="label">Ongoing Projects</div>
-        </div>
-
-        <div class="counter-card reveal">
-          <span class="count" data-target="5">0</span>
-          <div class="label">Happy Customers</div>
-        </div>
-
-        <div class="counter-card reveal">
-          <span class="count" data-target="14">0</span>
-          <div class="label">Completed Projects</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= FOOTER ================= -->
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <img src="Assets/Images/Logo.png" alt="Tech & Tidy Logo" class="footer-logo">
-          <div class="footer-company-text">
-            <strong>Tech &amp; Tidy Services</strong><br>
-            Dubai, United Arab Emirates<br>
-            Phone: <a href="tel:+971581160415">+971 58 116 0415</a><br>
-            Email: <a href="mailto:inquiry@techntidy.com">inquiry@techntidy.com</a>
-          </div>
-        </div>
-
-        <div class="footer-links">
-          <div class="footer-column">
-            <h4>Pages</h4>
-            <a href="index.html">Home</a>
-            <a href="about.html">About Us</a>
-            <a href="services.html">Services</a>
-            <a href="achievements.html">Achievements</a>
-            <a href="contact.html">Contact Us</a>
-          </div>
-
-          <div class="footer-column">
-            <h4>More</h4>
-            <a href="index.html#why-us">Why Us</a>
-            <a href="index.html#reviews">Customer Review</a>
-            <a href="index.html#services">Our Services</a>
-          </div>
-        </div>
-
-        <div class="footer-contact-icons">
-          <a href="https://wa.me/971581160415?text=Hi%20Tech%20%26%20Tidy%20Services!%20I%20would%20like%20to%20inquire%20about%20your%20required%20services."
-             target="_blank">
-            <img src="Assets/Images/WhatsApp.png" alt="WhatsApp">
-          </a>
-          <a href="https://www.facebook.com/profile.php?id=61583813489748" target="_blank">
-            <img src="Assets/Images/Facebook.png" alt="Facebook">
-          </a>
-          <a href="https://www.instagram.com/techtidyservices" target="_blank">
-            <img src="Assets/Images/Instagram.png" alt="Instagram">
-          </a>
-          <a href="tel:+971581160415">
-            <img src="Assets/Images/Call.png" alt="Call">
-          </a>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <p>Copyright &copy; 2025 All rights reserved</p>
-      </div>
-    </div>
-  </footer>
+// Logo scroll to home
+document.getElementById("home-logo").addEventListener("click", () => {
+    window.scrollTo({ top:0, behavior:"smooth" });
+});
+</script>
 
 </body>
 </html>
