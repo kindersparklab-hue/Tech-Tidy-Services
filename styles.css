@@ -50,13 +50,19 @@ img {
 .logo {
   width: 120px;
   height: auto;
-  filter: drop-shadow(0 0 6px rgba(255,255,255,0.9));
-  transition: 0.3s ease;
+  filter:
+    drop-shadow(0 0 5px rgba(255,255,255,0.9))   /* Soft white glow */
+    drop-shadow(0 0 12px rgba(0,150,230,0.7));  /* Blue neon glow */;
+  transition: 0.35s ease-in-out;
 }
 
 .logo:hover {
-  filter: drop-shadow(0 0 10px rgba(255,255,255,1));
+  filter:
+    drop-shadow(0 0 7px rgba(255,255,255,1))
+    drop-shadow(0 0 18px rgba(0,150,230,0.9));
+  transform: scale(1.03);
 }
+
 
 .site-header {
   background: linear-gradient(90deg, #0096E6, #42b9ff);
