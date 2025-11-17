@@ -48,34 +48,15 @@ img {
 
 /* Logo Styling */
 .logo {
-  width: 120px;  /* Adjust the size of the logo */
-  height: auto;  /* Keeps the logo’s aspect ratio */
-  background: transparent;  /* Ensure the background is transparent */
-  border: none;  /* Remove any border */
-  box-shadow: none;  /* Remove any box-shadow effect */
-  display: block;  /* Makes sure the image is a block-level element */
-  margin: 0;  /* Remove any margins */
-  padding: 0;  /* Remove padding */
+  width: 120px;
+  height: auto;
+  filter: drop-shadow(0 0 6px rgba(255,255,255,0.9));
+  transition: 0.3s ease;
 }
 
-/* Optional Glow Effect */
-.logo {
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);  /* Apply the white glow effect */
-  transition: box-shadow 0.3s ease-in-out;  /* Smooth transition for hover effect */
-}
-
-/* Hover Effect */
 .logo:hover {
-  box-shadow: 0 0 25px rgba(255, 255, 255, 0.9);  /* Larger glow on hover */
+  filter: drop-shadow(0 0 10px rgba(255,255,255,1));
 }
-
-/* Ensure no background or padding from the parent container */
-.brand {
-  background: transparent;  /* Ensure the parent container has no background */
-  padding: 0;  /* Remove any padding */
-  border: none;  /* Remove borders */
-}
-
 
 .site-header {
   background: linear-gradient(90deg, #0096E6, #42b9ff);
