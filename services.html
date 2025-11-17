@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services — Tech & Tidy Services</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <img src="Assets/Images/Logo.png" alt="Tech & Tidy Services Logo" class="logo">
+      </a>
+
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="services.html" class="active">Services</a>
+        <a href="achievements.html">Achievements</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <img src="Assets/Images/SHARE.png" alt="Share" class="share-btn">
+    </div>
+  </header>
+
+  <!-- SHARE PANEL -->
+  <aside class="share-panel">
+    <img src="Assets/Images/Logo.png" alt="Tech & Tidy Services" class="share-logo">
+    <h3>Share &amp; Contact</h3>
+    <div class="share-panel-inner">
+      <button class="share-option" type="button" onclick="openWhatsApp()">
+        <img src="Assets/Images/WhatsApp.png" alt="WhatsApp">
+        <span>WhatsApp</span>
+      </button>
+      <button class="share-option" type="button" onclick="openFacebook()">
+        <img src="Assets/Images/Facebook.png" alt="Facebook">
+        <span>Facebook</span>
+      </button>
+      <button class="share-option" type="button" onclick="openInstagram()">
+        <img src="Assets/Images/Instagram.png" alt="Instagram">
+        <span>Instagram</span>
+      </button>
+      <button class="share-option" type="button" onclick="callNow()">
+        <img src="Assets/Images/Call.png" alt="Call">
+        <span>Call</span>
+      </button>
+    </div>
+  </aside>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <h1>Our Services</h1>
+    <p>Complete technical, maintenance, and facility solutions for every property type.</p>
+  </section>
+
+  <!-- SERVICES LAYOUT -->
+  <section class="services-layout">
+    <div class="container">
+
+      <!-- Repair & Maintenance -->
+      <div class="service-row" id="repair-maintenance">
+        <div class="service-text">
+          <h2>Repair &amp; Maintenance Services</h2>
+          <p>
+            At Tech &amp; Tidy Services, we provide complete repair and maintenance solutions
+            to keep your home, villa, or office in excellent working condition. Our qualified
+            professionals handle all types of work including electrical repairs, plumbing,
+            painting, carpentry, AC maintenance, and general handyman support.
+          </p>
+          <p>
+            We focus on timely, cost-effective, and dependable services that minimize disruption
+            and extend the life of your property. From small fixes to large-scale maintenance,
+            every job is done with precision and high-quality materials.
+          </p>
+        </div>
+        <div>
+          <img src="Assets/Images/Repair & Maintenance.png" alt="Repair & Maintenance" class="service-img">
+        </div>
+      </div>
+
+      <!-- Renovation -->
+      <div class="service-row reverse" id="renovation">
+        <div>
+          <img src="Assets/Images/Home, Office & Villa Renovation.png" alt="Home, Office & Villa Renovation" class="service-img">
+        </div>
+        <div class="service-text">
+          <h2>Home, Office &amp; Villa Renovation</h2>
+          <p>
+            Transform your living or working space with Tech &amp; Tidy’s renovation experts.
+            We manage every stage — from planning, plumbing, and electrical work to flooring
+            and finishing — ensuring a smooth, stress-free experience.
+          </p>
+          <p>
+            Whether it’s a single room upgrade or a full property makeover, we combine modern design,
+            craftsmanship, and functionality to create inspiring spaces that reflect your style and needs.
+          </p>
+        </div>
+      </div>
+
+      <!-- Painting -->
+      <div class="service-row" id="painting">
+        <div class="service-text">
+          <h2>Painting Services</h2>
+          <p>
+            Refresh your space with professional painting solutions from Tech &amp; Tidy. We offer
+            interior and exterior painting for homes, offices, villas, and commercial properties,
+            using premium paints and eco-friendly materials for a flawless, long-lasting finish.
+          </p>
+          <p>
+            Our team ensures clean, efficient, and on-time service, handling every detail from color
+            consultation to the final coat. Let us bring color, life, and personality to your property.
+          </p>
+        </div>
+        <div>
+          <img src="Assets/Images/Painting Services.png" alt="Painting Services" class="service-img">
+        </div>
+      </div>
+
+      <!-- Electrical & Plumbing -->
+      <div class="service-row reverse" id="electrical-plumbing">
+        <div>
+          <img src="Assets/Images/Electrical & Plumbing.png" alt="Electrical & Plumbing" class="service-img">
+        </div>
+        <div class="service-text">
+          <h2>Electrical &amp; Plumbing Services</h2>
+          <p>
+            Our certified technicians deliver safe and reliable electrical and plumbing solutions
+            for any property.
+          </p>
+          <h3>Electrical Services</h3>
+          <ul>
+            <li>Wiring, lighting, and switchboard installation</li>
+            <li>Power socket fitting and fixture replacement</li>
+            <li>Troubleshooting and safety inspections</li>
+          </ul>
+          <h3>Plumbing Services</h3>
+          <ul>
+            <li>Leak detection and pipe repair</li>
+            <li>Bathroom and kitchen installations</li>
+            <li>Water heater setup and drainage cleaning</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Appliance Installation & Maintenance -->
+      <div class="service-row" id="appliance-maintenance">
+        <div class="service-text">
+          <h2>Home Appliance Installation &amp; Maintenance</h2>
+          <p>
+            We provide professional installation and routine maintenance for key household appliances,
+            ensuring they run efficiently and safely while extending their lifespan.
+          </p>
+          <p>
+            From installation to periodic servicing, our team handles appliances with care and follows
+            all safety standards.
+          </p>
+        </div>
+        <div>
+          <img src="Assets/Images/AC Maintenance and Repair.png" alt="Appliance Maintenance" class="service-img">
+        </div>
+      </div>
+
+      <!-- Carpentry -->
+      <div class="service-row reverse" id="carpentry">
+        <div>
+          <img src="Assets/Images/Carpentry Services.png" alt="Carpentry Services" class="service-img">
+        </div>
+        <div class="service-text">
+          <h2>Carpentry Services</h2>
+          <p>
+            Enhance your interiors with custom carpentry and woodwork. Our skilled craftsmen specialize in:
+          </p>
+          <ul>
+            <li>Furniture repair &amp; assembly</li>
+            <li>Custom wardrobes, cabinets, and shelving</li>
+            <li>Wooden doors, flooring &amp; decorative woodwork</li>
+          </ul>
+          <p>
+            We blend design with function using quality wood, precise detailing, and elegant finishes,
+            ensuring durability and beauty in every project.
+          </p>
+        </div>
+      </div>
+
+      <!-- Bathroom Renovation -->
+      <div class="service-row" id="bathroom-renovation">
+        <div class="service-text">
+          <h2>Bathroom Renovation</h2>
+          <p>
+            Reimagine your bathroom with Tech &amp; Tidy’s expert renovation services. We handle tile
+            replacement, fixture installation, plumbing upgrades, vanity and shower fitting, and more.
+          </p>
+          <p>
+            Our team focuses on clean, safe, and efficient renovation while creating a relaxing and
+            modern bathroom environment.
+          </p>
+        </div>
+        <div>
+          <img src="Assets/Images/Bathroom Renovation.png" alt="Bathroom Renovation" class="service-img">
+        </div>
+      </div>
+
+      <!-- Kitchen Renovation -->
+      <div class="service-row reverse" id="kitchen-renovation">
+        <div>
+          <img src="Assets/Images/Kitchen Renovation.png" alt="Kitchen Renovation" class="service-img">
+        </div>
+        <div class="service-text">
+          <h2>Kitchen Renovation</h2>
+          <p>
+            Our kitchen renovation services focus on optimizing space, improving functionality, and
+            enhancing aesthetics. From custom cabinets and countertops to lighting and plumbing,
+            we manage every detail.
+          </p>
+          <p>
+            We create modern, practical kitchens that are comfortable to use and beautiful to look at.
+          </p>
+        </div>
+      </div>
+
+      <!-- Cleaning Services -->
+      <div class="service-row" id="cleaning">
+        <div class="service-text">
+          <h2>Cleaning Services</h2>
+          <p>
+            Keep your home or office spotless and hygienic with Tech &amp; Tidy’s professional cleaning
+            solutions.
+          </p>
+          <ul>
+            <li>Sofa &amp; upholstery cleaning</li>
+            <li>Mattress cleaning</li>
+            <li>Bathroom and kitchen deep cleaning</li>
+            <li>Living room &amp; carpet cleaning</li>
+            <li>Curtain &amp; wood floor cleaning</li>
+            <li>Deep home cleaning &amp; move-in/move-out cleaning</li>
+          </ul>
+          <p>
+            We ensure sparkling results, eco-friendly methods, and on-time service — every time.
+          </p>
+        </div>
+        <div>
+          <img src="Assets/Images/Cleaning Services.png" alt="Cleaning Services" class="service-img">
+        </div>
+      </div>
+
+      <!-- AC Maintenance & Repair -->
+      <div class="service-row reverse" id="ac-maintenance">
+        <div>
+          <img src="Assets/Images/AC Maintenance & Repair.png" alt="AC Maintenance & Repair" class="service-img">
+        </div>
+        <div class="service-text">
+          <h2>AC Maintenance &amp; Repair</h2>
+          <p>
+            Professional AC servicing, deep cleaning, and reliable repair solutions to keep your
+            cooling systems working efficiently throughout the year.
+          </p>
+          <p>
+            We handle routine servicing, filter cleaning, gas checks, and troubleshooting to ensure
+            maximum performance and energy efficiency.
+          </p>
+        </div>
+      </div>
+
+      <!-- Pest/Bird Control -->
+      <div class="service-row" id="pest-control">
+        <div class="service-text">
+          <h2>Pest / Bird Control</h2>
+          <p>
+            Protect your property from unwanted pests with our safe and effective pest control solutions.
+          </p>
+          <ul>
+            <li>Control of ants, cockroaches, termites, mosquitoes, bedbugs &amp; rodents</li>
+            <li>Termite inspection, treatment, and prevention</li>
+            <li>Rodent control with safe trapping and exclusion methods</li>
+            <li>Mosquito &amp; insect control to reduce breeding and infestations</li>
+            <li>Bird control &amp; spikes to prevent nesting and damage</li>
+          </ul>
+          <p>
+            We use eco-friendly methods to keep your environment safe and hygienic.
+          </p>
+        </div>
+        <div>
+          <img src="Assets/Images/Pest n Bird Control.png" alt="Pest & Bird Control" class="service-img">
+        </div>
+      </div>
+
+      <!-- Packers & Movers -->
+      <div class="service-row reverse" id="packers-movers">
+        <div>
+          <img src="Assets/Images/Packers & Movers.png" alt="Packers & Movers" class="service-img">
+        </div>
+        <div class="service-text">
+          <h2>Packers &amp; Movers Services</h2>
+          <p>
+            Move with confidence and ease using Tech &amp; Tidy Packers &amp; Movers. We provide
+            safe, organized relocation for homes, villas, and offices.
+          </p>
+          <ul>
+            <li>Residential relocation with careful packing and transport</li>
+            <li>Commercial moves with minimal downtime</li>
+            <li>Specialized packing for fragile and high-value items</li>
+            <li>Efficient transportation and on-time delivery</li>
+          </ul>
+          <p>
+            From packing to setup, we ensure a smooth, stress-free moving experience.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <img src="Assets/Images/Logo.png" alt="Tech & Tidy Services" class="footer-logo">
+      <h3>Tech &amp; Tidy Services</h3>
+      <p>Dubai, United Arab Emirates</p>
+      <p>Phone: +971 58 116 0415</p>
+      <p>Email: inquiry@techntidy.com</p>
+      <p class="footer-copy">© 2025 Tech &amp; Tidy Services. All Rights Reserved.</p>
+
+      <div class="footer-social">
+        <img src="Assets/Images/WhatsApp.png" alt="WhatsApp" onclick="openWhatsApp()">
+        <img src="Assets/Images/Facebook.png" alt="Facebook" onclick="openFacebook()">
+        <img src="Assets/Images/Instagram.png" alt="Instagram" onclick="openInstagram()">
+        <img src="Assets/Images/Call.png" alt="Call" onclick="callNow()">
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING ICONS -->
+  <div class="floating-icons">
+    <img src="Assets/Images/WhatsApp.png" alt="WhatsApp" onclick="openWhatsApp()">
+    <img src="Assets/Images/Facebook.png" alt="Facebook" onclick="openFacebook()">
+    <img src="Assets/Images/Instagram.png" alt="Instagram" onclick="openInstagram()">
+    <img src="Assets/Images/Call.png" alt="Call" onclick="callNow()">
+  </div>
+
+</body>
+</html>
