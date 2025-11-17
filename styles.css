@@ -30,28 +30,35 @@ img {
 /* ===============================
    HEADER
 ================================== */
-
-/* Header Styling */
 .site-header {
-  background-color: #222; /* Dark background for contrast */
-  padding: 20px;
+  background: linear-gradient(90deg, #0096E6, #42b9ff); /* Your header background */
+  padding: 10px 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-inner {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: space-between;
+  gap: 12px;
 }
 
 /* Logo Styling */
 .logo {
   width: 120px;  /* Adjust the size of the logo */
   height: auto;  /* Keeps the logo’s aspect ratio */
-  background: transparent;  /* Ensure there is no background */
+  background: transparent;  /* Ensure the background is transparent */
   border: none;  /* Remove any border */
   box-shadow: none;  /* Remove any box-shadow effect */
-  display: block;  /* Make sure the image is displayed as a block-level element */
+  display: block;  /* Makes sure the image is a block-level element */
   margin: 0;  /* Remove any margins */
+  padding: 0;  /* Remove padding */
 }
 
-/* White Glow Effect */
+/* Optional Glow Effect */
 .logo {
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);  /* Apply the white glow effect */
   transition: box-shadow 0.3s ease-in-out;  /* Smooth transition for hover effect */
@@ -61,6 +68,14 @@ img {
 .logo:hover {
   box-shadow: 0 0 25px rgba(255, 255, 255, 0.9);  /* Larger glow on hover */
 }
+
+/* Ensure no background or padding from the parent container */
+.brand {
+  background: transparent;  /* Ensure the parent container has no background */
+  padding: 0;  /* Remove any padding */
+  border: none;  /* Remove borders */
+}
+
 
 .site-header {
   background: linear-gradient(90deg, #0096E6, #42b9ff);
