@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Achievements — Tech & Tidy Services</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <img src="Assets/Images/Logo.png" alt="Tech & Tidy Services Logo" class="logo">
+      </a>
+
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="services.html">Services</a>
+        <a href="achievements.html" class="active">Achievements</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <img src="Assets/Images/SHARE.png" alt="Share" class="share-btn">
+    </div>
+  </header>
+
+  <!-- SHARE PANEL -->
+  <aside class="share-panel">
+    <img src="Assets/Images/Logo.png" alt="Tech & Tidy Services" class="share-logo">
+    <h3>Share &amp; Contact</h3>
+    <div class="share-panel-inner">
+      <button class="share-option" type="button" onclick="openWhatsApp()">
+        <img src="Assets/Images/WhatsApp.png" alt="WhatsApp">
+        <span>WhatsApp</span>
+      </button>
+      <button class="share-option" type="button" onclick="openFacebook()">
+        <img src="Assets/Images/Facebook.png" alt="Facebook">
+        <span>Facebook</span>
+      </button>
+      <button class="share-option" type="button" onclick="openInstagram()">
+        <img src="Assets/Images/Instagram.png" alt="Instagram">
+        <span>Instagram</span>
+      </button>
+      <button class="share-option" type="button" onclick="callNow()">
+        <img src="Assets/Images/Call.png" alt="Call">
+        <span>Call</span>
+      </button>
+    </div>
+  </aside>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <h1>Our Achievements</h1>
+    <p>Measuring our impact through projects delivered and customers served.</p>
+  </section>
+
+  <!-- ACHIEVEMENTS COUNTERS -->
+  <section class="achievements-section">
+    <div class="container">
+      <div class="hero-counters">
+        <div class="counter-card">
+          <span class="count" data-target="3">0</span>
+          <div class="label">Ongoing Projects</div>
+        </div>
+        <div class="counter-card">
+          <span class="count" data-target="5">0</span>
+          <div class="label">Happy Customers</div>
+        </div>
+        <div class="counter-card">
+          <span class="count" data-target="14">0</span>
+          <div class="label">Completed Projects</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SHORT TEXT -->
+  <section class="page-section">
+    <div class="container">
+      <p>
+        Over time, Tech &amp; Tidy Services has built a strong reputation by consistently delivering
+        quality results, transparent communication, and dependable service. Each project reflects our
+        commitment to safety, craftsmanship, and customer satisfaction.
+      </p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <img src="Assets/Images/Logo.png" alt="Tech & Tidy Services" class="footer-logo">
+      <h3>Tech &amp; Tidy Services</h3>
+      <p>Dubai, United Arab Emirates</p>
+      <p>Phone: +971 58 116 0415</p>
+      <p>Email: inquiry@techntidy.com</p>
+      <p class="footer-copy">© 2025 Tech &amp; Tidy Services. All Rights Reserved.</p>
+
+      <div class="footer-social">
+        <img src="Assets/Images/WhatsApp.png" alt="WhatsApp" onclick="openWhatsApp()">
+        <img src="Assets/Images/Facebook.png" alt="Facebook" onclick="openFacebook()">
+        <img src="Assets/Images/Instagram.png" alt="Instagram" onclick="openInstagram()">
+        <img src="Assets/Images/Call.png" alt="Call" onclick="callNow()">
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING ICONS -->
+  <div class="floating-icons">
+    <img src="Assets/Images/WhatsApp.png" alt="WhatsApp" onclick="openWhatsApp()">
+    <img src="Assets/Images/Facebook.png" alt="Facebook" onclick="openFacebook()">
+    <img src="Assets/Images/Instagram.png" alt="Instagram" onclick="openInstagram()">
+    <img src="Assets/Images/Call.png" alt="Call" onclick="callNow()">
+  </div>
+
+</body>
+</html>
