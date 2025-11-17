@@ -42,8 +42,10 @@ img {
 
 /* Logo with White Glow Effect */
 .logo {
-  max-width: 200px; /* Adjust the size of the logo */
-  height: auto; /* Keeps the logo’s aspect ratio */
+  width: 120px;  /* Adjust the size of the logo */
+  height: auto;  /* Keeps the logo’s aspect ratio */
+  background: transparent; /* Ensure there’s no background */
+  border: none; /* Remove any border */
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.7); /* White glow effect */
   transition: box-shadow 0.3s ease-in-out; /* Smooth transition for hover effect */
 }
@@ -52,6 +54,7 @@ img {
 .logo:hover {
   box-shadow: 0 0 25px rgba(255, 255, 255, 0.9); /* Larger glow on hover */
 }
+
 
 
 .site-header {
