@@ -40,22 +40,27 @@ img {
   align-items: center;
 }
 
-/* Logo with White Glow Effect */
+/* Logo Styling */
 .logo {
   width: 120px;  /* Adjust the size of the logo */
   height: auto;  /* Keeps the logo’s aspect ratio */
-  background: transparent; /* Ensure there’s no background */
-  border: none; /* Remove any border */
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.7); /* White glow effect */
-  transition: box-shadow 0.3s ease-in-out; /* Smooth transition for hover effect */
+  background: transparent;  /* Ensure there is no background */
+  border: none;  /* Remove any border */
+  box-shadow: none;  /* Remove any box-shadow effect */
+  display: block;  /* Make sure the image is displayed as a block-level element */
+  margin: 0;  /* Remove any margins */
 }
 
-/* Optional Hover Effect */
+/* White Glow Effect */
+.logo {
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);  /* Apply the white glow effect */
+  transition: box-shadow 0.3s ease-in-out;  /* Smooth transition for hover effect */
+}
+
+/* Hover Effect */
 .logo:hover {
-  box-shadow: 0 0 25px rgba(255, 255, 255, 0.9); /* Larger glow on hover */
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.9);  /* Larger glow on hover */
 }
-
-
 
 .site-header {
   background: linear-gradient(90deg, #0096E6, #42b9ff);
