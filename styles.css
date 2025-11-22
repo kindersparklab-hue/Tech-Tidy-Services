@@ -15,14 +15,8 @@ html, body {
   scroll-behavior: smooth;
 }
 
-img {
-  user-select: none;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
+img { user-select: none; }
+a { text-decoration: none; color: inherit; }
 
 .container {
   width: 92%;
@@ -54,7 +48,7 @@ a {
 .logo {
   width: 120px;
   height: auto;
-  filter: drop-shadow(0 0 8px rgba(255,255,255,0.8)); /* header glow */
+  filter: drop-shadow(0 0 8px rgba(255,255,255,1)); /* HEADER glow ON */
 }
 
 .main-nav {
@@ -81,306 +75,64 @@ a {
 }
 
 /* ======================
-   SHARE SLIDER (RIGHT)
+   SERVICES PAGE IMAGE FIX
 ====================== */
-.share-panel {
-  position: fixed;
-  top: 0;
-  right: -260px;
-  width: 260px;
-  height: 100vh;
-  background: #ffffff;
-  box-shadow: -3px 0 15px rgba(0,0,0,0.15);
-  padding: 20px;
-  transition: right 0.35s ease-in-out;
-  z-index: 2000;
-  border-radius: 12px 0 0 12px;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-}
-
-.share-panel.open {
-  right: 0;
-}
-
-.share-logo {
-  width: 120px;
-  margin: 0 auto 10px;
-  display: block;
-}
-
-.share-panel-inner {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  margin-top: 10px;
-}
-
-.share-option {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 10px 12px;
-  background: #f0f8ff;
-  border-radius: 10px;
-  border: none;
-  cursor: pointer;
-  text-align: left;
-  font-weight: 600;
-  color: #003d66;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.15);
-}
-
-.share-option img {
-  width: 26px;
-  height: 26px;
+.service-image img {
+  max-width: 100%;
+  width: 320px; /* Slightly bigger than before */
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
 }
 
 /* ======================
-   BANNER SLIDER
+   SERVICES GRID HOME PAGE
 ====================== */
-.banner-slider {
-  width: 100%;
-  height: 260px;
-  position: relative;
-  overflow: hidden;
-}
-
-.banner-slider .slide {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  background-size: cover;
-  background-position: center;
-  opacity: 0;
-  animation: fadeSlide 24s infinite;
-}
-
-.banner-slider .slide:nth-child(1) { animation-delay: 0s; }
-.banner-slider .slide:nth-child(2) { animation-delay: 6s; }
-.banner-slider .slide:nth-child(3) { animation-delay: 12s; }
-.banner-slider .slide:nth-child(4) { animation-delay: 18s; }
-
-@keyframes fadeSlide {
-  0% { opacity: 0; }
-  10% { opacity: 1; }
-  40% { opacity: 1; }
-  50% { opacity: 0; }
-  100% { opacity: 0; }
-}
-
-/* ======================
-   HERO TEXT
-====================== */
-.hero-text-section {
-  text-align: center;
-  padding: 40px 20px 30px;
-}
-
-.hero-text-section h1 {
-  font-size: 32px;
-  color: #004c78;
-  font-weight: 800;
-}
-
-.hero-text-section p {
-  margin-top: 10px;
-  font-size: 18px;
-  color: #004c78;
-}
-
-.hero-buttons {
-  margin-top: 22px;
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-}
-
-.btn-primary,
-.btn-secondary {
-  padding: 11px 22px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 15px;
-}
-
-.btn-primary {
-  background: #0096E6;
-  color: white;
-}
-
-.btn-secondary {
-  background: white;
-  border: 2px solid #0096E6;
-  color: #0096E6;
-}
-
-/* ======================
-   SERVICES WE OFFER (HOME)
-====================== */
-.services-section {
-  padding: 45px 20px 35px;
-  text-align: center;
-}
-
-.services-section h2 {
-  font-size: 26px;
-  color: #004c78;
-  margin-bottom: 24px;
-}
-
-.service-subtitle {
-  font-size: 14px;
-  color: #005a99;
-  margin-top: 6px;
-}
-
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-  gap: 14px;
-}
-
 .service-box {
-  padding: 18px 12px;
+  padding: 20px 14px;
   background: white;
   border-radius: 12px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
   font-weight: 600;
   color: #003f66;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: 0.2s ease;
+  font-size: 16px;
 }
 
 .service-box:hover {
   transform: translateY(-4px);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.18);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.22);
 }
 
-/* ======================
-   WHY CHOOSE US (HOME)
-====================== */
-.why-section {
-  padding: 50px 20px;
-  text-align: center;
-  background: #e8f6ff;
-}
-
-.why-section h2 {
-  font-size: 26px;
-  margin-bottom: 22px;
-  color: #003f66;
-}
-
-.why-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-  gap: 18px;
-}
-
-.why-box {
-  background: #ffffff;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-  padding: 16px;
-  border-radius: 12px;
-}
-
-.why-box img {
-  width: 58px;
-  margin-bottom: 8px;
-}
-
-.why-box h3 {
-  font-size: 16px;
-  color: #003f66;
-}
-
-/* ======================
-   REVIEWS (HOME)
-====================== */
-.review-section {
-  padding: 50px 20px;
-  text-align: center;
-}
-
-.review-section h2 {
-  font-size: 26px;
-  margin-bottom: 22px;
-  color: #003f66;
-}
-
-.review-box {
-  max-width: 700px;
-  background: white;
-  margin: 10px auto;
-  padding: 18px 16px;
-  border-radius: 12px;
-  box-shadow: 0 1px 6px rgba(0,0,0,0.15);
-}
-
-.review-box p {
-  font-size: 17px;
-  color: #003f66;
-}
-
-.review-box span {
-  display: block;
-  margin-top: 8px;
-  color: #0077b6;
+/* SERVICE SUBTEXT FIX */
+.service-box p {
+  font-size: 14px;
+  color: #004c78;
+  margin-top: 6px;
 }
 
 /* ======================
    ACHIEVEMENTS (BLUE THEME)
 ====================== */
 .achievements-section {
-  background: #d8ecff;
+  background: #e8f6ff;
   padding: 35px 15px 45px;
-}
-
-.hero-counters {
-  display: flex;
-  justify-content: center;
-  gap: 24px;
-  flex-wrap: wrap;
 }
 
 .counter-card {
   text-align: center;
-  background: #0096e6;
+  background: #0096E6;  /* BLUE instead of yellow */
   padding: 18px 20px;
-  color: white;
+  color: #ffffff;
   border-radius: 12px;
   width: 165px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.18);
 }
 
-.count {
-  font-size: 30px;
-  font-weight: 700;
-}
+.count { font-size: 30px; font-weight: 700; }
+.label { margin-top: 4px; font-weight: 600; }
 
 /* ======================
-   SERVICES PAGE IMAGE SIZE
-====================== */
-.service-image img {
-  max-width: 100%;
-  width: 320px; /* slightly bigger */
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
-}
-
-/* ======================
-   ABOUT / CONTACT / ACHIEVEMENTS COLOR FIX
-====================== */
-.about-page,
-.contact-page,
-.achievements-page {
-  background: #f4faff;
-}
-
-/* ======================
-   FOOTER (CONSISTENT)
+   FOOTER
 ====================== */
 .site-footer {
   background: #111;
@@ -389,61 +141,15 @@ a {
   margin-top: 40px;
 }
 
-.footer-inner {
-  max-width: 1100px;
-  margin: 0 auto 8px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-}
-
 .footer-logo {
   width: 110px;
   height: auto;
-  filter: none; /* NO glow in footer */
-}
-
-.footer-center {
-  flex: 1 1 auto;
-  text-align: center;
-}
-
-.footer-brand {
-  font-weight: 700;
-  font-size: 16px;
-  margin-bottom: 4px;
-}
-
-.footer-info {
-  font-size: 14px;
-  line-height: 1.5;
-}
-
-.footer-right img {
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  background: #fff;
-  padding: 6px;
-  margin-left: 8px;
-  cursor: pointer;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+  filter: none !important; /* GLOW REMOVED */
 }
 
 /* ======================
    FLOATING ICONS
 ====================== */
-.floating-icons {
-  position: fixed;
-  right: 15px;
-  bottom: 90px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  z-index: 1500;
-}
-
 .floating-icons img {
   width: 46px;
   height: 46px;
@@ -455,52 +161,9 @@ a {
 }
 
 /* ======================
-   MOBILE RESPONSIVE
+   MOBILE FIXES
 ====================== */
-@media (max-width: 768px) {
-  .header-inner {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .hero-text-section h1 {
-    font-size: 26px;
-  }
-
-  .hero-text-section p {
-    font-size: 16px;
-  }
-
-  .banner-slider {
-    height: 210px;
-  }
-
-  .service-row {
-    flex-direction: column;
-  }
-
-  .footer-inner {
-    flex-direction: column;
-    text-align: center;
-  }
-}
-
 @media (max-width: 480px) {
-  .logo {
-    width: 95px;
-  }
-
-  .share-btn {
-    width: 34px;
-    height: 34px;
-  }
-
-  .floating-icons img {
-    width: 42px;
-    height: 42px;
-  }
-
-  .service-image img {
-    width: 260px;
-  }
+  .logo { width: 95px; }
+  .service-image img { width: 260px; }
 }
