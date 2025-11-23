@@ -1,72 +1,74 @@
-// script.js
+/* ===========================
+   SHARE PANEL TOGGLE
+=========================== */
+const shareBtn = document.querySelector('.share-btn');
+const sharePanel = document.querySelector('.share-panel');
 
-// WhatsApp, Facebook, Instagram, Call handlers
+if (shareBtn && sharePanel) {
+    shareBtn.addEventListener('click', () => {
+        sharePanel.classList.toggle('open');
+    });
+
+    // Close when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!sharePanel.contains(e.target) && e.target !== shareBtn) {
+            sharePanel.classList.remove('open');
+        }
+    });
+}
+
+/* ===========================
+   SOCIAL ACTIONS
+=========================== */
 function openWhatsApp() {
-  window.open(
-    "https://wa.me/971581160415?text=Hi%20Tech%20%26%20Tidy%20Services!%20I%20would%20like%20to%20inquire%20about%20your%20required%20services.",
-    "_blank"
-  );
+    window.open("https://wa.me/971581160415?text=Hi%20Tech%20%26%20Tidy%20Services!%20I%20would%20like%20to%20inquire%20about%20your%20required%20services.", "_blank");
 }
 
 function openFacebook() {
-  window.open(
-    "https://www.facebook.com/profile.php?id=61580373990541",
-    "_blank"
-  );
+    window.open("https://www.facebook.com/profile.php?id=61580373990541", "_blank");
 }
 
 function openInstagram() {
-  window.open(
-    "https://www.instagram.com/techtidyservices",
-    "_blank"
-  );
+    window.open("https://www.instagram.com/techtidyservices", "_blank");
 }
 
 function callNow() {
-  window.location.href = "tel:+971581160415";
+    window.location.href = "tel:+971581160415";
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-  // SHARE PANEL SLIDER
-  const shareBtn = document.querySelector(".share-btn");
-  const sharePanel = document.getElementById("sharePanel");
+/* ===========================
+   COUNTER ANIMATION
+=========================== */
+const counters = document.querySelectorAll('.count');
 
-  if (shareBtn && sharePanel) {
-    shareBtn.addEventListener("click", function (e) {
-      e.stopPropagation();
-      sharePanel.classList.toggle("open");
-    });
-
-    document.addEventListener("click", function (e) {
-      if (
-        sharePanel.classList.contains("open") &&
-        !sharePanel.contains(e.target) &&
-        !shareBtn.contains(e.target)
-      ) {
-        sharePanel.classList.remove("open");
-      }
-    });
-  }
-
-  // COUNTER ANIMATION
-  const counters = document.querySelectorAll(".count");
-  if (counters.length) {
+if (counters.length > 0) {
     counters.forEach(counter => {
-      const target = +counter.getAttribute("data-target") || 0;
-      let current = 0;
-      const frames = 80;
-      const increment = Math.max(1, Math.round(target / frames));
+        const updateCount = () => {
+            const target = +counter.getAttribute('data-target');
+            const count = +counter.innerText;
+            const speed = 18;
+            const increment = Math.ceil(target / speed);
 
-      const step = () => {
-        current += increment;
-        if (current >= target) {
-          counter.textContent = target;
-        } else {
-          counter.textContent = current;
-          requestAnimationFrame(step);
-        }
-      };
-      requestAnimationFrame(step);
+            if (count < target) {
+                counter.innerText = count + increment;
+                setTimeout(updateCount, 40);
+            } else {
+                counter.innerText = target;
+            }
+        };
+        updateCount();
     });
-  }
+}
+
+/* ===========================
+   SMOOTH SCROLL FIX (Optional)
+=========================== */
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener("click", function (e) {
+        const section = document.querySelector(this.getAttribute("href"));
+        if (section) {
+            e.preventDefault();
+            section.scrollIntoView({ behavior: "smooth" });
+        }
+    });
 });
