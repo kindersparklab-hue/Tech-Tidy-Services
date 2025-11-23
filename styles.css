@@ -1,0 +1,418 @@
+/* ======================
+   GLOBAL RESET
+====================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  background: #f4faff;
+  font-family: 'Segoe UI', sans-serif;
+  scroll-behavior: smooth;
+}
+
+img {
+  user-select: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: 92%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ======================
+   HEADER
+====================== */
+.site-header {
+  background: linear-gradient(90deg, #0096E6, #42b9ff);
+  padding: 10px 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-inner {
+  width: 92%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.logo {
+  width: 120px;
+  height: auto;
+  filter: drop-shadow(0 0 8px rgba(255,255,255,1)); /* header glow */
+}
+
+.main-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+}
+
+.main-nav a {
+  color: #fff;
+  font-weight: 600;
+  padding-bottom: 3px;
+}
+
+.main-nav a.active {
+  border-bottom: 2px solid #fff;
+}
+
+.share-btn {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+/* ======================
+   SHARE SLIDER (RIGHT)
+====================== */
+.share-panel {
+  position: fixed;
+  top: 0;
+  right: -260px;
+  width: 260px;
+  height: 100vh;
+  background: #ffffff;
+  box-shadow: -3px 0 15px rgba(0,0,0,0.15);
+  padding: 20px;
+  transition: right 0.35s ease-in-out;
+  z-index: 2000;
+  border-radius: 12px 0 0 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.share-panel.open {
+  right: 0;
+}
+
+.share-logo {
+  width: 120px;
+  margin: 0 auto 10px;
+}
+
+.share-panel-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.share-option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background: #f0f8ff;
+  border-radius: 10px;
+  font-weight: 600;
+  color: #003d66;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+  cursor: pointer;
+  border: none;
+}
+
+.share-option img {
+  width: 26px;
+}
+
+/* ======================
+   BANNER SLIDER
+====================== */
+.banner-slider {
+  width: 100%;
+  height: 260px;
+  position: relative;
+  overflow: hidden;
+}
+
+.banner-slider .slide {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  animation: fadeSlide 24s infinite;
+}
+
+.banner-slider .slide:nth-child(1) { animation-delay: 0s; }
+banner-slider .slide:nth-child(2) { animation-delay: 6s; }
+.banner-slider .slide:nth-child(3) { animation-delay: 12s; }
+.banner-slider .slide:nth-child(4) { animation-delay: 18s; }
+
+@keyframes fadeSlide {
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  40% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+/* ======================
+   HERO TEXT
+====================== */
+.hero-text-section {
+  text-align: center;
+  padding: 40px 20px 30px;
+}
+
+.hero-text-section h1 {
+  font-size: 32px;
+  color: #004c78;
+  font-weight: 800;
+}
+
+.hero-text-section p {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #004c78;
+}
+
+.hero-buttons {
+  margin-top: 22px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 11px 22px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.btn-primary {
+  background: #0096E6;
+  color: white;
+}
+
+.btn-secondary {
+  background: white;
+  border: 2px solid #0096E6;
+  color: #0096E6;
+}
+
+/* ======================
+   SERVICES WE OFFER (HOME)
+====================== */
+.services-section {
+  padding: 45px 20px 35px;
+  text-align: center;
+}
+
+.services-section h2 {
+  font-size: 26px;
+  color: #004c78;
+  margin-bottom: 24px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 14px;
+}
+
+.service-box {
+  padding: 18px 12px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+  font-weight: 600;
+  color: #003f66;
+}
+
+.service-box p {
+  font-size: 14px;
+  margin-top: 6px;
+  color: #005a99;
+}
+
+/* ======================
+   WHY CHOOSE US (HOME)
+====================== */
+.why-section {
+  padding: 50px 20px;
+  text-align: center;
+  background: #e8f6ff;
+}
+
+.why-section h2 {
+  font-size: 26px;
+  margin-bottom: 22px;
+  color: #003f66;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 18px;
+}
+
+.why-box {
+  background: #ffffff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  padding: 16px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.why-box img {
+  width: 65px;
+  margin-bottom: 8px;
+}
+
+.why-box h3 {
+  font-size: 16px;
+  color: #003f66;
+}
+
+/* ======================
+   REVIEWS (HOME)
+====================== */
+.review-section {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.review-section h2 {
+  font-size: 26px;
+  margin-bottom: 22px;
+  color: #003f66;
+}
+
+.review-box {
+  max-width: 700px;
+  background: white;
+  margin: 10px auto;
+  padding: 18px 16px;
+  border-radius: 12px;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.15);
+}
+
+.review-box p {
+  font-size: 17px;
+  color: #003f66;
+}
+
+.review-box span {
+  display: block;
+  margin-top: 8px;
+  color: #0077b6;
+}
+
+/* ======================
+   ACHIEVEMENTS (BLUE)
+====================== */
+.achievements-section {
+  background: #f0faff;
+  padding: 35px 15px 45px;
+}
+
+.counter-card {
+  background: #0096E6;
+  color: white;
+}
+
+/* ======================
+   FLOATING ICONS
+====================== */
+.floating-icons {
+  position: fixed;
+  right: 15px;
+  bottom: 90px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 1500;
+}
+
+.floating-icons img {
+  width: 46px;
+  height: 46px;
+  background: #ffffff;
+  border-radius: 50%;
+  padding: 8px;
+  box-shadow: 0 2px 7px rgba(0,0,0,0.25);
+  cursor: pointer;
+}
+
+/* ======================
+   FOOTER
+====================== */
+.site-footer {
+  background: #111;
+  padding: 20px 16px 16px;
+  color: #fff;
+  margin-top: 40px;
+}
+
+.footer-inner {
+  max-width: 1100px;
+  margin: 0 auto 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.footer-logo {
+  width: 110px;
+  height: auto;
+  filter: none;
+}
+
+.footer-social img {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #fff;
+  padding: 6px;
+  margin-left: 8px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}
+
+/* ======================
+   RESPONSIVE FIXES
+====================== */
+@media (max-width: 768px) {
+  .header-inner {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .floating-icons {
+    right: 10px;
+  }
+
+  .share-panel {
+    width: 80%;
+    right: -80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    width: 95px;
+  }
+}
