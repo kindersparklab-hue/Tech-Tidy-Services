@@ -1,46 +1,70 @@
-/* ==========================
-   SHARE PANEL TOGGLE
-========================== */
+// ===============================
+// Floating Social Icons - Show/Hide on Scroll
+// ===============================
+let lastScrollTop = 0;
+const floatingIcons = document.querySelector(".floating-icons");
 
-const shareBtn = document.getElementById("shareBtn");
-const sharePanel = document.getElementById("sharePanel");
-
-if (shareBtn) {
-  shareBtn.addEventListener("click", () => {
-    sharePanel.classList.toggle("open");
-  });
-}
-
-/* Close panel when clicking outside */
-document.addEventListener("click", (e) => {
-  if (
-    sharePanel &&
-    !sharePanel.contains(e.target) &&
-    !shareBtn.contains(e.target)
-  ) {
-    sharePanel.classList.remove("open");
-  }
+window.addEventListener("scroll", function () {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    if (scrollTop > lastScrollTop) {
+        floatingIcons.style.opacity = "0";
+    } else {
+        floatingIcons.style.opacity = "1";
+    }
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
 });
 
-/* ==========================
-   FLOATING ICON LINKS
-========================== */
-
-function openWhatsApp() {
-  window.open("https://wa.me/971581160415", "_blank");
+// ===============================
+// SHARE BUTTON
+// ===============================
+function shareWebsite() {
+    if (navigator.share) {
+        navigator.share({
+            title: "Tech & Tidy Services",
+            text: "Professional maintenance, renovation & repair services in UAE.",
+            url: window.location.href
+        });
+    } else {
+        alert("Sharing is not supported on this device.");
+    }
 }
 
-function openFacebook() {
-  window.open(
-    "https://www.facebook.com/profile.php?id=61580373990541",
-    "_blank"
-  );
-}
+// ===============================
+// COUNTER ANIMATION
+// ===============================
+const counters = document.querySelectorAll(".counter");
+const speed = 200;
 
-function openInstagram() {
-  window.open("https://www.instagram.com/techn_tidy/", "_blank");
-}
+const animateCounters = () => {
+    counters.forEach(counter => {
+        const updateCount = () => {
+            const target = +counter.getAttribute("data-target");
+            const count = +counter.innerText;
+            const increment = target / speed;
 
-function callNow() {
-  window.location.href = "tel:+971581160415";
+            if (count < target) {
+                counter.innerText = Math.ceil(count + increment);
+                setTimeout(updateCount, 20);
+            } else {
+                counter.innerText = target;
+            }
+        };
+        updateCount();
+    });
+};
+
+// Trigger when counters enter view
+const counterSection = document.querySelector(".counter-section");
+
+const observer = new IntersectionObserver(
+    (entries) => {
+        if (entries[0].isIntersecting) {
+            animateCounters();
+        }
+    },
+    { threshold: 0.5 }
+);
+
+if (counterSection) {
+    observer.observe(counterSection);
 }
