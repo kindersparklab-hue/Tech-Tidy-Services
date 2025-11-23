@@ -10,11 +10,11 @@
 
 <body>
 
-<!-- ============ HEADER ============ -->
+<!-- ================= HEADER ================= -->
 <header class="site-header">
-    <div class="header-inner container">
+    <div class="header-inner">
         <a href="index.html">
-            <img src="Assets/Images/Logo.png" class="logo" alt="Tech & Tidy Logo">
+            <img src="Assets/Images/Logo.png" class="logo" alt="Logo">
         </a>
 
         <nav class="main-nav">
@@ -24,53 +24,78 @@
             <a href="achievements.html">Achievements</a>
             <a href="contact.html" class="active">Contact</a>
         </nav>
+
+        <img src="Assets/Images/SHARE.png" class="share-btn" alt="Share">
     </div>
 </header>
 
-<!-- ============ PAGE TITLE ============ -->
-<section class="page-title">
-    <h1>Contact Us</h1>
-    <p>Reach out to our team anytime — we’re here to assist you!</p>
-</section>
+<!-- SHARE PANEL -->
+<div class="share-panel">
+    <div class="share-item" onclick="openWhatsApp()">
+        <img src="Assets/Images/WhatsApp.png"><span>WhatsApp</span>
+    </div>
+    <div class="share-item" onclick="openFacebook()">
+        <img src="Assets/Images/Facebook.png"><span>Facebook</span>
+    </div>
+    <div class="share-item" onclick="openInstagram()">
+        <img src="Assets/Images/Instagram.png"><span>Instagram</span>
+    </div>
+    <div class="share-item" onclick="callNow()">
+        <img src="Assets/Images/Call.png"><span>Call</span>
+    </div>
+</div>
 
-<!-- ============ CONTACT INFO GRID ============ -->
-<section class="contact-page container">
+<!-- ================= CONTACT PAGE ================= -->
+<section class="contact-page">
+    
+    <h1 class="page-title">Contact Us</h1>
+    <p class="page-subtitle">Reach out anytime — we’re here to help!</p>
 
     <div class="contact-grid">
 
+        <!-- BOX 1 - DETAILS -->
         <div class="contact-box">
-            <h2>Call Us</h2>
-            <p>Speak directly with our support team.</p>
-            <button onclick="callNow()">Call Now</button>
+            <h2>Tech & Tidy Services</h2>
+            <p><strong>Location:</strong> Dubai, United Arab Emirates</p>
+            <p><strong>Phone:</strong> +971 58 116 0415</p>
+            <p><strong>Email:</strong> inquiry@techntidy.com</p>
+            <p><strong>Availability:</strong> 7 days a week</p>
+            <p style="margin-top:10px;">
+                We respond quickly and professionally to all inquiries.
+            </p>
         </div>
 
+        <!-- BOX 2 - ACTION BUTTONS -->
         <div class="contact-box">
-            <h2>WhatsApp</h2>
-            <p>Message us for quick responses and assistance.</p>
-            <button onclick="openWhatsApp()">Open WhatsApp</button>
-        </div>
 
-        <div class="contact-box">
-            <h2>Email</h2>
-            <p>Send us project details and inquiries.</p>
-            <button onclick="openEmail()">Send Email</button>
-        </div>
+            <h2>Connect With Us</h2>
 
-        <div class="contact-box">
-            <h2>Location</h2>
-            <p>Dubai, United Arab Emirates</p>
-            <button onclick="openLocation()">View Map</button>
+            <ul class="contact-actions">
+                <li><button onclick="callNow()">📞 Call Now</button></li>
+                <li><button onclick="openWhatsApp()">💬 WhatsApp Chat</button></li>
+                <li><button onclick="sendEmail()">📧 Send Email</button></li>
+                <li><button onclick="openLocation()">📍 View Location</button></li>
+            </ul>
+
+            <h2 style="margin-top:18px;">Follow Us</h2>
+
+            <div class="footer-social" style="margin-top:10px;">
+                <img src="Assets/Images/WhatsApp.png" onclick="openWhatsApp()">
+                <img src="Assets/Images/Facebook.png" onclick="openFacebook()">
+                <img src="Assets/Images/Instagram.png" onclick="openInstagram()">
+            </div>
+
         </div>
 
     </div>
 </section>
 
-<!-- ============ FOOTER ============ -->
+<!-- ================= FOOTER ================= -->
 <footer class="site-footer">
-    <div class="footer-inner container">
+    <div class="footer-inner">
 
         <div class="footer-left">
-            <img src="Assets/Images/Logo.png" class="footer-logo" alt="Footer Logo">
+            <img src="Assets/Images/Logo.png" class="footer-logo">
         </div>
 
         <div class="footer-center">
@@ -83,10 +108,10 @@
         </div>
 
         <div class="footer-right footer-social">
-            <img src="Assets/Images/WhatsApp.png" onclick="openWhatsApp()" alt="">
-            <img src="Assets/Images/Facebook.png" onclick="openFacebook()" alt="">
-            <img src="Assets/Images/Instagram.png" onclick="openInstagram()" alt="">
-            <img src="Assets/Images/Call.png" onclick="callNow()" alt="">
+            <img src="Assets/Images/WhatsApp.png" onclick="openWhatsApp()">
+            <img src="Assets/Images/Facebook.png" onclick="openFacebook()">
+            <img src="Assets/Images/Instagram.png" onclick="openInstagram()">
+            <img src="Assets/Images/Call.png" onclick="callNow()">
         </div>
 
     </div>
@@ -96,12 +121,12 @@
     </div>
 </footer>
 
-<!-- ============ FLOATING BUTTONS ============ -->
-<div class="floating-buttons">
-    <a class="float-whatsapp" onclick="openWhatsApp()"></a>
-    <a class="float-facebook" onclick="openFacebook()"></a>
-    <a class="float-instagram" onclick="openInstagram()"></a>
-    <a class="float-call" onclick="callNow()"></a>
+<!-- FLOATING ICONS -->
+<div class="floating-icons">
+    <img src="Assets/Images/WhatsApp.png" onclick="openWhatsApp()">
+    <img src="Assets/Images/Facebook.png" onclick="openFacebook()">
+    <img src="Assets/Images/Instagram.png" onclick="openInstagram()">
+    <img src="Assets/Images/Call.png" onclick="callNow()">
 </div>
 
 </body>
