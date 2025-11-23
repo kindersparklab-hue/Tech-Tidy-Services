@@ -98,39 +98,70 @@ body {
   color: #003366;
 }
 
-/* ============ SERVICES DETAIL PAGE ============ */
-.services-detail {
-  padding: 40px 0 60px;
+/* === CLEAN UNIFIED ALIGNED SERVICE LAYOUT FIX === */
+
+.services-page {
+  width: 90%;
+  max-width: 1250px;
+  margin: auto;
 }
 
 .service-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 55px;
-  gap: 35px;
+  gap: 50px;
+  margin: 80px 0;
+  padding: 10px 0;
 }
 
 .service-row.reverse {
   flex-direction: row-reverse;
 }
 
-.service-image {
-  width: 360px;
+.service-image img {
+  width: 100%;
+  max-width: 420px;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  display: block;
+}
+
+.service-text {
+  flex: 1;
 }
 
 .service-text h2 {
-  font-size: 24px;
+  font-size: 30px;
   font-weight: 800;
-  margin-bottom: 10px;
+  margin-bottom: 16px;
+  color: #003366;
 }
 
 .service-text p {
-  font-size: 16px;
-  max-width: 600px;
+  font-size: 17px;
   color: #003366;
+  line-height: 1.65;
+  margin-bottom: 10px;
+  max-width: 600px;
+}
+
+/* MOBILE FIX */
+@media (max-width: 850px) {
+  .service-row,
+  .service-row.reverse {
+    flex-direction: column;
+    text-align: center;
+    margin: 50px 0;
+  }
+
+  .service-image img {
+    max-width: 100%;
+  }
+
+  .service-text p {
+    margin: auto;
+  }
 }
 
 /* ============ WHY CHOOSE US ============ */
