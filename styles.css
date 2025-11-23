@@ -54,7 +54,7 @@ a {
 .logo {
   width: 120px;
   height: auto;
-  filter: drop-shadow(0 0 8px rgba(255,255,255,0.9)); /* header glow */
+  filter: drop-shadow(0 0 8px rgba(255,255,255,0.9));
 }
 
 .main-nav {
@@ -81,7 +81,7 @@ a {
 }
 
 /* ======================
-   SHARE SLIDER (RIGHT)
+   SHARE SLIDER
 ====================== */
 .share-panel {
   position: fixed;
@@ -95,9 +95,6 @@ a {
   transition: right 0.35s ease-in-out;
   z-index: 2000;
   border-radius: 12px 0 0 12px;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
 }
 
 .share-panel.open {
@@ -124,9 +121,6 @@ a {
   padding: 10px 12px;
   background: #f0f8ff;
   border-radius: 10px;
-  border: none;
-  cursor: pointer;
-  text-align: left;
   font-weight: 600;
   color: #003d66;
   box-shadow: 0 1px 4px rgba(0,0,0,0.15);
@@ -197,28 +191,8 @@ a {
   gap: 16px;
 }
 
-.btn-primary,
-.btn-secondary {
-  padding: 11px 22px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 15px;
-}
-
-.btn-primary {
-  background: #0096E6;
-  color: white;
-}
-
-.btn-secondary {
-  background: white;
-  border: 2px solid #0096E6;
-  color: #0096E6;
-}
-
 /* ======================
-   SERVICES WE OFFER (HOME)
+   SERVICES WE OFFER
 ====================== */
 .services-section {
   padding: 45px 20px 35px;
@@ -233,27 +207,22 @@ a {
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-  gap: 14px;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 18px;
 }
 
 .service-box {
-  padding: 18px 12px;
+  padding: 20px 14px;
   background: white;
   border-radius: 12px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.12);
   font-weight: 600;
+  font-size: 16px;
   color: #003f66;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.service-box:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.18);
 }
 
 /* ======================
-   WHY CHOOSE US (HOME)
+   WHY CHOOSE US
 ====================== */
 .why-section {
   padding: 50px 20px;
@@ -273,275 +242,30 @@ a {
   gap: 18px;
 }
 
-.why-box {
-  background: #ffffff;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-  padding: 16px;
-  border-radius: 12px;
-}
-
 .why-box img {
   width: 58px;
   margin-bottom: 8px;
 }
 
-.why-box h3 {
-  font-size: 16px;
-  color: #003f66;
-}
-
 /* ======================
-   REVIEWS (HOME)
+   REVIEWS
 ====================== */
 .review-section {
   padding: 50px 20px;
   text-align: center;
 }
 
-.review-section h2 {
-  font-size: 26px;
-  margin-bottom: 22px;
-  color: #003f66;
-}
-
-.review-box {
-  max-width: 700px;
-  background: white;
-  margin: 10px auto;
-  padding: 18px 16px;
-  border-radius: 12px;
-  box-shadow: 0 1px 6px rgba(0,0,0,0.15);
-}
-
-.review-box p {
-  font-size: 17px;
-  color: #003f66;
-}
-
-.review-box span {
-  display: block;
-  margin-top: 8px;
-  color: #0077b6;
-}
-
 /* ======================
-   ACHIEVEMENTS (HOME & PAGE)
+   ACHIEVEMENTS
 ====================== */
 .achievements-section {
   background: #f0faff;
   padding: 35px 15px 45px;
 }
 
-.hero-counters {
-  display: flex;
-  justify-content: center;
-  gap: 24px;
-  flex-wrap: wrap;
-}
-
 .counter-card {
-  text-align: center;
-  background: #0096E6; /* blue */
-  padding: 18px 20px;
-  color: #ffffff; /* white text for contrast */
-  border-radius: 12px;
-  width: 165px;
-  box-shadow: 0 4px 22px rgba(0,150,230,0.45); /* blue glow */
-}
-
-.count {
-  font-size: 30px;
-  font-weight: 700;
-}
-
-.label {
-  margin-top: 4px;
-  font-weight: 600;
-}
-
-/* ======================
-   SERVICES PAGE
-====================== */
-.services-page {
-  padding: 35px 0 50px;
-}
-
-.page-title {
-  text-align: center;
-  font-size: 28px;
-  color: #004c78;
-  margin-bottom: 25px;
-}
-
-.service-row {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 22px;
-  margin-bottom: 40px;
-}
-
-.service-row.reverse {
-  flex-direction: row-reverse;
-}
-
-.service-image {
-  flex: 1 1 260px;
-  text-align: center;
-}
-
-.service-image img {
-  max-width: 100%;
-  width: 330px; /* slightly increased */
-  border-radius: 12px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.22);
-}
-
-.service-text {
-  flex: 1 1 320px;
-  font-size: 17px; /* slightly increased */
-  color: #333;
-}
-
-.service-text h2 {
-  font-size: 22px;
-  margin-bottom: 10px;
-  color: #004c78;
-}
-
-.service-text h3 {
-  font-size: 18px;
-  margin-top: 10px;
-  margin-bottom: 6px;
-  color: #005a99;
-}
-
-.service-text p {
-  margin-bottom: 8px;
-}
-
-.service-text ul {
-  margin-left: 18px;
-  margin-bottom: 8px;
-}
-
-/* ======================
-   ABOUT PAGE
-====================== */
-.about-page {
-  padding: 35px 0 50px;
-}
-
-.about-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 24px;
-  margin-top: 20px;
-}
-
-.about-text {
-  flex: 1 1 320px;
-  font-size: 17px;
-  color: #333;
-}
-
-.about-text h2 {
-  font-size: 20px;
-  margin-top: 14px;
-  margin-bottom: 6px;
-  color: #004c78;
-}
-
-.about-text ul {
-  margin-left: 18px;
-  margin-bottom: 6px;
-}
-
-.about-media {
-  flex: 1 1 260px;
-  text-align: center;
-}
-
-.about-team-image {
-  max-width: 100%;
-  width: 320px;
-  border-radius: 14px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
-}
-
-/* ======================
-   ACHIEVEMENTS PAGE
-====================== */
-.achievements-page .page-title {
-  margin-top: 25px;
-}
-
-.page-subtitle {
-  text-align: center;
-  margin-top: 6px;
-  color: #555;
-}
-
-/* ======================
-   CONTACT PAGE
-====================== */
-.contact-page {
-  padding: 35px 0 50px;
-}
-
-.contact-page .page-title {
-  text-align: center;
-  font-size: 28px;
-  color: #004c78;
-}
-
-.contact-page .page-subtitle {
-  text-align: center;
-  margin-top: 8px;
-  margin-bottom: 20px;
-  color: #555;
-}
-
-.contact-grid {
-  max-width: 880px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 20px;
-}
-
-.contact-box {
-  background: #fff;
-  border-radius: 12px;
-  padding: 18px 16px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-  text-align: left;
-  font-size: 16px;
-}
-
-.contact-box h2 {
-  font-size: 20px;
-  margin-bottom: 10px;
-  color: #004c78;
-}
-
-.contact-actions {
-  list-style: none;
-  margin-top: 10px;
-}
-
-.contact-actions li {
-  margin-bottom: 8px;
-}
-
-.contact-actions button {
-  padding: 8px 12px;
-  border-radius: 8px;
-  border: 1px solid #0096E6;
-  background: #fff;
-  color: #0096E6;
-  cursor: pointer;
-  font-weight: 600;
+  background: #0096E6;
+  color: white;
 }
 
 /* ======================
@@ -563,136 +287,37 @@ a {
   gap: 16px;
 }
 
-.footer-left {
-  flex: 0 0 auto;
-}
-
 .footer-logo {
   width: 110px;
-  height: auto;
-  filter: none; /* reduced glow in footer */
-}
-
-.footer-center {
-  flex: 1 1 auto;
-  text-align: center;
-}
-
-.footer-brand {
-  font-weight: 700;
-  font-size: 16px;
-  margin-bottom: 4px;
-}
-
-.footer-info {
-  font-size: 14px;
-  line-height: 1.5;
-}
-
-.footer-right {
-  flex: 0 0 auto;
+  filter: none;
 }
 
 .footer-social img {
   width: 34px;
   height: 34px;
-  border-radius: 50%;
   background: #fff;
+  border-radius: 50%;
   padding: 6px;
-  margin-left: 8px;
-  cursor: pointer;
   box-shadow: 0 2px 6px rgba(0,0,0,0.4);
-}
-
-.footer-bottom {
-  text-align: center;
-  font-size: 13px;
-  color: #ccc;
 }
 
 /* ======================
    FLOATING ICONS
 ====================== */
-.floating-icons {
-  position: fixed;
-  right: 15px;
-  bottom: 90px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  z-index: 1500;
-}
-
 .floating-icons img {
   width: 46px;
   height: 46px;
-  background: #ffffff;
-  border-radius: 50%;
-  padding: 8px;
-  box-shadow: 0 2px 7px rgba(0,0,0,0.25);
-  cursor: pointer;
 }
 
 /* ======================
-   MOBILE RESPONSIVE
+   RESPONSIVE FIXES
 ====================== */
-@media (max-width: 768px) {
-  .header-inner {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .hero-text-section h1 {
-    font-size: 26px;
-  }
-
-  .hero-text-section p {
-    font-size: 16px;
+@media (max-width: 480px) {
+  .services-grid {
+    grid-template-columns: 1fr;
   }
 
   .banner-slider {
-    height: 210px;
-  }
-
-  .service-row {
-    flex-direction: column;
-  }
-
-  .service-row.reverse {
-    flex-direction: column;
-  }
-
-  .footer-inner {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .footer-right {
-    margin-top: 6px;
-  }
-}
-
-@media (max-width: 480px) {
-  .logo {
-    width: 95px;
-  }
-
-  .share-btn {
-    width: 34px;
-    height: 34px;
-  }
-
-  .share-panel {
-    width: 78%;
-    right: -78%;
-  }
-
-  .share-logo {
-    width: 90px;
-  }
-
-  .floating-icons img {
-    width: 42px;
-    height: 42px;
+    height: 200px;
   }
 }
