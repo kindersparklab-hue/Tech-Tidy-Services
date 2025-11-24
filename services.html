@@ -1,256 +1,518 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Services — Tech & Tidy Services</title>
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services — Tech & Tidy Services</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
 </head>
-
 <body>
 
-<!-- ================= HEADER ================= -->
-<header class="site-header">
-    <div class="header-inner">
-        <a href="index.html">
-            <img src="Assets/Images/Logo.png" class="logo" alt="Logo">
-        </a>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <img src="Assets/Images/Logo.png" alt="Tech & Tidy Services" class="logo">
+      </a>
 
-        <nav class="main-nav">
-            <a href="index.html">Home</a>
-            <a href="about.html">About Us</a>
-            <a href="services.html" class="active">Services</a>
-            <a href="achievements.html">Achievements</a>
-            <a href="contact.html">Contact</a>
-        </nav>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="services.html" class="active">Services</a>
+        <a href="achievements.html">Achievements</a>
+        <a href="contact.html">Contact</a>
+      </nav>
 
-        <img src="Assets/Images/SHARE.png" class="share-btn" alt="Share">
+      <img src="Assets/Images/SHARE.png" alt="Share" class="share-btn">
     </div>
-</header>
+  </header>
 
-<!-- SHARE SLIDER -->
-<div class="share-panel">
-    <img src="Assets/Images/Logo.png" class="share-logo">
-
+  <!-- SHARE SLIDER -->
+  <aside class="share-panel" id="sharePanel">
+    <img src="Assets/Images/Logo.png" alt="Tech & Tidy Services" class="share-logo">
     <div class="share-panel-inner">
-        <div class="share-option" onclick="openWhatsApp()">
-            <img src="Assets/Images/WhatsApp.png"> WhatsApp
-        </div>
-        <div class="share-option" onclick="openFacebook()">
-            <img src="Assets/Images/Facebook.png"> Facebook
-        </div>
-        <div class="share-option" onclick="openInstagram()">
-            <img src="Assets/Images/Instagram.png"> Instagram
-        </div>
-        <div class="share-option" onclick="callNow()">
-            <img src="Assets/Images/Call.png"> Call
-        </div>
+      <button class="share-option" type="button" onclick="openWhatsApp()">
+        <img src="Assets/Images/WhatsApp.png" alt="WhatsApp"><span>WhatsApp</span>
+      </button>
+      <button class="share-option" type="button" onclick="openFacebook()">
+        <img src="Assets/Images/Facebook.png" alt="Facebook"><span>Facebook</span>
+      </button>
+      <button class="share-option" type="button" onclick="openInstagram()">
+        <img src="Assets/Images/Instagram.png" alt="Instagram"><span>Instagram</span>
+      </button>
+      <button class="share-option" type="button" onclick="callNow()">
+        <img src="Assets/Images/Call.png" alt="Call"><span>Call</span>
+      </button>
     </div>
-</div>
+  </aside>
 
+  <main class="services-page">
+    <div class="container">
+      <h1 class="page-title">Our Services</h1>
 
-<!-- ================= PAGE TITLE ================= -->
-<section class="services-page">
-    <h1 class="page-title">Our Services</h1>
-
-
-
-
-    <!-- ============ SERVICE 1 ============ -->
-    <div class="service-row">
+      <!-- 1. Repair & Maintenance -->
+      <section id="repair-maintenance" class="service-row">
         <div class="service-image">
-            <img src="Assets/Images/Repair & Maintenance.png">
+          <img src="Assets/Images/Repair & Maintenance.png" alt="Repair & Maintenance">
         </div>
         <div class="service-text">
-            <h2>Repair & Maintenance</h2>
-            <p>We offer comprehensive repair and maintenance services to ensure your property stays functional, safe, and in excellent working order. From electrical components and plumbing fixtures to structural adjustments and interior repairs, our skilled technicians handle every requirement with precision.</p>
-            <p>Our team focuses on delivering prompt, dependable, and cost-efficient solutions that minimize disruption while extending the longevity of your home, villa, or business space. Whether scheduled maintenance or emergency repairs — we keep everything running smoothly.</p>
+          <h2>Repair &amp; Maintenance Services</h2>
+          <p>
+            At Tech&amp;Tidy Services, we provide complete repair and maintenance solutions
+            designed to keep your home, villa, or office in excellent working condition.
+            Our team of qualified professionals is equipped to handle all types of
+            maintenance work including electrical repairs, plumbing services, painting,
+            carpentry, AC maintenance, and general handyman support.
+          </p>
+          <p>
+            We understand that well-maintained spaces not only look better but also function
+            more efficiently and safely. That’s why we focus on delivering timely,
+            cost-effective, and dependable services that minimize disruption and extend the
+            life of your property’s assets.
+          </p>
+          <p>
+            From small household repairs to large-scale maintenance projects, we ensure every
+            job is completed with precision, using high-quality materials and the latest tools.
+            Our goal is to provide you with peace of mind, knowing that your property is in
+            expert hands.
+          </p>
+          <p>
+            Choose Tech&amp;Tidy Services for consistent quality, transparent pricing, and
+            professional care — keeping your space safe, comfortable, and perfectly maintained
+            all year round.
+          </p>
         </div>
-    </div>
+      </section>
 
-    <!-- ============ SERVICE 2 ============ -->
-    <div class="service-row reverse">
+      <!-- 2. Home, Office & Villa Renovation -->
+      <section id="renovation" class="service-row reverse">
         <div class="service-image">
-            <img src="Assets/Images/Home, Office & Villa Renovation.png">
+          <img src="Assets/Images/Home, Office & Villa Renovation.png" alt="Home, Office & Villa Renovation">
         </div>
         <div class="service-text">
-            <h2>Home, Office & Villa Renovation</h2>
-            <p>Transform your property with expert renovation services designed to blend modern design, functionality, and craftsmanship. Whether it’s a single room improvement or a full-scale renovation, we manage all stages including planning, electrical, plumbing, flooring, partitioning, finishing, and design.</p>
-            <p>Our renovation projects enhance comfort, increase value, and elevate aesthetic appeal — all while ensuring a smooth, stress-free experience from concept to completion.</p>
+          <h2>Home, Office &amp; Villa Renovation</h2>
+          <p>
+            Transform your living or working space with Tech&amp;Tidy Services, your trusted
+            partner for complete renovation solutions. We specialize in home, office, and
+            villa renovations, delivering high-quality craftsmanship that blends functionality
+            with modern design.
+          </p>
+          <p>
+            Our experienced team handles every stage of the renovation process — from planning
+            and layout to plumbing, electrical work, painting, flooring, and finishing.
+            Whether you’re upgrading a single room or redesigning your entire property, we
+            ensure a smooth, hassle-free experience with attention to detail and professional
+            execution.
+          </p>
+          <p>
+            At Tech&amp;Tidy Services, we believe every space has the potential to inspire.
+            That’s why we work closely with our clients to understand their needs, style, and
+            budget, delivering personalized renovation solutions that add comfort, value, and
+            elegance to every project.
+          </p>
         </div>
-    </div>
+      </section>
 
-    <!-- ============ SERVICE 3 ============ -->
-    <div class="service-row">
+      <!-- 3. Painting Services -->
+      <section id="painting" class="service-row">
         <div class="service-image">
-            <img src="Assets/Images/Painting Services.png">
+          <img src="Assets/Images/Painting Services.png" alt="Painting Services">
         </div>
         <div class="service-text">
-            <h2>Painting Services</h2>
-            <p>We provide professional painting services for residential, commercial, and villa properties using premium, durable, and eco-friendly paints. Our work includes surface preparation, smoothing, patching, coating, and finishing — ensuring a flawless, long-lasting appearance.</p>
-            <p>From subtle tones to bold statement finishes, our painting specialists deliver clean, efficient, and on-time results that refresh and transform any environment.</p>
+          <h2>Painting Services</h2>
+          <p>
+            Give your space a fresh, vibrant look with Tech&amp;Tidy Services’ professional
+            painting solutions. We provide complete interior and exterior painting services
+            for homes, offices, and villas using premium paints and modern techniques to
+            ensure a smooth, long-lasting finish.
+          </p>
+          <p>
+            Our skilled painters handle every project with precision and care, from surface
+            preparation and color consultation to the final coat. Whether you’re refreshing a
+            single room or transforming your entire property, we guarantee clean, efficient,
+            and high-quality workmanship that enhances both the appearance and value of your
+            space.
+          </p>
+          <p>
+            We offer comprehensive interior and exterior painting services for homes,
+            offices, villas, and commercial properties, ensuring a flawless finish that adds
+            beauty, protection, and value to your space.
+          </p>
+          <p>
+            Our team of experienced painters and decorators takes care of every detail —
+            from wall repair and priming to final finishing. We use only premium-quality
+            paints, eco-friendly materials, and advanced painting tools to achieve a smooth,
+            durable, and elegant result that lasts for years.
+          </p>
+          <p>
+            Choose Tech&amp;Tidy Services for trusted craftsmanship, affordable pricing, and
+            exceptional attention to detail. Let our experts bring color, life, and
+            personality to your property — one perfect coat at a time.
+          </p>
         </div>
-    </div>
+      </section>
 
-    <!-- ============ SERVICE 4 ============ -->
-    <div class="service-row reverse">
+      <!-- 4. Electrical & Plumbing -->
+      <section id="electrical-plumbing" class="service-row reverse">
         <div class="service-image">
-            <img src="Assets/Images/Electrical & Plumbing.png">
+          <img src="Assets/Images/Electrical & Plumbing.png" alt="Electrical & Plumbing">
         </div>
         <div class="service-text">
-            <h2>Electrical & Plumbing</h2>
-            <p>Our certified electricians and plumbing technicians provide safe, efficient, and reliable system services including wiring, lighting installation, socket fitting, leak detection, drainage clearing, fixture installation, and more.</p>
-            <p>We follow strict safety standards and use durable materials to ensure long-term reliability, efficiency, and optimal performance in every property.</p>
-        </div>
-    </div>
+          <h2>Electrical &amp; Plumbing Services</h2>
+          <p>
+            At Tech&amp;Tidy Services, we provide reliable and professional electrical and
+            plumbing solutions for homes, villas, and offices. Our certified technicians are
+            trained to handle all types of installations, repairs, and maintenance work —
+            ensuring your property remains safe, efficient, and fully functional.
+          </p>
 
-    <!-- ============ SERVICE 5 ============ -->
-    <div class="service-row">
+          <h3>Electrical Services</h3>
+          <p>
+            Our experienced electricians manage a wide range of electrical tasks, including
+            wiring, lighting installation, power socket fitting, switchboard repair, ceiling
+            fan and fixture installation, troubleshooting, and safety inspections. We use
+            high-quality materials and follow strict safety standards to prevent hazards and
+            ensure long-term reliability. Whether you need to upgrade your electrical system,
+            fix power issues, or install new lighting, we deliver efficient and compliant
+            solutions with minimal disruption.
+          </p>
+
+          <h3>Plumbing Services</h3>
+          <p>
+            From leaky faucets to complete plumbing installations, our plumbing team provides
+            comprehensive solutions for water supply, drainage, and sanitation systems. We
+            specialize in pipe repair and replacement, water heater installation, bathroom and
+            kitchen plumbing, water leakage detection, and drainage cleaning. Our goal is to
+            ensure smooth water flow and prevent future problems through quality workmanship
+            and durable materials.
+          </p>
+
+          <p>
+            At Tech&amp;Tidy Services, we take pride in offering fast response times,
+            transparent pricing, and dependable service. Whether it’s routine maintenance or
+            an urgent repair, our experts work with precision and professionalism — keeping
+            your systems running perfectly and your property in top condition.
+          </p>
+        </div>
+      </section>
+
+      <!-- 5. Home Appliance Installation & Maintenance -->
+      <section id="appliance-maintenance" class="service-row">
         <div class="service-image">
-            <img src="Assets/Images/Home Appliance Installation n Maintenance.png">
+          <img src="Assets/Images/Home Appliance Installation n Maintenance.png" alt="Home Appliance Installation and Maintenance">
         </div>
         <div class="service-text">
-            <h2>Home Appliance Installation & Maintenance</h2>
-            <p>We provide expert installation and servicing for refrigerators, dishwashers, ovens, washing machines, dryers, cooktops, water heaters, and more. Our technicians ensure optimal setup, calibration, safety compliance, and long-lasting performance.</p>
-            <p>Whether it’s new installation, troubleshooting, or preventive maintenance — we keep your home appliances running efficiently.</p>
+          <h2>Home Appliance Installation &amp; Maintenance</h2>
+          <p>
+            We provide professional installation and routine maintenance for key household
+            appliances, helping you extend their lifespan and maintain efficiency.
+          </p>
+          <p>
+            Our services cover items such as washing machines, dishwashers, refrigerators,
+            cookers, ovens and more. From safe installation and proper calibration to
+            troubleshooting performance issues, we ensure your appliances operate reliably
+            and safely.
+          </p>
+          <p>
+            With careful handling and attention to manufacturer guidelines, Tech&amp;Tidy
+            Services helps you avoid breakdowns, reduce energy waste, and keep your home
+            running smoothly.
+          </p>
         </div>
-    </div>
+      </section>
 
-    <!-- ============ SERVICE 6 ============ -->
-    <div class="service-row reverse">
+      <!-- 6. Carpentry Services -->
+      <section id="carpentry" class="service-row reverse">
         <div class="service-image">
-            <img src="Assets/Images/Carpentry Services.png">
+          <img src="Assets/Images/Carpentry Services.png" alt="Carpentry Services">
         </div>
         <div class="service-text">
-            <h2>Carpentry Services</h2>
-            <p>Our skilled carpenters specialize in custom woodwork that enhances both appearance and usability. We build and repair wardrobes, cabinets, doors, shelving units, decorative wood finishes, storage solutions, and furniture assembly.</p>
-            <p>Every installation is crafted with precision, durability, and elegance — perfectly tailored to your space.</p>
+          <h2>Carpentry Services</h2>
+          <p>
+            Enhance the beauty, functionality, and comfort of your space with Tech&amp;Tidy
+            Services’ expert carpentry solutions. We provide a full range of custom
+            carpentry, woodwork repair, and installation services for homes, villas, and
+            offices — combining craftsmanship, precision, and quality materials to deliver
+            lasting results.
+          </p>
+          <p>
+            Our skilled carpenters handle everything from furniture repair and assembly to
+            custom-built wardrobes, kitchen cabinets, shelving units, wooden doors, and
+            flooring. Whether you need modern fittings, decorative woodwork, or complete
+            wooden interior renovation, we tailor our services to meet your design, style,
+            and budget requirements.
+          </p>
+          <p>
+            We focus on durability, fine finishing, and attention to detail, ensuring every
+            project enhances the overall look and usability of your space. Using
+            high-quality wood and professional tools, our team guarantees smooth
+            installations and flawless finishes that stand the test of time.
+          </p>
+          <p>
+            Choose Tech&amp;Tidy Services for dependable craftsmanship, timely delivery, and
+            personalized service that brings warmth, character, and style to your interiors.
+          </p>
         </div>
-    </div>
+      </section>
 
-    <!-- ============ SERVICE 7 ============ -->
-    <div class="service-row">
+      <!-- 7. Bathroom Renovation -->
+      <section id="bathroom-renovation" class="service-row">
         <div class="service-image">
-            <img src="Assets/Images/Bathroom Renovation.png">
+          <img src="Assets/Images/Bathroom Renovation.png" alt="Bathroom Renovation">
         </div>
         <div class="service-text">
-            <h2>Bathroom Renovation</h2>
-            <p>Upgrade your bathroom with modern fixtures, premium tiles, sanitary installations, waterproofing, smart layouts, and stylish finishing. We transform bathrooms into elegant, functional, moisture-resistant spaces built for comfort and durability.</p>
-            <p>From small upgrades to complete redesigns — we manage it all.</p>
+          <h2>Bathroom Renovation</h2>
+          <p>
+            Upgrade your bathroom with our comprehensive renovation solutions. We handle tile
+            replacement, fixture installation, plumbing upgrades, vanity and sink
+            installation, shower and bathtub fitting, and waterproofing.
+          </p>
+          <p>
+            Our team ensures a clean, safe, and efficient renovation process while creating
+            a relaxing and modern bathroom environment. From compact bathrooms to luxury
+            spa-style designs, we work according to your style, budget and functional needs.
+          </p>
+          <p>
+            With a focus on durability, easy maintenance and visual appeal, Tech&amp;Tidy
+            Services ensures your bathroom becomes a comfortable, practical and beautiful
+            part of your home.
+          </p>
         </div>
-    </div>
+      </section>
 
-    <!-- ============ SERVICE 8 ============ -->
-    <div class="service-row reverse">
+      <!-- 8. Kitchen Renovation -->
+      <section id="kitchen-renovation" class="service-row reverse">
         <div class="service-image">
-            <img src="Assets/Images/Kitchen Renovation.png">
+          <img src="Assets/Images/Kitchen Renovation.png" alt="Kitchen Renovation">
         </div>
         <div class="service-text">
-            <h2>Kitchen Renovation</h2>
-            <p>We redesign and upgrade kitchens with custom cabinetry, countertops, plumbing adjustments, lighting enhancements, appliance fitting, layout reconfiguration, and functional modern finishing.</p>
-            <p>Our goal: a stylish, practical, efficient kitchen that fits your lifestyle.</p>
+          <h2>Kitchen Renovation</h2>
+          <p>
+            Our kitchen renovation services focus on optimizing space, improving
+            functionality, and enhancing aesthetics. From custom cabinets, countertops, and
+            flooring to modern lighting, plumbing, and appliances, we handle every aspect of
+            your kitchen remodel.
+          </p>
+          <p>
+            We work closely with clients to design layouts that suit their cooking style,
+            storage needs, and interior décor preferences, ensuring a seamless blend of
+            style and practicality.
+          </p>
+          <p>
+            Whether you prefer a sleek modern look or a warm, classic design, we create a
+            kitchen that is both beautiful and efficient for everyday use.
+          </p>
         </div>
-    </div>
+      </section>
 
-    <!-- ============ SERVICE 9 ============ -->
-    <div class="service-row">
+      <!-- 9. Cleaning Services -->
+      <section id="cleaning" class="service-row">
         <div class="service-image">
-            <img src="Assets/Images/Cleaning Services.png">
+          <img src="Assets/Images/Cleaning Services.png" alt="Cleaning Services">
         </div>
         <div class="service-text">
-            <h2>Cleaning Services</h2>
-            <p>Our professional cleaning services include deep home cleaning, sofa & upholstery cleaning, mattress sanitizing, carpet and curtain cleaning, bathroom descaling, move-in move-out cleaning, and commercial property cleaning.</p>
-            <p>We use safe, hygienic, and high-grade cleaning solutions for fresher, healthier indoor environments.</p>
-        </div>
-    </div>
+          <h2>Cleaning Services</h2>
+          <p>
+            Keep your space spotless, fresh, and healthy with Tech&amp;Tidy Services’
+            professional cleaning solutions. We offer a full range of residential and
+            commercial cleaning services designed to restore hygiene, comfort, and beauty to
+            your property.
+          </p>
+          <p>
+            Our experienced cleaning specialists use advanced equipment, eco-friendly
+            products, and proven techniques to ensure deep, long-lasting results every time.
+          </p>
 
-    <!-- ============ SERVICE 10 ============ -->
-    <div class="service-row reverse">
+          <h3>Our Cleaning Services Include:</h3>
+          <ul>
+            <li><strong>Sofa &amp; Upholstery Cleaning</strong> – Deep cleaning and sanitizing for fresh, renewed fabric.</li>
+            <li><strong>Mattress Cleaning</strong> – Removes dust mites, bacteria, and odors.</li>
+            <li><strong>Bathroom Cleaning</strong> – Deep scrubbing, descaling, and disinfection.</li>
+            <li><strong>Living Room &amp; Carpet Cleaning</strong> – Removes dirt and allergens for a cleaner space.</li>
+            <li><strong>Curtain &amp; Wood Floor Cleaning</strong> – Safe, non-toxic treatments to restore freshness.</li>
+            <li><strong>Deep Home Cleaning</strong> – Full-property cleaning for a brand-new feel.</li>
+            <li><strong>Move-In &amp; Move-Out Cleaning</strong> – Perfect preparation for relocation.</li>
+          </ul>
+
+          <p>
+            We take pride in our attention to detail, punctuality, and commitment to
+            customer satisfaction. Whether it’s a one-time deep clean or regular
+            maintenance, we promise sparkling results, reliable service, and a healthier
+            environment every time.
+          </p>
+        </div>
+      </section>
+
+      <!-- 10. AC Maintenance & Repair -->
+      <section id="ac-maintenance" class="service-row reverse">
         <div class="service-image">
-            <img src="Assets/Images/AC Maintenance & Repair.png">
+          <img src="Assets/Images/AC Maintenance & Repair.png" alt="AC Maintenance and Repair">
         </div>
         <div class="service-text">
-            <h2>AC Maintenance & Repair</h2>
-            <p>We offer complete AC system servicing including filter cleaning, coil washing, gas refilling, ventilation clearing, thermostat troubleshooting, airflow balancing, component repair, and cooling restoration.</p>
-            <p>Fast relief, energy efficiency, and improved air quality are guaranteed — especially during UAE heat.</p>
+          <h2>AC Maintenance &amp; Repair</h2>
+          <p>
+            Tech&amp;Tidy Services offers professional AC maintenance and repair to keep your
+            cooling systems running efficiently, especially during the hot months.
+          </p>
+          <p>
+            Our services include filter and coil cleaning, gas level checks, drainage
+            cleaning, performance inspection and fault diagnosis. We work on split units,
+            ducted systems and other common AC types used in homes and offices.
+          </p>
+          <p>
+            Regular servicing improves cooling performance, reduces electricity usage and
+            helps prevent sudden breakdowns. In case of faults, our technicians provide fast
+            and reliable repair to restore comfort as quickly as possible.
+          </p>
         </div>
-    </div>
+      </section>
 
-    <!-- ============ SERVICE 11 ============ -->
-    <div class="service-row">
+      <!-- 11. Pest & Bird Control -->
+      <section id="pest-bird-control" class="service-row">
         <div class="service-image">
-            <img src="Assets/Images/Pest n Bird Control.png">
+          <img src="Assets/Images/Pest n Bird Control.png" alt="Pest and Bird Control">
         </div>
         <div class="service-text">
-            <h2>Pest & Bird Control</h2>
-            <p>Protect your property from insects, rodents, termites, ants, cockroaches, bed bugs, mosquitoes, and birds. We provide prevention, treatment, fumigation, anti-termite systems, safe repellents, netting solutions, and spike installations.</p>
-            <p>Our methods are safe, effective, and environmentally responsible — ensuring long-term protection.</p>
-        </div>
-    </div>
+          <h2>Pest &amp; Bird Control Services</h2>
+          <p>
+            Protect your home, villa, or office from unwanted pests with Tech&amp;Tidy
+            Services’ comprehensive pest control solutions. Our expert team provides safe,
+            effective, and long-lasting pest management, ensuring your property remains
+            clean, hygienic, and free from harmful insects and rodents.
+          </p>
 
-    <!-- ============ SERVICE 12 ============ -->
-    <div class="service-row reverse">
+          <h3>Our Pest Control Services Cover:</h3>
+          <ul>
+            <li>Ants, cockroaches, termites, mosquitoes, rodents, bedbugs, flies and more</li>
+            <li><strong>Termite Control &amp; Prevention</strong> – Inspection, treatment, and long-term protection</li>
+            <li><strong>Rodent Control</strong> – Safe trapping and exclusion techniques</li>
+            <li><strong>Mosquito &amp; Insect Control</strong> – Reduces breeding and infestations</li>
+          </ul>
+
+          <h3>Bird Control &amp; Spikes</h3>
+          <p>
+            Prevent birds from nesting or causing damage to your property with professional
+            bird control solutions, including installation of spikes and netting.
+          </p>
+
+          <p>
+            At Tech&amp;Tidy Services, we combine modern equipment, expert knowledge, and
+            safe, eco-friendly chemicals to deliver thorough pest eradication and prevention.
+            Our team conducts a detailed inspection, identifies the root cause, and
+            implements customized solutions to ensure long-term results.
+          </p>
+          <p>
+            Choose Tech&amp;Tidy Services for reliable, professional, and affordable pest
+            control — keeping your property safe, hygienic, and pest-free all year round.
+          </p>
+        </div>
+      </section>
+
+      <!-- 12. Packers & Movers -->
+      <section id="packers-movers" class="service-row reverse">
         <div class="service-image">
-            <img src="Assets/Images/Packers & Movers.png">
+          <img src="Assets/Images/Packers & Movers.png" alt="Packers and Movers">
         </div>
         <div class="service-text">
-            <h2>Packers & Movers</h2>
-            <p>Whether relocating a home or business, we provide secure packing, organized shifting, loading, transport, unloading, and placement. Fragile and valuable items receive premium handling and protection.</p>
-            <p>We ensure smooth, safe, and stress-free relocation with minimal downtime.</p>
-        </div>
-    </div>
+          <h2>Packers &amp; Movers Services</h2>
+          <p>
+            Make your move seamless, stress-free, and efficient with Tech&amp;Tidy Services’
+            professional packers and movers solutions. Whether you are relocating your home,
+            villa, or office, our experienced team ensures that your belongings are handled
+            with care and delivered safely to your new location.
+          </p>
 
-    <!-- ============ SERVICE 13 (NEW) ============ -->
-    <div class="service-row">
+          <h3>Our Moving Services Include:</h3>
+          <ul>
+            <li><strong>Residential Moving</strong> – Safe packing, loading, and transport of your belongings.</li>
+            <li><strong>Commercial &amp; Office Moving</strong> – Organized relocation with minimal downtime.</li>
+            <li><strong>Specialized Packing</strong> – Custom protection for fragile or high-value items.</li>
+            <li><strong>Efficient Transportation &amp; Delivery</strong> – On-time delivery with modern vehicles.</li>
+          </ul>
+
+          <p>
+            At Tech&amp;Tidy Services, we understand that moving can be overwhelming. That’s
+            why we provide end-to-end services, including packing, loading, transport,
+            unloading, and setup — all handled by our professional team with care and
+            precision.
+          </p>
+          <p>
+            Choose Tech&amp;Tidy Services Packers &amp; Movers for reliable, secure, and
+            hassle-free relocation, whether local or long-distance. We prioritize safety,
+            efficiency, and customer satisfaction, making your moving experience smooth and
+            worry-free.
+          </p>
+        </div>
+      </section>
+
+      <!-- 13. Professional Waterproofing Services -->
+      <section id="waterproofing" class="service-row">
         <div class="service-image">
-            <img src="Assets/Images/Professional Waterproofing Services.png">
+          <img src="Assets/Images/Professional Waterproofing Services.png" alt="Professional Waterproofing Services">
         </div>
         <div class="service-text">
-            <h2>Professional Waterproofing Services</h2>
-            <p>Keep your property protected from leaks, moisture buildup, and long-term damage with our expert waterproofing services. We provide industrial-grade sealing, coating, and leak-prevention systems tailored for homes, villas, commercial buildings, and foundations.</p>
-            <p>Our services include roof waterproofing, basement sealing, water tank and swimming pool waterproofing, bathroom and kitchen sealing, terrace coating, crack repair, and moisture prevention barriers — ensuring lasting durability and peace of mind.</p>
+          <h2>Professional Waterproofing Services</h2>
+          <p>
+            Protect your property from leaks, moisture damage, and costly repairs with our
+            expert waterproofing solutions. We specialize in safeguarding homes, villas,
+            buildings, and commercial spaces with durable, long-lasting protection.
+          </p>
+
+          <h3>Our Services Include:</h3>
+          <ul>
+            <li>Roof waterproofing</li>
+            <li>Foundation &amp; basement sealing</li>
+            <li>Bathroom &amp; kitchen waterproofing</li>
+            <li>Balcony and terrace coating</li>
+            <li>Water tank &amp; swimming pool waterproofing</li>
+            <li>Crack repair and leakage solutions</li>
+          </ul>
+
+          <p>
+            Whether it’s a minor leak or full-area waterproofing, we ensure your property
+            stays safe, dry, and protected year-round.
+          </p>
         </div>
+      </section>
     </div>
+  </main>
 
-</section>
-
-
-
-<!-- ================= FOOTER ================= -->
-<footer class="site-footer">
+  <!-- FOOTER -->
+  <footer class="site-footer">
     <div class="footer-inner">
-
-        <div class="footer-left">
-            <img src="Assets/Images/Logo.png" class="footer-logo">
+      <div class="footer-left">
+        <img src="Assets/Images/Logo.png" alt="Tech & Tidy Services" class="footer-logo">
+      </div>
+      <div class="footer-center">
+        <div class="footer-brand">Tech & Tidy Services</div>
+        <div class="footer-info">
+          Dubai, United Arab Emirates<br>
+          Phone: <a href="tel:+971581160415">+971 58 116 0415</a><br>
+          Email: <a href="mailto:inquiry@techntidy.com">inquiry@techntidy.com</a>
         </div>
-
-        <div class="footer-center">
-            <div class="footer-brand">Tech & Tidy Services</div>
-            <div class="footer-info">
-                Dubai, United Arab Emirates<br>
-                Phone: +971 58 116 0415<br>
-                Email: inquiry@techntidy.com
-            </div>
+      </div>
+      <div class="footer-right">
+        <div class="footer-social">
+          <img src="Assets/Images/WhatsApp.png" alt="WhatsApp" onclick="openWhatsApp()">
+          <img src="Assets/Images/Facebook.png" alt="Facebook" onclick="openFacebook()">
+          <img src="Assets/Images/Instagram.png" alt="Instagram" onclick="openInstagram()">
+          <img src="Assets/Images/Call.png" alt="Call" onclick="callNow()">
         </div>
-
-        <div class="footer-right footer-social">
-            <img src="Assets/Images/WhatsApp.png" onclick="openWhatsApp()">
-            <img src="Assets/Images/Facebook.png" onclick="openFacebook()">
-            <img src="Assets/Images/Instagram.png" onclick="openInstagram()">
-            <img src="Assets/Images/Call.png" onclick="callNow()">
-        </div>
-
+      </div>
     </div>
-</footer>
+    <div class="footer-bottom">
+      © 2025 Tech & Tidy Services. All Rights Reserved.
+    </div>
+  </footer>
 
-<!-- FLOATING ICONS -->
-<div class="floating-icons">
-    <img src="Assets/Images/WhatsApp.png" onclick="openWhatsApp()">
-    <img src="Assets/Images/Facebook.png" onclick="openFacebook()">
-    <img src="Assets/Images/Instagram.png" onclick="openInstagram()">
-    <img src="Assets/Images/Call.png" onclick="callNow()">
-</div>
+  <!-- FLOATING ICONS -->
+  <div class="floating-icons">
+    <img src="Assets/Images/WhatsApp.png" alt="WhatsApp" onclick="openWhatsApp()">
+    <img src="Assets/Images/Facebook.png" alt="Facebook" onclick="openFacebook()">
+    <img src="Assets/Images/Instagram.png" alt="Instagram" onclick="openInstagram()">
+    <img src="Assets/Images/Call.png" alt="Call" onclick="callNow()">
+  </div>
 
 </body>
 </html>
