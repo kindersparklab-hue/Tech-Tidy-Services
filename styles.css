@@ -531,6 +531,15 @@ a {
   color: #004c78;
 }
 
+.contact-details-section {
+  padding: 60px 0 80px;
+}
+
+.contact-actions a {
+  color: #005a99;
+  font-weight: 600;
+}
+
 /* ======================
    FOOTER
 ====================== */
