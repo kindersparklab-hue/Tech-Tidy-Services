@@ -1,11 +1,3 @@
-/* GLOBAL CONTAINER */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-  box-sizing: border-box;
-}
-
 /* ======================
    GLOBAL RESET
 ====================== */
@@ -24,6 +16,8 @@ html, body {
 }
 
 img {
+  max-width: 100%;
+  display: block;
   user-select: none;
 }
 
@@ -32,10 +26,14 @@ a {
   color: inherit;
 }
 
+/* ======================
+   MAIN CONTAINER
+====================== */
 .container {
-  width: 92%;
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
 }
 
 /* ======================
@@ -44,15 +42,13 @@ a {
 .site-header {
   background: linear-gradient(90deg, #0096E6, #42b9ff);
   padding: 10px 0;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
   position: sticky;
   top: 0;
   z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
 }
 
 .header-inner {
-  width: 92%;
-  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -61,15 +57,12 @@ a {
 
 .logo {
   width: 120px;
-  height: auto;
-  filter: drop-shadow(0 0 8px rgba(255,255,255,0.9)); /* header glow */
 }
 
 .main-nav {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
   gap: 14px;
+  flex-wrap: wrap;
 }
 
 .main-nav a {
@@ -89,7 +82,7 @@ a {
 }
 
 /* ======================
-   SHARE SLIDER (RIGHT)
+   SHARE PANEL
 ====================== */
 .share-panel {
   position: fixed;
@@ -97,15 +90,12 @@ a {
   right: -260px;
   width: 260px;
   height: 100vh;
-  background: #ffffff;
-  box-shadow: -3px 0 15px rgba(0,0,0,0.15);
+  background: #fff;
   padding: 20px;
-  transition: right 0.35s ease-in-out;
+  box-shadow: -3px 0 15px rgba(0,0,0,0.15);
+  transition: right 0.35s ease;
   z-index: 2000;
   border-radius: 12px 0 0 12px;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
 }
 
 .share-panel.open {
@@ -115,14 +105,12 @@ a {
 .share-logo {
   width: 120px;
   margin: 0 auto 16px;
-  display: block;
 }
 
 .share-panel-inner {
   display: flex;
   flex-direction: column;
   gap: 14px;
-  margin-top: 10px;
 }
 
 .share-option {
@@ -135,16 +123,10 @@ a {
   cursor: pointer;
   font-weight: 600;
   color: #003d66;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.15);
-}
-
-.share-option img {
-  width: 26px;
-  height: 26px;
 }
 
 /* ======================
-   BANNER SLIDER
+   BANNER
 ====================== */
 .banner-slider {
   width: 100%;
@@ -154,9 +136,8 @@ a {
 }
 
 .banner-slider .slide {
-  width: 100%;
-  height: 100%;
   position: absolute;
+  inset: 0;
   background-size: cover;
   background-position: center;
   opacity: 0;
@@ -181,13 +162,12 @@ a {
 ====================== */
 .hero-text-section {
   text-align: center;
-  padding: 40px 20px 30px;
+  padding: 40px 0 30px;
 }
 
 .hero-text-section h1 {
   font-size: 32px;
   color: #004c78;
-  font-weight: 800;
 }
 
 .hero-text-section p {
@@ -203,55 +183,40 @@ a {
   gap: 16px;
 }
 
-.btn-primary,
-.btn-secondary {
-  padding: 11px 22px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 15px;
-}
-
 .btn-primary {
   background: #0096E6;
-  color: white;
+  color: #fff;
+  padding: 11px 22px;
+  border-radius: 8px;
+  font-weight: 600;
 }
 
 .btn-secondary {
-  background: white;
+  background: #fff;
   border: 2px solid #0096E6;
   color: #0096E6;
+  padding: 11px 22px;
+  border-radius: 8px;
+  font-weight: 600;
 }
 
 /* ======================
-   SERVICES WE OFFER (HOME)
+   SERVICES
 ====================== */
 .services-section {
-  padding: 45px 20px 35px;
+  padding: 45px 0 35px;
   text-align: center;
-}
-
-.services-section h2 {
-  font-size: 26px;
-  color: #004c78;
-  margin-bottom: 16px;
-}
-
-.services-subtext {
-  font-size: 16px;
-  color: #005a99;
-  margin-bottom: 24px;
 }
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-  gap: 14px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
 }
 
 .service-box {
-  padding: 18px 12px;
-  background: white;
+  background: #fff;
+  padding: 18px;
   border-radius: 12px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.12);
   transition: transform 0.2s ease;
@@ -261,97 +226,50 @@ a {
   transform: translateY(-4px);
 }
 
-.service-box h3 {
-  font-size: 16px;
-  font-weight: 700;
-  color: #003f66;
-}
-
-.service-box p {
-  margin-top: 6px;
-  font-size: 14px;
-  color: #005a99;
-  min-height: 38px;
-}
-
 /* ======================
-   WHY CHOOSE US (HOME)
+   WHY CHOOSE US
 ====================== */
 .why-section {
-  padding: 50px 20px;
-  text-align: center;
   background: #e8f6ff;
-}
-
-.why-section h2 {
-  font-size: 26px;
-  margin-bottom: 22px;
-  color: #003f66;
+  padding: 50px 0;
+  text-align: center;
 }
 
 .why-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-  gap: 18px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
 }
 
 .why-box {
-  background: #ffffff;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  background: #fff;
   padding: 16px;
   border-radius: 12px;
-}
-
-.why-box img {
-  width: 58px;
-  margin-bottom: 8px;
-}
-
-.why-box h3 {
-  font-size: 16px;
-  color: #003f66;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
 }
 
 /* ======================
-   REVIEWS (HOME)
+   REVIEWS
 ====================== */
 .review-section {
-  padding: 50px 20px;
+  padding: 50px 0;
   text-align: center;
-}
-
-.review-section h2 {
-  font-size: 26px;
-  margin-bottom: 22px;
-  color: #003f66;
 }
 
 .review-box {
   max-width: 700px;
-  background: white;
-  margin: 10px auto;
-  padding: 18px 16px;
+  margin: 12px auto;
+  padding: 18px;
+  background: #fff;
   border-radius: 12px;
   box-shadow: 0 1px 6px rgba(0,0,0,0.15);
 }
 
-.review-box p {
-  font-size: 17px;
-  color: #003f66;
-}
-
-.review-box span {
-  display: block;
-  margin-top: 8px;
-  color: #0077b6;
-}
-
 /* ======================
-   ACHIEVEMENTS (HOME & PAGE)
+   ACHIEVEMENTS
 ====================== */
 .achievements-section {
-  background: #f0faff;
-  padding: 35px 15px 45px;
+  padding: 40px 0;
 }
 
 .hero-counters {
@@ -362,190 +280,12 @@ a {
 }
 
 .counter-card {
-  text-align: center;
   background: #0096E6;
+  color: #fff;
   padding: 18px 20px;
-  color: white;
   border-radius: 12px;
   width: 165px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
-}
-
-.count {
-  font-size: 30px;
-  font-weight: 700;
-}
-
-.label {
-  margin-top: 4px;
-  font-weight: 600;
-}
-
-/* ======================
-   SERVICES PAGE
-====================== */
-.services-page {
-  padding: 35px 0 50px;
-}
-
-.page-title {
   text-align: center;
-  font-size: 28px;
-  color: #004c78;
-  margin-bottom: 25px;
-}
-
-.service-row {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 22px;
-  margin-bottom: 48px;
-}
-
-.service-row.reverse {
-  flex-direction: row-reverse;
-}
-
-.service-image {
-  flex: 1 1 260px;
-  text-align: center;
-}
-
-.service-image img {
-  max-width: 100%;
-  width: 310px;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
-}
-
-.service-text {
-  flex: 1 1 320px;
-  font-size: 17px;
-  color: #333;
-  line-height: 1.45;
-}
-
-.service-text h2 {
-  font-size: 22px;
-  margin-bottom: 10px;
-  color: #004c78;
-}
-
-.service-text h3 {
-  font-size: 18px;
-  margin-top: 10px;
-  margin-bottom: 6px;
-  color: #005a99;
-}
-
-.service-text p {
-  margin-bottom: 8px;
-}
-
-.service-text ul {
-  margin-left: 18px;
-  margin-bottom: 8px;
-}
-
-/* ======================
-   ABOUT PAGE
-====================== */
-.about-page {
-  padding: 35px 0 50px;
-}
-
-.about-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 24px;
-  margin-top: 20px;
-}
-
-.about-text {
-  flex: 1 1 320px;
-  font-size: 17px;
-  color: #333;
-}
-
-.about-text h2 {
-  font-size: 20px;
-  margin-top: 14px;
-  margin-bottom: 6px;
-  color: #004c78;
-}
-
-.about-text ul {
-  margin-left: 18px;
-  margin-bottom: 6px;
-}
-
-.about-media {
-  flex: 1 1 260px;
-  text-align: center;
-}
-
-.about-team-image {
-  max-width: 100%;
-  width: 320px;
-  border-radius: 14px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
-}
-
-/* ======================
-   ACHIEVEMENTS PAGE
-====================== */
-.achievements-page .page-title {
-  margin-top: 25px;
-}
-
-.page-subtitle {
-  text-align: center;
-  margin-top: 6px;
-  color: #555;
-}
-
-/* ======================
-   CONTACT PAGE
-====================== */
-.contact-page {
-  padding: 35px 0 50px;
-}
-
-.contact-page .page-title {
-  text-align: center;
-  font-size: 28px;
-  color: #004c78;
-}
-
-.contact-grid {
-  max-width: 880px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 20px;
-}
-
-.contact-box {
-  background: #fff;
-  border-radius: 12px;
-  padding: 18px 16px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-}
-
-.contact-box h2 {
-  font-size: 20px;
-  margin-bottom: 10px;
-  color: #004c78;
-}
-
-.contact-details-section {
-  padding: 60px 0 80px;
-}
-
-.contact-actions a {
-  color: #005a99;
-  font-weight: 600;
 }
 
 /* ======================
@@ -553,53 +293,35 @@ a {
 ====================== */
 .site-footer {
   background: #111;
-  padding: 20px 16px 16px;
   color: #fff;
-  margin-top: 40px;
+  padding: 30px 0 15px;
 }
 
 .footer-inner {
-  max-width: 1100px;
-  margin: 0 auto 8px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  gap: 16px;
-}
-
-.footer-left {
-  flex: 0 0 auto;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 .footer-logo {
   width: 110px;
-  height: auto;
-  filter: none;
-}
-
-.footer-center {
-  flex: 1 1 auto;
-  text-align: center;
 }
 
 .footer-info {
   font-size: 14px;
-  line-height: 1.5;
-}
-
-.footer-right {
-  flex: 0 0 auto;
+  text-align: center;
 }
 
 .footer-social img {
   width: 34px;
   height: 34px;
-  border-radius: 50%;
   background: #fff;
   padding: 6px;
+  border-radius: 50%;
   margin-left: 8px;
   cursor: pointer;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
 }
 
 /* ======================
@@ -618,47 +340,26 @@ a {
 .floating-icons img {
   width: 46px;
   height: 46px;
-  background: #ffffff;
+  background: #fff;
   border-radius: 50%;
   padding: 8px;
-  box-shadow: 0 2px 7px rgba(0,0,0,0.25);
   cursor: pointer;
 }
 
 /* ======================
-   MOBILE RESPONSIVE
+   MOBILE
 ====================== */
 @media (max-width: 768px) {
   .header-inner {
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
   }
 
   .banner-slider {
     height: 210px;
   }
 
-  .service-row {
-    flex-direction: column;
-  }
-
   .footer-inner {
     flex-direction: column;
     text-align: center;
-  }
-}
-
-@media (max-width: 480px) {
-  .logo {
-    width: 95px;
-  }
-
-  .floating-icons img {
-    width: 42px;
-    height: 42px;
-  }
-
-  .service-image img {
-    width: 250px;
   }
 }
