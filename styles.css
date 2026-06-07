@@ -567,7 +567,6 @@ a {
 .footer-logo {
   width: 110px;
   height: auto;
-  filter: none;
 }
 
 .footer-center {
@@ -584,23 +583,33 @@ a {
   flex: 0 0 auto;
 }
 
+.footer-social {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
 .footer-social img {
   width: 34px;
   height: 34px;
   border-radius: 50%;
   background: #fff;
   padding: 6px;
-  margin-left: 8px;
   cursor: pointer;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+  transition: transform 0.2s ease;
+}
+
+.footer-social img:hover {
+  transform: scale(1.1);
 }
 
 .footer-bottom {
-  text-align: center;
   width: 100%;
+  text-align: center;
   margin-top: 15px;
   padding-top: 12px;
-  border-top: 1px solid rgba(255,255,255,0.15);
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
   font-size: 14px;
   color: #ccc;
 }
