@@ -22,7 +22,7 @@
   z-index: 999;
 }
 
-/* Popup */
+/* Popup background */
 .popup {
   display: none;
   position: fixed;
@@ -36,16 +36,17 @@
   z-index: 1000;
 }
 
-/* Box */
+/* Popup box */
 .popup-box {
   background: white;
   padding: 20px;
   width: 350px;
   border-radius: 10px;
   position: relative;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
 }
 
-/* Close */
+/* Close button */
 .close {
   position: absolute;
   right: 12px;
@@ -63,7 +64,7 @@ input, select, textarea {
   border-radius: 5px;
 }
 
-/* Submit */
+/* Submit button */
 button.submit {
   width: 100%;
   padding: 12px;
@@ -74,7 +75,7 @@ button.submit {
   border-radius: 5px;
 }
 
-/* Service buttons (optional demo) */
+/* Service buttons */
 .service-btn {
   margin: 8px;
   padding: 10px 14px;
@@ -90,7 +91,7 @@ button.submit {
 
 <body>
 
-<!-- OPTIONAL SERVICES -->
+<!-- SERVICES -->
 <div style="padding:30px;">
   <h2>Our Services</h2>
 
@@ -102,7 +103,7 @@ button.submit {
 <!-- FLOATING BUTTON -->
 <button class="floating-btn" onclick="openForm()">💬 Get Quote</button>
 
-<!-- POPUP FORM -->
+<!-- POPUP -->
 <div class="popup" id="popup">
   <div class="popup-box">
 
@@ -112,14 +113,14 @@ button.submit {
 
     <form action="https://api.web3forms.com/submit" method="POST">
 
-      <!-- WEB3FORMS ACCESS KEY -->
+      <!-- Web3Forms Key -->
       <input type="hidden" name="access_key" value="e5995f02-b81e-4e1b-904e-bc5c5c5e3162">
 
       <input type="text" name="name" placeholder="Your Name" required>
       <input type="tel" name="phone" placeholder="Phone Number" required>
       <input type="email" name="email" placeholder="Email Address" required>
 
-      <!-- AUTO FILLED SERVICE -->
+      <!-- Auto Service -->
       <select name="service" id="serviceSelect">
         <option value="">Select Service</option>
         <option value="Mattress Cleaning">Mattress Cleaning</option>
@@ -137,36 +138,37 @@ button.submit {
 
 <script>
 
-// Open popup + auto fill service
+// OPEN POPUP
 function openForm(service = "") {
-  document.getElementById("popup").style.display = "flex";
+  const popup = document.getElementById("popup");
+  popup.style.display = "flex";
 
   if (service) {
     document.getElementById("serviceSelect").value = service;
   }
 }
 
-// Close popup
+// CLOSE POPUP
 function closeForm() {
   document.getElementById("popup").style.display = "none";
 }
 
-// Auto popup on page load (after 2 sec)
-window.onload = function () {
-  setTimeout(() => {
+// AUTO POPUP AFTER 2 SECONDS
+window.addEventListener("load", function () {
+  setTimeout(function () {
     document.getElementById("popup").style.display = "flex";
   }, 2000);
-}
+});
 
-// Close when clicking outside box
-window.onclick = function(e) {
-  let popup = document.getElementById("popup");
+// CLOSE WHEN CLICKING OUTSIDE
+window.addEventListener("click", function (e) {
+  const popup = document.getElementById("popup");
   if (e.target === popup) {
     popup.style.display = "none";
   }
-}
+});
 
 </script>
 
 </body>
-</html>   
+</html>
