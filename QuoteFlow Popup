@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Get Quote Popup</title>
+<title>QuoteFlow Popup</title>
 
 <style>
 
@@ -22,7 +22,7 @@
   z-index: 999;
 }
 
-/* Popup background */
+/* Popup */
 .popup {
   display: none;
   position: fixed;
@@ -36,17 +36,18 @@
   z-index: 1000;
 }
 
-/* Popup box */
+/* Box */
 .popup-box {
   background: white;
   padding: 20px;
-  width: 350px;
-  border-radius: 10px;
+  width: 380px;
+  max-width: 90%;
+  border-radius: 12px;
   position: relative;
   box-shadow: 0 10px 25px rgba(0,0,0,0.3);
 }
 
-/* Close button */
+/* Close */
 .close {
   position: absolute;
   right: 12px;
@@ -61,10 +62,11 @@ input, select, textarea {
   margin: 8px 0;
   padding: 10px;
   border: 1px solid #ddd;
-  border-radius: 5px;
+  border-radius: 6px;
+  outline: none;
 }
 
-/* Submit button */
+/* Submit */
 button.submit {
   width: 100%;
   padding: 12px;
@@ -72,12 +74,12 @@ button.submit {
   color: white;
   border: none;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 6px;
 }
 
-/* Service buttons */
+/* Service buttons demo */
 .service-btn {
-  margin: 8px;
+  margin: 6px;
   padding: 10px 14px;
   background: #007bff;
   color: white;
@@ -91,13 +93,15 @@ button.submit {
 
 <body>
 
-<!-- SERVICES -->
+<!-- SERVICES (DEMO BUTTONS) -->
 <div style="padding:30px;">
   <h2>Our Services</h2>
 
-  <button class="service-btn" onclick="openForm('Mattress Cleaning')">Mattress Cleaning</button>
-  <button class="service-btn" onclick="openForm('Sofa Cleaning')">Sofa Cleaning</button>
-  <button class="service-btn" onclick="openForm('Carpet Cleaning')">Carpet Cleaning</button>
+  <button class="service-btn" onclick="openForm('Repair & Maintenance')">Repair & Maintenance</button>
+  <button class="service-btn" onclick="openForm('Painting Services')">Painting Services</button>
+  <button class="service-btn" onclick="openForm('Electrical & Plumbing')">Electrical & Plumbing</button>
+  <button class="service-btn" onclick="openForm('AC Maintenance & Repair')">AC Maintenance</button>
+  <button class="service-btn" onclick="openForm('Cleaning Services')">Cleaning Services</button>
 </div>
 
 <!-- FLOATING BUTTON -->
@@ -113,19 +117,43 @@ button.submit {
 
     <form action="https://api.web3forms.com/submit" method="POST">
 
-      <!-- Web3Forms Key -->
+      <!-- Web3Forms KEY -->
       <input type="hidden" name="access_key" value="e5995f02-b81e-4e1b-904e-bc5c5c5e3162">
 
       <input type="text" name="name" placeholder="Your Name" required>
       <input type="tel" name="phone" placeholder="Phone Number" required>
       <input type="email" name="email" placeholder="Email Address" required>
 
-      <!-- Auto Service -->
-      <select name="service" id="serviceSelect">
+      <!-- ALL SERVICES -->
+      <select name="service" id="serviceSelect" required>
         <option value="">Select Service</option>
-        <option value="Mattress Cleaning">Mattress Cleaning</option>
-        <option value="Sofa Cleaning">Sofa Cleaning</option>
-        <option value="Carpet Cleaning">Carpet Cleaning</option>
+
+        <option value="Repair & Maintenance">Repair & Maintenance</option>
+
+        <option value="Home, Office & Villa Renovation">Home, Office & Villa Renovation</option>
+
+        <option value="Painting Services">Painting Services</option>
+
+        <option value="Electrical & Plumbing">Electrical & Plumbing</option>
+
+        <option value="Home Appliance Installation & Maintenance">Home Appliance Installation & Maintenance</option>
+
+        <option value="Carpentry Services">Carpentry Services</option>
+
+        <option value="Bathroom Renovation">Bathroom Renovation</option>
+
+        <option value="Kitchen Renovation">Kitchen Renovation</option>
+
+        <option value="Cleaning Services">Cleaning Services</option>
+
+        <option value="AC Maintenance & Repair">AC Maintenance & Repair</option>
+
+        <option value="Pest & Bird Control">Pest & Bird Control</option>
+
+        <option value="Packers & Movers">Packers & Movers</option>
+
+        <option value="Professional Waterproofing Services">Professional Waterproofing Services</option>
+
       </select>
 
       <textarea name="message" placeholder="Your Message"></textarea>
@@ -153,14 +181,14 @@ function closeForm() {
   document.getElementById("popup").style.display = "none";
 }
 
-// AUTO POPUP AFTER 2 SECONDS
+// AUTO POPUP AFTER LOAD
 window.addEventListener("load", function () {
   setTimeout(function () {
     document.getElementById("popup").style.display = "flex";
   }, 2000);
 });
 
-// CLOSE WHEN CLICKING OUTSIDE
+// CLICK OUTSIDE TO CLOSE
 window.addEventListener("click", function (e) {
   const popup = document.getElementById("popup");
   if (e.target === popup) {
