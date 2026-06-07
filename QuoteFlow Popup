@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Get Quote Popup</title>
+
+<style>
+
+/* Floating Button */
+.floating-btn {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: #ff4d00;
+  color: white;
+  padding: 14px 18px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  z-index: 999;
+}
+
+/* Popup */
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Box */
+.popup-box {
+  background: white;
+  padding: 20px;
+  width: 350px;
+  border-radius: 10px;
+  position: relative;
+}
+
+/* Close */
+.close {
+  position: absolute;
+  right: 12px;
+  top: 8px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* Inputs */
+input, select, textarea {
+  width: 100%;
+  margin: 8px 0;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Submit */
+button.submit {
+  width: 100%;
+  padding: 12px;
+  background: green;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Service buttons (optional demo) */
+.service-btn {
+  margin: 8px;
+  padding: 10px 14px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- OPTIONAL SERVICES -->
+<div style="padding:30px;">
+  <h2>Our Services</h2>
+
+  <button class="service-btn" onclick="openForm('Mattress Cleaning')">Mattress Cleaning</button>
+  <button class="service-btn" onclick="openForm('Sofa Cleaning')">Sofa Cleaning</button>
+  <button class="service-btn" onclick="openForm('Carpet Cleaning')">Carpet Cleaning</button>
+</div>
+
+<!-- FLOATING BUTTON -->
+<button class="floating-btn" onclick="openForm()">💬 Get Quote</button>
+
+<!-- POPUP FORM -->
+<div class="popup" id="popup">
+  <div class="popup-box">
+
+    <span class="close" onclick="closeForm()">&times;</span>
+
+    <h3>Request a Quotation</h3>
+
+    <form action="https://api.web3forms.com/submit" method="POST">
+
+      <!-- WEB3FORMS ACCESS KEY -->
+      <input type="hidden" name="access_key" value="e5995f02-b81e-4e1b-904e-bc5c5c5e3162">
+
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="tel" name="phone" placeholder="Phone Number" required>
+      <input type="email" name="email" placeholder="Email Address" required>
+
+      <!-- AUTO FILLED SERVICE -->
+      <select name="service" id="serviceSelect">
+        <option value="">Select Service</option>
+        <option value="Mattress Cleaning">Mattress Cleaning</option>
+        <option value="Sofa Cleaning">Sofa Cleaning</option>
+        <option value="Carpet Cleaning">Carpet Cleaning</option>
+      </select>
+
+      <textarea name="message" placeholder="Your Message"></textarea>
+
+      <button type="submit" class="submit">Send Request</button>
+    </form>
+
+  </div>
+</div>
+
+<script>
+
+// Open popup + auto fill service
+function openForm(service = "") {
+  document.getElementById("popup").style.display = "flex";
+
+  if (service) {
+    document.getElementById("serviceSelect").value = service;
+  }
+}
+
+// Close popup
+function closeForm() {
+  document.getElementById("popup").style.display = "none";
+}
+
+// Auto popup on page load (after 2 sec)
+window.onload = function () {
+  setTimeout(() => {
+    document.getElementById("popup").style.display = "flex";
+  }, 2000);
+}
+
+// Close when clicking outside box
+window.onclick = function(e) {
+  let popup = document.getElementById("popup");
+  if (e.target === popup) {
+    popup.style.display = "none";
+  }
+}
+
+</script>
+
+</body>
+</html>   
