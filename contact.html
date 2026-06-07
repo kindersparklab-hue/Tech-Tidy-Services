@@ -34,69 +34,74 @@
       </div>
     </div>
 
-    <!-- Box 3 -->
-    <div class="contact-box">
-      <h2>Request a Free Quote</h2>
-      <p>Fill in your details and we will contact you.</p>
+<!-- Box 3 -->
+<div class="contact-box">
+  <h2>Request a Free Quote</h2>
+  <p>Fill in your details and we will contact you.</p>
 
-      <form action="send-quote.php" method="post">
+  <form action="https://api.web3forms.com/submit" method="POST">
 
-        <!-- Anti-Spam Field -->
-        <input type="text" name="website" style="display:none;">
+    <!-- Web3Forms Settings -->
+    <input type="hidden" name="access_key" value="e5995f02-b81e-4e1b-904e-bc5c5c5e3162">
+    <input type="hidden" name="subject" value="New Quote Request - Tech & Tidy Services">
+    <input type="hidden" name="from_name" value="Tech & Tidy Website">
 
-        <input type="text"
-               name="fullname"
-               placeholder="Full Name *"
-               required
-               style="width:100%;padding:12px;margin-bottom:10px;border:1px solid #ddd;border-radius:8px;">
+    <!-- Anti-Spam Field -->
+    <input type="text" name="website" style="display:none;">
 
-        <input type="tel"
-               name="phone"
-               placeholder="Phone / WhatsApp *"
-               required
-               style="width:100%;padding:12px;margin-bottom:10px;border:1px solid #ddd;border-radius:8px;">
+    <input type="text"
+           name="fullname"
+           placeholder="Full Name *"
+           required
+           style="width:100%;padding:12px;margin-bottom:10px;border:1px solid #ddd;border-radius:8px;">
 
-        <input type="email"
-               name="email"
-               placeholder="Email Address"
-               style="width:100%;padding:12px;margin-bottom:10px;border:1px solid #ddd;border-radius:8px;">
+    <input type="tel"
+           name="phone"
+           placeholder="Phone / WhatsApp *"
+           required
+           style="width:100%;padding:12px;margin-bottom:10px;border:1px solid #ddd;border-radius:8px;">
 
-        <select name="service"
-                required
-                style="width:100%;padding:12px;margin-bottom:10px;border:1px solid #ddd;border-radius:8px;">
-          <option value="">Select a Service *</option>
-          <option>Deep Cleaning</option>
-          <option>Mattress Cleaning</option>
-          <option>Sofa Cleaning</option>
-          <option>Carpet Cleaning</option>
-          <option>Villa Cleaning</option>
-          <option>Office Cleaning</option>
-          <option>Painting Services</option>
-          <option>AC Services</option>
-          <option>Plumbing</option>
-          <option>Electrical Works</option>
-          <option>General Maintenance</option>
-          <option>Other</option>
-        </select>
+    <input type="email"
+           name="email"
+           placeholder="Email Address"
+           style="width:100%;padding:12px;margin-bottom:10px;border:1px solid #ddd;border-radius:8px;">
 
-        <input type="text"
-               name="location"
-               placeholder="Property Location in UAE"
-               style="width:100%;padding:12px;margin-bottom:10px;border:1px solid #ddd;border-radius:8px;">
+    <select name="service"
+            required
+            style="width:100%;padding:12px;margin-bottom:10px;border:1px solid #ddd;border-radius:8px;">
+      <option value="">Select a Service *</option>
+      <option>Deep Cleaning</option>
+      <option>Mattress Cleaning</option>
+      <option>Sofa Cleaning</option>
+      <option>Carpet Cleaning</option>
+      <option>Villa Cleaning</option>
+      <option>Office Cleaning</option>
+      <option>Painting Services</option>
+      <option>AC Services</option>
+      <option>Plumbing</option>
+      <option>Electrical Works</option>
+      <option>General Maintenance</option>
+      <option>Other</option>
+    </select>
 
-        <textarea name="message"
-                  rows="5"
-                  placeholder="Please describe your requirements, property size, and any specific details..."
-                  required
-                  style="width:100%;padding:12px;margin-bottom:10px;border:1px solid #ddd;border-radius:8px;"></textarea>
+    <input type="text"
+           name="location"
+           placeholder="Property Location in UAE"
+           style="width:100%;padding:12px;margin-bottom:10px;border:1px solid #ddd;border-radius:8px;">
 
-        <button type="submit"
-                style="width:100%;padding:14px;background:#00a859;color:#fff;border:none;border-radius:8px;font-size:16px;font-weight:600;cursor:pointer;">
-          Get Free Quote
-        </button>
+    <textarea name="message"
+              rows="5"
+              placeholder="Please describe your requirements, property size, and any specific details..."
+              required
+              style="width:100%;padding:12px;margin-bottom:10px;border:1px solid #ddd;border-radius:8px;"></textarea>
 
-      </form>
-    </div>
+    <button type="submit"
+            style="width:100%;padding:14px;background:#00a859;color:#fff;border:none;border-radius:8px;font-size:16px;font-weight:600;cursor:pointer;">
+      Get Free Quote
+    </button>
+
+  </form>
+</div>
 
   </div>
 </section>
