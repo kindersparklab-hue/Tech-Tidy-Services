@@ -1,98 +1,103 @@
 (function () {
   const phone = "971581160415";
-  const message = "Hi TechTidy, I would like a free quote for home services (repair, AC, plumbing, renovation, cleaning).";
+  const message = "Hi TechTidy, I would like a free quote for your services.";
 
-  // Create styles
+  // show only once per day
+  const last = localStorage.getItem("tt_popup");
+  if (last && Date.now() - last < 86400000) return;
+
+  const overlay = document.createElement("div");
+  overlay.id = "tt-overlay";
+
+  const box = document.createElement("div");
+  box.id = "tt-popup";
+
+  box.innerHTML = `
+    <span id="tt-close">&times;</span>
+
+    <h2>👋 Welcome to Tech & Tidy Services</h2>
+
+    <p>
+      Need help with AC repair, plumbing, painting, renovation or cleaning?
+      Get a FREE quote instantly on WhatsApp.
+    </p>
+
+    <a href="https://wa.me/${phone}?text=${encodeURIComponent(message)}"
+       target="_blank" id="tt-btn">
+       💬 Get Free Quote
+    </a>
+  `;
+
+  overlay.appendChild(box);
+  document.body.appendChild(overlay);
+
+  // styles
   const style = document.createElement("style");
   style.innerHTML = `
-  #tt-wa {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 99999;
-    font-family: Arial, sans-serif;
-  }
+    #tt-overlay{
+      position:fixed;
+      inset:0;
+      background:rgba(0,0,0,0.6);
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      z-index:999999;
+    }
 
-  #tt-box {
-    width: 280px;
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-    padding: 15px;
-    display: none;
-    margin-bottom: 10px;
-  }
+    #tt-popup{
+      background:#fff;
+      width:320px;
+      padding:20px;
+      border-radius:14px;
+      text-align:center;
+      position:relative;
+      font-family:Arial;
+      animation:pop .3s ease;
+    }
 
-  #tt-box h4 {
-    margin: 0 0 8px;
-    font-size: 16px;
-  }
+    @keyframes pop{
+      from{transform:scale(0.7);opacity:0}
+      to{transform:scale(1);opacity:1}
+    }
 
-  #tt-box p {
-    font-size: 13px;
-    color: #444;
-    margin: 0;
-  }
+    #tt-popup h2{
+      margin:0 0 10px;
+      font-size:18px;
+    }
 
-  #tt-btn {
-    display: block;
-    margin-top: 12px;
-    background: #25D366;
-    color: white;
-    text-align: center;
-    padding: 12px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-  }
+    #tt-popup p{
+      font-size:13px;
+      color:#444;
+      line-height:1.4;
+    }
 
-  #tt-float {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background: #25D366;
-    color: white;
-    border: none;
-    font-size: 28px;
-    cursor: pointer;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.3);
-  }
+    #tt-btn{
+      display:block;
+      margin-top:15px;
+      background:#25D366;
+      color:white;
+      padding:12px;
+      border-radius:8px;
+      text-decoration:none;
+      font-weight:bold;
+    }
+
+    #tt-close{
+      position:absolute;
+      right:10px;
+      top:5px;
+      font-size:22px;
+      cursor:pointer;
+    }
   `;
   document.head.appendChild(style);
 
-  // Create widget
-  const wrapper = document.createElement("div");
-  wrapper.id = "tt-wa";
+  // close logic
+  document.addEventListener("click", function (e) {
+    if (e.target.id === "tt-close" || e.target.id === "tt-overlay") {
+      overlay.remove();
+    }
+  });
 
-  wrapper.innerHTML = `
-    <div id="tt-box">
-      <h4>👋 Need Help?</h4>
-      <p>Home repair, AC service, plumbing, painting & renovation. Get a free quote now.</p>
-      <a id="tt-btn" target="_blank"
-        href="https://wa.me/${phone}?text=${encodeURIComponent(message)}">
-        Get Free Quote
-      </a>
-    </div>
-
-    <button id="tt-float">💬</button>
-  `;
-
-  document.body.appendChild(wrapper);
-
-  const box = document.getElementById("tt-box");
-  const btn = document.getElementById("tt-float");
-
-  btn.onclick = () => {
-    box.style.display = box.style.display === "block" ? "none" : "block";
-  };
-
-  // show once every 24 hours
-  const last = localStorage.getItem("tt-wa");
-
-  if (!last || Date.now() - last > 86400000) {
-    setTimeout(() => {
-      box.style.display = "block";
-      localStorage.setItem("tt-wa", Date.now());
-    }, 8000);
-  }
+  localStorage.setItem("tt_popup", Date.now());
 })();
