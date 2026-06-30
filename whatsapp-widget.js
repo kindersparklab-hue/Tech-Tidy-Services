@@ -1,103 +1,161 @@
 (function () {
   const phone = "971581160415";
-  const message = "Hi TechTidy, I would like a free quote for your services.";
 
-  // show only once per day
-  const last = localStorage.getItem("tt_popup");
+  const path = window.location.pathname.toLowerCase();
+
+  let message = "Hi TechTidy, I would like a free quote for your services.";
+
+  // SMART PAGE DETECTION
+  if (path.includes("services")) {
+    message = "Hi TechTidy, I need a quote for your services (AC, plumbing, renovation, cleaning).";
+  } else if (path.includes("contact")) {
+    message = "Hi TechTidy, I would like to get in touch and request a quote.";
+  } else if (path.includes("about")) {
+    message = "Hi TechTidy, I would like to know more about your services and get a quote.";
+  } else if (path.includes("achievements")) {
+    message = "Hi TechTidy, I saw your achievements and would like a quote for my project.";
+  }
+
+  // show once per day
+  const last = localStorage.getItem("tt_smart_popup");
   if (last && Date.now() - last < 86400000) return;
 
-  const overlay = document.createElement("div");
-  overlay.id = "tt-overlay";
+  function showPopup() {
+    const overlay = document.createElement("div");
+    overlay.id = "tt-overlay";
 
-  const box = document.createElement("div");
-  box.id = "tt-popup";
+    overlay.innerHTML = `
+      <div id="tt-chat">
 
-  box.innerHTML = `
-    <span id="tt-close">&times;</span>
+        <div id="tt-header">
+          <div>
+            <div class="dot"></div>
+            <strong>Tech & Tidy Services</strong>
+          </div>
+          <span id="tt-close">✕</span>
+        </div>
 
-    <h2>👋 Welcome to Tech & Tidy Services</h2>
+        <div id="tt-body">
+          <div class="msg bot">
+            Hi! Welcome to Tech & Tidy Services<br><br>
+            We provide:
+            <ul>
+              <li>AC Repair & Maintenance</li>
+              <li>Plumbing & Electrical</li>
+              <li>Renovation Services</li>
+              <li>Cleaning & Maintenance</li>
+            </ul>
+            Tap below to get a FREE quote instantly.
+          </div>
 
-    <p>
-      Need help with AC repair, plumbing, painting, renovation or cleaning?
-      Get a FREE quote instantly on WhatsApp.
-    </p>
+          <a class="msg user"
+             href="https://wa.me/${phone}?text=${encodeURIComponent(message)}"
+             target="_blank">
+             💬 Get Free Quote
+          </a>
+        </div>
 
-    <a href="https://wa.me/${phone}?text=${encodeURIComponent(message)}"
-       target="_blank" id="tt-btn">
-       💬 Get Free Quote
-    </a>
-  `;
+      </div>
+    `;
 
-  overlay.appendChild(box);
-  document.body.appendChild(overlay);
+    document.body.appendChild(overlay);
 
-  // styles
-  const style = document.createElement("style");
-  style.innerHTML = `
-    #tt-overlay{
-      position:fixed;
-      inset:0;
-      background:rgba(0,0,0,0.6);
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      z-index:999999;
-    }
+    const style = document.createElement("style");
+    style.innerHTML = `
+      #tt-overlay{
+        position:fixed;
+        inset:0;
+        background:rgba(0,0,0,0.5);
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        z-index:999999;
+        font-family:Arial;
+      }
 
-    #tt-popup{
-      background:#fff;
-      width:320px;
-      padding:20px;
-      border-radius:14px;
-      text-align:center;
-      position:relative;
-      font-family:Arial;
-      animation:pop .3s ease;
-    }
+      #tt-chat{
+        width:320px;
+        background:#fff;
+        border-radius:14px;
+        overflow:hidden;
+        animation:pop .25s ease;
+      }
 
-    @keyframes pop{
-      from{transform:scale(0.7);opacity:0}
-      to{transform:scale(1);opacity:1}
-    }
+      @keyframes pop{
+        from{transform:scale(0.8);opacity:0}
+        to{transform:scale(1);opacity:1}
+      }
 
-    #tt-popup h2{
-      margin:0 0 10px;
-      font-size:18px;
-    }
+      #tt-header{
+        background:#075E54;
+        color:white;
+        padding:12px;
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+      }
 
-    #tt-popup p{
-      font-size:13px;
-      color:#444;
-      line-height:1.4;
-    }
+      #tt-header .dot{
+        width:8px;
+        height:8px;
+        background:#25D366;
+        border-radius:50%;
+        display:inline-block;
+        margin-right:6px;
+      }
 
-    #tt-btn{
-      display:block;
-      margin-top:15px;
-      background:#25D366;
-      color:white;
-      padding:12px;
-      border-radius:8px;
-      text-decoration:none;
-      font-weight:bold;
-    }
+      #tt-close{
+        cursor:pointer;
+        font-size:18px;
+      }
 
-    #tt-close{
-      position:absolute;
-      right:10px;
-      top:5px;
-      font-size:22px;
-      cursor:pointer;
-    }
-  `;
-  document.head.appendChild(style);
+      #tt-body{
+        padding:15px;
+        background:#e5ddd5;
+      }
 
-  // close logic
-  document.addEventListener("click", function (e) {
-    if (e.target.id === "tt-close" || e.target.id === "tt-overlay") {
+      .msg{
+        padding:10px;
+        border-radius:10px;
+        margin-bottom:10px;
+        font-size:13px;
+      }
+
+      .bot{
+        background:white;
+        color:#333;
+      }
+
+      .user{
+        display:block;
+        text-align:center;
+        background:#25D366;
+        color:white;
+        text-decoration:none;
+        font-weight:bold;
+      }
+
+      ul{
+        margin:8px 0 0;
+        padding-left:18px;
+      }
+    `;
+
+    document.head.appendChild(style);
+
+    document.getElementById("tt-close").onclick = () => {
       overlay.remove();
+    };
+
+    localStorage.setItem("tt_smart_popup", Date.now());
+  }
+
+  // TRIGGERS (time OR scroll)
+  setTimeout(showPopup, 6000);
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > window.innerHeight * 0.3) {
+      showPopup();
     }
   });
-
-  localStorage.setItem("tt_popup", Date.now());
 })();
