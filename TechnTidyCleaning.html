@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Professional Cleaning Services | Tech & Tidy Services</title>
+  <meta name="description" content="Professional deep cleaning, sanitizing, sofa & carpet steam cleaning, move-in/move-out, and commercial cleaning services in Dubai by Tech & Tidy Services.">
+  
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    /* ================= GLOBAL STYLES & RESET ================= */
+    :root {
+      --primary-blue: #003366;
+      --secondary-blue: #0056b3;
+      --accent-cyan: #00a8cc;
+      --light-cyan: #e6f7ff;
+      --dark-text: #222222;
+      --gray-text: #555555;
+      --light-bg: #f8fafc;
+      --white: #ffffff;
+      --whatsapp-green: #25D366;
+      --border-color: #e1e8ed;
+      --box-shadow: 0 10px 30px rgba(0, 51, 102, 0.08);
+      --transition: all 0.3s ease;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: var(--light-bg);
+      color: var(--dark-text);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+    .section-padding {
+      padding: 70px 0;
+    }
+
+    /* ================= TOP ANNOUNCEMENT BAR ================= */
+    .top-bar {
+      background-color: var(--primary-blue);
+      color: var(--white);
+      font-size: 0.85rem;
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .top-bar-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .top-bar-info span {
+      margin-right: 20px;
+    }
+
+    .top-bar-info i {
+      color: var(--accent-cyan);
+      margin-right: 6px;
+    }
+
+    /* ================= NAVIGATION HEADER ================= */
+    .site-header {
+      background: var(--white);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 80px;
+    }
+
+    .logo-container img {
+      max-height: 55px;
+      width: auto;
+      display: block;
+    }
+
+    .main-nav {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .main-nav a {
+      font-weight: 500;
+      font-size: 0.95rem;
+      color: var(--dark-text);
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .main-nav a:hover,
+    .main-nav a.active {
+      color: var(--accent-cyan);
+    }
+
+    .main-nav a.active::after {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background-color: var(--accent-cyan);
+      border-radius: 2px;
+    }
+
+    .btn-header {
+      background-color: var(--accent-cyan);
+      color: var(--white) !important;
+      padding: 9px 20px;
+      border-radius: 5px;
+      font-weight: 600 !important;
+    }
+
+    .btn-header:hover {
+      background-color: var(--primary-blue);
+    }
+
+    /* ================= HERO BANNER ================= */
+    .hero-banner {
+      background: linear-gradient(135deg, rgba(0,51,102,0.92) 0%, rgba(0,168,204,0.85) 100%), 
+                  url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=1200&auto=format&fit=crop') center/cover no-repeat;
+      color: var(--white);
+      padding: 90px 0;
+      text-align: center;
+    }
+
+    .hero-banner h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      margin-bottom: 15px;
+      text-transform: capitalize;
+    }
+
+    .hero-banner p {
+      font-size: 1.15rem;
+      max-width: 700px;
+      margin: 0 auto 30px auto;
+      opacity: 0.95;
+    }
+
+    .hero-actions {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background-color: var(--whatsapp-green);
+      color: var(--white);
+      padding: 14px 28px;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 1rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+      transition: var(--transition);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+      color: var(--white);
+    }
+
+    .btn-outline {
+      border: 2px solid var(--white);
+      color: var(--white);
+      padding: 12px 26px;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: var(--transition);
+    }
+
+    .btn-outline:hover {
+      background-color: var(--white);
+      color: var(--primary-blue);
+    }
+
+    /* ================= SECTION TITLE ================= */
+    .section-title {
+      margin-bottom: 45px;
+    }
+
+    .section-title h2 {
+      font-size: 2.2rem;
+      color: var(--primary-blue);
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+
+    .section-title p {
+      color: var(--gray-text);
+      font-size: 1rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* ================= SERVICE FILTER TABS ================= */
+    .filter-tabs {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+    }
+
+    .tab-btn {
+      background: var(--white);
+      border: 1px solid var(--border-color);
+      padding: 10px 22px;
+      border-radius: 25px;
+      font-weight: 600;
+      color: var(--gray-text);
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .tab-btn.active,
+    .tab-btn:hover {
+      background: var(--primary-blue);
+      color: var(--white);
+      border-color: var(--primary-blue);
+    }
+
+    /* ================= SERVICES GRID ================= */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
+    }
+
+    .service-card {
+      background: var(--white);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: var(--box-shadow);
+      transition: var(--transition);
+      border: 1px solid rgba(0,0,0,0.03);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .service-card:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 15px 35px rgba(0, 51, 102, 0.12);
+    }
+
+    .card-icon-header {
+      background: linear-gradient(135deg, var(--light-cyan) 0%, #ffffff 100%);
+      padding: 25px;
+      text-align: center;
+      border-bottom: 1px solid #f0f0f0;
+    }
+
+    .card-icon-header i {
+      font-size: 2.5rem;
+      color: var(--accent-cyan);
+    }
+
+    .card-body {
+      padding: 25px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: flex-start;
+      flex-direction: column;
+    }
+
+    .card-body h3 {
+      font-size: 1.3rem;
+      color: var(--primary-blue);
+      margin-bottom: 12px;
+    }
+
+    .card-body p {
+      color: var(--gray-text);
+      font-size: 0.92rem;
+      margin-bottom: 20px;
+    }
+
+    .feature-list {
+      margin-bottom: 25px;
+      margin-top: auto;
+    }
+
+    .feature-list li {
+      font-size: 0.88rem;
+      color: var(--dark-text);
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .feature-list li i {
+      color: var(--accent-cyan);
+      font-size: 0.85rem;
+    }
+
+    .card-footer-btn {
+      background-color: var(--light-cyan);
+      color: var(--primary-blue);
+      text-align: center;
+      padding: 12px;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: var(--transition);
+      display: block;
+    }
+
+    .card-footer-btn:hover {
+      background-color: var(--primary-blue);
+      color: var(--white);
+    }
+
+    /* ================= MAIN SITE EXPLORE BANNER ================= */
+    .explore-banner {
+      background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+      color: var(--white);
+      border-radius: 15px;
+      padding: 40px;
+      margin-top: 50px;
+      text-align: center;
+      box-shadow: var(--box-shadow);
+    }
+
+    .explore-banner h3 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+    }
+
+    .explore-banner p {
+      margin-bottom: 25px;
+      opacity: 0.9;
+    }
+
+    .btn-white {
+      background-color: var(--white);
+      color: var(--primary-blue);
+      padding: 12px 30px;
+      border-radius: 25px;
+      font-weight: 700;
+      display: inline-block;
+      transition: var(--transition);
+    }
+
+    .btn-white:hover {
+      background-color: var(--accent-cyan);
+      color: var(--white);
+    }
+
+    /* ================= BOOKING SECTION ================= */
+    .booking-section {
+      background-color: var(--white);
+    }
+
+    .booking-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+      background: var(--light-bg);
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: var(--box-shadow);
+    }
+
+    .booking-info h3 {
+      font-size: 1.8rem;
+      color: var(--primary-blue);
+      margin-bottom: 15px;
+    }
+
+    .booking-info p {
+      color: var(--gray-text);
+      margin-bottom: 25px;
+    }
+
+    .info-list-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+
+    .info-list-item i {
+      background: var(--light-cyan);
+      color: var(--accent-cyan);
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.88rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: var(--dark-text);
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 12px 15px;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      font-size: 0.95rem;
+      outline: none;
+      transition: var(--transition);
+    }
+
+    .form-control:focus {
+      border-color: var(--accent-cyan);
+      box-shadow: 0 0 0 3px rgba(0, 168, 204, 0.15);
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+
+    .btn-submit {
+      width: 100%;
+      background: var(--whatsapp-green);
+      color: var(--white);
+      border: none;
+      padding: 14px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 1rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      transition: var(--transition);
+    }
+
+    .btn-submit:hover {
+      background-color: #20bd5a;
+    }
+
+    /* ================= FAQ SECTION ================= */
+    .faq-accordion {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      background: var(--white);
+      border-radius: 8px;
+      margin-bottom: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      overflow: hidden;
+    }
+
+    .faq-question {
+      padding: 18px 22px;
+      font-weight: 600;
+      font-size: 1rem;
+      color: var(--primary-blue);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .faq-answer {
+      padding: 0 22px 18px 22px;
+      color: var(--gray-text);
+      font-size: 0.92rem;
+      display: none;
+    }
+
+    .faq-item.active .faq-answer {
+      display: block;
+    }
+
+    .faq-item.active .faq-question i {
+      transform: rotate(180deg);
+    }
+
+    /* ================= FOOTER ================= */
+    footer {
+      background-color: var(--primary-blue);
+      color: var(--white);
+      padding: 60px 0 20px 0;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+
+    .footer-col h4 {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+      position: relative;
+      padding-bottom: 8px;
+    }
+
+    .footer-col h4::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 35px;
+      height: 2px;
+      background: var(--accent-cyan);
+    }
+
+    .footer-links li {
+      margin-bottom: 10px;
+    }
+
+    .footer-links a {
+      opacity: 0.8;
+      transition: var(--transition);
+      font-size: 0.9rem;
+    }
+
+    .footer-links a:hover {
+      opacity: 1;
+      color: var(--accent-cyan);
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      font-size: 0.85rem;
+      opacity: 0.7;
+    }
+
+    /* ================= FLOATING WHATSAPP BUTTON ================= */
+    .float-whatsapp {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background-color: var(--whatsapp-green);
+      color: var(--white);
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      z-index: 9999;
+      transition: var(--transition);
+    }
+
+    .float-whatsapp:hover {
+      transform: scale(1.1);
+      color: var(--white);
+    }
+
+    /* ================= RESPONSIVE DESIGN ================= */
+    @media (max-width: 992px) {
+      .booking-container {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero-banner h1 {
+        font-size: 2rem;
+      }
+      .main-nav {
+        display: none; /* Can be toggled with mobile JS menu */
+      }
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP ANNOUNCEMENT BAR -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="top-bar-info">
+        <span><i class="fa-solid fa-location-dot"></i> Dubai, United Arab Emirates</span>
+        <span><i class="fa-solid fa-phone"></i> +971 58 116 0415</span>
+      </div>
+      <div class="top-bar-email">
+        <span><i class="fa-solid fa-envelope"></i> inquiry@techntidy.com</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVIGATION HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo-container">
+        <img src="Assets/Images/ Logo.png" alt="Tech & Tidy Services Logo" onerror="this.src='https://techntidy.com/Assets/Images/Logo.png'">
+      </a>
+
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="techntidycleaning.html" class="active">Cleaning Services</a>
+        <a href="services.html">Services</a>
+        <a href="achievements.html">Achievements</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <a href="https://wa.me/971581160415?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20your%20Cleaning%20Services." target="_blank" class="btn-header">
+        <i class="fa-brands fa-whatsapp"></i> Quick Quote
+      </a>
+    </div>
+  </header>
+
+  <!-- HERO BANNER -->
+  <section class="hero-banner">
+    <div class="container">
+      <h1>Professional Cleaning & Sanitization Services</h1>
+      <p>Transforming residential and commercial properties across Dubai with tailored deep cleaning, eco-friendly sanitization, and specialized steam treatments.</p>
+      <div class="hero-actions">
+        <a href="https://wa.me/971581160415?text=Hello%20Tech%20%26%20Tidy%2C%20I%20want%20to%20book%20a%20cleaning%20service." target="_blank" class="btn-primary">
+          <i class="fa-brands fa-whatsapp"></i> Book via WhatsApp
+        </a>
+        <a href="#services-list" class="btn-outline">Explore Cleaning Options</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES SECTION -->
+  <section class="section-padding" id="services-list">
+    <div class="container">
+      <div class="section-title text-center">
+        <h2>Our Specialized Cleaning Solutions</h2>
+        <p>Thorough, reliable, and hygienic cleaning delivered by certified professionals equipped with modern tools.</p>
+      </div>
+
+      <!-- FILTER TABS -->
+      <div class="filter-tabs">
+        <button class="tab-btn active" onclick="filterServices('all')">All Services</button>
+        <button class="tab-btn" onclick="filterServices('residential')">Residential</button>
+        <button class="tab-btn" onclick="filterServices('commercial')">Commercial</button>
+        <button class="tab-btn" onclick="filterServices('specialized')">Specialized Steam</button>
+      </div>
+
+      <!-- SERVICES GRID -->
+      <div class="services-grid">
+        
+        <!-- CARD 1 -->
+        <div class="service-card" data-category="residential">
+          <div class="card-icon-header">
+            <i class="fa-solid fa-broom"></i>
+          </div>
+          <div class="card-body">
+            <h3>Full Home Deep Cleaning</h3>
+            <p>Comprehensive top-to-bottom sanitization and deep cleaning for villas and apartments.</p>
+            <ul class="feature-list">
+              <li><i class="fa-solid fa-check-circle"></i> High-pressure floor scrubbing</li>
+              <li><i class="fa-solid fa-check-circle"></i> Wall & ceiling dust removal</li>
+              <li><i class="fa-solid fa-check-circle"></i> Window frame & glass polish</li>
+            </ul>
+            <a href="#booking" class="card-footer-btn">Inquire / Book Now</a>
+          </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="service-card" data-category="residential">
+          <div class="card-icon-header">
+            <i class="fa-solid fa-truck-ramp-box"></i>
+          </div>
+          <div class="card-body">
+            <h3>Move-In / Move-Out Cleaning</h3>
+            <p>Ensure your new home is spotless or guarantee your tenancy deposit back when leaving.</p>
+            <ul class="feature-list">
+              <li><i class="fa-solid fa-check-circle"></i> Cabinet & wardrobe interior sanitization</li>
+              <li><i class="fa-solid fa-check-circle"></i> Deep grease removal in kitchens</li>
+              <li><i class="fa-solid fa-check-circle"></i> Grout & tile limescale treatment</li>
+            </ul>
+            <a href="#booking" class="card-footer-btn">Inquire / Book Now</a>
+          </div>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="service-card" data-category="specialized">
+          <div class="card-icon-header">
+            <i class="fa-solid fa-couch"></i>
+          </div>
+          <div class="card-body">
+            <h3>Sofa & Carpet Steam Cleaning</h3>
+            <p>Thermal steam extraction to remove deep stains, dust mites, and bacteria from fabrics.</p>
+            <ul class="feature-list">
+              <li><i class="fa-solid fa-check-circle"></i> Eco-friendly stain removers</li>
+              <li><i class="fa-solid fa-check-circle"></i> Fast drying technology</li>
+              <li><i class="fa-solid fa-check-circle"></i> Upholstery fabric protection</li>
+            </ul>
+            <a href="#booking" class="card-footer-btn">Inquire / Book Now</a>
+          </div>
+        </div>
+
+        <!-- CARD 4 -->
+        <div class="service-card" data-category="commercial">
+          <div class="card-icon-header">
+            <i class="fa-solid fa-building"></i>
+          </div>
+          <div class="card-body">
+            <h3>Office & Commercial Cleaning</h3>
+            <p>Customized maintenance schedules to keep your workplace professional, clean, and safe.</p>
+            <ul class="feature-list">
+              <li><i class="fa-solid fa-check-circle"></i> Workstation & electronics sanitization</li>
+              <li><i class="fa-solid fa-check-circle"></i> High-traffic area disinfections</li>
+              <li><i class="fa-solid fa-check-circle"></i> Flexible after-hours shifts</li>
+            </ul>
+            <a href="#booking" class="card-footer-btn">Inquire / Book Now</a>
+          </div>
+        </div>
+
+        <!-- CARD 5 -->
+        <div class="service-card" data-category="residential">
+          <div class="card-icon-header">
+            <i class="fa-solid fa-kitchen-set"></i>
+          </div>
+          <div class="card-body">
+            <h3>Kitchen & Bathroom Sanitization</h3>
+            <p>Targeted deep cleaning eliminating grease, limescale, bacteria, and hidden mold.</p>
+            <ul class="feature-list">
+              <li><i class="fa-solid fa-check-circle"></i> Oven, hood & appliance cleaning</li>
+              <li><i class="fa-solid fa-check-circle"></i> Antimicrobial surface treatment</li>
+              <li><i class="fa-solid fa-check-circle"></i> Drain cleaning & deodorizing</li>
+            </ul>
+            <a href="#booking" class="card-footer-btn">Inquire / Book Now</a>
+          </div>
+        </div>
+
+        <!-- CARD 6 -->
+        <div class="service-card" data-category="specialized">
+          <div class="card-icon-header">
+            <i class="fa-solid fa-pump-soap"></i>
+          </div>
+          <div class="card-body">
+            <h3>Post-Renovation Cleaning</h3>
+            <p>Detailed removal of construction dust, paint spots, grout residue, and debris.</p>
+            <ul class="feature-list">
+              <li><i class="fa-solid fa-check-circle"></i> Heavy-duty industrial vacuuming</li>
+              <li><i class="fa-solid fa-check-circle"></i> Paint & adhesive spot scraping</li>
+              <li><i class="fa-solid fa-check-circle"></i> Complete ready-to-live polish</li>
+            </ul>
+            <a href="#booking" class="card-footer-btn">Inquire / Book Now</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- EXPLORE MAIN WEBSITE CTA BANNER -->
+      <div class="explore-banner">
+        <h3>Need Maintenance, Renovation, or AC Repair?</h3>
+        <p>Tech & Tidy Services provides a full suite of property maintenance solutions across Dubai.</p>
+        <a href="https://www.techntidy.com/" class="btn-white">
+          <i class="fa-solid fa-globe"></i> Explore All Our Services at TechNTidy.com
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- DIRECT WHATSAPP BOOKING SECTION -->
+  <section class="section-padding booking-section" id="booking">
+    <div class="container">
+      <div class="booking-container">
+        
+        <div class="booking-info">
+          <h3>Request a Custom Quote</h3>
+          <p>Fill out your details below. Clicking submit will immediately open WhatsApp with a ready-formatted message to send directly to our dispatch team.</p>
+
+          <div class="info-list-item">
+            <i class="fa-solid fa-clock"></i>
+            <div>
+              <strong>Fast Response Guarantee</strong>
+              <p style="margin:0; font-size: 0.88rem;">Our support team reviews messages immediately during operational hours.</p>
+            </div>
+          </div>
+
+          <div class="info-list-item">
+            <i class="fa-solid fa-shield-halved"></i>
+            <div>
+              <strong>Trained & Verified Staff</strong>
+              <p style="margin:0; font-size: 0.88rem;">All cleaning staff are background-checked and highly trained.</p>
+            </div>
+          </div>
+
+          <div class="info-list-item">
+            <i class="fa-solid fa-headset"></i>
+            <div>
+              <strong>Direct Support</strong>
+              <p style="margin:0; font-size: 0.88rem;">Call/WhatsApp: +971 58 116 0415</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="booking-form-box">
+          <form id="whatsappForm" onsubmit="sendToWhatsApp(event)">
+            
+            <div class="form-group">
+              <label for="fullName">Your Full Name *</label>
+              <input type="text" id="fullName" class="form-control" placeholder="e.g. Ahmed Khan" required>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="phoneNum">Phone / WhatsApp Number *</label>
+                <input type="tel" id="phoneNum" class="form-control" placeholder="+971 50 000 0000" required>
+              </div>
+              <div class="form-group">
+                <label for="serviceType">Select Cleaning Service *</label>
+                <select id="serviceType" class="form-control" required>
+                  <option value="Full Home Deep Cleaning">Full Home Deep Cleaning</option>
+                  <option value="Move-In / Move-Out Cleaning">Move-In / Move-Out Cleaning</option>
+                  <option value="Sofa & Carpet Steam Cleaning">Sofa & Carpet Steam Cleaning</option>
+                  <option value="Office & Commercial Cleaning">Office & Commercial Cleaning</option>
+                  <option value="Kitchen & Bathroom Sanitization">Kitchen & Bathroom Sanitization</option>
+                  <option value="Post-Renovation Cleaning">Post-Renovation Cleaning</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="propertyType">Property Type</label>
+                <select id="propertyType" class="form-control">
+                  <option value="Apartment">Apartment</option>
+                  <option value="Villa">Villa</option>
+                  <option value="Office / Commercial Space">Office / Commercial Space</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="prefDate">Preferred Service Date</label>
+                <input type="date" id="prefDate" class="form-control">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="notes">Additional Requirements or Address</label>
+              <textarea id="notes" class="form-control" rows="3" placeholder="Specify location, apartment size, or specific requirements..."></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit">
+              <i class="fa-brands fa-whatsapp"></i> Send Request via WhatsApp
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="section-title text-center">
+        <h2>Frequently Asked Questions</h2>
+        <p>Everything you need to know about our professional cleaning services.</p>
+      </div>
+
+      <div class="faq-accordion">
+        
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-question">
+            <span>Do you supply all necessary cleaning chemicals and equipment?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            Yes, our teams arrive fully equipped with professional-grade cleaning machines, micro-fiber tools, and eco-friendly sanitizing solutions.
+          </div>
+        </div>
+
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-question">
+            <span>How long does a deep cleaning session take?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            Duration depends on property size and condition. Standard apartment deep cleanings usually take 3 to 5 hours, while large villas may require a full team for 6 to 8 hours.
+          </div>
+        </div>
+
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-question">
+            <span>How does the booking process work?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            Simply submit the WhatsApp form above or message us directly. Our dispatcher will confirm property details, provide an exact custom estimate, and schedule your preferred slot.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Tech & Tidy Services</h4>
+          <p style="font-size:0.88rem; opacity:0.8; margin-bottom:15px;">Keeping your spaces efficient, safe, and perfectly maintained across Dubai and the UAE.</p>
+          <p style="font-size:0.88rem; opacity:0.8;"><i class="fa-solid fa-location-dot"></i> Dubai, United Arab Emirates</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Main Menu</h4>
+          <ul class="footer-links">
+            <li><a href="https://www.techntidy.com/">Home Page</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="techntidycleaning.html">Cleaning Services</a></li>
+            <li><a href="services.html">All Maintenance Services</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Cleaning Solutions</h4>
+          <ul class="footer-links">
+            <li><a href="#services-list">Residential Deep Clean</a></li>
+            <li><a href="#services-list">Move-In / Move-Out</a></li>
+            <li><a href="#services-list">Sofa & Carpet Steam</a></li>
+            <li><a href="#services-list">Commercial Sanitization</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact & Support</h4>
+          <p style="font-size:0.88rem; opacity:0.8; margin-bottom:8px;"><i class="fa-solid fa-phone"></i> +971 58 116 0415</p>
+          <p style="font-size:0.88rem; opacity:0.8; margin-bottom:15px;"><i class="fa-solid fa-envelope"></i> inquiry@techntidy.com</p>
+          <a href="https://wa.me/971581160415" target="_blank" class="btn-primary" style="padding: 8px 18px; font-size: 0.85rem;">
+            <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Tech & Tidy Services. All Rights Reserved. | <a href="https://www.techntidy.com/" style="color:var(--accent-cyan);">www.techntidy.com</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING WHATSAPP BUTTON -->
+  <a href="https://wa.me/971581160415?text=Hello%20Tech%20%26%20Tidy%2C%20I%20have%20a%20cleaning%20inquiry." class="float-whatsapp" target="_blank" title="Chat on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- JAVASCRIPT LOGIC -->
+  <script>
+    // WhatsApp Form Submission Handler
+    function sendToWhatsApp(event) {
+      event.preventDefault();
+      
+      const name = document.getElementById('fullName').value;
+      const phone = document.getElementById('phoneNum').value;
+      const service = document.getElementById('serviceType').value;
+      const property = document.getElementById('propertyType').value;
+      const date = document.getElementById('prefDate').value || 'Flexible';
+      const notes = document.getElementById('notes').value || 'None';
+
+      const whatsappNumber = "971581160415";
+
+      const message = `*NEW CLEANING SERVICE INQUIRY*%0A%0A` +
+        `*Name:* ${encodeURIComponent(name)}%0A` +
+        `*Phone:* ${encodeURIComponent(phone)}%0A` +
+        `*Service Requested:* ${encodeURIComponent(service)}%0A` +
+        `*Property Type:* ${encodeURIComponent(property)}%0A` +
+        `*Preferred Date:* ${encodeURIComponent(date)}%0A` +
+        `*Details/Notes:* ${encodeURIComponent(notes)}`;
+
+      const whatsappURL = `https://wa.me/${whatsappNumber}?text=${message}`;
+      window.open(whatsappURL, '_blank');
+    }
+
+    // Category Filter Handler
+    function filterServices(category) {
+      const buttons = document.querySelectorAll('.tab-btn');
+      buttons.forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+
+      const cards = document.querySelectorAll('.service-card');
+      cards.forEach(card => {
+        if (category === 'all' || card.getAttribute('data-category') === category) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // FAQ Accordion Handler
+    function toggleFaq(element) {
+      element.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>
